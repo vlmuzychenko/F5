@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Calendar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=768, initial-scale=1">
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header"><a href="#" class="header__back-btn"><i class="header__back-icon"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></i></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <ul class="nav js-nav">
+          <li class="nav__item is-active"><a href="#" class="nav__link">Сервисы</a>
+            <!--a.nav__link(href='#') Services-->
+            <ul class="nav__sub-nav">
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Яхт-вики</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Аренда яхт</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Регаты</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Академия</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Календарь</a>
+            <!--a.nav__link(href='#') Calendar-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Новости</a>
+            <!--a.nav__link(href='#') News-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a>
+            <!--a.nav__link(href='#') Contacts-->
+          </li>
+          <li class="nav__line js-moving-line"></li>
+        </ul><a href="tel:0442544545" class="header__phone">044 254 45 45</a>
+        <ul class="header__lang lang">
+          <li><a href="#" class="is-active"><span>RU</span></a></li>
+          <li><a href="#"><span>EN</span></a></li>
+        </ul>
+      </header>
+      <!--END header-->
+      <!-- BEGIN calendar-->
+      <div class="calendar">
+        <div class="calendar__top directions directions--calendar">
+          <div class="directions__title">Направления</div>
+        </div>
+        <div class="calendar__datepicker">
+          <form class="datepicker js-datepicker">
+            <div class="datepicker__row"><button type="button" data-direction="prev" class="datepicker__btn-left js-datepicker-btn"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></button><button type="button" class="datepicker__select js-open-datepicker"><span class="js-datepicker-text">Окт 2016</span><svg class="icon-arrow-sm"><use xlink:href="img/sprite.svg#icon-arrow-sm"></use></svg></button>
+              <button
+                type="button" data-direction="next" class="datepicker__btn-right js-datepicker-btn"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></button>
+            </div>
+            <div class="datepicker__dropdown js-datepicker-dropdown">
+              <div class="datepicker__header">
+                <div class="datepicker__year"><label class="datepicker__input js-datepicker-year"><input type="radio" name="datepickerYear" data-type="year" data-val="2015"><span>2015</span></label></div>
+                <div class="datepicker__year"><label class="datepicker__input js-datepicker-year"><input type="radio" checked="true" name="datepickerYear" data-type="year" data-val="2016"><span>2016</span></label></div>
+                <div class="datepicker__year"><label class="datepicker__input js-datepicker-year"><input type="radio" name="datepickerYear" data-type="year" data-val="2017"><span>2017</span></label></div>
+              </div>
+              <div class="datepicker__body">
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Янв"><span>Янв</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Фев"><span>Фев</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Мар"><span>Мар</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Апр"><span>Апр</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Май"><span>Май</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Июн"><span>Июн</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Июл"><span>Июл</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Авг"><span>Авг</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Сен"><span>Сен</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" checked="true" name="datepickerMonth" data-type="month" data-val="Окт"><span>Окт</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Ноя"><span>Ноя</span></label></div>
+                <div class="datepicker__month"><label class="datepicker__input js-datepicker-month"><input type="radio" name="datepickerMonth" data-type="month" data-val="Дек"><span>Дек</span></label></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="calendar__layout">
+          <div class="calendar__chapter">
+            <div class="calendar__title">
+              <div href="#" class="directions__link directions__link--academy">Академия</div>
+            </div>
+            <div class="calendar__items js-row">
+              <div class="calendar__row js-row-inner">
+                <div data-information-for-popup="{&quot;title&quot;: &quot;1Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#1&quot;}"
+                  class="calendar__event js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-1.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">IYT Group 2&5</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-2.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Brodica Group 2&5</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-3.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">RYA Group 2&5</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-4.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Практика Турция</div>
+                    <div class="calendar__event-text">15 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-5.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Средиземноморье. Удивительное приключение на уикенд</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-6.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Практика Турция</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-4.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Практика Турция</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calendar__chapter">
+            <div class="calendar__title">
+              <div href="#" class="directions__link directions__link--wiki">Яхт вики</div>
+            </div>
+            <div class="calendar__items js-row">
+              <div class="calendar__row js-row-inner">
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event calendar__event--lg js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-8.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Средиземноморье. Удивительное приключение на уикенд</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event calendar__event--lg js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-9.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Регата Turkie MIRW</div>
+                    <div class="calendar__event-text">15-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calendar__chapter">
+            <div class="calendar__title">
+              <div href="#" class="directions__link directions__link--events">Ивенты</div>
+            </div>
+            <div class="calendar__items js-row">
+              <div class="calendar__row js-row-inner">
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event calendar__event--variable js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-10.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Канары</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event calendar__event--variable js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-11.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Закрытие сезона</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event calendar__event--variable js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-12.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Средиземноморье. Удивительное приключение на уикенд</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event calendar__event--variable js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-13.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Закрытие сезона</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+                <div data-information-for-popup="{&quot;title&quot;: &quot;Поход на болеарские острова&quot;, &quot;img&quot;: &quot;img/content/more.jpg&quot;, &quot;text&quot;: &quot;Поистине богемые и аристократические места, обоснованные творческой интеллигенцией с 19 века. Время проведения: 27 октября.&quot;, &quot;link&quot;: &quot;#&quot;}"
+                  class="calendar__event calendar__event--variable js-infromation-more">
+                  <div style="background-image: url(img/content/calendar-14.jpg)" class="calendar__event-img"></div>
+                  <div class="calendar__event-descr">
+                    <div class="calendar__event-text">Средиземноморье. Удивительное приключение на уикенд</div>
+                    <div class="calendar__event-text">1-25 окт. 2016</div><a href="#" data-open="more" class="calendar__event-more btn js-open-popup-more">Подробнее<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-popup="more" class="popup popup_more js-popup-more">
+        <div class="popup__in popup__in--right js-popup-more-in"><button type="button" class="popup__close js-close-popup-more"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <div class="popup__body">
+            <div class="more js-more">
+              <div class="more__img js-more-photo"></div>
+              <div class="more__body">
+                <div class="more__title js-more-title"></div>
+                <div class="more__text js-more-text"></div>
+                <div class="more__btns"><a href="#" class="js-more-link btn btn--transp">Подробнее</a><a href="#" data-open="feedback" class="btn btn--bg js-open-popup">Записаться</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END calendar-->
+    </div>
+    <!--END out-->
+    <div data-popup="feedback" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="При необходимости напишите комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div data-popup="callme" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="Пожалуйста, напишите свой комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--LOAD scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKzXeKm-qJO4uqPR39L4lZf109YLmOFo"></script>
+  </body>
+
+</html>

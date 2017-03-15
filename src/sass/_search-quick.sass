@@ -1,0 +1,241 @@
+.search
+   &__inner
+      display: flex
+      flex-direction: column
+      overflow: auto
+      height: calc(100vh - 100px)
+      margin-top: 100px
+      +resp
+         height: calc(100vh - 70px)
+         margin-top: 70px
+   &__regions
+      //height: 440px
+      //overflow-y: auto
+      //overflow-x: hidden
+      //flex: 1 0 auto
+      //max-height: 440px
+      overflow: auto
+      min-height: 350px
+      height: calc(100vh - 420px - 100px)
+      +clr
+      +r(1124)
+         height: auto
+         min-height: 0
+         flex: 1 0 auto
+      &::-webkit-scrollbar
+         display: none
+   &__row
+      flex: 1 0 auto
+      height: auto
+   &__region
+      float: left
+      width: 16.66666%
+      position: relative
+      z-index: 1
+      background-color: #2b2b2b
+      -webkit-tap-highlight-color: transparent
+      &:nth-child(12n+6), &:nth-child(12n+4), &:nth-child(12n+2), &:nth-child(12n+11),&:nth-child(12n+9),&:nth-child(12n+7)
+         background-color: #1d1d1d
+      +r(1124)
+         width: 25%
+         &:nth-child(12n+6), &:nth-child(12n+4), &:nth-child(12n+2), &:nth-child(12n+11),&:nth-child(12n+9), &:nth-child(12n+7)
+            background-color: #2b2b2b
+         &:nth-child(12n+12), &:nth-child(12n+10), &:nth-child(12n+7), &:nth-child(12n+5),  &:nth-child(12n+4), &:nth-child(12n+2)
+            background-color: #1d1d1d
+      &::before
+         display: block
+         content: ''
+         width: 100%
+         padding-top: 100%
+      input
+         display: none
+      input:checked + label
+         opacity: 1
+      input:checked + label::after
+         opacity: 1
+         transform: scale(1)
+      input:checked + label::before
+         opacity: 1
+         background-color: $accent
+      input:checked ~ .search__region-images .search__region-img
+         opacity: 1
+         transform: scale(1.1)
+      input:checked ~ .search__region-images::before,
+      input:checked ~ .search__region-images::after
+         opacity: 0
+      label
+         opacity: 0
+         z-index: 10
+         +coverdiv
+         cursor: pointer
+         +tr(opacity .3s)
+         &::before
+            position: absolute
+            top: 20px
+            right: 20px
+            content: ''
+            width: 40px
+            height: 40px
+            border: 2px solid $accent
+            +tr(background-color .3s)
+         &::after
+            transform: scale(.25)
+            opacity: 0
+            position: absolute
+            top: 29px
+            right: 27px
+            width: 40px
+            height: 40px
+            content: ''
+            +s('checked')
+            transition: opacity .3s, transform .3s
+      &--bg
+         background-color: #1d1d1d
+   &__region:hover &__region-images::after,
+   &__region:hover &__region-images::before
+      opacity: 0
+   &__region:hover &__region-img,
+   &__region:hover label
+      opacity: 1
+
+   &__region-images
+      +coverdiv
+      overflow: hidden
+   &__region-pic
+         +vcenter
+   &__region-pic
+         top: 135px
+   &__region-img
+      +coverdiv
+      z-index: 1
+      opacity: 0
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
+      transition: transform .7s linear, opacity .5s ease-in-out
+      &::before
+         +coverdiv
+         content: ''
+         background-color: rgba(#2b2b2b, .3)
+         z-index: 0
+
+   &__region-name
+      position: absolute
+      //top: 80%
+      bottom: 10px
+      min-height: 56px
+      left: 10px
+      right: 10px
+      z-index: 3
+      font-size: 24px
+      color: #fff
+      text-transform: uppercase
+      +futura-bold
+      +prevent-text
+      +r(1366)
+         font-size: 22px
+   &__row
+      display: flex
+      justify-content: center
+      min-height: 420px
+      height: calc(100vh - 540px)
+      //height: 400px
+      +r(1124)
+         height: auto
+         flex-wrap: wrap
+   &__yacht-type
+      display: flex
+      width: 33.33333%
+      flex-wrap: wrap
+      background-color: #dbdbdb
+      +r(1124)
+         width: 50%
+      .img-check
+         width: 50%
+   &__rent
+      display: flex
+      flex-direction: column
+      width: 42.1875%
+      align-content: center
+      align-items: center
+      +r(1124)
+         width: 50%
+      &-date
+         margin-top: auto
+         background: #fff
+         font-size: 0
+         +r(1400)
+            padding: 0 20px
+      &-title
+         margin-bottom: 55px
+         font-size: 24px
+         color: #818181
+         text-transform: uppercase
+         +futura-bold
+      &-row
+         margin: 0 -6px
+      &-field
+         display: inline-block
+         vertical-align: top
+         width: 300px
+         max-width: 50%
+         padding: 0 6px
+         input
+            padding: 0 10px
+            height: 50px
+            line-height: 50px
+      &-help
+         align-self: stretch
+         margin-top: auto
+         position: relative
+         z-index: 1
+         display: block
+         padding: 0
+         line-height: 80px
+         height: 80px
+         background-color: #000
+         color: #fff
+         text-align: center
+         +trs
+         &::before
+            content: ''
+            display: inline-block
+            vertical-align: middle
+            margin-right: 20px
+            +s('phone')
+         &:hover
+            color: $accent
+   &__find
+      display: flex
+      justify-content: center
+      flex-direction: column
+      width: 24.47916%
+      background-color: $accent
+      text-align: center
+      +r(1124)
+         width: 100%
+         padding: 20px
+      &-title
+         margin-bottom: 55px
+         +r(1124)
+            margin-bottom: 20px
+      &-btn
+         display: block
+         margin: 0 auto
+         width: 230px
+         height: 50px
+         line-height: 50px
+         color: #000
+         background: #fff
+         border-color: transparent
+         +r(1124)
+            display: inline-block
+            margin: 0 10px
+         &--bg
+            background-color: transparent
+            border: 1px solid #000
+         & + &
+            margin-top: 20px
+            +r(1124)
+               margin-top: 0

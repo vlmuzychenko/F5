@@ -1,0 +1,40 @@
+//BEGIN header
+header.header
+   a.header__back-btn(href='#')
+      i.header__back-icon
+         +icon('icon-arrow')
+   a.logo(href='index.html')
+      img(src='img/logo.png' alt='logo')
+   ul.nav.js-nav
+      li.nav__item.is-active
+         a.nav__link(href='#') Сервисы
+         //a.nav__link(href='#') Services
+         ul.nav__sub-nav
+            li.nav__sub-item
+               a.nav__sub-link(href='#') Яхт-вики
+            li.nav__sub-item
+               a.nav__sub-link(href='#') Аренда яхт
+            li.nav__sub-item
+               a.nav__sub-link(href='#') Регаты
+            li.nav__sub-item
+               a.nav__sub-link(href='#') Академия
+      li.nav__item
+         a.nav__link(href='#') Календарь
+         //a.nav__link(href='#') Calendar
+      li.nav__item
+         a.nav__link(href='#') Новости
+         //a.nav__link(href='#') News
+      li.nav__item
+         a.nav__link(href='#') Контакты
+         //a.nav__link(href='#') Contacts
+      li.nav__line.js-moving-line
+   a.header__phone(href='tel:0442544545') 044 254 45 45
+   ul.header__lang.lang
+      li
+         a(href="#" class="is-active")
+            span RU
+      li
+         a(href="#")
+            span EN
+
+//END header

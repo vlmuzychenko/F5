@@ -1,0 +1,170 @@
+$icons: (0:0)
+$icons: map-merge($icons,('360_view': (X: -89px, Y:-76px, W: 35px, H: 24px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('academy': (X: -89px, Y:0px, W: 121px, H: 66px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('cabin-sm': (X: -294px, Y:-128px, W: 16px, H: 16px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('cabin': (X: 0px, Y:-215px, W: 64px, H: 64px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('checked': (X: -294px, Y:-72px, W: 24px, H: 20px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('engine': (X: -220px, Y:0px, W: 64px, H: 64px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('events': (X: 0px, Y:0px, W: 79px, H: 105px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('gallery': (X: -294px, Y:0px, W: 32px, H: 26px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('location': (X: -220px, Y:-74px, W: 64px, H: 64px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('phone': (X: -169px, Y:-115px, W: 27px, H: 51px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ruler-sm': (X: -294px, Y:-102px, W: 16px, H: 16px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ruler': (X: -74px, Y:-215px, W: 64px, H: 64px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('shower': (X: -148px, Y:-215px, W: 60px, H: 64px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('sleeps-sm': (X: -294px, Y:-154px, W: 16px, H: 8px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('sleeps': (X: -218px, Y:-215px, W: 64px, H: 34px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('speed': (X: -220px, Y:-148px, W: 64px, H: 50px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('video': (X: -294px, Y:-36px, W: 32px, H: 26px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('yacht-wiki': (X: 0px, Y:-115px, W: 89px, H: 90px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('yacht': (X: -99px, Y:-115px, W: 60px, H: 78px, TW: 326px, TH: 279px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-360_view
+//  width: 35px
+//  height: 24px
+//  background-image: url('../img/sprite.png')
+//  background-position: -89px -76px
+//
+//.icon-academy
+//  width: 121px
+//  height: 66px
+//  background-image: url('../img/sprite.png')
+//  background-position: -89px 0px
+//
+//.icon-cabin-sm
+//  width: 16px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: -294px -128px
+//
+//.icon-cabin
+//  width: 64px
+//  height: 64px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -215px
+//
+//.icon-checked
+//  width: 24px
+//  height: 20px
+//  background-image: url('../img/sprite.png')
+//  background-position: -294px -72px
+//
+//.icon-engine
+//  width: 64px
+//  height: 64px
+//  background-image: url('../img/sprite.png')
+//  background-position: -220px 0px
+//
+//.icon-events
+//  width: 79px
+//  height: 105px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-gallery
+//  width: 32px
+//  height: 26px
+//  background-image: url('../img/sprite.png')
+//  background-position: -294px 0px
+//
+//.icon-location
+//  width: 64px
+//  height: 64px
+//  background-image: url('../img/sprite.png')
+//  background-position: -220px -74px
+//
+//.icon-phone
+//  width: 27px
+//  height: 51px
+//  background-image: url('../img/sprite.png')
+//  background-position: -169px -115px
+//
+//.icon-ruler-sm
+//  width: 16px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: -294px -102px
+//
+//.icon-ruler
+//  width: 64px
+//  height: 64px
+//  background-image: url('../img/sprite.png')
+//  background-position: -74px -215px
+//
+//.icon-shower
+//  width: 60px
+//  height: 64px
+//  background-image: url('../img/sprite.png')
+//  background-position: -148px -215px
+//
+//.icon-sleeps-sm
+//  width: 16px
+//  height: 8px
+//  background-image: url('../img/sprite.png')
+//  background-position: -294px -154px
+//
+//.icon-sleeps
+//  width: 64px
+//  height: 34px
+//  background-image: url('../img/sprite.png')
+//  background-position: -218px -215px
+//
+//.icon-speed
+//  width: 64px
+//  height: 50px
+//  background-image: url('../img/sprite.png')
+//  background-position: -220px -148px
+//
+//.icon-video
+//  width: 32px
+//  height: 26px
+//  background-image: url('../img/sprite.png')
+//  background-position: -294px -36px
+//
+//.icon-yacht-wiki
+//  width: 89px
+//  height: 90px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -115px
+//
+//.icon-yacht
+//  width: 60px
+//  height: 78px
+//  background-image: url('../img/sprite.png')
+//  background-position: -99px -115px
+//

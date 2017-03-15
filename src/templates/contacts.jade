@@ -1,0 +1,59 @@
+---
+title: Contacts
+---
+extends layouts/_layout
+block content
+  .contacts-container
+    .contacts-wrap
+      .contacts
+        .contacts__title Контакты
+        .contacts__items
+          .contacts__item_title Адрес
+          .contacts__item г. Киев, ул. Льва Толстого 39, терраса Fleet5
+
+          .contacts__item_title Email
+          .contacts__item info@fleet5.com
+
+          .contacts__item_title Телефон
+          .contacts__item 044 337 15 35
+
+        a(href="#").btn.contacts__btn-popup Написать нам
+        .contacts__social
+          a(href="#").btn.contacts__social-btn.contacts__social-btn_yt
+          a(href="#").btn.contacts__social-btn.contacts__social-btn_fb
+          a(href="#").btn.contacts__social-btn.contacts__social-btn_inst
+
+    #map.map-wrap
+
+    .popup-wrap
+      .popup-contacts
+        .input-container
+          input.input-contacts.error(type="text" id="name" placeholder="Имя Фамилия")
+          label(for="name") Имя и фамилия
+
+        .input-container
+          input.input-contacts(type="text" id="phone" placeholder="(0--) --- -- --")
+          label(for="phone") Телефон
+
+        .input-container
+          input.input-contacts(type="text" id="email" placeholder="name@mail.com")
+          label(for="email") Email
+
+        .input-container
+          textarea.input-contacts.input-contacts_textarea(rows="6" cols="" placeholder="Пожалуйста напишите свой комментарий...")
+
+        button(type="submit").btn.btn_popup.js-send Отправить
+        button(type="button").close.close_black.js-popup-close
+
+      .popup-substrate
+        .popup-substrate__content
+          img(src="img/popup-logo.png").popup-substrate__logo
+          .popup-substrate__text
+            p Спасибо!
+            p Мы свяжемся с Вами в ближайшее время.
+
+          img(src="img/popup-icon.png").popup-substrate__icon
+          .popup-substrate__timer окно закроется через
+              span(id="timer") 5
+              | сек
+          button(type="button").close.close_white.js-popup-substrate-close

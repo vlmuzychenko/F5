@@ -1,0 +1,29 @@
+//=include lib/sayHello.js
+//=include lib/jquery.min.js
+//=include lib/jquery-ui.min.js
+//=include lib/jquery.ui.touch-punch.min.js
+//=include lib/perfect-scrollbar.jquery.min.js
+//=include lib/slick.min.js
+//=include lib/multiple-select.js
+//=include lib/jquery.mousewheel.min.js
+//=include lib/svgxuse.min.js
+//=include lib/jquery.fullPage.js
+//=include lib/Carousel.js
+//=include lib/owl.carousel.min.js
+//=include map.js
+//=include datepickers.js
+//=include Datepicker.js
+//=include _PopupMore.js
+//=include filters.js
+//=include _rows.js
+//=include _movingLine.js
+//=include common.js
+//=include yacht-wiki.js
+//=include contacts-map.js
+//=include cards.js
+//=include yacht-wiki-main.js
+//=include yacht-wiki-open.js
+//=include academy.js
+//=include news-open.js
+
+sayHello();

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>search-page_advanced</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=768, initial-scale=1">
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header"><a href="#" class="header__back-btn"><i class="header__back-icon"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></i></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <ul class="nav js-nav">
+          <li class="nav__item is-active"><a href="#" class="nav__link">Сервисы</a>
+            <!--a.nav__link(href='#') Services-->
+            <ul class="nav__sub-nav">
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Яхт-вики</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Аренда яхт</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Регаты</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Академия</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Календарь</a>
+            <!--a.nav__link(href='#') Calendar-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Новости</a>
+            <!--a.nav__link(href='#') News-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a>
+            <!--a.nav__link(href='#') Contacts-->
+          </li>
+          <li class="nav__line js-moving-line"></li>
+        </ul><a href="tel:0442544545" class="header__phone">044 254 45 45</a>
+        <ul class="header__lang lang">
+          <li><a href="#" class="is-active"><span>RU</span></a></li>
+          <li><a href="#"><span>EN</span></a></li>
+        </ul>
+      </header>
+      <!--END header-->
+      <!-- BEGIN search-advanced-->
+      <div class="search-adv">
+        <form action="#">
+          <div class="search-adv__layout">
+            <div class="search-adv__wrapper js-info"><button type="button" class="search-adv__btn js-open-info"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></button>
+              <div class="search-adv__filters">
+                <div class="search-adv__filters-inner">
+                  <div class="search-adv__filter js-scroll styled-scroll">
+                    <div class="search-adv__item">
+                      <div class="search-adv__inner">
+                        <div class="search-adv__title title">Локация</div>
+                        <div class="search-adv__row">
+                          <div class="search-adv__field js-select-field"><select multiple="multiple" placeholder="Регион" class="js-select-multiple"><option>Австралия</option><option>Африка</option><option>Америка</option><option>Европа</option><option>Регион</option><option>Австралия</option><option>Африка</option><option>Америка</option><option>Европа</option><option>Африка</option><option>Америка</option><option>Европа</option><option>Регион</option><option>Австралия</option><option>Африка</option><option>Америка</option><option>Европа</option></select></div>
+                          <div
+                            class="search-adv__field js-select-field"><select multiple="multiple" placeholder="Не выбрано" class="js-select-multiple"><option>Украина</option><option>Испания</option><option>Бельгия</option><option>Швейцария</option><option>Украина</option><option>Испания</option><option>Бельгия</option><option>Швейцария</option><option>Украина</option><option>Испания</option><option>Швейцария</option></select></div>
+                      </div>
+                      <div class="search-adv__row">
+                        <div class="search-adv__field js-select-field"><select multiple="multiple" placeholder="Город" class="js-select-multiple"><option>Киев</option><option>Лондон</option><option>Львов</option><option>Львов</option><option>Одесса</option><option>Киев</option><option>Лондон</option><option>Львов</option><option>Львов</option><option>Одесса</option></select></div>
+                        <div
+                          class="search-adv__field js-select-field"><select multiple="multiple" placeholder="Порт/марина" class="js-select-multiple"><option>Африка</option><option>Америка</option><option>Европа</option><option>Одесса</option><option>Киев</option><option>Лондон</option><option>Львов</option><option>Африка</option><option>Америка</option><option>Львов</option></select></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-adv__item">
+                  <div class="search-adv__inner">
+                    <div class="search-adv__title title">Тип яхты</div>
+                    <div class="search-adv__row">
+                      <div class="search-adv__field">
+                        <div class="checkbox checkbox_mod"><input type="checkbox" id="motor_yachts" name="motor_yachts"><label for="motor_yachts"><div class="checkbox__pic"></div><div class="checkbox__name">Моторные яхты</div><div class="checkbox__check"></div></label></div>
+                      </div>
+                      <div class="search-adv__field">
+                        <div class="checkbox checkbox_mod"><input type="checkbox" id="sailboats" name="sailboats"><label for="sailboats"><div class="checkbox__pic"></div><div class="checkbox__name">Парусные яхты</div><div class="checkbox__check"></div></label></div>
+                      </div>
+                    </div>
+                    <div class="search-adv__row">
+                      <div class="search-adv__field">
+                        <div class="checkbox checkbox_mod"><input type="checkbox" id="catamarans" name="catamarans"><label for="catamarans"><div class="checkbox__pic"></div><div class="checkbox__name">Парусные катамараны</div><div class="checkbox__check"></div></label></div>
+                      </div>
+                      <div class="search-adv__field">
+                        <div class="checkbox checkbox_mod"><input type="checkbox" id="mega_yachts" name="mega_yachts"><label for="mega_yachts"><div class="checkbox__pic"></div><div class="checkbox__name">Мега яхты</div><div class="checkbox__check"></div></label></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-adv__item">
+                  <div class="search-adv__inner">
+                    <div class="search-adv__title title">Даты</div>
+                    <div class="search-adv__row">
+                      <div class="search-adv__field"><input type="text" name="" placeholder="Отплытие" required class="input js-search-adv-date"></div>
+                      <div class="search-adv__field"><input type="text" name="" placeholder="Прибытие" required class="input js-search-adv-date"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-adv__item">
+                  <div class="search-adv__inner search-adv__inner--price">
+                    <div class="search-adv__title title">Цена</div>
+                    <div class="search-adv__row search-adv__row--justify search-adv__row--price">
+                      <div class="search-adv__price-field"><input type="text" name="" class="input js-price-from"><span>грн.</span></div>
+                      <div class="search-adv__price-field"><input type="text" name="" class="input js-price-to"><span>грн.</span></div>
+                    </div>
+                    <div class="search-adv__row search-adv__row--range">
+                      <div class="js-price-range"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-adv__item search-adv__item--topmargin">
+                  <div class="search-adv__inner search-adv__inner--price">
+                    <div class="search-adv__title title">Количество людей</div>
+                    <div class="search-adv__row search-adv__row--price">
+                      <div class="search-adv__price-field"><input type="text" name="" class="input js-people-count"><span>чел.</span></div>
+                    </div>
+                    <div class="search-adv__row search-adv__row--range">
+                      <div class="js-people-count-range"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-adv__actions"><button type="submit" class="search-adv__btn-find btn btn--bg"><svg class="icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg><span>Найти</span></button><button type="reset" class="search-adv__btn-reset js-search-adv-reset btn btn--transp"><svg class="icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg><span>Сбросить</span></button>
+                  <button
+                    type="button" class="search-adv__btn-filter btn btn--transp js-more-filters"><span> Больше фильтров</span><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></button>
+                </div>
+              </div>
+              <div class="search-adv__filter search-adv__filter--detailed js-filter-detailed">
+                <div class="search-adv__filter-inner js-scroll styled-scroll">
+                  <div class="search-adv__item">
+                    <div class="search-adv__inner">
+                      <div class="search-adv__title title">марка яхты</div>
+                      <div class="search-adv__row">
+                        <div class="search-adv__field js-select-field"><select multiple="multiple" placeholder="Марка" class="js-select-multiple"><option>Австралия</option><option>Африка</option><option>Америка</option><option>Европа</option><option>Регион</option><option>Австралия</option><option>Африка</option><option>Америка</option><option>Европа</option><option>Африка</option><option>Америка</option><option>Европа</option><option>Регион</option><option>Австралия</option><option>Африка</option><option>Америка</option><option>Европа</option></select></div>
+                        <div
+                          class="search-adv__field js-select-field"><select multiple="multiple" placeholder="Модель" class="js-select-multiple"><option>Украина</option><option>Испания</option><option>Бельгия</option><option>Швейцария</option><option>Украина</option><option>Испания</option><option>Бельгия</option><option>Швейцария</option><option>Украина</option><option>Испания</option><option>Швейцария</option></select></div>
+                    </div>
+                    <div class="search-adv__row">
+                      <div class="search-adv__field js-select-field"><select multiple="multiple" placeholder="Год выпуска от" class="js-select-multiple"><option>Киев</option><option>Лондон</option><option>Львов</option><option>Львов</option><option>Одесса</option><option>Киев</option><option>Лондон</option><option>Львов</option><option>Львов</option><option>Одесса</option></select></div>
+                      <div
+                        class="search-adv__field js-select-field"><select multiple="multiple" placeholder="Год выпуска до" class="js-select-multiple"><option>Африка</option><option>Америка</option><option>Европа</option><option>Одесса</option><option>Киев</option><option>Лондон</option><option>Львов</option><option>Африка</option><option>Америка</option><option>Львов</option></select></div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-adv__item">
+                <div class="search-adv__inner">
+                  <div class="search-adv__title title">наличие подруливающего устройства</div>
+                  <div class="search-adv__row">
+                    <div class="search-adv__field">
+                      <div class="checkbox"><input type="checkbox" name="" id="available-1"><label for="available-1"><div class="checkbox__check"></div><div class="checkbox__name">Есть</div></label></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-adv__item">
+                <div class="search-adv__inner">
+                  <div class="search-adv__title title">тип грота</div>
+                  <div class="search-adv__row">
+                    <div class="search-adv__field js-select-field"><select placeholder="Скрутка" class="js-select-single"><option>Скрутка</option><option>Америка</option><option>Скрутка</option><option>Европа</option><option>Европа</option></select></div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-adv__item">
+                <div class="search-adv__inner search-adv__inner--price">
+                  <div class="search-adv__title title">Количество кают</div>
+                  <div class="search-adv__row search-adv__row--price">
+                    <div class="search-adv__price-field"><input type="text" name="" class="input js-cabin-count"></div>
+                  </div>
+                  <div class="search-adv__row search-adv__row--range">
+                    <div class="js-cabin-count-range"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-adv__item no-bd">
+                <div class="search-adv__inner search-adv__inner--price">
+                  <div class="search-adv__title title">Количество туалетов</div>
+                  <div class="search-adv__row search-adv__row--price">
+                    <div class="search-adv__price-field"><input type="text" name="" class="input js-toilets-count"></div>
+                  </div>
+                  <div class="search-adv__row search-adv__row--range">
+                    <div class="js-toilets-count-range"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+    <!--BEGIN yacht-map-->
+    <div class="yacht-map__wrapper"><button class="yacht-map__show-btn btn js-show-yacht-map"><span>Показать карту</span><svg class="icon-arrow-sm"><use xlink:href="img/sprite.svg#icon-arrow-sm"></use></svg></button>
+      <div class="yacht-map__inner js-yacht-map-inner">
+        <div class="yacht-map__search-move js-yacht-map-move checkbox"><input type="checkbox" id="yacht-map-move" name=""><label for="yacht-map-move"><div class="checkbox__check"></div><div class="checkbox__name">Поиск при перемещении карты</div></label></div>
+        <div id="js-yacht-map" class="yacht-map"></div>
+      </div>
+    </div>
+    <!--END yacht-map-->
+    <div class="search-adv__view">
+      <div class="yacht">
+        <div class="yacht__sort">
+          <div class="yacht__sort-inner">
+            <div class="yacht__sort-action"><button title="Показать плиткой" class="yacht__sort-btn js-yacht-view grid is-active"><svg class="icon-card"><use xlink:href="img/sprite.svg#icon-card"></use></svg></button><button title="Показать списком" class="yacht__sort-btn js-yacht-view list"><svg class="icon-list"><use xlink:href="img/sprite.svg#icon-list"></use></svg></button></div>
+            <div
+              class="yacht__sort-select">
+              <div class="yacht__sort-text">Сортировка по:</div>
+              <div class="yacht__sort-field js-select-field"><select class="js-select-single"><option>Цена вниз</option><option>Цена вверх</option><option>Год выпуска вниз</option><option>Год выпуска вверх</option></select></div>
+          </div>
+        </div>
+      </div>
+      <div class="yacht__inner js-yacht-scroll js-yacht-section">
+        <div class="yacht__row js-view-container grid">
+          <a href="#" class="yacht__card">
+            <div class="yacht__card-pic">
+              <div style="background-image: url(img/content/yacht-card-1.jpg)" class="yacht__card-img"></div>
+            </div>
+            <div class="yacht__card-content">
+              <div class="yacht__card-title title">ЯХТА Riva Duchessa<button type="submit" class="yacht__card-favourite js-card-favourite"><svg class="icon-fav-star"><use xlink:href="img/sprite.svg#icon-fav-star"></use></svg></button></div>
+              <div class="yacht__card-descr">
+                <div class="yacht__card-col">
+                  <div class="yacht__card-info yacht__card-info--length">Длина: 26 м</div>
+                  <div class="yacht__card-info yacht__card-info--cabin">Каюты: 4 + 1</div>
+                  <div class="yacht__card-info yacht__card-info--sleeps">Спальных мест: 8 + 2</div>
+                </div>
+                <div class="yacht__card-col">
+                  <div class="yacht__card-price">20 000 грн/день</div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="yacht__card">
+            <div class="yacht__card-pic">
+              <div style="background-image: url(img/content/yacht-card-2.jpg)" class="yacht__card-img"></div>
+            </div>
+            <div class="yacht__card-content">
+              <div class="yacht__card-title title">ЯХТА Riva Duchessa<button type="submit" class="yacht__card-favourite js-card-favourite"><svg class="icon-fav-star"><use xlink:href="img/sprite.svg#icon-fav-star"></use></svg></button></div>
+              <div class="yacht__card-descr">
+                <div class="yacht__card-col">
+                  <div class="yacht__card-info yacht__card-info--length">Длина: 26 м</div>
+                  <div class="yacht__card-info yacht__card-info--cabin">Каюты: 4 + 1</div>
+                  <div class="yacht__card-info yacht__card-info--sleeps">Спальных мест: 8 + 2</div>
+                </div>
+                <div class="yacht__card-col">
+                  <div class="yacht__card-price">13 000 грн/день</div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="yacht__card">
+            <div class="yacht__card-pic">
+              <div style="background-image: url(img/content/yacht-card-3.jpg)" class="yacht__card-img"></div>
+            </div>
+            <div class="yacht__card-content">
+              <div class="yacht__card-title title">ЯХТА Riva Duchessa<button type="submit" class="yacht__card-favourite js-card-favourite"><svg class="icon-fav-star"><use xlink:href="img/sprite.svg#icon-fav-star"></use></svg></button></div>
+              <div class="yacht__card-descr">
+                <div class="yacht__card-col">
+                  <div class="yacht__card-info yacht__card-info--length">Длина: 26 м</div>
+                  <div class="yacht__card-info yacht__card-info--cabin">Каюты: 4 + 1</div>
+                  <div class="yacht__card-info yacht__card-info--sleeps">Спальных мест: 8 + 2</div>
+                </div>
+                <div class="yacht__card-col">
+                  <div class="yacht__card-price">15 000 грн/день</div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="yacht__card">
+            <div class="yacht__card-pic">
+              <div style="background-image: url(img/content/yacht-card-4.jpg)" class="yacht__card-img"></div>
+            </div>
+            <div class="yacht__card-content">
+              <div class="yacht__card-title title">ЯХТА Riva Duchessa<button type="submit" class="yacht__card-favourite js-card-favourite"><svg class="icon-fav-star"><use xlink:href="img/sprite.svg#icon-fav-star"></use></svg></button></div>
+              <div class="yacht__card-descr">
+                <div class="yacht__card-col">
+                  <div class="yacht__card-info yacht__card-info--length">Длина: 26 м</div>
+                  <div class="yacht__card-info yacht__card-info--cabin">Каюты: 4 + 1</div>
+                  <div class="yacht__card-info yacht__card-info--sleeps">Спальных мест: 8 + 2</div>
+                </div>
+                <div class="yacht__card-col">
+                  <div class="yacht__card-price">20 000 грн/день</div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="yacht__card">
+            <div class="yacht__card-pic">
+              <div style="background-image: url(img/content/yacht-card-5.jpg)" class="yacht__card-img"></div>
+            </div>
+            <div class="yacht__card-content">
+              <div class="yacht__card-title title">ЯХТА Riva Duchessa<button type="submit" class="yacht__card-favourite js-card-favourite"><svg class="icon-fav-star"><use xlink:href="img/sprite.svg#icon-fav-star"></use></svg></button></div>
+              <div class="yacht__card-descr">
+                <div class="yacht__card-col">
+                  <div class="yacht__card-info yacht__card-info--length">Длина: 26 м</div>
+                  <div class="yacht__card-info yacht__card-info--cabin">Каюты: 4 + 1</div>
+                  <div class="yacht__card-info yacht__card-info--sleeps">Спальных мест: 8 + 2</div>
+                </div>
+                <div class="yacht__card-col">
+                  <div class="yacht__card-price">13 000 грн/день</div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="yacht__card">
+            <div class="yacht__card-pic">
+              <div style="background-image: url(img/content/yacht-card-6.jpg)" class="yacht__card-img"></div>
+            </div>
+            <div class="yacht__card-content">
+              <div class="yacht__card-title title">ЯХТА Riva Duchessa<button type="submit" class="yacht__card-favourite js-card-favourite"><svg class="icon-fav-star"><use xlink:href="img/sprite.svg#icon-fav-star"></use></svg></button></div>
+              <div class="yacht__card-descr">
+                <div class="yacht__card-col">
+                  <div class="yacht__card-info yacht__card-info--length">Длина: 26 м</div>
+                  <div class="yacht__card-info yacht__card-info--cabin">Каюты: 4 + 1</div>
+                  <div class="yacht__card-info yacht__card-info--sleeps">Спальных мест: 8 + 2</div>
+                </div>
+                <div class="yacht__card-col">
+                  <div class="yacht__card-price">15 000 грн/день</div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="yacht__card">
+            <div class="yacht__card-pic">
+              <div style="background-image: url(img/content/yacht-card-1.jpg)" class="yacht__card-img"></div>
+            </div>
+            <div class="yacht__card-content">
+              <div class="yacht__card-title title">ЯХТА Riva Duchessa<button type="submit" class="yacht__card-favourite js-card-favourite"><svg class="icon-fav-star"><use xlink:href="img/sprite.svg#icon-fav-star"></use></svg></button></div>
+              <div class="yacht__card-descr">
+                <div class="yacht__card-col">
+                  <div class="yacht__card-info yacht__card-info--length">Длина: 26 м</div>
+                  <div class="yacht__card-info yacht__card-info--cabin">Каюты: 4 + 1</div>
+                  <div class="yacht__card-info yacht__card-info--sleeps">Спальных мест: 8 + 2</div>
+                </div>
+                <div class="yacht__card-col">
+                  <div class="yacht__card-price">15 000 грн/день</div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="yacht__card">
+            <div class="yacht__card-pic">
+              <div style="background-image: url(img/content/yacht-card-2.jpg)" class="yacht__card-img"></div>
+            </div>
+            <div class="yacht__card-content">
+              <div class="yacht__card-title title">ЯХТА Riva Duchessa<button type="submit" class="yacht__card-favourite js-card-favourite"><svg class="icon-fav-star"><use xlink:href="img/sprite.svg#icon-fav-star"></use></svg></button></div>
+              <div class="yacht__card-descr">
+                <div class="yacht__card-col">
+                  <div class="yacht__card-info yacht__card-info--length">Длина: 26 м</div>
+                  <div class="yacht__card-info yacht__card-info--cabin">Каюты: 4 + 1</div>
+                  <div class="yacht__card-info yacht__card-info--sleeps">Спальных мест: 8 + 2</div>
+                </div>
+                <div class="yacht__card-col">
+                  <div class="yacht__card-price">15 000 грн/день</div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="yacht__card">
+            <div class="yacht__card-pic">
+              <div style="background-image: url(img/content/yacht-card-3.jpg)" class="yacht__card-img"></div>
+            </div>
+            <div class="yacht__card-content">
+              <div class="yacht__card-title title">ЯХТА Riva Duchessa<button type="submit" class="yacht__card-favourite js-card-favourite"><svg class="icon-fav-star"><use xlink:href="img/sprite.svg#icon-fav-star"></use></svg></button></div>
+              <div class="yacht__card-descr">
+                <div class="yacht__card-col">
+                  <div class="yacht__card-info yacht__card-info--length">Длина: 26 м</div>
+                  <div class="yacht__card-info yacht__card-info--cabin">Каюты: 4 + 1</div>
+                  <div class="yacht__card-info yacht__card-info--sleeps">Спальных мест: 8 + 2</div>
+                </div>
+                <div class="yacht__card-col">
+                  <div class="yacht__card-price">15 000 грн/день</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </form>
+    </div>
+    <!-- END search-advanced-->
+    </div>
+    <!--END out-->
+    <div data-popup="feedback" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="При необходимости напишите комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div data-popup="callme" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="Пожалуйста, напишите свой комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--LOAD scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKzXeKm-qJO4uqPR39L4lZf109YLmOFo"></script>
+  </body>
+
+</html>

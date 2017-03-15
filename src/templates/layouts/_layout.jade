@@ -1,0 +1,22 @@
+include _mixins
+
+doctype html
+html
+  head
+    include _head
+
+  body(class=bodyClass)
+    //BEGIN out
+    .out(class=outClass)
+      block header
+        include ../partials/_header
+      block content
+    //END out
+    include ../partials/_popupFeedback
+
+
+    //LOAD scripts
+    block scripts
+      script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js")
+      script(type="text/javascript" src="js/app.js")
+      script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKzXeKm-qJO4uqPR39L4lZf109YLmOFo")

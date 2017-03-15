@@ -1,0 +1,701 @@
+.skew-section
+  width: 55%
+  height: 100%
+  background-color: #178084
+  overflow: hidden
+  transform: skewX(-16deg) translateX(-20%)
+  position: absolute
+  z-index: 200
+  &__img
+    width: 100%
+    height: 100%
+    transform: skewX(16deg) translateX(20%)
+    background-size: cover
+    transition: background .7s
+  &_price
+    box-shadow: 25px 0 23px -13px rgba(0,0,0,.2)
+    +r(1365)
+      width: 45%
+    & > .skew-section__img
+      background-image: url(../img/price-1.jpg)
+      background-position: 75% 50%
+  &_contacts
+    box-shadow: 10px 0 20px 0px #a2a2a2
+    & > .skew-section__img
+      background-image: url(../img/contacts.jpg)
+      background-position: 100% 50%
+  &_programm
+    & > .skew-section__img
+      background-image: url(../img/days/programm-img-1.jpg)
+      background-position: 0 50%
+      &:after
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        transform: skewX(-16deg) translateX(-20%)
+        box-shadow: inset -35px 0px 29px -4px rgba(0, 0, 0, 0.5)
+
+.yacht-wiki-btn
+  min-width: 230px
+  display: inline-block
+  transition: .3s
+  background-color: $accent
+  border-color: $accent
+  position: absolute
+  bottom: 40px
+  text-transform: uppercase
+  z-index: 900
+  +rmin(768)
+    min-width: 160px
+    right: 3%
+  +rmin(1366)
+    min-width: 190px
+    right: 7%
+  +rmin(1600)
+    min-width: 230px
+  &:hover
+    background-color: #fff
+    border-color: #000
+
+.content-section
+  width: 70%
+  margin-left: 30%
+  height: 100%
+  position: relative
+  &_price
+    +r(1365)
+      width: 80%
+      margin-left: 20%
+.yacht-wiki-menu
+  color: #000
+  position: fixed
+  top: 130px
+  width: 100%
+  z-index: 900
+  text-align: center
+  transition: color .2s
+  &.light
+    color: #fff
+    .yacht-wiki-menu__item.active
+      border-bottom-color: #fff
+  &.dark
+    color: #000
+    .yacht-wiki-menu__item.active
+      border-bottom-color: #000
+  +rmin(768)
+    top: 80px
+    font-size: 12px
+  +rmin(1600)
+    top: 130px
+    font-size: 14px
+
+  &__item
+    display: inline-block
+    +casp-bold
+    text-transform: uppercase
+    margin-right: 70px
+    border-bottom: 2px solid transparent
+    transition: border-color .2s
+    &.active
+      border-bottom-color: #000
+    +rmin(768)
+      margin-right: 40px
+      padding: 0 2px 7px
+    +rmin(1366)
+      margin-right: 60px
+      padding: 0 2px 10px
+    +rmin(1600)
+      margin-right: 70px
+
+.descr-video
+  display: none
+  width: 100%
+  height: calc(100vh - 100px)
+  margin-top: 100px
+  background-color: #161616
+  position: relative
+  +resp
+     height: calc(100vh - 70px)
+     margin-top: 70px
+  .descr-video__close
+    width: 70px
+    height: 70px
+    background-color: rgba(0,0,0,.7)
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+.descr
+  width: 100%
+  height: 100%
+  margin-top: 100px
+  background-size: cover
+  background-position: 0 0
+  background-image: url(../img/descr-bg-1.jpg)
+
+  &__title
+    bottom: 40%
+    position: absolute
+    font-family: Arial
+    padding-left: 30px
+    +rmin(768)
+      font-size: 8px
+      height: 35vh
+    +rmin(1366)
+      font-size: 14px
+    +rmin(1600)
+      font-size: 18px
+      height: 40vh
+    span
+      display: block
+      text-transform: uppercase
+      +futura-bold
+
+  &__title-name
+    font-size: 140px
+    display: block
+    text-transform: uppercase
+    font-weight: 800
+    line-height: 105px
+    color: #fff
+    +rmin(768)
+      font-size: 45px
+      line-height: 35px
+    +rmin(1366)
+      font-size: 90px
+      line-height: 70px
+    +rmin(1600)
+      font-size: 140px
+      line-height: 105px
+    &_pink
+      display: block
+      color: #d233f0
+  &__title-date
+    font-size: 72px
+    display: block
+    font-weight: 900
+    color: $accent
+    +rmin(768)
+      font-size: 30px
+    +rmin(1366)
+      font-size: 50px
+    +rmin(1600)
+      font-size: 72px
+    &_year
+      display: block
+      color: #fff
+      font-size: 140px
+      line-height: 75px
+      +rmin(768)
+        font-size: 45px
+        line-height: 25px
+      +rmin(1366)
+        font-size: 90px
+        line-height: 50px
+      +rmin(1600)
+        font-size: 140px
+        line-height: 75px
+
+  &__video-btn
+    width: 270px
+    position: absolute
+    text-align: center
+    cursor: pointer
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 16%
+    +rmin(768)
+      bottom: 25%
+    +rmin(1600)
+      bottom: 16%
+    span
+      font-size: 30px
+      +casp-bold
+      color: #fff
+      display: block
+      padding-top: 100px
+      text-shadow: 0 0 16px rgba(0,0,0,.7)
+      +rmin(768)
+        font-size: 21px
+        padding-top: 55px
+      +rmin(1366)
+        font-size: 24px
+        padding-top: 75px
+      +rmin(1600)
+        font-size: 30px
+        padding-top: 100px
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        width: 95px
+        height: 95px
+        background-image: url(../img/video-btn.png)
+        +cover
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        +rmin(768)
+          width: 50px
+          height: 50px
+        +rmin(1366)
+          width: 70px
+          height: 70px
+        +rmin(1600)
+          width: 95px
+          height: 95px
+  &__btn-container
+    position: absolute
+    bottom: 35px
+    right: 3%
+  &__btn
+    min-width: 230px
+    display: inline-block
+    transition: .3s
+    text-transform: uppercase
+    +rmin(768)
+      min-width: 160px
+    +rmin(1366)
+      min-width: 190px
+    +rmin(1600)
+      min-width: 230px
+    &:not(last-child)
+      margin-right: 15px
+    &_register
+      background-color: $accent
+      border-color: $accent
+      &:hover
+        background-color: #fff
+        border-color: #000
+    &_calendar
+      border-color: $accent
+      color: $accent
+      background-color: rgba(#000, .2)
+      &:hover
+        background-color: $accent
+        color: #000
+.details
+  width: 100%
+  height: 100vh
+  background-color: #fff
+  position: relative
+  +rmin(768)
+    padding-top: 130px
+  +rmin(1600)
+    padding-top: 200px
+  &__controll-btn-container
+    position: absolute
+    bottom: 40px
+    left: 120px
+    z-index: 900
+    .controll__btn
+      background-color: #fff
+
+.carousel
+  height: calc(100% - 100px)
+  width: 70%
+  margin: 0 auto
+  position: relative
+  li
+    border: 20px solid #fff
+    box-shadow: 0 0 30px 10px rgba(0,0,0,.2)
+    width: 1130px
+    height: 730px
+    overflow: hidden
+    +rmin(768)
+      width: 400px
+      height: 260px
+      border: 8px solid #fff
+    +rmin(1024)
+      width: 600px
+      height: 380px
+      border: 8px solid #fff
+    +rmin(1366)
+      width: 700px
+      height: 440px
+      border: 12px solid #fff
+    +rmin(1600)
+      width: 1130px
+      height: 730px
+      border: 20px solid #fff
+
+.price-wrap
+  height: 100vh
+.price
+  height: 70.5%
+  border-width: 13px
+  border-style: solid
+  position: absolute
+  top: 23%
+  left: 0
+  border-image: linear-gradient(to bottom, #dd4bea 0%, #5f31f2 100%)
+  border-image-slice: 1
+  +rmin(768)
+    border-width: 9px
+    width: 70%
+  +rmin(1024)
+    border-width: 9px
+    width: 55%
+  +rmin(1366)
+    width: 60%
+  +rmin(1600)
+    border-width: 13px
+  &__content
+    width: 100%
+    height: 100%
+  &__title
+    font-size: 98px
+    +futura-bold
+    color: #d12eff
+    text-align: right
+    padding-right: 10%
+    height: 25%
+    +rmin(768)
+      font-size: 60px
+    +rmin(1366)
+      font-size: 65px
+    +rmin(1600)
+      font-size: 98px
+    &_period
+      font-size: 48px
+      display: block
+      line-height: 0
+      +rmin(768)
+        font-size: 30px
+      +rmin(1600)
+        font-size: 48px
+  &__list-wrap
+    font-size: 21px
+    +futura-demi
+    +rmin(768)
+      font-size: 12px
+    +rmin(1366)
+      font-size: 15px
+    +rmin(1600)
+      font-size: 21px
+    &_in
+      padding-right: 15px
+      text-align: right
+      ul li:nth-child(2n)
+        color: #5e30f2
+      ul li:nth-child(2n+1)
+        color: #dc4bea
+    &_out
+      position: absolute
+      top: 25%
+      left: 100%
+      width: 50%
+      padding-left: 28px
+      ul li:nth-child(2n)
+        color: #dc4bea
+      ul li:nth-child(2n+1)
+        color: #5e30f2
+  &__list-title
+    color: #000
+    +rmin(768)
+      padding-top: 10px
+    +rmin(1366)
+      padding-top: 15px
+
+
+.programm-wrap
+  height: 100%
+
+.programm
+  background-image: url(../img/days/programm-img-pic-1.jpg)
+  transition: background 1s
+  background-size: cover
+  background-position: 50% 50%
+  padding-top: 100px
+  height: 100vh
+  &__slider
+    +futura-demi
+    width: 60%
+    margin-left: 35%
+    margin-top: 110px
+    +rmin(768)
+      margin-top: 60px
+    +rmin(1600)
+      margin-top: 110px
+  &__slide.slick-active
+    .programm__title
+      transform: translateY(0)
+      opacity: 1
+      transition: transform 1s, opacity 1s
+    .programm__day
+      transform: translateY(0)
+      opacity: 1
+      transition: transform 1s, opacity 1s
+      transition-delay: .1s
+    .programm__descr
+      transform: translateY(0)
+      opacity: 1
+      transition: transform 1s, opacity 1s
+      transition-delay: .2s
+  &__title
+    font-size: 48px
+    margin-bottom: 10px
+    transform: translateY(70px)
+    opacity: 0
+    +rmin(768)
+      font-size: 24px
+    +rmin(1366)
+      font-size: 36px
+    +rmin(1600)
+      font-size: 48px
+  &__day
+    font-size: 30px
+    text-align: right
+    margin-bottom: 20px
+    transform: translateY(70px)
+    opacity: 0
+    +rmin(768)
+      font-size: 18px
+    +rmin(1366)
+      font-size: 24px
+    +rmin(1600)
+      font-size: 30px
+    span
+      display: inline-block
+      border-bottom: 2px solid #000
+  &__descr
+    width: 90%
+    transform: translateY(70px)
+    opacity: 0
+    +rmin(768)
+      font-size: 12px
+    +rmin(1366)
+      font-size: 18px
+    +rmin(1600)
+      font-size: 24px
+  &__btn-container
+    text-align: right
+    width: 60%
+    margin-left: 35%
+    +rmin(768)
+      margin-top: 20px
+    +rmin(1600)
+      margin-top: 60px
+
+.controll-btn,
+.controll__btn
+  border: 1px solid #000000
+  background: none
+  border-radius: 30px
+  transition: .3s
+  +rmin(768)
+    height: 40px
+    width: 80px
+  +rmin(1600)
+    width: 100px
+    height: 50px
+  &:hover
+    background-color: #000
+    .icon-arrow
+      fill: #fff
+  &.slick-hidden
+    display: none
+  &.slick-disabled
+    opacity: .5
+    &:hover
+      background-color: transparent
+      .icon-arrow
+        fill: #000
+  &_right
+    margin-left: 30px
+    .icon-arrow
+      transform: scale(-1)
+  .icon-arrow
+    fill: #000
+    font-size: 24px
+
+.checkin
+  padding-top: 200px
+  height: 100vh
+  width: 100%
+  position: relative
+  background-image: url(../img/registration.jpg)
+  +cover
+  +rmin(768)
+    padding-top: 14%
+  +rmin(1366)
+    padding-top: 160px
+  +rmin(1600)
+    padding-top: 200px
+
+  &__title
+    +futura-bold
+    font-size: 48px
+    color: #fff
+    text-transform: uppercase
+    text-align: center
+    +rmin(768)
+      font-size: 16px
+    +rmin(1366)
+      font-size: 36px
+    +rmin(1600)
+      font-size: 48px
+
+.checkin-partners
+    position: absolute
+    bottom: 0
+    height: 15%
+    width: 100%
+    background-color: #2e3192
+    text-align: center
+    +rmin(768)
+      height: 12%
+    +rmin(1600)
+      padding-top: 10px
+      height: 15%
+
+    &__item
+      width: 260px
+      text-transform: uppercase
+      display: inline-block
+      vertical-align: bottom
+      border-bottom: 2px solid transparent
+      padding-bottom: 10px
+      transition: .3s
+      +rmin(768)
+        width: 100px
+      +rmin(1600)
+        width: 260px
+      &:not(:last-child)
+        +rmin(768)
+          margin-right: 100px
+        +rmin(1600)
+          margin-right: 20px
+      &:hover
+        border-bottom: 2px solid $accent
+
+.checkin-social
+  text-align: center
+  margin: 25px 0
+  +rmin(768)
+    margin: 5px 0
+  +rmin(1366)
+    margin: 10px 0
+  +rmin(1600)
+    margin: 25px 0
+  &__link
+    display: inline-block
+    min-width: 40px
+    height: 40px
+    background-color: transparent
+    position: relative
+    &:not(:last-child)
+      margin-right: 50px
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-size: contain
+      background-repeat: no-repeat
+    &_fb:before
+      background-image: url(../img/fb.png)
+      width: 16px
+      height: 31px
+      +rmin(768)
+        height: 20px
+      +rmin(1366)
+        height: 31px
+    &_inst:before
+      background-image: url(../img/inst.png)
+      width: 32px
+      height: 32px
+      +rmin(768)
+        height: 20px
+      +rmin(1366)
+        height: 32px
+    &_yt:before
+      background-image: url(../img/yt.png)
+      width: 26px
+      height: 30px
+      +rmin(768)
+        height: 20px
+      +rmin(1366)
+        height: 30px
+
+.checkin-form
+  width: 500px
+  margin: 0 auto
+
+  &__input
+    +rmin(768)
+      margin-bottom: 10px
+    +rmin(1366)
+      margin-bottom: 15px
+    +rmin(1600)
+      margin-bottom: 20px
+    label
+      font-size: 18px
+      color: #fff
+      padding-left: 20px
+      display: block
+      margin-bottom: 5px
+      +rmin(768)
+        font-size: 12px
+        margin-bottom: 10px
+      +rmin(1366)
+        font-size: 14px
+        margin-bottom: 10px
+      +rmin(1600)
+        font-size: 18px
+        margin-bottom: 15px
+    input
+      font-size: 26px
+      color: #003366
+      background-color: rgba(255,255,255,.7)
+      width: 100%
+      +placeholder-color(#003366)
+      +rmin(768)
+        font-size: 14px
+        padding: 5px 20px
+      +rmin(1366)
+        font-size: 18px
+        padding: 10px 20px
+      +rmin(1600)
+        font-size: 26px
+      &.error
+        background-color: #ff6e6e
+        &::-webkit-input-placeholder
+          color: #cc3333
+        &::-moz-input-placeholder
+          color: #cc3333
+        &::-ms-input-placeholder
+          color: #cc3333
+  &__btn-container
+    text-align: center
+    margin-top: 50px
+    +rmin(768)
+      margin-top: 20px
+    +rmin(1600)
+      margin-top: 50px
+  &__btn
+    display: inline-block
+    transition: .3s
+    text-transform: uppercase
+    +rmin(768)
+      min-width: 160px
+    +rmin(1366)
+      min-width: 190px
+    +rmin(1600)
+      min-width: 230px
+    &:not(:last-child)
+      margin-right: 20px
+    &_reg
+      background-color: $accent
+      border-color: $accent
+      &:hover
+        background-color: #fff
+        border-color: #000
+    &_calendar
+      background-color: rgba(0,55,113,.6)
+      border-color: $accent
+      color: $accent
+      &:hover
+        background-color: $accent
+        color: #000

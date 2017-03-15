@@ -1,0 +1,1016 @@
+.academy-menu
+    color: #000
+    position: fixed
+    top: 100px
+    width: 100%
+    z-index: 900
+    text-align: center
+    transition: color .2s
+    background-color: #fff
+    box-sizing: border-box
+    +rmin(768)
+      top: 70px
+      height: 60px
+      padding-top: 20px
+    +rmin(1366)
+      top: 70px
+      height: 60px
+      padding-top: 15px
+    +rmin(1680)
+      top: 100px
+      height: 85px
+      padding-top: 25px
+
+
+    &__item
+      display: inline-block
+      +casp-bold
+      text-transform: uppercase
+      margin-right: 70px
+      border-bottom: 2px solid transparent
+      transition: border-color .2s
+      &.active
+        border-bottom-color: #000
+      +rmin(768)
+        margin-right: 9px
+        padding: 0 2px 7px
+        font-size: 11px
+      +rmin(1024)
+        margin-right: 30px
+        padding: 0 2px 10px
+        font-size: 12px
+      +rmin(1366)
+        font-size: 14px
+      +rmin(1600)
+        margin-right: 70px
+
+.license-wrap
+  margin-top: 100px
+  width: 100vw
+  overflow: hidden
+  background-color: #fff
+  background-size: cover
+  background-position: 50% 50%
+  height: calc(100vh - 185px)
+  margin-top: 185px
+  +resp
+     height: calc(100vh - 130px)
+     margin-top: 130px
+
+.license-cards-container
+  width: 90%
+  max-width: 1650px
+  height: 100%
+  margin: 0 auto
+  display: flex
+  justify-content: center
+
+
+.license-card-container
+  position: relative
+  width: 30px
+  &_open
+    width: 90%
+    transition: 1.2s
+
+.license-card
+  width: 100%
+  height: 60vh
+  position: relative
+  transform-origin: left 50%
+  transform-style: preserve-3d
+  backface-visibility: hidden
+  &_open
+    height: 70vh !important
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      height: 3px
+      border-radius: 50%
+      bottom: 0
+      +rmin(1024)
+        box-shadow: 0 50px 20px 5px rgba(0,0,0,.5)
+      +rmin(1600)
+        box-shadow: 0 65px 20px 5px rgba(0,0,0,.5)
+
+  +rmin(768)
+    height: 70vh
+  +rmin(1600)
+    height: 60vh
+
+
+.license-card-small
+  width: 100%
+  height: 100%
+  position: absolute
+  overflow: hidden
+  background-color: $accent
+  &__title
+    +futura-bold
+    font-weight: 800
+    line-height: 30px
+    color: #000
+    text-transform: uppercase
+    position: absolute
+    transform: rotateZ(-90deg)
+    width: 500px
+    bottom: 245px
+    left: -240px
+    +rmin(768)
+      font-size: 16px
+    +rmin(1024)
+      font-size: 24px
+    +rmin(1600)
+      font-size: 30px
+    span
+      color: #fff
+      +rmin(768)
+        font-size: 12px
+      +rmin(1024)
+        font-size: 18px
+
+.license-card-open
+    width: 100%
+    height: 100%
+    position: absolute
+    transition: .5s
+    opacity: 1
+    display: block
+    +clr
+
+    &__content-container
+      width: 70%
+      height: 100%
+      background-color: #000
+      float: left
+      position: relative
+      z-index: 100
+      box-shadow: 15px 0 15px -3px rgba(0, 0, 0, 0.5)
+    &__img-wrap
+      width: 30%
+      height: 100%
+      float: right
+      position: relative
+      z-index: 50
+      overflow: hidden
+    &__img
+      width: 100%
+      height: 100%
+      transition: .5s
+      position: absolute
+      z-index: 100
+      background-size: cover
+      background-image: url(../img/academy-img.jpg)
+
+    &__title
+      color: #363636
+      white-space: nowrap
+      text-transform: uppercase
+      position: absolute
+      top: 0
+      text-align: left
+      width: 100%
+      font-weight: 800
+      +futura-bold
+      +rmin(768)
+        font-size: 60px
+        line-height: 50px
+      +rmin(1366)
+        font-size: 105px
+        line-height: 75px
+      +rmin(1600)
+        font-size: 134px
+        line-height: 90px
+
+    &__descr
+      color: #fff
+      +casp-reg
+      margin: 20% auto 0
+      +rmin(768)
+        width: 90%
+        font-size: 14px
+      +rmin(1024)
+        font-size: 18px
+        width: 75%
+
+    &__btn-container
+      position: absolute
+      bottom: 10%
+      right: 10%
+
+    &__btn
+      min-width: 230px
+      display: inline-block
+      transition: .3s
+      text-transform: uppercase
+      +rmin(768)
+        min-width: 160px
+      +rmin(1366)
+        min-width: 190px
+      +rmin(1600)
+        min-width: 230px
+
+.course-skew
+  width: 40%
+  height: 100%
+  position: absolute
+  transform: skewX(-10deg)
+  +r(1365)
+    width: 45%
+  &_large
+    width: 50%
+
+  &_left
+    left: -5%
+    background-color: rgba(0,0,0,.7)
+  &_right
+    right: -5%
+    background-color: rgba(255,255,255,.9)
+
+.course
+  transform: skewX(10deg)
+  margin-left: 10%
+  box-sizing: border-box
+  padding-left: 10%
+  padding-top: 5%
+  height: 100%
+  +rmin(768)
+    padding-left: 5%
+    padding-top: 3%
+  +rmin(1366)
+    padding-top: 3%
+  +rmin(1680)
+    padding-left: 10%
+  &__video
+    width: 100%
+    height: 100%
+    +cover
+    background-image: url(../img/academy/teoretic-bg.jpg)
+    &_pract
+      background-image: url(../img/academy/practic-bg.jpg)
+      .course__video-btn
+        left: 75%
+  &__item
+    +rmin(768)
+      margin-top: 5px
+    +rmin(1024)
+      margin-top: 18px
+    +rmin(1680)
+      margin-top: 30px
+  &__title
+    +futura-demi
+    color: #fff
+    +rmin(768)
+      font-size: 18px
+    +rmin(1024)
+      font-size: 24px
+    +rmin(1680)
+      font-size: 36px
+  &__subtitle
+    +futura-demi
+    color: $accent
+    +rmin(768)
+      font-size: 12px
+    +rmin(1024)
+      font-size: 18px
+    +rmin(1680)
+      font-size: 24px
+  &__date
+    color: $accent
+    font-size: 36px
+    +rmin(768)
+      font-size: 18px
+    +rmin(1024)
+      font-size: 24px
+    +rmin(1680)
+      font-size: 36px
+    +casp-reg
+  &__btn-container
+    position: absolute
+    bottom: 35px
+    +rmin(768)
+      bottom: 10px
+    +rmin(1024)
+      bottom: 35px
+  &__btn
+    display: inline-block
+    +rmin(768)
+      min-width: 120px
+    +rmin(1024)
+      min-width: 190px
+    +rmin(1600)
+      min-width: 230px
+    &:not(last-child)
+      margin-right: 15px
+    &_register
+      background-color: $accent
+      border-color: $accent
+      &:hover
+        background-color: #fff
+        border-color: #000
+    &_calendar
+      border-color: $accent
+      color: $accent
+      background-color: rgba(#000, .2)
+      &:hover
+        background-color: $accent
+        color: #000
+  &__icon
+    position: relative
+    margin-bottom: 5px
+    +rmin(768)
+      width: 40px
+      height: 40px
+    +rmin(1366)
+      width: 50px
+      height: 50px
+    +rmin(1600)
+      width: 80px
+      height: 80px
+    &::before
+       content: ''
+       width: 100%
+       height: 100%
+       display: block
+       background-size: contain
+       background-repeat: no-repeat
+    &_count:before
+      background-image: url(../img/academy/teoretic-count.png)
+    &_price:before
+      background-image: url(../img/academy/teoretic-price.png)
+    &_students::before
+      background-image: url(../img/academy/practic-students.png)
+    &_sea::before
+      background-image: url(../img/academy/practic-sea.png)
+    &_wind::before
+      background-image: url(../img/academy/practic-wind.png)
+  &__video-btn
+    width: 270px
+    position: absolute
+    text-align: center
+    cursor: pointer
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    span
+      +casp-bold
+      color: #fff
+      display: block
+      text-shadow: 0 0 16px rgba(0,0,0,.7)
+      +rmin(768)
+        font-size: 16px
+        padding-top: 55px
+      +rmin(1366)
+        font-size: 24px
+        padding-top: 75px
+      +rmin(1600)
+        font-size: 30px
+        padding-top: 100px
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        width: 95px
+        height: 95px
+        background-image: url(../img/video-btn.png)
+        +cover
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        +rmin(768)
+          width: 50px
+          height: 50px
+        +rmin(1366)
+          width: 70px
+          height: 70px
+        +rmin(1600)
+          width: 95px
+          height: 95px
+
+.course-right
+  transform: skewX(10deg)
+  margin-right: 20%
+  box-sizing: border-box
+  padding-right: 10%
+  padding-left: 15%
+  padding-top: 15%
+  text-align: right
+  +rmin(768)
+    margin-right: 5%
+  +rmin(1024)
+    margin-right: 10%
+    padding-right: 15%
+    padding-top: 5%
+  +rmin(1680)
+    margin-right: 20%
+    padding-right: 10%
+    padding-top: 15%
+
+  &__item
+    display: inline-block
+    text-align: center
+    vertical-align: top
+    +futura-demi
+    +rmin(768)
+      width: 114px
+      font-size: 16px
+      margin-top: 5%
+    +rmin(1024)
+      width: 150px
+      font-size: 21px
+      margin-top: 20%
+    &:nth-child(2n+1)
+      +rmin(768)
+        margin-right: 5%
+      +rmin(1368)
+        margin-right: 15%
+      +rmin(1920)
+        margin-right: 25%
+  &__icon
+    height: 65px
+    width: 65px
+    position: relative
+    margin: 0 auto 5px
+    +rmin(1366)
+      width: 60px
+      height: 60px
+    +rmin(1600)
+      width: 70px
+      height: 70px
+    &::before
+       content: ''
+       width: 100%
+       height: 100%
+       display: block
+       background-size: contain
+       background-repeat: no-repeat
+    &_programm::before
+      background-image: url(../img/academy/teoretic-programm.png)
+    &_book::before
+      background-image: url(../img/academy/teoretic-book.png)
+    &_radio::before
+      background-image: url(../img/academy/teoretic-radio.png)
+    &_online::before
+      background-image: url(../img/academy/teoretic-online.png)
+
+.academy-content-wrap
+  height: calc(100vh - 185px)
+  margin-top: 185px
+  position: relative
+  +resp
+     height: calc(100vh - 130px)
+     margin-top: 130px
+
+.fmk-top
+  padding-top: 20px
+  box-sizing: border-box
+  background-color: $accent
+  display: flex
+  justify-content: space-around
+  +rmin(768)
+    height: 90px
+  +rmin(1024)
+    height: 120px
+  +rmin(1680)
+    height: 195px
+
+  &__item
+    text-align: center
+    width: 20%
+  &__icon
+    position: relative
+    margin: 0 auto
+    +rmin(768)
+      width: 35px
+      height: 35px
+    +rmin(1024)
+      width: 50px
+      height: 50px
+    +rmin(1680)
+      width: 85px
+      height: 85px
+    &::before
+       content: ''
+       width: 100%
+       height: 100%
+       display: block
+       background-size: contain
+       background-repeat: no-repeat
+    &_1:before
+      background-image: url(../img/academy/fmk-1.png)
+    &_2:before
+      background-image: url(../img/academy/fmk-2.png)
+      +rmin(768)
+        width: 35px
+        height: 35px
+      +rmin(1024)
+        width: 50px
+        height: 50px
+      +rmin(1680)
+        width: 70px
+        height: 70px
+
+    &_3::before
+      background-image: url(../img/academy/fmk-3.png)
+      +rmin(768)
+        width: 35px
+        height: 35px
+      +rmin(1024)
+        width: 50px
+        height: 50px
+      +rmin(1680)
+        width: 70px
+        height: 70px
+  &__text
+    +futura-demi
+    +rmin(768)
+      font-size: 12px
+    +rmin(1024)
+      font-size: 18px
+    +rmin(1680)
+      font-size: 24px
+
+.fmk-skew
+  width: 60%
+  height: 100%
+  position: absolute
+  left: -10%
+  transform: skewX(-16deg)
+  background-color: #161616
+  z-index: 20
+
+.fmk-content
+  position: relative
+  +rmin(768)
+    height: calc(100% - 90px)
+  +rmin(1024)
+    height: calc(100% - 120px)
+  +rmin(1680)
+    height: calc(100% - 195px)
+.fmk
+  transform: skewX(16deg)
+  margin-left: 10%
+  box-sizing: border-box
+  padding-left: 10%
+  padding-top: 7%
+  height: 100%
+
+  &__text
+    color: #fff
+    +futura-demi
+    +rmin(768)
+      font-size: 14px
+      margin-bottom: 35px
+    +rmin(1024)
+      font-size: 21px
+      margin-bottom: 60px
+    +rmin(1680)
+      font-size: 30px
+      margin-bottom: 80px
+    &_yellow
+      color: $accent
+  &__btn-container
+    text-align: center
+  &__btn
+    display: inline-block
+    margin: 0 auto
+    +rmin(768)
+      min-width: 120px
+    +rmin(1024)
+      min-width: 190px
+    +rmin(1600)
+      min-width: 230px
+
+.fmk-video
+  position: absolute
+  right: 0
+  width: 70%
+  height: 100%
+  z-index: 10
+  background-image: url(../img/academy/fmk-bg.jpg)
+  background-size: cover
+  background-position: 50% 0%
+
+.gallery
+  height: 100%
+  width: 100%
+  position: relative
+  &__img
+    height: 100%
+    width: 100%
+    div
+      height: 100%
+      width: 100%
+      +cover
+  &__arrow
+
+    height: 100%
+    background-color: rgba(#000, .8)
+    position: absolute
+    top: 0
+    cursor: pointer
+    opacity: 0
+    transition: .3s
+    +rmin(768)
+      width: 40px
+    +rmin(1366)
+      width: 50px
+    +rmin(1680)
+      width: 85px
+    &:hover
+      opacity: 1
+    &_left
+      left: 0
+      .gallery__arrow-icon
+        background-image: url(../img/academy/gallery-arrow-l.png)
+        left: 40%
+        background-size: contain
+        background-position: 50%
+        background-repeat: no-repeat
+    &_right
+      right: 0
+      .gallery__arrow-icon
+        background-image: url(../img/academy/gallery-arrow-r.png)
+        left: 60%
+        background-size: contain
+        background-position: 50%
+        background-repeat: no-repeat
+  &__arrow-icon
+    position: absolute
+    top: 50%
+    transform: translateX(-50%)
+    +rmin(768)
+      width: 25px
+      height: 60px
+    +rmin(1366)
+      width: 25px
+      height: 60px
+    +rmin(1680)
+      width: 35px
+      height: 69px
+  .slick-dots
+    position: absolute
+    bottom: 40px
+    left: 50%
+    transform: translateX(-50%)
+    background-color: rgba(#000, .8)
+    height: 24px
+    border-radius: 12px
+    padding: 0 7px
+    li
+      display: inline-block
+      vertical-align: top
+      line-height: 0
+      margin-top: 4px
+      &:not(:last-child)
+        margin-right: 12px
+      &.slick-active button
+        background-color: #b7990c
+    button
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      background-color: #bebebd
+      font-size: 0
+      transition: background-color .5s
+
+.instructors-title
+  text-align: center
+  +futura-bold
+  color: #585858
+  text-transform: uppercase
+  box-shadow: inset 0px 1px 4px -1px rgba(0,0,0,0.2)
+  +rmin(768)
+    font-size: 21px
+    line-height: 50px
+    height: 50px
+  +rmin(1366)
+    font-size: 21px
+    line-height: 50px
+    height: 50px
+  +rmin(1680)
+    font-size: 30px
+    line-height: 90px
+    height: 90px
+
+.instructors
+  +clr
+  +rmin(768)
+    height: calc(100% - 50px)
+  +rmin(1366)
+    height: calc(100% - 50px)
+  +rmin(1680)
+    height: calc(100% - 90px)
+
+.instructor
+  width: 25%
+  float: left
+  height: 100%
+  position: relative
+  padding-top: 8px
+  overflow: hidden
+  &:hover .instructor__more
+    left: 0
+
+  &__pic
+    width: 100%
+    height: 100%
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 50% 0
+
+  &__more
+    position: absolute
+    height: calc(100% + 8px)
+    width: 100%
+    box-sizing: border-box
+    border-top: 8px solid $accent
+    top: 0
+    transition: .5s
+    background-color: rgba(0,0,0,.7)
+    text-align: center
+    left: -100%
+  &__name
+    +futura-bold
+    color: #fff
+    text-transform: uppercase
+    margin-top: 50%
+    +rmin(768)
+      font-size: 21px
+    +rmin(1024)
+      font-size: 30px
+  &__btn
+    display: inline-block
+    margin-top: 50px
+    +rmin(768)
+      min-width: 120px
+    +rmin(1024)
+      min-width: 190px
+    +rmin(1600)
+      min-width: 230px
+
+.instructor-cards
+  position: absolute
+  left: 0
+  top: 0
+  background-color: #1d1d1d
+  width: 100%
+  height: 100%
+  opacity: 0
+  transition: .3s
+  z-index: -1
+  &.active
+    opacity: 1
+    z-index: 10
+
+.instructor-card
+  width: 100%
+  height: 100%
+  position: absolute
+  overflow: hidden
+  opacity: 0
+  transition: .3s
+  z-index: -1
+  +clr
+  &.active
+    opacity: 1
+    z-index: 10
+    .instructor-card
+      &__pic
+        opacity: 1
+        transition: opacity .7s, transform .7s
+        transition-delay: .2s
+        transform: translateY(0%)
+      &__title
+        opacity: 1
+        transition: opacity .7s, transform .7s
+        transition-delay: .2s
+        transform: translateY(0%)
+      &__subtitle
+        opacity: 1
+        transition: opacity .7s, transform .7s
+        transition-delay: .9s
+        transform: translateY(0%)
+      &__line
+        background-size: 100% 100%
+        transition: background-size .7s
+        transition-delay: .8s
+      &__descr
+        opacity: 1
+        transition: opacity .4s, transform .4s
+        transform: translateY(0%)
+        transition-delay: .7s
+        &:nth-last-child(2)
+          transition-delay: 1.1s
+        &:last-child
+          transition-delay: 1.5s
+      &__bg-title
+        opacity: 1
+        transition: opacity .5s
+  &__pic
+    float: left
+    width: 40%
+    height: 100%
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 50% 0
+    opacity: 0
+    transform: translateY(10%)
+  &__wrap
+    float: left
+    width: 60%
+    height: 100%
+    box-sizing: border-box
+    padding-left: 50px
+    padding-top: 25px
+    position: relative
+    overflow: hidden
+  &__content
+    position: relative
+    z-index: 20
+  &__bg-title
+    font-size: 200px
+    position: absolute
+    width: 25%
+    +futura-bold
+    transform: rotate(-90deg)
+    color: #232323
+    text-transform: uppercase
+    line-height: 190px
+    opacity: 0
+    +rmin(768)
+      font-size: 68px
+      top: 65%
+      line-height: 70px
+      left: 10px
+    +rmin(1366)
+      font-size: 140px
+      top: 55%
+      line-height: 130px
+      left: 70px
+    +rmin(1680)
+      font-size: 200px
+      top: 60%
+      line-height: 190px
+  &__title
+    +futura-bold
+    text-transform: uppercase
+    color: #fff
+    opacity: 0
+    transform: translateY(20%)
+    +rmin(768)
+      font-size: 21px
+    +rmin(1024)
+      font-size: 36px
+    +rmin(1680)
+      font-size: 48px
+  &__subtitle
+    color: #fff
+    margin-bottom: 120px
+    opacity: 0
+    transform: translateY(20%)
+    +casp-reg
+    +rmin(768)
+      margin-bottom: 15px
+      font-size: 14px
+    +rmin(1024)
+      margin-bottom: 30px
+      font-size: 24px
+    +rmin(1680)
+      margin-bottom: 120px
+  &__line
+    height: 2px
+    background-image: linear-gradient(#fff, #fff)
+    background-repeat: no-repeat
+    margin: 8px 0 10px
+    background-size: 0% 100%
+  &__descr
+    display: inline-block
+    width: 30%
+    text-align: center
+    opacity: 0
+    transform: translateY(20%)
+  &__descr-value
+    color: $accent
+    +futura-bold
+    +rmin(768)
+      font-size: 24px
+    +rmin(1024)
+      font-size: 48px
+    +rmin(1680)
+      font-size: 72px
+  &__descr-title
+    text-align: center
+    text-transform: uppercase
+    color: #fff
+    +casp-reg
+    +rmin(768)
+      font-size: 11px
+      margin-bottom: 15px
+    +rmin(1024)
+      font-size: 18px
+      margin-bottom: 30px
+    +rmin(1680)
+      font-size: 24px
+      margin-bottom: 60px
+  &__descr-icon
+    position: relative
+    margin: 0 auto
+    +rmin(768)
+      width: 70px
+      height: 70px
+    +rmin(1024)
+      width: 130px
+      height: 130px
+    &::before
+       content: ''
+       width: 100%
+       height: 100%
+       display: block
+       background-size: contain
+       background-repeat: no-repeat
+       opacity: .4
+    &_mile::before
+      background-image: url(../img/academy/mile.png)
+    &_hour::before
+      background-image: url(../img/academy/hour.png)
+    &_skipper::before
+      background-image: url(../img/academy/skipper.png)
+  &__btn-container
+    position: absolute
+    bottom: 30px
+    right: 15%
+
+.controll-btn_yellow
+  border: 1px solid $accent
+  position: relative
+  +rmin(768)
+    height: 40px
+    width: 80px
+  +rmin(1600)
+    width: 100px
+    height: 50px
+  &:hover
+    background-color: $accent
+    .icon-arrow
+      fill: #000
+  &.disabled
+    opacity: .1
+    border-color: #fff
+    .icon-arrow
+      fill: #fff
+    &:hover
+      background-color: transparent
+      .icon-arrow
+        fill: #fff
+  &_right
+    margin-left: 30px
+    .icon-arrow
+      transform: scale(-1)
+  .icon-arrow
+    fill: $accent
+    font-size: 24px
+
+.instructor-card__btn-name
+  text-transform: uppercase
+  +futura-bold
+  color: #fff
+  display: block
+  position: absolute
+  width: 200%
+  white-space: nowrap
+  +rmin(768)
+    font-size: 11px
+    top: -25px
+  +rmin(1366)
+    font-size: 14px
+    top: -35px
+  +rmin(1680)
+    font-size: 18px
+.controll-btn_right .instructor-card__btn-name
+  text-align: left
+  left: 0
+.controll-btn_left .instructor-card__btn-name
+  text-align: right
+  right: 0
+
+.academy-video
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: calc(100vh - 185px)
+  margin-top: 185px
+  display: none
+  +resp
+     height: calc(100vh - 130px)
+     margin-top: 130px
+  &__close.close
+    width: 70px
+    height: 70px
+    background-color: rgba(0, 0, 0, 0.7)
+    right: 0
+    top: 50%
+    transform: translateY(-50%)

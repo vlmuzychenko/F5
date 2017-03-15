@@ -1,0 +1,78 @@
+.popup
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	height: 100vh
+	padding-top: 100px
+	background: rgba(#000, .6)
+	overflow: auto
+	opacity: 0
+	visibility: hidden
+	z-index: 999
+	transition: opacity .3s ease, visibility .3s ease
+	&.is-open
+		opacity: 1
+		visibility: visible
+		.popup__in--right
+			transform: translate3d(0,0,0)
+	+resp
+		padding-top: 70px
+	&__in
+		position: relative
+		padding: 0 20px 20px
+	&__form
+		width: 650px
+		margin: 0 auto
+		padding: 0 15px
+	&__in--right
+		float: right
+		transform: translate3d(100%,0,0)
+		transition: transform .5s ease
+	&__in--center
+		height: 100%
+		+vertical
+		.popup__body
+			display: inline-block
+			vertical-align: middle
+			font-size: 18px
+			text-align: left
+	&__body
+		position: relative
+		width: 900px
+		max-width: 100%
+		background: $accent
+		padding: 35px 20px 40px 20px
+		.popup__close
+			top: 0
+			right: 0
+			.icon-close-bold
+				font-size: 30px
+				fill: #000
+	&__close
+		position: absolute
+		padding: 15px
+		background: none
+		.icon-close-bold
+			font-size: 32px
+			fill: $accent
+
+.popup_more
+	.popup__in
+		width: 480px
+		height: 100%
+		padding: 0
+		+resp
+			width: 330px
+	.popup__close
+		right: 100%
+		top: 0
+	.popup__body
+		height: 100%
+		overflow: auto
+		background: #fff
+		padding: 0
+		width: 100%
+
+

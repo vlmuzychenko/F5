@@ -1,0 +1,315 @@
+// variables
+$accent: #f6cb02
+
+// fonts
++font(Casper-Regular, Casper-Regular)
++font(Casper-Bold, Casper-Bold)
++font(FuturaPT-Demi, FuturaPT-Demi)
++font(FuturaPT-Bold, FuturaPT-Bold)
+
+$default-fonts: Arial, sans-serif
+
+=casp-reg
+   font-family: Casper-Regular, $default-fonts
+
+=casp-bold
+   font-family: Casper-Bold, $default-fonts
+
+=futura-demi
+   font-family: FuturaPT-Demi, $default-fonts
+
+=futura-bold
+   font-family: FuturaPT-Bold, $default-fonts
+
+// base transition
+=trs
+   transition: all .25s ease-in-out
+
+=trs-search
+   transition: all .3s ease-in-out
+
+// base styles
+
+html
+   height: 100%
+   width: 100%
+   overflow: hidden
+
+body
+   min-height: 100%
+   min-width: 768px
+   font-family: 'Casper-Regular', Arial, sans-serif
+   font-size: 18px
+   line-height: 1.2
+
+.out
+   overflow: hidden
+   min-height: 100vh
+   position: relative
+
+img
+   max-width: 100%
+   vertical-align: top
+
+a
+   color: inherit
+   text-decoration: none
+
+.title
+   font-size: 20px
+   color: rgba(#010101, .8)
+   text-transform: uppercase
+   +futura-bold
+
+.btn
+   padding: 0 15px
+   border: 1px solid #000
+   border-radius: 25px
+   text-align: center
+   outline: none
+   background-color: #fff
+   text-transform: uppercase
+   +casp-bold
+   +trs
+   +rmin(768)
+      height: 40px
+      line-height: 40px
+      font-size: 14px
+   +rmin(1366)
+      font-size: 16px
+   +rmin(1600)
+      height: 50px
+      line-height: 50px
+      font-size: 18px
+   &--bg
+      background-color: $accent
+      border-color: transparent
+      &:hover
+         background-color: lighten($accent, 10)
+   &--transp
+      background-color: #fff
+      border-color: #000
+      &:hover
+         background-color: $accent
+         border-color: transparent
+   &_yellow
+     background-color: $accent
+     border-color: $accent
+     &:hover
+       background-color: #fff
+       border-color: #000
+   &_dark
+     border-color: $accent
+     color: $accent
+     background-color: rgba(#000, .2)
+     &:hover
+       background-color: $accent
+       color: #000
+
+.btn--send
+   background: none
+   text-transform: uppercase
+   padding: 0 30px
+   &:hover
+      border-color: #ffffff
+      background: #fff
+
+.input
+   width: 100%
+   transition: color .3s, border .3s
+   white-space: nowrap
+   text-overflow: ellipsis
+   font-size: 16px
+   border-radius: 2px
+   border: 1px solid #6b6b6b
+   height: 40px
+   line-height: 38px
+   +casp-reg
+   +placeholder
+      font-size: 16px
+   +placeholder-color(#000)
+   &__text
+      display: inline-block
+      font-size: 18px
+      margin-bottom: 5px
+
+.checkbox
+   display: inline-block
+   cursor: pointer
+   input
+      display: none
+   input:checked + label .checkbox__check
+      background-color: #000
+   input:checked + label .checkbox__check::after
+      opacity: 1
+      transform: scale(.65)
+   label
+      display: block
+      cursor: pointer
+      z-index: 10
+      position: relative
+   &__check
+      position: relative
+      display: inline-block
+      vertical-align: middle
+      width: 20px
+      height: 20px
+      border: 1px solid #000
+      overflow: hidden
+      +trs-search
+      &::after
+         content: ''
+         position: absolute
+         top: -1px
+         left: -3px
+         opacity: 0
+         transform: scale(1.2)
+         +trs-search
+         +s('checked')
+   &__pic
+      position: relative
+      display: inline-block
+      vertical-align: middle
+      width: 20px
+      height: 27px
+      &::after
+         content: ''
+         position: absolute
+         top: -27px
+         left: -20px
+         transform: scale(.34)
+         display: block
+         +s('yacht')
+   &__name
+      display: inline-block
+      vertical-align: middle
+      margin: 0 10px 0 7px
+      text-align: left
+      font-size: 18px
+
+.checkbox_mod
+   $r: 1777
+   +r($r)
+      position: relative
+   .checkbox
+      &__name
+         +r($r)
+            margin-left: 0
+            padding-left: 30px
+      &__pic
+         +r($r)
+            display: none
+      &__check
+         +r($r)
+            position: absolute
+            top: 0
+            left: 0
+
+.img-check
+   position: relative
+   z-index: 1
+   width: 50%
+   background-color: #dbdbdb
+   +trs-search
+   &::before
+      display: block
+      content: ''
+      width: 100%
+      padding-top: 65%
+      +r(1124)
+         padding-top: 100%
+   &:hover &__pic
+      opacity: 1
+   &:hover &__name
+      color: #000
+   input
+      display: none
+   input:checked ~ .search__type-pic,
+   input:checked ~ .search__type-name
+      opacity: 1
+      color: #000
+   input:checked + label::before
+      background-color: #000
+   input:checked + label::after
+      transform: scale(1)
+      opacity: 1
+   label
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      cursor: pointer
+      z-index: 10
+      &::after,
+      &::before
+         content: ''
+         position: absolute
+         +trs-search
+      &::before
+         top: 20px
+         right: 20px
+         border: 2px solid #000
+         height: 40px
+         width: 40px
+         background-color: #dbdbdb
+      &::after
+         opacity: 0
+         top: 30px
+         right: 27px
+         transform: scale(.25)
+         +s('checked')
+   &__pic
+      +vcenter
+      top: 85px
+      +s('yacht')
+      opacity: .2
+      +trs-search
+   &__name
+      position: absolute
+      top: 128px
+      left: 20px
+      right: 20px
+      color: rgba(#000, .4)
+      text-align: center
+      +trs-search
+
+// hide
+input[type='checkbox'], select, input[type='radio']
+   display: none
+
+// custom scroll
+.ps-scrollbar-y
+   background-color: rgba(#000, .3)!important
+
+.js-select-field
+   .ps-scrollbar-y-rail
+      background: #e5e5e5!important
+      width: 10px!important
+      border-radius: 3px
+   .ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y, .ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y
+      width: 6px!important
+
+
+.js-yacht-scroll, .styled-scroll
+   .ps-scrollbar-x-rail,.ps-scrollbar-y-rail
+      z-index: 1
+   .ps-scrollbar-y-rail
+      //left: 0!important
+      right: 3px !important
+      width: 10px!important
+      background-color: rgba(#000, .1)!important
+      border-radius: 5px!important
+      .ps-scrollbar-y
+         left: 2px!important
+      &:hover .ps-scrollbar-y,
+      &:active .ps-scrollbar-y
+         width: auto!important
+
+//.js-scroll-filter
+//   &.ps-container
+      //overflow-x: hidden!important
+      //overflow-y: hidden!important
+
+.ui-datepicker
+   z-index: 999!important

@@ -1,0 +1,49 @@
+.popup.js-popup(data-popup="feedback")
+  .popup__in.popup__in--center.js-popup-in
+    .popup__body
+      button(type="button").popup__close.js-close-popup
+        +icon('icon-close-bold')
+      form.form.popup__form
+        .form-field
+          .form-control.is-filled
+            input(type="text" placeholder="Имя и фамилия")
+            label Имя и фамилия (заполненное)
+        .form-field
+          .form-control.has-error
+            input(type="text" placeholder="(0--) --- -- --")
+            label Телефон(ошибка)
+        .form-field
+          .form-control
+            input(type="mail" placeholder="name@gmail.com")
+            label Email
+        .form-field
+          .form-control
+            textarea(placeholder="При необходимости напишите комментарий...")
+        .form-btn
+          button.btn.btn--send(type="submit") Отправить заявку
+
+
+.popup.js-popup(data-popup="callme")
+  .popup__in.popup__in--center.js-popup-in
+    .popup__body
+      button(type="button").popup__close.js-close-popup
+        +icon('icon-close-bold')
+      form.form.popup__form
+        .form-field
+          .form-control.is-filled
+            input(type="text" placeholder="Имя и фамилия")
+            label Имя и фамилия (заполненное)
+        .form-field
+          .form-control.has-error
+            input(type="text" placeholder="(0--) --- -- --")
+            label Телефон(ошибка)
+        .form-field
+          .form-control
+            input(type="mail" placeholder="name@gmail.com")
+            label Email
+        .form-field
+          .form-control
+            textarea(placeholder="Пожалуйста, напишите свой комментарий...")
+        .form-btn
+          button.btn.btn--send(type="submit") Отправить заявку
+

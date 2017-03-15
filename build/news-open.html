@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>News Open</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=768, initial-scale=1">
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header"><a href="#" class="header__back-btn"><i class="header__back-icon"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></i></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <ul class="nav js-nav">
+          <li class="nav__item is-active"><a href="#" class="nav__link">Сервисы</a>
+            <!--a.nav__link(href='#') Services-->
+            <ul class="nav__sub-nav">
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Яхт-вики</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Аренда яхт</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Регаты</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Академия</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Календарь</a>
+            <!--a.nav__link(href='#') Calendar-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Новости</a>
+            <!--a.nav__link(href='#') News-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a>
+            <!--a.nav__link(href='#') Contacts-->
+          </li>
+          <li class="nav__line js-moving-line"></li>
+        </ul><a href="tel:0442544545" class="header__phone">044 254 45 45</a>
+        <ul class="header__lang lang">
+          <li><a href="#" class="is-active"><span>RU</span></a></li>
+          <li><a href="#"><span>EN</span></a></li>
+        </ul>
+      </header>
+      <!--END header-->
+      <!-- BEGIN yacht wiki archive open-->
+      <div class="news-extended">
+        <div class="news-extended__view">
+          <div class="news-extended-slider">
+            <div class="news-extended-slider__controll">
+              <div class="news-extended-slider__body js-news-extended-slider">
+                <div style="background-image: url(img/news/pic-1.jpg)"></div>
+                <div style="background-image: url(img/news/pic-2.jpg)"></div>
+                <div style="background-image: url(img/news/pic-3.jpg)"></div>
+                <div style="background-image: url(img/news/pic-2.jpg)"></div>
+                <div style="background-image: url(img/news/pic-4.jpg)"></div>
+                <div style="background-image: url(img/news/pic-1.jpg)"></div>
+                <div style="background-image: url(img/news/pic-2.jpg)"></div>
+              </div>
+            </div>
+            <div class="news-extended-slider__nav js-news-extended-slider-nav">
+              <div style="background-image: url(img/news/pic-1.jpg)"></div>
+              <div style="background-image: url(img/news/pic-4.jpg)"></div>
+              <div style="background-image: url(img/news/pic-3.jpg)"></div>
+              <div style="background-image: url(img/news/pic-4.jpg)"></div>
+              <div style="background-image: url(img/news/pic-2.jpg)"></div>
+              <div style="background-image: url(img/news/pic-3.jpg)"></div>
+              <div style="background-image: url(img/news/pic-3.jpg)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="news-extended__descr">
+          <div class="news-extended__news">новость</div>
+          <div class="news-extended__date">8 ноября 2016</div>
+          <h1 class="news-extended__title">Тест-драйв новой яхты Jeanneau Sun Odyssey 349</h1>
+          <p class="news-extended__text">Cat ipsum dolor sit amet, hola te quiero. Destroy the blinds kitty scratches couch bad kitty mew sleep in the bathroom sink. Chase laser under the bed. Eat grass, throw it back up immediately regret falling into bathtub. Lick the plastic bag
+            sniff other cat's butt and hang jaw half open thereafter but present belly, scratch hand when stroked hide when guests come over, for my left donut is missing, as is my right yet lick yarn hanging out of own butt. Leave hair everywhere. Meow
+            to be let in find empty spot in cupboard and sleep all day, cats go for world domination for give attitude, eat and than sleep on your face. Intrigued by the shower always hungry. Ignore the squirrels, you'll never catch them anyway.</p>
+          <button
+            type="button" class="news-extended__actions-btn news-extended__actions-btn_video btn"></button>
+            <p class="news-extended__social-title">Следите за нами в соц сетях</p>
+            <div class="news-extended__social">
+              <a href="#" class="btn news-extended__social-btn news-extended__social-btn_yt"></a>
+              <a href="#" class="btn news-extended__social-btn news-extended__social-btn_fb"></a>
+              <a href="#" class="btn news-extended__social-btn news-extended__social-btn_inst"></a>
+            </div>
+            <div class="news-extended__btn-container"><a href="#" class="btn news-extended__btn news-extended__btn_main">Записаться</a><a href="#" class="btn news-extended__btn news-extended__btn_calendar">Календарь</a></div>
+        </div>
+      </div>
+    </div>
+    <!--END out-->
+    <div data-popup="feedback" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="При необходимости напишите комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div data-popup="callme" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="Пожалуйста, напишите свой комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--LOAD scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKzXeKm-qJO4uqPR39L4lZf109YLmOFo"></script>
+  </body>
+
+</html>

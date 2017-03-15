@@ -1,0 +1,231 @@
+.popup-wrap
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  z-index: 999
+  background-color: rgba(0,0,0,.5)
+  display: none
+  opacity: 0
+
+.popup-contacts
+  position: absolute
+  top: 50%
+  transform: translate(0%, -50%)
+  left: 50%
+  max-height: 85%
+  box-sizing: border-box
+  background-color: $accent
+  z-index: 200
+  +rmin(800)
+    width: 60%
+    padding: 20px 50px
+  +rmin(1024)
+    width: 45%
+    padding: 20px 90px
+  +rmin(1600)
+    padding: 35px 110px 50px
+
+  &.active
+    transform: translate(-50%, -50%)
+  &.no-active
+    transform: translate(0%, -50%)
+
+.input-container
+  +rmin(800)
+    margin-bottom: 5px
+  +rmin(1024)
+    margin-bottom: 10px
+  +rmin(1600)
+    margin-bottom: 20px
+
+  label
+    font-size: 18px
+    padding-left: 20px
+    +casp-reg
+    +rmin(800)
+      font-size: 13px
+    +rmin(1024)
+      font-size: 16px
+    +rmin(1600)
+      font-size: 18px
+
+.input-contacts
+  background-color: #fae067
+  font-size: 36px
+  padding: 12px 20px
+  box-sizing: border-box
+  +casp-reg
+  width: 100%
+  border: 3px solid transparent
+  -webkit-appearance: none
+  +rmin(800)
+    font-size: 17px
+    padding: 9px 12px
+  +rmin(1024)
+    font-size: 21px
+    padding: 10px 20px
+  +rmin(1600)
+    font-size: 36px
+    padding: 12px 20px
+
+  &::-webkit-input-placeholder
+    color: #999900
+  &::-moz-input-placeholder
+    color: #999900
+  &::-ms-input-placeholder
+    color: #999900
+
+  &.error
+    background-color: #ff6e6e
+    &::-webkit-input-placeholder
+      color: #cc3333
+    &::-moz-input-placeholder
+      color: #cc3333
+    &::-ms-input-placeholder
+      color: #cc3333
+
+  &_textarea
+    resize: none
+    font-size: 24px
+    +rmin(800)
+      font-size: 14px
+    +rmin(1024)
+      font-size: 18px
+    +rmin(1600)
+      font-size: 24px
+
+.btn_popup
+  min-width: 230px
+  border-color: #000
+  color: #000
+  display: block
+  margin: 0 auto
+  text-transform: uppercase
+  transition: .3s
+  background-color: transparent
+  +rmin(800)
+    margin-top: 15px
+  +rmin(1024)
+    margin-top: 20px
+  +rmin(1600)
+    margin-top: 40px
+
+  &:hover
+    background-color: #fff
+    border-color: #fff
+
+.popup-substrate
+  background-color: #000
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-100%, -50%)
+  opacity: 0
+  z-index: 100
+  text-align: center
+  +rmin(800)
+    width: 70%
+    padding: 30px 40px
+  +rmin(1024)
+    width: 52%
+    padding: 45px 100px
+
+  &.active
+    transform: translate(-50%, -50%)
+  &.no-active
+    transform: translate(-100%, -50%)
+
+  &__content
+    opacity: 0
+    &.show
+      opacity: 1
+
+  &__logo
+    width: 55%
+    max-width: 400px
+    +rmin(800)
+      width: 25%
+    +rmin(1024)
+      width: 40%
+    +rmin(1700)
+      width: 55%
+
+  &__text
+    +casp-reg
+    font-size: 36px
+    color: $accent
+    margin-top: 35px
+    +rmin(800)
+      font-size: 24px
+      margin-top: 10px
+    +rmin(1600)
+      font-size: 36px
+      margin-top: 35px
+
+  &__icon
+    max-width: 190px
+    margin-top: 50px
+    margin-bottom: 25px
+    +rmin(800)
+      max-width: 160px
+      margin-top: 30px
+    +rmin(1600)
+      max-width: 190px
+      margin-top: 50px
+
+  &__timer
+    color: #262626
+    font-size: 36px
+    +casp-reg
+    +rmin(800)
+      font-size: 21px
+    +rmin(1024)
+      font-size: 24px
+    +rmin(1600)
+      font-size: 36px
+
+#timer
+  display: inline-block
+  width: 25px
+
+.close
+    width: 30px
+    height: 30px
+    cursor: pointer
+    position: absolute
+    right: 15px
+    top: 15px
+    z-index: 300
+    background-color: transparent
+    &:after,
+    &:before
+        content: ''
+        width: 28px
+        height: 7px
+        left: 50%
+        top: 50%
+        position: absolute
+    &:after
+        transform: translate(-50%, -50%) rotate(-45deg)
+    &:before
+        transform: translate(-50%, -50%) rotate(45deg)
+
+    &_black
+        &:after,
+        &:before
+            background-color: #000
+    &_white
+        &:after,
+        &:before
+            background-color: #fff
+    &_yellow
+        &:after,
+        &:before
+            background-color: $accent
+
+    &_card
+        background-image: url(../img/close.png)
+        opacity: 0
+        display: none

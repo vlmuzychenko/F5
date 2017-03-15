@@ -1,0 +1,298 @@
+.card
+   +clr
+   $tab: 1124
+   &__btn
+      display: none
+      position: absolute
+      left: 100%
+      top: 80px
+      width: 60px
+      height: 40px
+      //margin-left: 1px
+      box-shadow: 2px 0px 4px  rgba(#333, .4)
+      background: #fff
+      border-radius: 0
+      font-size: 20px
+
+      z-index: 4
+      +r($tab)
+         display: block
+      svg
+         fill: #333
+         transform: translate3d(0,0,0) rotateY(-180deg)
+         transition: transform .4s ease
+   &__more
+      float: left
+      width: 33.33333%
+      height: calc(100vh - 100px)
+      margin-top: 100px
+      position: relative
+      +resp
+         height: calc(100vh - 70px)
+         margin-top: 70px
+      +r($tab)
+         position: fixed
+         height: auto
+         width: 350px
+         top: 100px
+         bottom: 0
+         left: 0
+         background: #fff
+         //border-right: 1px solid #333
+         box-shadow: 2px 0px 4px  rgba(#333, .4)
+
+         transform: translate3d(-100%, 0, 0)
+         transition: transform .4s ease
+         z-index: 6
+         &.is-active
+            transform: translate3d(0, 0, 0)
+            .card__btn
+               svg
+                  transform: translate3d(0,0,0) rotate(0)
+   &__info
+      height: 100%
+      position: relative
+      padding: 55px 75px 80px 75px
+      +r(1400)
+         padding-right: 30px
+      +r($tab)
+         padding-left: 30px
+         padding: 20px 30px 20px 20px
+
+   &__label
+      z-index: -1
+      position: fixed
+      left: -311px
+      top: 400px
+      color: rgba(#010101, .1)
+      font-size: 90px
+      white-space: nowrap
+      text-transform: uppercase
+      line-height: 1
+      user-select: none
+      cursor: default
+      +rotate(-90)
+      +futura-bold
+      +r($tab)
+         display: none
+   &__text
+      margin-bottom: 40px
+   &__title
+      margin-bottom: 20px
+      font-size: 30px
+      +futura-bold
+      color: rgba(#010101, .8)
+      text-transform: uppercase
+   &__price
+      font-size: 24px
+      color: #010101
+      +futura-demi
+   &__info-col
+      margin: 0 -30px
+      font-size: 0
+      text-align: center
+      +r($tab)
+         margin: 0 -5px
+   &__info-inner
+      margin-left: 50px
+      +r(1400)
+         margin-left: 0
+   &__info-item
+      display: inline-block
+      vertical-align: top
+      width: 33.33333%
+      margin-bottom: 45px
+      padding: 0 5px
+      color: #6c6c6c
+      text-align: center
+      +r(1400)
+         width: 50%
+      &:nth-child(7),
+      &:nth-child(8)
+         width: 40%
+         +r(1600)
+            width: 50%
+   &__info-pic
+      position: relative
+      margin: 0 auto 10px
+      height: 85px
+      &::before
+         content: ''
+         +vcenter
+      &--type::before
+         +s('yacht')
+      &--length::before
+         +s('ruler')
+      &--speed::before
+         +s('speed')
+      &--cabin:before
+         +s('cabin')
+      &--sleeps:before
+         +s('sleeps')
+      &--shower:before
+         +s('shower')
+      &--location:before
+         +s('location')
+      &--engine:before
+         +s('engine')
+   &__info-title
+      font-size: 24px
+      +futura-demi
+      word-break: break-all
+      +r(1400)
+         font-size: 20px
+   &__info-descr
+      margin-top: 5px
+      font-size: 18px
+   &__info-link
+      color: #d9b300
+      font-size: 18px
+      text-decoration: underline
+      &:hover
+         text-decoration: none
+   &__feature
+      margin-bottom: 25px
+      &:last-child
+         margin-bottom: 0
+   &__feature-title
+      margin-bottom: 7px
+      color: #585858
+      +futura-demi
+   &__feature-text
+      margin-bottom: 3px
+      color: #6c6c6c
+   &__actions
+      margin: 30px 0 70px
+      font-size: 0
+      +r($tab)
+         margin-bottom: 50px
+   &__actions-btn
+      display: inline-block
+      vertical-align: top
+      position: relative
+      margin-right: 30px
+      margin-bottom: 20px
+      min-width: 100px
+      +tr(background .3s)
+      &:hover
+         background: $accent
+      &:last-child
+         margin-right: 0
+      &::before
+         content: ''
+         +vcenter
+      &--view::before
+         +s('360_view')
+      &--video::before
+         +s('video')
+      &--photo::before
+         +s('gallery')
+      +r(1400)
+         margin-right: 9px
+
+   &__order
+      font-size: 0
+   &__order-btn
+      display: inline-block
+      vertical-align: top
+      min-width: 230px
+      +r(1400)
+         display: table
+      & + &
+         margin-left: 29px
+         +r(1400)
+            margin-left: 0
+            margin-top: 20px
+
+   &__rent
+      position: relative
+      margin-top: 85px
+      &::before
+         content: ''
+         position: absolute
+         width: 120%
+         left: -40px
+         top: -30px
+         border-top: 1px solid rgba(#000, .15)
+         +r(1400)
+            left: 0
+            width: 100%
+   &__rent-row
+      +clr
+   &__rent-table
+      color: #6c6c6c
+      +clr
+   &__rent-col
+      float: left
+      &:nth-child(1)
+         width: 60%
+      &:nth-child(2)
+         width: 40%
+         text-align: center
+   &__rent-title
+      margin-bottom: 10px
+      color: #585858
+      +futura-demi
+   &__rent-text
+      margin-bottom: 5px
+      &:last-child
+         margin-bottom: 0
+   &__view
+      position: relative
+      float: left
+      width: 66.66667%
+      height: calc(100vh - 100px)
+      margin-top: 100px
+      z-index: 1
+      +resp
+         height: calc(100vh - 70px)
+         margin-top: 70px
+      +r($tab)
+         width: 100%
+
+.card-slider
+   &__wrapper
+      position: relative
+      z-index: 3
+   &__pic
+      position: absolute
+      z-index: 4
+      width: 100%
+      height: calc(100vh - 98px)
+      pointer-events: none
+      background: no-repeat center center
+      background-size: cover
+   &__nav
+      position: absolute
+      bottom: 30px
+      //left: 50%
+      left: 0
+      right: 0
+      text-align: center
+      //transform: translateX(-50%)
+      height: 100px
+      z-index: 5
+      .slick-slide
+         float: none
+         display: inline-block
+         vertical-align: top
+   &__nav-pic
+      position: relative
+      width: 100px !important
+      height: 100px
+      background: no-repeat center center
+      background-size: cover
+      cursor: pointer
+      z-index: 6
+      & + &
+         margin-left: 10px
+      &::after
+         content: ''
+         +coverdiv
+         background-color: rgba(#c5c5c5, .5)
+         +tr(opacity .3s)
+      &:hover::after
+         opacity: 0
+      &.slick-current::after
+         display: none
+         content: none

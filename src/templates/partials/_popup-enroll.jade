@@ -1,0 +1,32 @@
+.popup-wrap
+  .popup-contacts
+    .input-container
+      input.input-contacts.error(type="text" id="name" placeholder="ФИО" require)
+      label(for="name") ФИО
+
+    .input-container
+      input.input-contacts(type="text" id="phone" placeholder="(0--) --- -- --" require)
+      label(for="phone") Телефон
+
+    .input-container
+      input.input-contacts(type="text" id="email" placeholder="name@mail.com" require)
+      label(for="email") Email
+
+    .input-container
+      textarea.input-contacts.input-contacts_textarea(rows="6" cols="" placeholder="При необходимости напишите комментарий...")
+
+    button(type="submit").btn.btn_popup.js-send Отправить
+    button(type="button").close.close_black.js-popup-close
+
+  .popup-substrate
+    .popup-substrate__content
+      img(src="img/popup-logo.png").popup-substrate__logo
+      .popup-substrate__text
+        p Спасибо!
+        p Мы обработаем заявку и свяжемся с Вами в ближайшее время. 
+
+      img(src="img/popup-icon.png").popup-substrate__icon
+      .popup-substrate__timer окно закроется через
+          span(id="timer") 5
+          | сек
+      button(type="button").close.close_white.js-popup-substrate-close

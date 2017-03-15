@@ -1,0 +1,145 @@
+---
+title: search-page_quick
+---
+extends layouts/_layout
+block content
+   // BEGIN search
+   .search
+      form(action='#')
+         .search__inner
+            .search__regions
+               .search__region
+                  input(type='checkbox' id='west_africa' name='west_africa')
+                  label(for='west_africa')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/south_america.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Западная Африка
+               .search__region
+                  input(type='checkbox' id='middle_east' name='middle_east')
+                  label(for='middle_east')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/middle_east.png')
+                     .search__region-img(style='background-image: url(img/content/middle_east.jpg)')
+                  .search__region-name Средний восток
+               .search__region
+                  input(type='checkbox' id='south_america' name='south_america')
+                  label(for='south_america')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/south_america.png')
+                     .search__region-img(style='background-image: url(img/content/south_america.jpg)')
+                  .search__region-name Южная Америка
+               .search__region
+                  input(type='checkbox' id='central_america' name='central_america')
+                  label(for='central_america')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/central_america.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Центральная
+                     br
+                     | Америка
+               .search__region
+                  input(type='checkbox' id='north_america' name='north_america')
+                  label(for='north_america')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/north_america.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Северная Америка
+               .search__region
+                  input(type='checkbox' id='northern_europe' name='northern_europe')
+                  label(for='northern_europe')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/northern_europe.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Северная Европа
+               .search__region
+                  input(type='checkbox' id='caribs' name='caribs')
+                  label(for='caribs')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/caribs.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Карибы
+               .search__region
+                  input(type='checkbox' id='australia_and_oceania' name='australia_and_oceania')
+                  label(for='australia_and_oceania')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/australia_and_oceania.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Австралия и
+                     br
+                     | Океания
+               .search__region
+                  input(type='checkbox' id='southeas_asia' name='southeas_asia')
+                  label(for='southeas_asia')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/southeas_asia.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Юго-Восточная
+                     br
+                     | Азия
+               .search__region
+                  input(type='checkbox' id='atlantic_europe' name='atlantic_europe')
+                  label(for='atlantic_europe')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/atlantic_europe.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Атлантическая
+                     br
+                     | Европа
+               .search__region
+                  input(type='checkbox' id='indian_ocean' name='indian_ocean')
+                  label(for='indian_ocean')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/indian_ocean.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Индийский Океан
+               .search__region
+                  input(type='checkbox' id='mediterranean' name='mediterranean')
+                  label(for='mediterranean')
+                  .search__region-images
+                     img.search__region-pic(src='img/content/mediterranean.png')
+                     .search__region-img(style='background-image: url(img/content/west_africa.jpg)')
+                  .search__region-name Средиземно&shy;морье
+
+            .search__row
+               .search__yacht-type
+                  .img-check
+                     input(type='checkbox' id='motor_yachts' name='motor_yachts')
+                     label(for='motor_yachts')
+                     .img-check__pic
+                     .img-check__name Моторные яхты
+                  .img-check
+                     input(type='checkbox' id='sailboats' name='sailboats')
+                     label(for='sailboats')
+                     .img-check__pic
+                     .img-check__name Парусные яхты
+                  .img-check
+                     input(type='checkbox' id='catamarans' name='catamarans')
+                     label(for='catamarans')
+                     .img-check__pic
+                     .img-check__name Парусные катамараны
+                  .img-check
+                     input(type='checkbox' id='mega_yachts' name='mega_yachts')
+                     label(for='mega_yachts')
+                     .img-check__pic
+                     .img-check__name Мега яхты
+
+               .search__rent
+                  .search__rent-date
+                     .search__rent-title Даты Оренды
+                     .search__rent-row
+                        .search__rent-field
+                           label.input__text(for='sailing') Отплытие
+                           input.input.js-pick-date(id='sailing' type='text' name='' required)
+                        .search__rent-field
+                           label.input__text(for='arrival') Прибытие
+                           input.input.js-pick-date(id='arrival' type='text' name='' required)
+                  a.search__rent-help.js-open-popup(href='#' data-open="callme") Не знаете что подобрать?
+
+               .search__find
+                  .search__find-title.title Найти подходящие яхты
+                  .search__find-actions
+                     button.search__find-btn.btn(type='submit') Найти
+                     a.search__find-btn.search__find-btn--bg.btn(href='#') Развернутый поиск
+
+   //END search

@@ -1,0 +1,233 @@
+.news-main
+  margin-top: 100px
+  width: 100%
+  height: calc(100vh - 100px)
+  margin-top: 100px
+  box-sizing: border-box
+  padding-left: 10px
+  padding-right: 10px
+  padding-bottom: 20px
+  +resp
+    height: calc(100vh - 70px)
+    margin-top: 70px
+
+  &_archive
+    .wiki-top__btn
+      background-color: $accent
+      border-color: $accent
+      &:hover
+        background-color: #fff
+        border-color: #000
+        color: #000
+    .wiki__btn
+      background-color: rgba(0,0,0,.8)
+      border-color: rgba(0,0,0,.8)
+      color: #fff
+      &:hover
+        background-color: $accent
+        border-color: $accent
+        color: #000
+
+.news-top
+  height: 130px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +rmin(768)
+    height: 60px
+  +rmin(1366)
+    height: 95px
+  +rmin(1600)
+    height: 130px
+  &__title
+    font-size: 30px
+    color: #585858
+    text-transform: uppercase
+    +futura-bold
+    +rmin(768)
+      font-size: 18px
+    +rmin(1366)
+      font-size: 30px
+  &__btn
+    margin-right: 7%
+    transition: .3s
+    +rmin(768)
+      min-width: 120px
+    +rmin(1366)
+      min-width: 190px
+    +rmin(1600)
+      min-width: 230px
+    &:hover
+      background-color: #000
+      color: #fff
+
+    &_archive
+      color: #000
+      background-color: #fff
+      border-color: #000
+
+  .controll-btn_right
+    margin-left: 10px
+  &__checkbox
+    display: inline-block
+    padding-left: 20px
+
+.checkbox__check_yellow
+  border-color: #f6cb02
+  left: -20px
+  position: absolute
+
+.checkbox__check_red
+  border-color: #ee5004
+  left: -20px
+  position: absolute
+
+.checkbox input:checked + label .checkbox__check_yellow
+  background-color: #f6cb02
+
+.checkbox input:checked + label .checkbox__check_red
+  background-color: #ee5004
+
+.checkbox-wrap
+  +rmin(768)
+    margin-left: 0
+  +rmin(1366)
+    margin-left: 18%
+
+.news-content-wrap
+  +rmin(768)
+    height: calc(100% - 60px)
+  +rmin(1366)
+    height: calc(100% - 95px)
+  +rmin(1600)
+    height: calc(100% - 130px)
+
+.news-content
+  height: 100%
+  display: flex
+  align-content: space-between
+  flex-flow: row wrap
+
+.news
+  .news-post__text:before
+    content: 'новость'
+    background-color: $accent
+    color: #000
+
+.event
+  .news-post__text:before
+    content: 'событие'
+    background-color: #ee5004
+    color: #fff
+
+
+.news-post
+  box-sizing: border-box
+  position: relative
+  overflow: hidden
+  +rmin(768)
+    width: calc(25% - 10px)
+    height: calc(50% - 5px)
+    margin-right: 10px
+  +rmin(1366)
+    width: calc(25% - 20px)
+    height: calc(50% - 10px)
+    margin-right: 20px
+
+  &:hover
+    .news-post__desc
+      bottom: 0
+      background-color: rgba(0, 0, 0, .6)
+
+    .news-post__btn
+      opacity: 1
+
+  &__desc
+    position: absolute
+    padding-top: 10px
+    bottom: -30%
+    width: 100%
+    height: 100%
+    background-color: transparent
+    transition: bottom .3s ease-out, background-color .3s ease-out
+    +rmin(1600)
+      padding-top: 60px
+
+  &__text
+    +rmin(768)
+      padding-left: 10px
+    +rmin(1366)
+      padding-left: 40px
+    &:before
+      display: inline-block
+      margin-bottom: 10px
+      +futura-demi
+      +rmin(768)
+        margin-bottom: 5px
+        font-size: 14px
+        padding: 1px 5px 3px
+      +rmin(1366)
+        font-size: 18px
+        margin-bottom: 10px
+      +rmin(1600)
+        margin-bottom: 15px
+        padding: 2px 5px 5px
+
+  &__img
+    +cover
+    width: 100%
+    height: 100%
+  &__title
+    color: #fff
+    +futura-demi
+    span
+      display: block
+    +rmin(768)
+      font-size: 14px
+      margin-bottom: 5px
+      width: 90%
+    +rmin(1366)
+      font-size: 24px
+      margin-bottom: 10px
+      width: 75%
+    +rmin(1600)
+      margin-bottom: 15px
+
+  &__date
+    display: block
+    color: #fff
+    +casp-reg
+    +rmin(768)
+      font-size: 12px
+    +rmin(1366)
+      font-size: 16px
+
+  &__btn
+    background-color: rgba(0, 0, 0, .7)
+    color: #fff
+    border-color: $accent
+    margin: 0 auto
+    display: block
+    opacity: 0
+    +rmin(768)
+      min-width: 120px
+      margin-top: 10px
+    +rmin(1366)
+      min-width: 190px
+      margin-top: 20px
+    +rmin(1600)
+      margin-top: 60px
+      min-width: 230px
+
+    &:hover
+      color: #000
+      background-color: #fff
+      border-color: #000
+
+    &_archive
+      border-color: rgba(0, 0, 0, .7)
+
+      &:hover
+        background-color: $accent
+        color: #000
+        border-color: $accent

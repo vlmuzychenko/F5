@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Index Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=768, initial-scale=1">
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header"><a href="#" class="header__back-btn"><i class="header__back-icon"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></i></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <ul class="nav js-nav">
+          <li class="nav__item is-active"><a href="#" class="nav__link">Сервисы</a>
+            <!--a.nav__link(href='#') Services-->
+            <ul class="nav__sub-nav">
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Яхт-вики</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Аренда яхт</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Регаты</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Академия</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Календарь</a>
+            <!--a.nav__link(href='#') Calendar-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Новости</a>
+            <!--a.nav__link(href='#') News-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a>
+            <!--a.nav__link(href='#') Contacts-->
+          </li>
+          <li class="nav__line js-moving-line"></li>
+        </ul><a href="tel:0442544545" class="header__phone">044 254 45 45</a>
+        <ul class="header__lang lang">
+          <li><a href="#" class="is-active"><span>RU</span></a></li>
+          <li><a href="#"><span>EN</span></a></li>
+        </ul>
+      </header>
+      <!--END header-->
+      <header style="position: relative; z-index: 98" class="header"><a href="#" class="header__back-btn"><i class="header__back-icon"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></i></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <ul class="nav js-nav">
+          <li class="nav__item is-active"><a href="#" class="nav__link">Services</a>
+            <ul class="nav__sub-nav">
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Yacht week</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Yacht charters</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Regattas</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Academy</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Calendar</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">News</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+          <li class="nav__line js-moving-line"></li>
+        </ul><a href="tel:0442544545" class="header__phone">044 254 45 45</a>
+        <ul class="header__lang lang">
+          <li><a href="#" class="is-active"><span>RU</span></a></li>
+          <li><a href="#"><span>EN</span></a></li>
+        </ul>
+      </header>
+      <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <h1>PAGES:</h1><a href="yacht_card.html" style="margin-bottom: 10px;">1) yacht card</a><a href="search-page_quick.html" style="margin-bottom: 10px;">2) search-page_quick</a><a href="search-page_advanced.html" style="margin-bottom: 10px;">3) search-page_advanced</a>
+        <a
+          href="calendar.html" style="margin-bottom: 10px;">4) calendar</a><a href="yacht-wiki.html" style="margin-bottom: 10px;">5) yacht-wiki</a><a href="contacts.html" style="margin-bottom: 10px;">6) contacts</a><a href="main.html" style="margin-bottom: 10px;">7) main</a><a href="yacht-wiki-main.html"
+            style="margin-bottom: 10px;">8) yacht-wiki-main</a><a href="yacht-wiki-archive.html" style="margin-bottom: 10px;">9) yacht-wiki-archive</a><a href="yacht-wiki-archive-open.html" style="margin-bottom: 10px;">10) yacht-wiki-archive-open</a>
+          <a
+            href="academy.html" style="margin-bottom: 10px;">11) academy</a><a href="news.html" style="margin-bottom: 10px;">12) news</a><a href="news-archive.html" style="margin-bottom: 10px;">13) news archive</a><a href="news-open.html" style="margin-bottom: 10px;">14) news open</a></div>
+    </div>
+    <!--END out-->
+    <div data-popup="feedback" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="При необходимости напишите комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div data-popup="callme" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="Пожалуйста, напишите свой комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--LOAD scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKzXeKm-qJO4uqPR39L4lZf109YLmOFo"></script>
+  </body>
+
+</html>

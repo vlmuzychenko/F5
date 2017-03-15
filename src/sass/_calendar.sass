@@ -1,0 +1,212 @@
+.calendar
+   height: calc(100vh - 100px)
+   margin-top: 100px
+   overflow: auto
+   position: relative
+   +resp
+      height: calc(100vh - 70px)
+      margin-top: 70px
+   &__top
+      position: absolute
+      left: 0
+      top: 0
+      .directions__title
+         +resp
+            height: 50px
+            line-height: 50px
+            font-size: 18px
+   &__layout
+      padding-top: 80px
+      min-height: 400px
+      height: 100%
+      +clr
+      +resp
+         padding-top: 50px
+   &__row
+      +clr
+      white-space: nowrap
+      font-size: 0
+      display: flex
+      height: 100%
+      position: relative
+      overflow-x: hidden
+
+      //+scrollbar
+      //   background: #ececec
+      //   height: 13px
+      //   border-radius: 10px
+      //+scrollbar-thumb
+      //   border: 2px solid  #ececec
+      //   border-radius: 10px
+      //   background: #9f9f9f
+   &__event
+      position: relative
+      display: inline-block
+      font-size: 14px
+      margin-right: 3px
+      min-width: 255px
+      width: 255px
+      height: 100%
+      overflow: hidden
+      z-index: 1
+      &--lg
+         min-width: 513px
+         width: 513px
+         +resp
+            min-width: 255px
+            width: 255px
+
+      &--variable
+         &:first-child:nth-last-child(1),
+         &:first-child:nth-last-child(2),
+         &:first-child:nth-last-child(2) ~ div,
+         &:first-child:nth-last-child(3),
+         &:first-child:nth-last-child(3) ~ div
+            min-width: 513px
+            width: 513px
+            +resp
+               min-width: 255px
+               width: 255px
+      &-img
+         +coverdiv
+         background-size: cover
+         background-position: center center
+         background-repeat: no-repeat
+         z-index: 2
+      &-descr
+         position: absolute
+         top: 0
+         bottom: 0
+         right: 0
+         left: 0
+         padding: 15px 12px
+         background: rgba(#000, .5)
+         color: #fff
+         z-index: 3
+         font-size: 16px
+         transform: translateY(74%)
+         +trs
+         +rh(750)
+            transform: translateY(64%)
+         +rh(680)
+            padding-top: 10px
+            padding-bottom: 10px
+            transform: translateY(64%)
+      &-text
+         +text-overflow
+      &-more
+         +vcenter
+         border: 1px solid #f6cb02
+         color: #fff
+         background-color: transparent
+         font-size: 14px
+         width: 160px
+         height: 40px
+         line-height: 40px
+         .icon-arrow
+            position: absolute
+            top: 6px
+            right: 11px
+            fill: $accent
+            +rotate(180)
+            width: 25px
+            height: 25px
+      &:hover &-descr
+         transform: translateY(0)
+   &__chapter
+      min-height: 160px
+      height: 33.33%
+      max-height: 300px
+      +clr
+      &:first-child
+         .calendar__items
+            padding-top: 3px
+      &:not(:last-child)
+         .calendar__items
+            padding-bottom: 3px
+   &__title
+      float: left
+      margin-right: 3px
+      width: 220px
+      height: 100%
+      +resp
+         width: 158px
+   &__items
+      position: relative
+      width: calc(100% - 223px)
+      height: 100%
+      float: left
+      //overflow: hidden
+      +resp
+         width: calc(100% - 164px)
+   &__datepicker
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      height: 80px
+      padding: 15px 0 15px 235px
+      box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21)
+      text-align: center
+      z-index: 5
+      +r(1000)
+         padding-left: 168px
+      +resp
+         height: 50px
+         padding-top: 10px
+         padding-bottom: 10px
+      .datepicker
+         display: inline-block
+
+.directions
+   &--calendar
+      width: 220px
+      +resp
+         width: 158px
+   &__title
+      height: 80px
+      padding: 0 5px
+      font-size: 24px
+      color: #000000
+      text-align: center
+      line-height: 80px
+      box-shadow: 0px 0px 8px 0px rgba(#000, 0.21)
+   &__items
+      display: flex
+      flex-direction: column
+      flex: 1 0 auto
+   &__link
+      position: relative
+      display: block
+      padding: 10px 0 0 10px
+      font-size: 30px
+      height: 100%
+      box-shadow: 3px 0px 8px -3px rgba(#000, 0.21)
+      +futura-bold
+      +tr(background-color .2s)
+      &::before
+         content: ''
+         +vcenter
+         +resp
+            margin-top: 20px
+            transform: translate3d(-50%,-50%,0) scale(0.91)
+      &--academy
+         background-color: #f6cb02
+         color: #ffffff
+         &::before
+            +s('academy')
+
+      &--wiki
+         background-color: #fff
+         color: #000000
+         &::before
+            +s('yacht-wiki')
+      &--events
+         background-color: #000
+         color: $accent
+         &::before
+            +s('events')
+
+.is-touch
+   .calendar__row
+      overflow-x: auto

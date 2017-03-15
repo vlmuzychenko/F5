@@ -1,0 +1,151 @@
+---
+title: Yacht Card
+---
+extends layouts/_layout
+block content
+   // BEGIN card
+   .card
+      .card__more.js-info
+         button.card__btn.js-open-info
+            +icon('icon-arrow')
+         .card__info.js-scroll
+
+            .card__label Riva Duchessa
+            .card__data
+               .card__text
+                  .card__title Riva Duchessa
+                  .card__price 20 000 грн/день
+               .card__info-col
+                  .card__info-item
+                     .card__info-pic.card__info-pic--type
+                     .card__info-title Тип
+                     .card__info-descr sailing
+                  .card__info-item
+                     .card__info-pic.card__info-pic--length
+                     .card__info-title Длина
+                     .card__info-descr 10.36 м
+                  .card__info-item
+                     .card__info-pic.card__info-pic--speed
+                     .card__info-title Скорость
+                     .card__info-descr макс. 28 узлов
+                     .card__info-descr круизная 18 узлов
+                  .card__info-item
+                     .card__info-pic.card__info-pic--cabin
+                     .card__info-title Кают
+                     .card__info-descr 1
+                  .card__info-item
+                     .card__info-pic.card__info-pic--sleeps
+                     .card__info-title Спальные места
+                     .card__info-descr 2+2
+                  .card__info-item
+                     .card__info-pic.card__info-pic--shower
+                     .card__info-title WC/Душ
+                     .card__info-descr 1
+                  .card__info-item
+                     .card__info-pic.card__info-pic--location
+                     .card__info-title Местонахождение
+                     .card__info-descr о. Крк (Хорватия)
+                     a.card__info-link(href='#') Показать на карте
+                  .card__info-item
+                     .card__info-pic.card__info-pic--engine
+                     .card__info-title Двигатель
+                     .card__info-descr GM 8.1L (496cid) 525 л.с.
+               .card__info-inner
+                  .card__feature
+                     .card__feature-title Навигация:
+                     .card__feautre-text Подруливающее устройство
+                     .card__feautre-text  Тип грота
+                     .card__feautre-text  Автопилот
+                  .card__feature
+                     .card__feature-title Комфорт:
+                     .card__feautre-text Холодильник
+                     .card__feautre-text Наличие эл. туалета
+                     .card__feautre-text Radio-CD player
+                     .card__feautre-text Акустическая система в кокпите
+                     .card__feautre-text Наличие козырька
+                     .card__feautre-text Наличие переднего стекла
+                     .card__feautre-text Система накопления отходов
+                     .card__feautre-text Резиновая лодка
+                  .card__feature
+                     .card__feature-title Доп опционал:
+                     .card__feautre-text Стоимость уборки
+               .card__info-inner
+                  .card__actions
+                     button.card__actions-btn.card__actions-btn--view.btn(type='button')
+                     button.card__actions-btn.card__actions-btn--video.btn(type='button')
+                     button.card__actions-btn.card__actions-btn--photo.btn(type='button')
+
+               .card__order
+                  a.card__order-btn.btn.btn--transp(href='#') Нужна консультация?
+                  a.card__order-btn.btn--bg.card__order-btn--color.btn(href='#') Забронировать
+               .card__info-inner
+                  .card__rent
+                     .card__rent-table
+                        .card__rent-row
+                           .card__rent-col
+                              .card__rent-title Период
+                           .card__rent-col
+                              .card__rent-title Цена в неделю
+                        .card__rent-row
+                           .card__rent-col
+                              .card__rent-text октябрь 2016 - ноябрь 2016
+                           .card__rent-col
+                              .card__rent-text &euro; 4 100
+                        .card__rent-row
+                           .card__rent-col
+                              .card__rent-text октябрь 2016 - ноябрь 2016
+                           .card__rent-col
+                              .card__rent-text &euro; 4 100
+                        .card__rent-row
+                           .card__rent-col
+                              .card__rent-text октябрь 2016 - ноябрь 2016
+                           .card__rent-col
+                              .card__rent-text &euro; 4 100
+                        .card__rent-row
+                           .card__rent-col
+                              .card__rent-text октябрь 2016 - ноябрь 2016
+                           .card__rent-col
+                              .card__rent-text &euro; 4 100
+
+      .card__view
+         //BEGIN yacht-map
+         .yacht-map__wrapper.yacht-map__wrapper--card
+           button.yacht-map__show-btn.js-show-yacht-map
+              span Показать карту
+              +icon('icon-arrow-sm')
+           .yacht-map__inner.js-yacht-map-inner
+              .yacht-map__search-move.js-yacht-map-move.checkbox
+                 input(type='checkbox' id='yacht-map-move' name='')
+                 label(for='yacht-map-move')
+                    .checkbox__check
+                    .checkbox__name Поиск при перемещении карты
+              div(id='js-yacht-map' class='yacht-map')
+         //END yacht-map
+         .card-slider__wrapper
+            .card-slider.js-card-slider
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-1.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-2.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-1.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-2.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-1.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-2.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-1.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-2.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-1.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-2.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-1.jpg)')
+               .card-slider__pic(style='background-image: url(img/content/riva-domino-2.jpg)')
+            .card-slider__nav.js-card-slider-nav
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-1.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-2.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-3.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-4.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-1.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-2.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-3.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-4.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-1.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-2.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-3.jpg)')
+               .card-slider__nav-pic(style='background-image: url(img/content/riva-domino-sm-4.jpg)')
+   // END card

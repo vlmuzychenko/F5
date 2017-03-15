@@ -1,0 +1,416 @@
+---
+title: search-page_advanced
+---
+extends layouts/_layout
+block content
+   // BEGIN search-advanced
+
+   .search-adv
+      form(action='#')
+         .search-adv__layout
+            .search-adv__wrapper.js-info
+               button.search-adv__btn.js-open-info(type="button")
+                  +icon('icon-arrow')
+               .search-adv__filters
+                  .search-adv__filters-inner
+                     .search-adv__filter.js-scroll.styled-scroll
+                        .search-adv__item
+                           .search-adv__inner
+                              .search-adv__title.title Локация
+                              .search-adv__row
+                                 .search-adv__field.js-select-field
+                                    select.js-select-multiple(multiple='multiple' placeholder='Регион')
+                                       option Австралия
+                                       option Африка
+                                       option Америка
+                                       option Европа
+                                       option Регион
+                                       option Австралия
+                                       option Африка
+                                       option Америка
+                                       option Европа
+                                       option Африка
+                                       option Америка
+                                       option Европа
+                                       option Регион
+                                       option Австралия
+                                       option Африка
+                                       option Америка
+                                       option Европа
+                                 .search-adv__field.js-select-field
+                                    select.js-select-multiple(multiple='multiple' placeholder='Не выбрано')
+                                       option Украина
+                                       option Испания
+                                       option Бельгия
+                                       option Швейцария
+                                       option Украина
+                                       option Испания
+                                       option Бельгия
+                                       option Швейцария
+                                       option Украина
+                                       option Испания
+                                       option Швейцария
+
+                              .search-adv__row
+                                 .search-adv__field.js-select-field
+                                    select.js-select-multiple(multiple='multiple' placeholder='Город')
+                                       option Киев
+                                       option Лондон
+                                       option Львов
+                                       option Львов
+                                       option Одесса
+                                       option Киев
+                                       option Лондон
+                                       option Львов
+                                       option Львов
+                                       option Одесса
+                                 .search-adv__field.js-select-field
+                                    select.js-select-multiple(multiple='multiple' placeholder='Порт/марина')
+                                       option Африка
+                                       option Америка
+                                       option Европа
+                                       option Одесса
+                                       option Киев
+                                       option Лондон
+                                       option Львов
+                                       option Африка
+                                       option Америка
+                                       option Львов
+
+                        .search-adv__item
+                           .search-adv__inner
+                              .search-adv__title.title Тип яхты
+                              .search-adv__row
+                                 .search-adv__field
+                                    .checkbox.checkbox_mod
+                                       input(type='checkbox' id='motor_yachts' name='motor_yachts')
+                                       label(for='motor_yachts')
+                                          .checkbox__pic
+                                          .checkbox__name Моторные яхты
+                                          .checkbox__check
+                                 .search-adv__field
+                                    .checkbox.checkbox_mod
+                                       input(type='checkbox' id='sailboats' name='sailboats')
+                                       label(for='sailboats')
+                                          .checkbox__pic
+                                          .checkbox__name Парусные яхты
+                                          .checkbox__check
+                              .search-adv__row
+                                 .search-adv__field
+                                    .checkbox.checkbox_mod
+                                       input(type='checkbox' id='catamarans' name='catamarans')
+                                       label(for='catamarans')
+                                          .checkbox__pic
+                                          .checkbox__name Парусные катамараны
+                                          .checkbox__check
+                                 .search-adv__field
+                                    .checkbox.checkbox_mod
+                                       input(type='checkbox' id='mega_yachts' name='mega_yachts')
+                                       label(for='mega_yachts')
+                                          .checkbox__pic
+                                          .checkbox__name Мега яхты
+                                          .checkbox__check
+
+                        .search-adv__item
+                           .search-adv__inner
+                              .search-adv__title.title Даты
+                              .search-adv__row
+                                 .search-adv__field
+                                    input.input.js-search-adv-date(type='text' name='' placeholder='Отплытие' required)
+                                 .search-adv__field
+                                    input.input.js-search-adv-date(type='text' name='' placeholder='Прибытие' required)
+                        .search-adv__item
+                           .search-adv__inner.search-adv__inner--price
+                              .search-adv__title.title Цена
+                              .search-adv__row.search-adv__row--justify.search-adv__row--price
+                                 .search-adv__price-field
+                                    input.input.js-price-from(type='text' name='')
+                                    span грн.
+                                 .search-adv__price-field
+                                    input.input.js-price-to(type='text' name='')
+                                    span грн.
+                              .search-adv__row.search-adv__row--range
+                                 .js-price-range
+
+                        .search-adv__item.search-adv__item--topmargin
+                           .search-adv__inner.search-adv__inner--price
+                              .search-adv__title.title Количество людей
+                              .search-adv__row.search-adv__row--price
+                                 .search-adv__price-field
+                                    input.input.js-people-count(type='text' name='')
+                                    span чел.
+                              .search-adv__row.search-adv__row--range
+                                 .js-people-count-range
+                        .search-adv__actions
+                           button.search-adv__btn-find.btn.btn--bg(type='submit')
+                              +icon('icon-search')
+                              span Найти
+                           button.search-adv__btn-reset.js-search-adv-reset.btn.btn--transp(type='reset')
+                              +icon('icon-close')
+                              span Сбросить
+                           button.search-adv__btn-filter.btn.btn--transp.js-more-filters(type='button')
+                              span  Больше фильтров
+                              +icon('icon-arrow')
+
+                     .search-adv__filter.search-adv__filter--detailed.js-filter-detailed
+                        .search-adv__filter-inner.js-scroll.styled-scroll
+                           .search-adv__item
+                              .search-adv__inner
+                                 .search-adv__title.title марка яхты
+                                 .search-adv__row
+                                    .search-adv__field.js-select-field
+                                       select.js-select-multiple(multiple='multiple' placeholder='Марка')
+                                          option Австралия
+                                          option Африка
+                                          option Америка
+                                          option Европа
+                                          option Регион
+                                          option Австралия
+                                          option Африка
+                                          option Америка
+                                          option Европа
+                                          option Африка
+                                          option Америка
+                                          option Европа
+                                          option Регион
+                                          option Австралия
+                                          option Африка
+                                          option Америка
+                                          option Европа
+                                    .search-adv__field.js-select-field
+                                       select.js-select-multiple(multiple='multiple' placeholder='Модель')
+                                          option Украина
+                                          option Испания
+                                          option Бельгия
+                                          option Швейцария
+                                          option Украина
+                                          option Испания
+                                          option Бельгия
+                                          option Швейцария
+                                          option Украина
+                                          option Испания
+                                          option Швейцария
+
+                                 .search-adv__row
+                                    .search-adv__field.js-select-field
+                                       select.js-select-multiple(multiple='multiple' placeholder='Год выпуска от')
+                                          option Киев
+                                          option Лондон
+                                          option Львов
+                                          option Львов
+                                          option Одесса
+                                          option Киев
+                                          option Лондон
+                                          option Львов
+                                          option Львов
+                                          option Одесса
+                                    .search-adv__field.js-select-field
+                                       select.js-select-multiple(multiple='multiple' placeholder='Год выпуска до')
+                                          option Африка
+                                          option Америка
+                                          option Европа
+                                          option Одесса
+                                          option Киев
+                                          option Лондон
+                                          option Львов
+                                          option Африка
+                                          option Америка
+                                          option Львов
+                           .search-adv__item
+                              .search-adv__inner
+                                 .search-adv__title.title наличие подруливающего устройства
+                                 .search-adv__row
+                                    .search-adv__field
+                                       .checkbox
+                                          input(type='checkbox' name='' id='available-1')
+                                          label(for='available-1')
+                                             .checkbox__check
+                                             .checkbox__name Есть
+                           .search-adv__item
+                              .search-adv__inner
+                                 .search-adv__title.title тип грота
+                                 .search-adv__row
+                                    .search-adv__field.js-select-field
+                                       select.js-select-single(placeholder='Скрутка')
+                                          option Скрутка
+                                          option Америка
+                                          option Скрутка
+                                          option Европа
+                                          option Европа
+                           .search-adv__item
+                              .search-adv__inner.search-adv__inner--price
+                                 .search-adv__title.title Количество кают
+                                 .search-adv__row.search-adv__row--price
+                                    .search-adv__price-field
+                                       input.input.js-cabin-count(type='text' name='')
+                                 .search-adv__row.search-adv__row--range
+                                    .js-cabin-count-range
+
+                           .search-adv__item.no-bd
+                              .search-adv__inner.search-adv__inner--price
+                                 .search-adv__title.title Количество туалетов
+                                 .search-adv__row.search-adv__row--price
+                                    .search-adv__price-field
+                                       input.input.js-toilets-count(type='text' name='')
+                                 .search-adv__row.search-adv__row--range
+                                    .js-toilets-count-range
+            //BEGIN yacht-map
+            .yacht-map__wrapper
+               button.yacht-map__show-btn.btn.js-show-yacht-map
+                  span Показать карту
+                  +icon('icon-arrow-sm')
+               .yacht-map__inner.js-yacht-map-inner
+                  .yacht-map__search-move.js-yacht-map-move.checkbox
+                     input(type='checkbox' id='yacht-map-move' name='')
+                     label(for='yacht-map-move')
+                        .checkbox__check
+                        .checkbox__name Поиск при перемещении карты
+                  div(id='js-yacht-map' class='yacht-map')
+            //END yacht-map
+            .search-adv__view
+               .yacht
+                  .yacht__sort
+                     .yacht__sort-inner
+                        .yacht__sort-action
+                           button(title='Показать плиткой').yacht__sort-btn.js-yacht-view.grid.is-active
+                              +icon('icon-card')
+                           button(title='Показать списком').yacht__sort-btn.js-yacht-view.list
+                              +icon('icon-list')
+                        .yacht__sort-select
+                           .yacht__sort-text Сортировка по:
+                           .yacht__sort-field.js-select-field
+                              select.js-select-single
+                                 option Цена вниз
+                                 option Цена вверх
+                                 option Год выпуска вниз
+                                 option Год выпуска вверх
+                  .yacht__inner.js-yacht-scroll.js-yacht-section
+                     .yacht__row.js-view-container.grid
+                        a.yacht__card(href='#')
+                           .yacht__card-pic
+                              .yacht__card-img(style='background-image: url(img/content/yacht-card-1.jpg)')
+                           .yacht__card-content
+                              .yacht__card-title.title ЯХТА Riva Duchessa
+                                 button.yacht__card-favourite.js-card-favourite(type='submit')
+                                    +icon('icon-fav-star')
+                              .yacht__card-descr
+                                 .yacht__card-col
+                                    .yacht__card-info.yacht__card-info--length Длина: 26 м
+                                    .yacht__card-info.yacht__card-info--cabin Каюты: 4 + 1
+                                    .yacht__card-info.yacht__card-info--sleeps Спальных мест: 8 + 2
+                                 .yacht__card-col
+                                    .yacht__card-price 20 000 грн/день
+                        a.yacht__card(href='#')
+                           .yacht__card-pic
+                              .yacht__card-img(style='background-image: url(img/content/yacht-card-2.jpg)')
+                           .yacht__card-content
+                              .yacht__card-title.title ЯХТА Riva Duchessa
+                                 button.yacht__card-favourite.js-card-favourite(type='submit')
+                                    +icon('icon-fav-star')
+                              .yacht__card-descr
+                                 .yacht__card-col
+                                    .yacht__card-info.yacht__card-info--length Длина: 26 м
+                                    .yacht__card-info.yacht__card-info--cabin Каюты: 4 + 1
+                                    .yacht__card-info.yacht__card-info--sleeps Спальных мест: 8 + 2
+                                 .yacht__card-col
+                                    .yacht__card-price 13 000 грн/день
+                        a.yacht__card(href='#')
+                           .yacht__card-pic
+                              .yacht__card-img(style='background-image: url(img/content/yacht-card-3.jpg)')
+                           .yacht__card-content
+                              .yacht__card-title.title ЯХТА Riva Duchessa
+                                 button.yacht__card-favourite.js-card-favourite(type='submit')
+                                    +icon('icon-fav-star')
+                              .yacht__card-descr
+                                 .yacht__card-col
+                                    .yacht__card-info.yacht__card-info--length Длина: 26 м
+                                    .yacht__card-info.yacht__card-info--cabin Каюты: 4 + 1
+                                    .yacht__card-info.yacht__card-info--sleeps Спальных мест: 8 + 2
+                                 .yacht__card-col
+                                    .yacht__card-price 15 000 грн/день
+                        a.yacht__card(href='#')
+                           .yacht__card-pic
+                              .yacht__card-img(style='background-image: url(img/content/yacht-card-4.jpg)')
+                           .yacht__card-content
+                              .yacht__card-title.title ЯХТА Riva Duchessa
+                                 button.yacht__card-favourite.js-card-favourite(type='submit')
+                                    +icon('icon-fav-star')
+                              .yacht__card-descr
+                                 .yacht__card-col
+                                    .yacht__card-info.yacht__card-info--length Длина: 26 м
+                                    .yacht__card-info.yacht__card-info--cabin Каюты: 4 + 1
+                                    .yacht__card-info.yacht__card-info--sleeps Спальных мест: 8 + 2
+                                 .yacht__card-col
+                                    .yacht__card-price 20 000 грн/день
+                        a.yacht__card(href='#')
+                           .yacht__card-pic
+                              .yacht__card-img(style='background-image: url(img/content/yacht-card-5.jpg)')
+                           .yacht__card-content
+                              .yacht__card-title.title ЯХТА Riva Duchessa
+                                 button.yacht__card-favourite.js-card-favourite(type='submit')
+                                    +icon('icon-fav-star')
+                              .yacht__card-descr
+                                 .yacht__card-col
+                                    .yacht__card-info.yacht__card-info--length Длина: 26 м
+                                    .yacht__card-info.yacht__card-info--cabin Каюты: 4 + 1
+                                    .yacht__card-info.yacht__card-info--sleeps Спальных мест: 8 + 2
+                                 .yacht__card-col
+                                    .yacht__card-price 13 000 грн/день
+                        a.yacht__card(href='#')
+                           .yacht__card-pic
+                              .yacht__card-img(style='background-image: url(img/content/yacht-card-6.jpg)')
+                           .yacht__card-content
+                              .yacht__card-title.title ЯХТА Riva Duchessa
+                                 button.yacht__card-favourite.js-card-favourite(type='submit')
+                                    +icon('icon-fav-star')
+                              .yacht__card-descr
+                                 .yacht__card-col
+                                    .yacht__card-info.yacht__card-info--length Длина: 26 м
+                                    .yacht__card-info.yacht__card-info--cabin Каюты: 4 + 1
+                                    .yacht__card-info.yacht__card-info--sleeps Спальных мест: 8 + 2
+                                 .yacht__card-col
+                                    .yacht__card-price 15 000 грн/день
+                        a.yacht__card(href='#')
+                           .yacht__card-pic
+                              .yacht__card-img(style='background-image: url(img/content/yacht-card-1.jpg)')
+                           .yacht__card-content
+                              .yacht__card-title.title ЯХТА Riva Duchessa
+                                 button.yacht__card-favourite.js-card-favourite(type='submit')
+                                    +icon('icon-fav-star')
+                              .yacht__card-descr
+                                 .yacht__card-col
+                                    .yacht__card-info.yacht__card-info--length Длина: 26 м
+                                    .yacht__card-info.yacht__card-info--cabin Каюты: 4 + 1
+                                    .yacht__card-info.yacht__card-info--sleeps Спальных мест: 8 + 2
+                                 .yacht__card-col
+                                    .yacht__card-price 15 000 грн/день
+                        a.yacht__card(href='#')
+                           .yacht__card-pic
+                              .yacht__card-img(style='background-image: url(img/content/yacht-card-2.jpg)')
+                           .yacht__card-content
+                              .yacht__card-title.title ЯХТА Riva Duchessa
+                                 button.yacht__card-favourite.js-card-favourite(type='submit')
+                                    +icon('icon-fav-star')
+                              .yacht__card-descr
+                                 .yacht__card-col
+                                    .yacht__card-info.yacht__card-info--length Длина: 26 м
+                                    .yacht__card-info.yacht__card-info--cabin Каюты: 4 + 1
+                                    .yacht__card-info.yacht__card-info--sleeps Спальных мест: 8 + 2
+                                 .yacht__card-col
+                                    .yacht__card-price 15 000 грн/день
+                        a.yacht__card(href='#')
+                           .yacht__card-pic
+                              .yacht__card-img(style='background-image: url(img/content/yacht-card-3.jpg)')
+                           .yacht__card-content
+                              .yacht__card-title.title ЯХТА Riva Duchessa
+                                 button.yacht__card-favourite.js-card-favourite(type='submit')
+                                    +icon('icon-fav-star')
+                              .yacht__card-descr
+                                 .yacht__card-col
+                                    .yacht__card-info.yacht__card-info--length Длина: 26 м
+                                    .yacht__card-info.yacht__card-info--cabin Каюты: 4 + 1
+                                    .yacht__card-info.yacht__card-info--sleeps Спальных мест: 8 + 2
+                                 .yacht__card-col
+                                    .yacht__card-price 15 000 грн/день
+
+   // END search-advanced

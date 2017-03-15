@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=768, initial-scale=1">
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header"><a href="#" class="header__back-btn"><i class="header__back-icon"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></i></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <ul class="nav js-nav">
+          <li class="nav__item is-active"><a href="#" class="nav__link">Сервисы</a>
+            <!--a.nav__link(href='#') Services-->
+            <ul class="nav__sub-nav">
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Яхт-вики</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Аренда яхт</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Регаты</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Академия</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Календарь</a>
+            <!--a.nav__link(href='#') Calendar-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Новости</a>
+            <!--a.nav__link(href='#') News-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a>
+            <!--a.nav__link(href='#') Contacts-->
+          </li>
+          <li class="nav__line js-moving-line"></li>
+        </ul><a href="tel:0442544545" class="header__phone">044 254 45 45</a>
+        <ul class="header__lang lang">
+          <li><a href="#" class="is-active"><span>RU</span></a></li>
+          <li><a href="#"><span>EN</span></a></li>
+        </ul>
+      </header>
+      <!--END header-->
+      <div class="contacts-container">
+        <div class="contacts-wrap">
+          <div class="contacts">
+            <div class="contacts__title">Контакты</div>
+            <div class="contacts__items">
+              <div class="contacts__item_title">Адрес</div>
+              <div class="contacts__item">г. Киев, ул. Льва Толстого 39, терраса Fleet5</div>
+              <div class="contacts__item_title">Email</div>
+              <div class="contacts__item">info@fleet5.com</div>
+              <div class="contacts__item_title">Телефон</div>
+              <div class="contacts__item">044 337 15 35</div>
+            </div><a href="#" class="btn contacts__btn-popup">Написать нам</a>
+            <div class="contacts__social">
+              <a href="#" class="btn contacts__social-btn contacts__social-btn_yt"></a>
+              <a href="#" class="btn contacts__social-btn contacts__social-btn_fb"></a>
+              <a href="#" class="btn contacts__social-btn contacts__social-btn_inst"></a>
+            </div>
+          </div>
+        </div>
+        <div id="map" class="map-wrap"></div>
+        <div class="popup-wrap">
+          <div class="popup-contacts">
+            <div class="input-container"><input type="text" id="name" placeholder="Имя Фамилия" class="input-contacts error"><label for="name">Имя и фамилия</label></div>
+            <div class="input-container"><input type="text" id="phone" placeholder="(0--) --- -- --" class="input-contacts"><label for="phone">Телефон</label></div>
+            <div class="input-container"><input type="text" id="email" placeholder="name@mail.com" class="input-contacts"><label for="email">Email</label></div>
+            <div class="input-container"><textarea rows="6" cols="" placeholder="Пожалуйста напишите свой комментарий..." class="input-contacts input-contacts_textarea"></textarea></div><button type="submit" class="btn btn_popup js-send">Отправить</button><button type="button" class="close close_black js-popup-close"></button></div>
+          <div
+            class="popup-substrate">
+            <div class="popup-substrate__content"><img src="img/popup-logo.png" class="popup-substrate__logo">
+              <div class="popup-substrate__text">
+                <p>Спасибо!</p>
+                <p>Мы свяжемся с Вами в ближайшее время.</p>
+              </div><img src="img/popup-icon.png" class="popup-substrate__icon">
+              <div class="popup-substrate__timer">окно закроется через<span id="timer">5</span>сек</div><button type="button" class="close close_white js-popup-substrate-close"></button></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--END out-->
+    <div data-popup="feedback" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="При необходимости напишите комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div data-popup="callme" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="Пожалуйста, напишите свой комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--LOAD scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKzXeKm-qJO4uqPR39L4lZf109YLmOFo"></script>
+  </body>
+
+</html>

@@ -1,0 +1,304 @@
+.ui-datepicker {
+   background: $accent;
+   border-radius: 2px;
+   padding: 5px;
+   display: none;
+
+   &.datepicker-adv-search {
+      width: 268px;
+   }
+
+   .ui-state-default {
+      border: 1px solid #6b6b6b;
+      transition: .2s;
+      background-image: linear-gradient(135deg, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+   }
+
+   .ui-widget-header {
+      border: 1px solid #6b6b6b;
+      background-image: linear-gradient(to bottom, rgba(246,203,2,1) 0%, rgba(252,205,77,1) 22%, rgba(246,203,2,1) 34%, rgba(248,181,0,1) 100%);
+      color: #ffffff;
+   }
+
+   .ui-state-highlight {
+      background: #fff;
+      color: #000;
+   }
+
+   .ui-state-hover {
+      background: rgba(grey, .3);
+   }
+
+   .ui-state-active {
+      background: #ff8b00;
+   }
+
+   .ui-datepicker-prev,
+   .ui-datepicker-next {
+      position: absolute;
+      top: 6px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      cursor: pointer;
+      &.ui-state-hover {
+         background-color: transparent;
+      }
+   }
+
+   .ui-datepicker-prev {
+      left: 10px;
+      border-width: 7.5px 10px 7.5px 0;
+      border-color: transparent #000 transparent transparent;
+   }
+
+   .ui-datepicker-next {
+      right: 10px;
+      border-width: 7.5px 0 7.5px 10px;
+      border-color: transparent transparent transparent #000;
+   }
+
+}
+.ui-helper-hidden {
+	display: none;
+}
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.ui-helper-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+	clear: both;
+}
+.ui-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	filter:Alpha(Opacity=0); /* support: IE8 */
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+	cursor: default !important;
+	pointer-events: none;
+}
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: 3px 0;
+}
+
+.ui-datepicker .ui-datepicker-title {
+   font-size: 18px;
+	text-align: center;
+   color: #000;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 45%;
+}
+.ui-datepicker table {
+	width: 100%;
+	border-collapse: collapse;
+   font-size: 15px;
+}
+.ui-datepicker th {
+	padding: 7px 3px;
+	text-align: center;
+	border: 0;
+   font-size: 16px;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+
+/* Icons */
+
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 1;
+   top: -12px;
+	-ms-touch-action: none;
+	touch-action: none;
+   background-image: url(../img/ui-icons/handle.svg);
+   background-size: 12px 12px;
+   background-position: center center;
+   background-repeat: no-repeat;
+   width: 28px;
+   height: 28px;
+   background-color: #737373;
+   border-radius: 50%;
+   cursor: pointer;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	display: block;
+	border: 0;
+   background-color: #f6cb02;
+   transition: none;
+}
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.ui-slider-horizontal {
+	height: 4px;
+   border-radius: 2px;
+   background-color: #d8d8d8;
+
+   .ui-state-default {
+      margin-left: -15px;
+   }
+}
+
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+   border-radius: 2px;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+   font-family: 'FuturaPT-Demi', Arial, sans-serif;
+	font-size: 16px;
+}
+

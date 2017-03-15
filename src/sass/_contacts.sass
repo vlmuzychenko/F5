@@ -1,0 +1,140 @@
+.contacts-container
+  position: relative
+  overflow: hidden
+  height: calc(100vh - 100px)
+  margin-top: 100px
+  +resp
+     height: calc(100vh - 70px)
+     margin-top: 70px
+
+.map-wrap
+  width: 60%
+  margin-left: 40%
+  height: 100%
+  cursor: pointer
+  z-index: 100
+
+.contacts-wrap
+  width: 60%
+  height: 100%
+  background-color: #000
+  overflow: hidden
+  transform: skewX(-16deg) translateX(-20%)
+  position: absolute
+  z-index: 200
+  box-shadow: 10px 0 20px 0px #a2a2a2
+
+.contacts
+  width: 100%
+  height: 100%
+  background-image: url(../img/contacts.jpg)
+  background-position: 100% 50%
+  background-size: cover
+  transform: skewX(16deg) translateX(20%)
+  +rmin(768)
+    padding-top: 25px
+    padding-left: 25px
+  +rmin(1024)
+    padding-top: 50px
+    padding-left: 50px
+
+  &__title
+    +futura-bold
+    text-transform: uppercase
+    color: #fff
+    font-size: 30px
+    +rmin(768)
+      font-size: 24px
+    +rmin(1366)
+      font-size: 26px
+    +rmin(1600)
+      font-size: 30px
+
+  &__btn-popup
+    min-width: 230px
+    transition: .3s
+    text-transform: uppercase
+    display: inline-block
+    background-color: transparent
+    border-color: #fff
+    color: #fff
+    +rmin(768)
+      min-width: 160px
+      margin-top: 5%
+    +rmin(1366)
+      min-width: 190px
+      margin-top: 80px
+    +rmin(1600)
+      min-width: 230px
+
+    &:hover
+      background-color: $accent
+      border-color: $accent
+      color: #000
+
+  &__items
+    +casp-reg
+    font-size: 24px
+    +rmin(768)
+      width: 60%
+      font-size: 18px
+    +rmin(1024)
+      width: 40%
+      font-size: 21px
+    +rmin(1600)
+      width: 30%
+      font-size: 24px
+
+  &__item
+    color: #f6cb02
+    margin-top: 5px
+
+    &_title
+      margin-top: 45px
+      color: #fff
+      +rmin(768)
+        margin-top: 15px
+      +rmin(1600)
+        margin-top: 45px
+
+  &__social-btn
+    display: inline-block
+    min-width: 70px
+    height: 40px
+    margin-top: 70px
+    background-color: transparent
+    position: relative
+    border-color: #fff
+    +rmin(768)
+      margin-top: 20px
+    +rmin(1024)
+      margin-top: 25px
+    +rmin(1600)
+      margin-top: 70px
+
+    &:hover
+      background-color: rgba(0,0,0,.5)
+
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-repeat: no-repeat
+
+    &_fb:before
+      background-image: url(../img/fb.png)
+      width: 16px
+      height: 31px
+    &_inst:before
+      background-image: url(../img/inst.png)
+      width: 32px
+      height: 32px
+    &_yt:before
+      background-image: url(../img/yt.png)
+      width: 26px
+      height: 30px
+
+    &:not(:last-child)
+      margin-right: 10px

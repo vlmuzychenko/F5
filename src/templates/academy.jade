@@ -1,0 +1,308 @@
+---
+title: Academy
+---
+extends layouts/_layout
+block content
+   // BEGIN academy
+   ul.academy-menu
+       li(data-menuanchor="license").academy-menu__item
+           a(href="#license") Лицензии
+       li(data-menuanchor="teoretic").academy-menu__item
+           a(href="#teoretic") Теоретический курс
+       li(data-menuanchor="practice").academy-menu__item
+           a(href="#practice") Практический курс
+       li(data-menuanchor="instructors").academy-menu__item
+           a(href="#instructors") Инструкторы
+       li(data-menuanchor="learning").academy-menu__item
+           a(href="#learning") Классы обучения
+       li(data-menuanchor="fmk").academy-menu__item
+           a(href="#fmk") Флотилии молодых капитанов
+   .academy-wrap
+       section.fp-section
+         .license-wrap
+           .license-cards-container
+             .license-card-container.license-card-container_open
+               .license-card.license-card_open
+                 .license-card-open
+                   .license-card-open__content-container
+                     .license-card-open__content
+                       .license-card-open__title Лицензия IYT
+                       .license-card-open__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                       //.license-card-open__btn-container
+                         a.btn.btn_dark.license-card-open__btn(href="#") Перейти
+                   .license-card-open__img-wrap
+                     .license-card-open__img
+                   button.close.close_card.card-open__close.js-card-close
+
+             //.license-card-container
+               .license-card
+                 .license-card-small
+                   .license-card-small__title
+                     .license-card-small__title-inner
+                       div
+                         p лицензия Brodica
+                           span в скором времени
+
+             //.license-card-container
+               .license-card
+                 .license-card-small
+                   .license-card-small__title
+                     .license-card-small__title-inner
+                       div
+                         p лицензия Rya
+                           span в скором времени
+
+
+       section.fp-section
+         .academy-content-wrap.academy-content-wrap_teoretic
+           .course-skew.course-skew_left
+             .course
+               .course__item
+                 .course__date
+                   | 23.01
+                 .course__title
+                   | Старт курса
+               .course__item
+                 .course__icon.course__icon_count
+                 .course__title
+                   | 15 занятий по 3 часа
+               .course__item
+                 .course__icon.course__icon_price
+                 .course__title
+                   | Курс теории 6900 грн
+               .course__btn-container
+                 a.btn.btn_yellow.course__btn(href="#") Записаться
+                 a.btn.btn_dark.course__btn(href="#") Календарь
+           .course-skew.course-skew_right
+             .course-right
+               .course-right__item
+                 .course-right__icon.course-right__icon_programm
+                 .course-right__title
+                   | Усиленная программа обучения
+               .course-right__item
+                 .course-right__icon.course-right__icon_book
+                 .course-right__title
+                   | Эксклюзивные учебные материалы
+               .course-right__item
+                 .course-right__icon.course-right__icon_radio
+                 .course-right__title
+                   | Радиоупра-вляемая яхта для тренировок
+               .course-right__item
+                 .course-right__icon.course-right__icon_online
+                 .course-right__title
+                   | Доступ к онлайн библиотеке
+           .course__video.course__video_teoretic
+             .course__video-btn
+                 span Посмотрите видео
+         .academy-video.academy-video_teoretic
+           .academy-video__close.close.close_yellow.js-close-teoretic
+           iframe(width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen)
+       section.fp-section
+         .academy-content-wrap
+           .course-skew.course-skew_left.course-skew_large
+             .course
+               .course__item
+                 .course__icon.course__icon_students
+                 .course__title
+                   | 80% учеников
+                   br
+                   | готовы к одиночному плаванию
+                 .course__subtitle Индивидуальный подход к каждому ученику
+               .course__item
+                 .course__icon.course__icon_sea
+                 .course__title
+                   | 2 недели практики в море
+                 .course__subtitle Ближайшая дата отмечена в календаре
+               .course__item
+                 .course__icon.course__icon_wind
+                 .course__title
+                   | Обучение в разных условиях
+                 .course__subtitle На воде и на суше, утром, днем, и вечером
+               .course__btn-container
+                 a.btn.btn_yellow.course__btn(href="#") Записаться
+                 a.btn.btn_dark.course__btn(href="#") Календарь
+           .course__video.course__video_pract
+             .course__video-btn
+                 span Посмотрите видео
+         .academy-video.academy-video_pract
+           .academy-video__close.close.close_yellow.js-close-pract
+           iframe(width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen)
+       section.fp-section
+         .academy-content-wrap
+           .instructors-title ЛУЧШАЯ КОМАНДА ИНСТРУКТОРОВ fleet 5
+           .instructors
+             .instructor
+               .instructor__pic(style='background-image:url(img/academy/instructor-1.jpg);')
+               .instructor__more
+                 .instructor__name Андрей Иванов1
+                 a.btn.btn_dark.instructor__btn.instructor__btn_1(href='#') Подробнее
+             .instructor
+               .instructor__pic(style='background-image:url(img/academy/instructor-2.jpg);')
+               .instructor__more
+                 .instructor__name Андрей Иванов2
+                 a.btn.btn_dark.instructor__btn.instructor__btn_2(href='#') Подробнее
+             .instructor
+               .instructor__pic(style='background-image:url(img/academy/instructor-3.jpg);')
+               .instructor__more
+                 .instructor__name Андрей Иванов3
+                 a.btn.btn_dark.instructor__btn.instructor__btn_3(href='#') Подробнее
+             .instructor
+               .instructor__pic(style='background-image:url(img/academy/instructor-4.jpg);')
+               .instructor__more
+                 .instructor__name Андрей Иванов4
+                 a.btn.btn_dark.instructor__btn.instructor__btn_4(href='#') Подробнее
+           .instructor-cards
+             .close.close_yellow.js-instructor-cards-close
+             .instructor-card.instructor-card_1
+               .instructor-card__pic(style='background-image:url(img/academy/instructor-1_open.jpg);')
+               .instructor-card__wrap
+                 .instructor-card__bg-title Андрей Иванов1
+                 .instructor-card__content
+                   .instructor-card__title Андрей Иванов1
+                   .instructor-card__line
+                   .instructor-card__subtitle Прошел Атлантический океан в 2 стороны
+                   .instructor-card__descr
+                     .instructor-card__descr-value 40 000
+                     .instructor-card__descr-title Пройдено миль
+                     .instructor-card__descr-icon.instructor-card__descr-icon_mile
+                   .instructor-card__descr
+                     .instructor-card__descr-value 15 000
+                     .instructor-card__descr-title Часов обучения
+                     .instructor-card__descr-icon.instructor-card__descr-icon_hour
+                   .instructor-card__descr
+                     .instructor-card__descr-value 200
+                     .instructor-card__descr-title Выпущено шкиперов
+                     .instructor-card__descr-icon.instructor-card__descr-icon_skipper
+                 .instructor-card__btn-container
+                   button(type="button").controll-btn.controll-btn_yellow.controll-btn_left.disabled
+                     +icon('icon-arrow')
+                   button(type="button").controll-btn.controll-btn_yellow.controll-btn_right.js-instructor-2
+                     +icon('icon-arrow')
+                     .instructor-card__btn-name анастасия гофенко2
+
+             .instructor-card.instructor-card_2
+               .instructor-card__pic(style='background-image:url(img/academy/instructor-1_open.jpg);')
+               .instructor-card__wrap
+                 .instructor-card__bg-title Анастасия Гофенко2
+                 .instructor-card__content
+                   .instructor-card__title Анастасия Гофенко2
+                   .instructor-card__line
+                   .instructor-card__subtitle Прошел Атлантический океан в 2 стороны
+                   .instructor-card__descr
+                     .instructor-card__descr-value 40 000
+                     .instructor-card__descr-title Пройдено миль
+                     .instructor-card__descr-icon.instructor-card__descr-icon_mile
+                   .instructor-card__descr
+                     .instructor-card__descr-value 15 000
+                     .instructor-card__descr-title Часов обучения
+                     .instructor-card__descr-icon.instructor-card__descr-icon_hour
+                   .instructor-card__descr
+                     .instructor-card__descr-value 200
+                     .instructor-card__descr-title Выпущено шкиперов
+                     .instructor-card__descr-icon.instructor-card__descr-icon_skipper
+                 .instructor-card__btn-container
+                   button(type="button").controll-btn.controll-btn_yellow.controll-btn_left.js-instructor-1
+                     +icon('icon-arrow')
+                     .instructor-card__btn-name Андрей Иванов1
+                   button(type="button").controll-btn.controll-btn_yellow.controll-btn_right.js-instructor-3
+                     +icon('icon-arrow')
+                     .instructor-card__btn-name Андрей Иванов3
+
+             .instructor-card.instructor-card_3
+               .instructor-card__pic(style='background-image:url(img/academy/instructor-1_open.jpg);')
+               .instructor-card__wrap
+                 .instructor-card__bg-title Андрей Иванов3
+                 .instructor-card__content
+                   .instructor-card__title Андрей Иванов3
+                   .instructor-card__line
+                   .instructor-card__subtitle Прошел Атлантический океан в 2 стороны
+                   .instructor-card__descr
+                     .instructor-card__descr-value 40 000
+                     .instructor-card__descr-title Пройдено миль
+                     .instructor-card__descr-icon.instructor-card__descr-icon_mile
+                   .instructor-card__descr
+                     .instructor-card__descr-value 15 000
+                     .instructor-card__descr-title Часов обучения
+                     .instructor-card__descr-icon.instructor-card__descr-icon_hour
+                   .instructor-card__descr
+                     .instructor-card__descr-value 200
+                     .instructor-card__descr-title Выпущено шкиперов
+                     .instructor-card__descr-icon.instructor-card__descr-icon_skipper
+                 .instructor-card__btn-container
+                   button(type="button").controll-btn.controll-btn_yellow.controll-btn_left.js-instructor-2
+                     +icon('icon-arrow')
+                     .instructor-card__btn-name Андрей Иванов2
+                   button(type="button").controll-btn.controll-btn_yellow.controll-btn_right.js-instructor-4
+                     +icon('icon-arrow')
+                     .instructor-card__btn-name Андрей Иванов4
+
+             .instructor-card.instructor-card_4
+               .instructor-card__pic(style='background-image:url(img/academy/instructor-1_open.jpg);')
+               .instructor-card__wrap
+                 .instructor-card__bg-title Андрей Иванов4
+                 .instructor-card__content
+                   .instructor-card__title Андрей Иванов4
+                   .instructor-card__line
+                   .instructor-card__subtitle Прошел Атлантический океан в 2 стороны
+                   .instructor-card__descr
+                     .instructor-card__descr-value 40 000
+                     .instructor-card__descr-title Пройдено миль
+                     .instructor-card__descr-icon.instructor-card__descr-icon_mile
+                   .instructor-card__descr
+                     .instructor-card__descr-value 15 000
+                     .instructor-card__descr-title Часов обучения
+                     .instructor-card__descr-icon.instructor-card__descr-icon_hour
+                   .instructor-card__descr
+                     .instructor-card__descr-value 200
+                     .instructor-card__descr-title Выпущено шкиперов
+                     .instructor-card__descr-icon.instructor-card__descr-icon_skipper
+                 .instructor-card__btn-container
+                   button(type="button").controll-btn.controll-btn_yellow.controll-btn_left.js-instructor-3
+                     +icon('icon-arrow')
+                     .instructor-card__btn-name Андрей Иванов3
+                   button(type="button").controll-btn.controll-btn_yellow.controll-btn_right.disabled
+                     +icon('icon-arrow')
+
+       section.fp-section
+         .academy-content-wrap
+           .gallery
+             .gallery__img
+               div(style='background-image:url(img/academy/gallery-1.jpg);')
+               div(style='background-image:url(img/academy/gallery-2.jpg);')
+               div(style='background-image:url(img/academy/gallery-3.jpg);')
+             .gallery__arrow.gallery__arrow_left
+               .gallery__arrow-icon
+             .gallery__arrow.gallery__arrow_right
+               .gallery__arrow-icon
+       section.fp-section
+         .academy-content-wrap.academy-content-wrap_fmk
+           .fmk-top
+             .fmk-top__item
+               .fmk-top__icon.fmk-top__icon_1
+               .fmk-top__text
+                 | Выбор лодки
+             .fmk-top__item
+               .fmk-top__icon.fmk-top__icon_2
+               .fmk-top__text
+                 | Первый опыт под руководством инструктора
+             .fmk-top__item
+               .fmk-top__icon.fmk-top__icon_3
+               .fmk-top__text
+                 | Полностью твоя лодка.
+                 br
+                 | Твое пространство
+           .fmk-content
+             .fmk-skew
+               .fmk
+                 .fmk__text
+                   | Наши выпускники готовы к одиночному плаванью, но хотят, чтобы первый опыт прошел под наблюдением инструктора. Специально для них мы подготовили отдельный продукт - Флотилия Молодых Капитанов (ФМК).
+                  .fmk__text.fmk__text_yellow
+                    | ФМК - это полный ассист твоего первого путешествия!
+                  .fmk__btn-container
+                    a.btn.btn_yellow.fmk__btn(href="#") Записаться
+             .fmk-video
+               .course__video-btn.course__video-btn_fmk
+                   span Посмотрите видео
+         .academy-video.academy-video_fmk
+           .academy-video__close.close.close_yellow.js-close-fmk
+           iframe(width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen)

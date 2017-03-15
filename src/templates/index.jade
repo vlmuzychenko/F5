@@ -1,0 +1,54 @@
+---
+title: Index Page
+---
+extends layouts/_layout
+block content
+   header.header(style="position: relative; z-index: 98")
+      a.header__back-btn(href='#')
+         i.header__back-icon
+            +icon('icon-arrow')
+      a.logo(href='index.html')
+         img(src='img/logo.png' alt='logo')
+      ul.nav.js-nav
+         li.nav__item.is-active
+            a.nav__link(href='#') Services
+            ul.nav__sub-nav
+               li.nav__sub-item
+                  a.nav__sub-link(href='#') Yacht week
+               li.nav__sub-item
+                  a.nav__sub-link(href='#') Yacht charters
+               li.nav__sub-item
+                  a.nav__sub-link(href='#') Regattas
+               li.nav__sub-item
+                  a.nav__sub-link(href='#') Academy
+         li.nav__item
+            a.nav__link(href='#') Calendar
+         li.nav__item
+            a.nav__link(href='#') News
+         li.nav__item
+            a.nav__link(href='#') Contacts
+         li.nav__line.js-moving-line
+      a.header__phone(href='tel:0442544545') 044 254 45 45
+      ul.header__lang.lang
+         li
+            a(href="#" class="is-active")
+               span RU
+         li
+            a(href="#")
+               span EN
+   div(style='display: flex; flex-direction: column; align-items: flex-start;')
+      h1 PAGES:
+      a(href='yacht_card.html' style='margin-bottom: 10px;') 1) yacht card
+      a(href='search-page_quick.html' style='margin-bottom: 10px;') 2) search-page_quick
+      a(href='search-page_advanced.html' style='margin-bottom: 10px;') 3) search-page_advanced
+      a(href='calendar.html' style='margin-bottom: 10px;') 4) calendar
+      a(href='yacht-wiki.html' style='margin-bottom: 10px;') 5) yacht-wiki
+      a(href='contacts.html' style='margin-bottom: 10px;') 6) contacts
+      a(href='main.html' style='margin-bottom: 10px;') 7) main
+      a(href='yacht-wiki-main.html' style='margin-bottom: 10px;') 8) yacht-wiki-main
+      a(href='yacht-wiki-archive.html' style='margin-bottom: 10px;') 9) yacht-wiki-archive
+      a(href='yacht-wiki-archive-open.html' style='margin-bottom: 10px;') 10) yacht-wiki-archive-open
+      a(href='academy.html' style='margin-bottom: 10px;') 11) academy
+      a(href='news.html' style='margin-bottom: 10px;') 12) news
+      a(href='news-archive.html' style='margin-bottom: 10px;') 13) news archive
+      a(href='news-open.html' style='margin-bottom: 10px;') 14) news open

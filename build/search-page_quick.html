@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>search-page_quick</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=768, initial-scale=1">
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header"><a href="#" class="header__back-btn"><i class="header__back-icon"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></i></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <ul class="nav js-nav">
+          <li class="nav__item is-active"><a href="#" class="nav__link">Сервисы</a>
+            <!--a.nav__link(href='#') Services-->
+            <ul class="nav__sub-nav">
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Яхт-вики</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Аренда яхт</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Регаты</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Академия</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Календарь</a>
+            <!--a.nav__link(href='#') Calendar-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Новости</a>
+            <!--a.nav__link(href='#') News-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a>
+            <!--a.nav__link(href='#') Contacts-->
+          </li>
+          <li class="nav__line js-moving-line"></li>
+        </ul><a href="tel:0442544545" class="header__phone">044 254 45 45</a>
+        <ul class="header__lang lang">
+          <li><a href="#" class="is-active"><span>RU</span></a></li>
+          <li><a href="#"><span>EN</span></a></li>
+        </ul>
+      </header>
+      <!--END header-->
+      <!-- BEGIN search-->
+      <div class="search">
+        <form action="#">
+          <div class="search__inner">
+            <div class="search__regions">
+              <div class="search__region"><input type="checkbox" id="west_africa" name="west_africa"><label for="west_africa"></label>
+                <div class="search__region-images"><img src="img/content/south_america.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Западная Африка</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="middle_east" name="middle_east"><label for="middle_east"></label>
+                <div class="search__region-images"><img src="img/content/middle_east.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/middle_east.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Средний восток</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="south_america" name="south_america"><label for="south_america"></label>
+                <div class="search__region-images"><img src="img/content/south_america.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/south_america.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Южная Америка</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="central_america" name="central_america"><label for="central_america"></label>
+                <div class="search__region-images"><img src="img/content/central_america.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Центральная<br>Америка</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="north_america" name="north_america"><label for="north_america"></label>
+                <div class="search__region-images"><img src="img/content/north_america.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Северная Америка</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="northern_europe" name="northern_europe"><label for="northern_europe"></label>
+                <div class="search__region-images"><img src="img/content/northern_europe.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Северная Европа</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="caribs" name="caribs"><label for="caribs"></label>
+                <div class="search__region-images"><img src="img/content/caribs.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Карибы</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="australia_and_oceania" name="australia_and_oceania"><label for="australia_and_oceania"></label>
+                <div class="search__region-images"><img src="img/content/australia_and_oceania.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Австралия и<br>Океания</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="southeas_asia" name="southeas_asia"><label for="southeas_asia"></label>
+                <div class="search__region-images"><img src="img/content/southeas_asia.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Юго-Восточная<br>Азия</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="atlantic_europe" name="atlantic_europe"><label for="atlantic_europe"></label>
+                <div class="search__region-images"><img src="img/content/atlantic_europe.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Атлантическая<br>Европа</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="indian_ocean" name="indian_ocean"><label for="indian_ocean"></label>
+                <div class="search__region-images"><img src="img/content/indian_ocean.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Индийский Океан</div>
+              </div>
+              <div class="search__region"><input type="checkbox" id="mediterranean" name="mediterranean"><label for="mediterranean"></label>
+                <div class="search__region-images"><img src="img/content/mediterranean.png" class="search__region-pic">
+                  <div style="background-image: url(img/content/west_africa.jpg)" class="search__region-img"></div>
+                </div>
+                <div class="search__region-name">Средиземно&shy;морье</div>
+              </div>
+            </div>
+            <div class="search__row">
+              <div class="search__yacht-type">
+                <div class="img-check"><input type="checkbox" id="motor_yachts" name="motor_yachts"><label for="motor_yachts"></label>
+                  <div class="img-check__pic"></div>
+                  <div class="img-check__name">Моторные яхты</div>
+                </div>
+                <div class="img-check"><input type="checkbox" id="sailboats" name="sailboats"><label for="sailboats"></label>
+                  <div class="img-check__pic"></div>
+                  <div class="img-check__name">Парусные яхты</div>
+                </div>
+                <div class="img-check"><input type="checkbox" id="catamarans" name="catamarans"><label for="catamarans"></label>
+                  <div class="img-check__pic"></div>
+                  <div class="img-check__name">Парусные катамараны</div>
+                </div>
+                <div class="img-check"><input type="checkbox" id="mega_yachts" name="mega_yachts"><label for="mega_yachts"></label>
+                  <div class="img-check__pic"></div>
+                  <div class="img-check__name">Мега яхты</div>
+                </div>
+              </div>
+              <div class="search__rent">
+                <div class="search__rent-date">
+                  <div class="search__rent-title">Даты Оренды</div>
+                  <div class="search__rent-row">
+                    <div class="search__rent-field"><label for="sailing" class="input__text">Отплытие</label><input id="sailing" type="text" name="" required class="input js-pick-date"></div>
+                    <div class="search__rent-field"><label for="arrival" class="input__text">Прибытие</label><input id="arrival" type="text" name="" required class="input js-pick-date"></div>
+                  </div>
+                </div><a href="#" data-open="callme" class="search__rent-help js-open-popup">Не знаете что подобрать?</a></div>
+              <div class="search__find">
+                <div class="search__find-title title">Найти подходящие яхты</div>
+                <div class="search__find-actions"><button type="submit" class="search__find-btn btn">Найти</button><a href="#" class="search__find-btn search__find-btn--bg btn">Развернутый поиск</a></div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--END search-->
+    </div>
+    <!--END out-->
+    <div data-popup="feedback" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="При необходимости напишите комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div data-popup="callme" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="Пожалуйста, напишите свой комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--LOAD scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKzXeKm-qJO4uqPR39L4lZf109YLmOFo"></script>
+  </body>
+
+</html>

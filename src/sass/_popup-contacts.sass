@@ -14,16 +14,17 @@
   top: 50%
   transform: translate(0%, -50%)
   left: 50%
-  max-height: 85%
   box-sizing: border-box
   background-color: $accent
   z-index: 200
-  +rmin(800)
+  +rmin(768)
     width: 60%
     padding: 20px 50px
+    max-height: 90%
   +rmin(1024)
     width: 45%
     padding: 20px 90px
+    max-height: 85%
   +rmin(1600)
     padding: 35px 110px 50px
 
@@ -33,7 +34,7 @@
     transform: translate(0%, -50%)
 
 .input-container
-  +rmin(800)
+  +rmin(768)
     margin-bottom: 5px
   +rmin(1024)
     margin-bottom: 10px
@@ -44,7 +45,7 @@
     font-size: 18px
     padding-left: 20px
     +casp-reg
-    +rmin(800)
+    +rmin(768)
       font-size: 13px
     +rmin(1024)
       font-size: 16px
@@ -60,7 +61,7 @@
   width: 100%
   border: 3px solid transparent
   -webkit-appearance: none
-  +rmin(800)
+  +rmin(768)
     font-size: 17px
     padding: 9px 12px
   +rmin(1024)
@@ -95,6 +96,50 @@
       font-size: 18px
     +rmin(1600)
       font-size: 24px
+  &__descr
+    margin-top: 20px
+    padding-left: 20px
+    span
+      display: block
+  &_dropdown
+    padding: 0 !important
+    border: 0
+    .ms-choice
+      border: none
+      border-radius: 0
+      background-color: #fae067
+      height: auto
+      line-height: 1em
+      +rmin(768)
+        font-size: 17px
+        padding: 9px 12px
+      +rmin(1024)
+        font-size: 21px
+        padding: 10px 20px
+      +rmin(1600)
+        font-size: 36px
+        padding: 12px 20px
+      span
+        padding: 0
+        position: static
+    .ms-drop
+      background-color: #fae067
+      border: 0
+    .ms-drop.bottom
+      box-shadow: none
+    .ms-drop ul > li label
+      font-size: 30px
+      +rmin(768)
+        font-size: 14px
+        padding: 9px 12px
+      +rmin(1024)
+        font-size: 18px
+        padding: 10px 20px
+      +rmin(1600)
+        font-size: 30px
+        padding: 12px 20px
+    .ms-drop ul > li label:hover
+      background-color: #ffefa3
 
 .btn_popup
   min-width: 230px

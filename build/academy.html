@@ -369,6 +369,33 @@
             <div class="academy-video__close close close_yellow js-close-fmk"></div><iframe width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen></iframe></div>
         </section>
       </div>
+      <div class="popup-wrap">
+        <div class="popup-contacts">
+          <div class="input-container"><input type="text" id="name" placeholder="ФИО" require class="input-contacts error"><label for="name">ФИО</label></div>
+          <div class="input-container"><input type="text" id="phone" placeholder="(0--) --- -- --" require class="input-contacts"><label for="phone">Телефон</label></div>
+          <div class="input-container"><input type="text" id="email" placeholder="name@mail.com" require class="input-contacts"><label for="email">Email</label></div>
+          <div class="input-container">
+            <div class="input-contacts input-contacts_dropdown js-select-field"><select class="js-select-single"><option> <span>25.02 </span><span>(по субботам)</span></option><option>28.02 (по вторникам и четвергам)</option><option>6.03 (по понедельникам и средам)</option><option>Не определился </option></select></div>
+            <label
+              for="">Старт ближайшего курса
+              <div class="input-contacts__descr"><span>Занятия проводятся по таким дням:</span>
+                <ol>
+                  <li>1. Понедельник-среда</li>
+                  <li>2. Вторник-четверг</li>
+                  <li>3. Суббота (занятие длится _ часов)</li>
+                </ol>
+              </div>
+              </label>
+          </div><button type="submit" class="btn btn_popup js-send">Отправить</button><button type="button" class="close close_black js-popup-close"></button></div>
+        <div class="popup-substrate">
+          <div class="popup-substrate__content"><img src="img/popup-logo.png" class="popup-substrate__logo">
+            <div class="popup-substrate__text">
+              <p>Спасибо!</p>
+              <p>Мы обработаем заявку и свяжемся с Вами в ближайшее время.</p>
+            </div><img src="img/popup-icon.png" class="popup-substrate__icon">
+            <div class="popup-substrate__timer">окно закроется через<span id="timer">5</span>сек</div><button type="button" class="close close_white js-popup-substrate-close"></button></div>
+        </div>
+      </div>
     </div>
     <!--END out-->
     <div data-popup="feedback" class="popup js-popup">

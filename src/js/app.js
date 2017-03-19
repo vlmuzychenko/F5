@@ -25,5 +25,6 @@
 //=include yacht-wiki-open.js
 //=include academy.js
 //=include news-open.js
+//=include event.js
 
 sayHello();

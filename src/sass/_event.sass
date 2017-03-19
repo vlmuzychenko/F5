@@ -1,0 +1,97 @@
+.event-btn-container
+  position: absolute
+  bottom: 35px
+  right: 3%
+.event__btn
+  min-width: 230px
+  display: inline-block
+  transition: .3s
+  text-transform: uppercase
+  +rmin(768)
+    min-width: 160px
+  +rmin(1366)
+    min-width: 190px
+  +rmin(1600)
+    min-width: 230px
+  &:not(last-child)
+    margin-right: 15px
+  &_register
+    background-color: $accent
+    border-color: $accent
+    &:hover
+      background-color: #fff
+      border-color: #000
+  &_calendar
+    border-color: $accent
+    color: $accent
+    background-color: rgba(#000, .5)
+    &:hover
+      background-color: $accent
+      color: #000
+
+.map-wrap
+  width: 60%
+  margin-left: 40%
+  height: 100%
+  cursor: pointer
+  z-index: 100
+
+.event-place
+  width: 100%
+  height: 100%
+  background-image: url(../img/event/place-bg.jpg)
+  background-position: 100% 50%
+  background-size: cover
+  transform: skewX(16deg) translateX(20%)
+  +rmin(768)
+    padding-top: 100px
+    padding-left: 25px
+  +rmin(1024)
+    padding-top: 140px
+    padding-left: 50px
+  +rmin(1600)
+    padding-top: 190px
+
+  &__title
+    +futura-bold
+    text-transform: uppercase
+    color: #fff
+    +rmin(768)
+      font-size: 24px
+    +rmin(1600)
+      font-size: 30px
+
+  &__items
+    +casp-reg
+    +rmin(768)
+      font-size: 16px
+      width: 70%
+    +rmin(1024)
+      font-size: 18px
+      width: 80%
+    +rmin(1600)
+      font-size: 24px
+
+  &__item
+    color: #f6cb02
+    margin-top: 5px
+
+    &_title-bold
+      color: $accent
+      +futura-bold
+      +rmin(768)
+        margin-top: 15px
+      +rmin(1024)
+        margin-top: 45px
+
+    &_title
+      color: #fff
+      &:last-child
+        +rmin(768)
+          margin-bottom: 40px
+        +rmin(1024)
+          margin-bottom: 80px
+      +rmin(768)
+        margin-top: 15px
+      +rmin(1024)
+        margin-top: 45px

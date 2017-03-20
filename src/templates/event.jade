@@ -4,7 +4,7 @@ title: Event
 extends layouts/_layout
 block content
   // BEGIN Event
-  ul.yacht-wiki-menu
+  ul.yacht-wiki-menu.js-event-menu
       li(data-menuanchor="event").yacht-wiki-menu__item
           a(href="#event") событие
       li(data-menuanchor="details").yacht-wiki-menu__item
@@ -13,8 +13,6 @@ block content
           a(href="#place") время и место
       li(data-menuanchor="partners").yacht-wiki-menu__item
           a(href="#partners") партнеры
-      li(data-menuanchor="gallery").yacht-wiki-menu__item
-          a(href="#gallery") галерея
   .event-fp
       section.fp-section
           .descr(style='background-image:url(img/event/event-bg.jpg)')
@@ -69,17 +67,29 @@ block content
           .event-map
             
       section.fp-section
-        .programm-wrap
+        .e-partners-wrap
+          .e-partners-title информационные партнеры
+          .e-partners-content
+            a(href='#').e-partners-item
+              .e-partners-item__img
+                img(src='img/event/partner-1.png')
+              span Вокруг света
+            a(href='#').e-partners-item
+              .e-partners-item__img
+                img(src='img/event/partner-2.png')
+              span Деловая столица
+            a(href='#').e-partners-item
+              .e-partners-item__img
+                img(src='img/event/partner-3.png')
+              span ДЕПО
+            a(href='#').e-partners-item
+              .e-partners-item__img
+                img(src='img/event/partner-4.png')
+              span Playboy
+            a(href='#').e-partners-item
+              .e-partners-item__img
+                img(src='img/event/partner-5.png')
+              span Officiel online
+          .partners-btn-container
+              a.btn.event__btn.event__btn_calendar(href="#") Календарь
           
-
-      section.fp-section
-        .academy-content-wrap
-          .gallery
-            .gallery__img
-              div(style='background-image:url(img/event/event-gallery-1.jpg);')
-              div(style='background-image:url(img/event/event-gallery-1.jpg);')
-              div(style='background-image:url(img/event/event-gallery-1.jpg);')
-            .gallery__arrow.gallery__arrow_left
-              .gallery__arrow-icon
-            .gallery__arrow.gallery__arrow_right
-              .gallery__arrow-icon

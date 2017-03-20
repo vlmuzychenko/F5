@@ -95,3 +95,77 @@
         margin-top: 15px
       +rmin(1024)
         margin-top: 45px
+
+.e-partners-wrap
+  height: 100%
+  background-image: url(../img/event/partners-bg.jpg)
+  +rmin(768)
+    padding-top: 100px
+  +rmin(1024)
+    padding-top: 140px
+  +rmin(1600)
+    padding-top: 190px
+
+.e-partners-title
+  font-size: 48px
+  +futura-bold
+  color: #161616
+  text-transform: uppercase
+  text-align: center
+  +rmin(768)
+    font-size: 24px
+  +rmin(1024)
+    font-size: 30px
+  +rmin(1680)
+    font-size: 48px
+.e-partners-content
+  width: 70%
+  height: 60%
+  margin: 4% auto 0
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-flow: row wrap
+.e-partners-item
+  width: 33.3333%
+  text-align: center
+  position: relative
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 50%
+    bottom: -5px
+    left: 50%
+    transform: translateX(-50%)
+    border-bottom: 2px solid transparent
+    transition: border-color .2s
+  &:hover:after
+    border-bottom: 2px solid #007bc9
+  &__img
+    position: relative
+    margin-bottom: 20px
+    +rmin(768)
+      height: 80px
+    +rmin(1024)
+      height: 110px
+    img
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+  span
+    display: block
+    +casp-reg
+    font-size: 18px
+
+.partners-btn-container
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  +rmin(768)
+    bottom: 30px
+  +rmin(1024)
+    bottom: 50px
+  +rmin(1680)
+    bottom: 80px

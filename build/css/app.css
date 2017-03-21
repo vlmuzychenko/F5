@@ -5364,17 +5364,6 @@ html.fp-enabled,
   position: relative;
 }
 
-.wiki-extended-slider__title {
-  position: absolute;
-  left: 50px;
-  top: 100px;
-  font-family: FuturaPT-Bold, Arial, sans-serif;
-}
-
-.wiki-extended-slider__title span {
-  display: block;
-}
-
 .wiki-extended-slider__nav {
   position: absolute;
   left: 50%;
@@ -6607,7 +6596,8 @@ html.fp-enabled,
 .license-card-open__btn-container {
   position: absolute;
   bottom: 10%;
-  right: 10%;
+  width: 100%;
+  text-align: center;
 }
 
 .license-card-open__btn {
@@ -6874,6 +6864,7 @@ html.fp-enabled,
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .fmk-top__icon_1:before {
@@ -7647,7 +7638,7 @@ html.fp-enabled,
 }
 
 .news-extended__descr {
-  width: 55%;
+  width: 50%;
   height: 100%;
   float: right;
   position: relative;
@@ -7714,7 +7705,7 @@ html.fp-enabled,
   vertical-align: top;
   position: relative;
   margin-left: 5%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   transition: background 0.3s;
 }
 
@@ -8385,9 +8376,6 @@ html.fp-enabled,
     width: 50px;
     height: 50px;
   }
-  .wiki-extended-slider__title{
-    font-size: 7px;
-  }
   .wiki-extended-slider__nav{
     bottom: 0;
     width: 360px;
@@ -8920,7 +8908,7 @@ html.fp-enabled,
     height: 120px;
   }
   .fmk-top__icon{
-    width: 50px;
+    width: 80px;
     height: 50px;
   }
   .fmk-top__icon_2:before{
@@ -8967,6 +8955,10 @@ html.fp-enabled,
   .instructor-card__descr-icon{
     width: 130px;
     height: 130px;
+  }
+  .news-post__btn{
+    min-width: 120px;
+    margin-top: 50px;
   }
   .news-extended__title{
     font-size: 30px;
@@ -9015,6 +9007,10 @@ html.fp-enabled,
   }
   .partners-btn-container{
     bottom: 50px;
+  }
+  .error404__social{
+    bottom: 85px;
+    right: 8%;
   }
 }
 
@@ -9180,9 +9176,6 @@ html.fp-enabled,
     width: 70px;
     height: 70px;
   }
-  .wiki-extended-slider__title{
-    font-size: 12px;
-  }
   .wiki-extended-slider__nav{
     bottom: 30px;
     width: 660px;
@@ -9310,7 +9303,6 @@ html.fp-enabled,
   }
   .news-post__btn{
     min-width: 190px;
-    margin-top: 20px;
   }
   .news-extended__date{
     font-size: 18px;
@@ -9525,9 +9517,6 @@ html.fp-enabled,
   .wiki-extended-slider__video-btn span:after{
     width: 95px;
     height: 95px;
-  }
-  .wiki-extended-slider__title{
-    font-size: 18px;
   }
   .contacts__title{
     font-size: 30px;

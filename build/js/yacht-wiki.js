@@ -30,7 +30,7 @@ $(function () {
     }
   });
 
-  $('.js-programm__slider').slick({
+  $('.js-programm-slider').slick({
     fade: true,
     infinite: false,
     draggable: false,
@@ -39,8 +39,8 @@ $(function () {
   });
 
   $('.js-programm-btn').click(function () {
-    var bg = $('.programm__slider .slick-active').data('bgImg');
-    var bgPic = $('.programm__slider .slick-active').data('bgImgPic');
+    var bg = $('.js-programm-slider .slick-active').data('bgImg');
+    var bgPic = $('.js-programm-slider .slick-active').data('bgImgPic');
     $('.js-section-bg').css('background-image', bg);
     $('.programm').css('background-image', bgPic);
   });

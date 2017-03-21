@@ -198,7 +198,8 @@
     &__btn-container
       position: absolute
       bottom: 10%
-      right: 10%
+      width: 100%
+      text-align: center
 
     &__btn
       min-width: 230px
@@ -486,7 +487,7 @@
       width: 35px
       height: 35px
     +rmin(1024)
-      width: 50px
+      width: 80px
       height: 50px
     +rmin(1680)
       width: 85px
@@ -498,6 +499,7 @@
        display: block
        background-size: contain
        background-repeat: no-repeat
+       margin: 0 auto
     &_1:before
       background-image: url(../img/academy/fmk-1.png)
     &_2:before

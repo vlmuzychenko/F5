@@ -12,7 +12,9 @@ block content
       li(data-menuanchor="place").yacht-wiki-menu__item
           a(href="#place") время и место
       li(data-menuanchor="partners").yacht-wiki-menu__item
-          a(href="#partners") партнеры
+          a(href="#partners") партнеры 
+      li(data-menuanchor="registration").yacht-wiki-menu__item
+          a(href="#registration") регистрация
   .event-fp
       section.fp-section
           .descr(style='background-image:url(img/event/event-bg.jpg)')
@@ -92,4 +94,29 @@ block content
               span Officiel online
           .partners-btn-container
               a.btn.event__btn.event__btn_calendar(href="#") Календарь
+              
+      section.fp-section
+        .checkin(style='background-image:url(img/event/thank_you.jpg)')
+          .checkin__content
+            .checkin__title решайтесь, это будет грандиозно!
+            .checkin-social
+              a(href="#").checkin-social__link.checkin-social__link_yt
+              a(href="#").checkin-social__link.checkin-social__link_fb
+              a(href="#").checkin-social__link.checkin-social__link_inst
+            .checkin-form
+              .checkin-form__input
+                label(for="name") Имя и фамилия
+                input(type="text" id="name" placeholder="Имя Фамилия")
+
+              .checkin-form__input
+                label(for="phone") Телефон
+                input(type="text" id="phone" placeholder="(0--) --- -- --")
+
+              .checkin-form__input
+                label(for="email") Email
+                input(type="text" id="email" placeholder="name@mail.com").error
+
+              .checkin-form__btn-container
+                a.btn.checkin-form__btn.checkin-form__btn_reg.js-enroll(href="#") Записаться
+                a.btn.btn_dark.checkin-form__btn(href="#") Календарь
           

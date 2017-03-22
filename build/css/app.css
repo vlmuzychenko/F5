@@ -8780,6 +8780,9 @@ html.fp-enabled,
     border-width: 9px;
     width: 55%;
   }
+  .checkin__title{
+    font-size: 36px;
+  }
   .contacts{
     padding-top: 50px;
     padding-left: 50px;
@@ -9079,9 +9082,6 @@ html.fp-enabled,
   }
   .checkin{
     padding-top: 160px;
-  }
-  .checkin__title{
-    font-size: 36px;
   }
   .checkin-social{
     margin: 10px 0;

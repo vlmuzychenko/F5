@@ -3616,7 +3616,7 @@ html.fp-enabled,
 }
 
 .search-adv__filter {
-  padding: 0 25px 0 10px;
+  padding: 0 0 0 10px;
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -3628,6 +3628,7 @@ html.fp-enabled,
 
 .search-adv__filter:not(.search-adv__filter--detailed) {
   height: 100%;
+  padding-bottom: 100px;
 }
 
 .search-adv__filter--detailed {
@@ -3638,23 +3639,15 @@ html.fp-enabled,
   top: 0;
   left: 0;
   right: 0;
-  bottom: 120px;
+  bottom: 100px;
   z-index: 10;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   overflow: hidden;
   padding-right: 0px;
-}
-
-.search-adv__filter--detailed:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-  right: 25px;
-  height: 1px;
-  background: #d8d8d8;
 }
 
 .search-adv__filter--detailed.is-active {
@@ -3704,7 +3697,6 @@ html.fp-enabled,
   font-size: 0;
   text-justify: newspaper;
   zoom: 1;
-  -moz-text-align-last: justify;
   text-align-last: justify;
   margin-left: 0;
   margin-right: 0;
@@ -3802,11 +3794,25 @@ html.fp-enabled,
 }
 
 .search-adv__actions {
-  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 10px;
+  padding-top: 50px;
   margin-bottom: -20px;
-  position: relative;
-  z-index: 3;
+  z-index: 11;
   font-size: 0;
+}
+
+.search-adv__actions:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 25px;
+  height: 1px;
+  background: #d8d8d8;
 }
 
 .search-adv__actions > button {
@@ -3830,10 +3836,11 @@ html.fp-enabled,
 
 .search-adv__btn-find .icon-search {
   position: absolute;
-  top: 9px;
+  top: 50%;
   left: 39px;
   width: 30px;
   height: 30px;
+  margin-top: -15px;
   fill: #000;
 }
 
@@ -3859,12 +3866,13 @@ html.fp-enabled,
 
 .search-adv__btn-filter .icon-arrow {
   position: absolute;
-  top: 12px;
+  top: 50%;
   left: 82%;
   z-index: 1;
   fill: #000;
   width: 25px;
   height: 25px;
+  margin-top: -12px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -10571,8 +10579,12 @@ html.fp-enabled,
 
 @media only screen and (max-width: 1900px) {
 
+  .search-adv__filter:not(.search-adv__filter--detailed) {
+    padding-bottom: 150px;
+  }
+
   .search-adv__filter--detailed {
-    bottom: 190px;
+    bottom: 150px;
   }
 
   .search-adv__btn-find {

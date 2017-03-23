@@ -95,6 +95,10 @@
     margin-left: 18%
 
 .news-content-wrap
+  +clr
+  .slick-list,
+  .slick-track
+    height: 100%
   +rmin(768)
     height: calc(100% - 60px)
   +rmin(1366)
@@ -108,7 +112,8 @@
   align-content: space-between
   flex-flow: row wrap
 
-    
+
+
 .news-post
   box-sizing: border-box
   position: relative

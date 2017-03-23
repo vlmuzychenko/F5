@@ -7522,6 +7522,21 @@ html.fp-enabled,
   background-color: #ee5004;
 }
 
+.news-content-wrap {
+  *zoom: 1;
+}
+
+.news-content-wrap:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.news-content-wrap .slick-list,
+.news-content-wrap .slick-track {
+  height: 100%;
+}
+
 .news-content {
   height: 100%;
   display: -webkit-flex;

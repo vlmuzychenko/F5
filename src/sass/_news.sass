@@ -108,23 +108,31 @@
   align-content: space-between
   flex-flow: row wrap
 
-.news
-  .news-post__text:before
-    content: 'новость'
-    background-color: $accent
-    color: #000
-
-.event
-  .news-post__text:before
-    content: 'событие'
-    background-color: #ee5004
-    color: #fff
-
-
+    
 .news-post
   box-sizing: border-box
   position: relative
   overflow: hidden
+  &__label
+    display: inline-block
+    margin-bottom: 10px
+    +futura-demi
+    &_news
+      background-color: $accent
+      color: #000
+    &_event
+      background-color: #ee5004
+      color: #fff
+    +rmin(768)
+      margin-bottom: 5px
+      font-size: 14px
+      padding: 1px 5px 3px
+    +rmin(1366)
+      font-size: 18px
+      margin-bottom: 10px
+    +rmin(1600)
+      margin-bottom: 15px
+      padding: 2px 5px 5px
   +rmin(768)
     width: calc(25% - 10px)
     height: calc(50% - 5px)
@@ -158,20 +166,6 @@
       padding-left: 10px
     +rmin(1366)
       padding-left: 40px
-    &:before
-      display: inline-block
-      margin-bottom: 10px
-      +futura-demi
-      +rmin(768)
-        margin-bottom: 5px
-        font-size: 14px
-        padding: 1px 5px 3px
-      +rmin(1366)
-        font-size: 18px
-        margin-bottom: 10px
-      +rmin(1600)
-        margin-bottom: 15px
-        padding: 2px 5px 5px
 
   &__img
     +cover

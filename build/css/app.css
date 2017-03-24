@@ -1607,6 +1607,31 @@ html.fp-enabled,
   height: auto !important;
 }
 
+/**/
+.fullpage-wrapper {
+  width: 100% !important;
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
+}
+
+.fp-section {
+  width: 100% !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+  transition: all .7s ease-in-out;
+}
+
+.fp-section.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
 /**
  * Owl Carousel v2.2.1
  * Copyright 2013-2017 David Deutsch
@@ -4519,8 +4544,7 @@ html.fp-enabled,
 
 .descr__btn-container {
   position: absolute;
-  bottom: 35px;
-  right: 3%;
+  bottom: 40px;
 }
 
 .descr__btn {
@@ -4531,7 +4555,7 @@ html.fp-enabled,
 }
 
 .descr__btn:not(last-child) {
-  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .descr__btn_register {
@@ -8215,7 +8239,7 @@ html.fp-enabled,
 
   .yacht-wiki-btn {
     min-width: 160px;
-    right: 3%;
+    right: 20px;
   }
 
   .yacht-wiki-menu {
@@ -8259,6 +8283,10 @@ html.fp-enabled,
   .descr__video-btn span:after {
     width: 50px;
     height: 50px;
+  }
+
+  .descr__btn-container {
+    right: 20px;
   }
 
   .descr__btn {
@@ -8963,6 +8991,15 @@ html.fp-enabled,
 
 @media only screen and (min-width: 1024px) {
 
+  .yacht-wiki-btn {
+    min-width: 190px;
+    right: 70px;
+  }
+
+  .descr__btn-container {
+    right: 70px;
+  }
+
   .carousel li {
     width: 600px;
     height: 380px;
@@ -9295,11 +9332,6 @@ html.fp-enabled,
 
   .btn {
     font-size: 16px;
-  }
-
-  .yacht-wiki-btn {
-    min-width: 190px;
-    right: 7%;
   }
 
   .yacht-wiki-menu__item {

@@ -26,7 +26,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         maxZ: 280,
         minOpacity: .4,
         maxOpacity: 1,
-        minScale: .4,
+        minScale: .1,
         maxScale: 1,
         duration: 600,
         btnNext: null,

@@ -7819,7 +7819,7 @@ function sayHello() {
         maxZ: 280,
         minOpacity: .4,
         maxOpacity: 1,
-        minScale: .4,
+        minScale: .1,
         maxScale: 1,
         duration: 600,
         btnNext: null,
@@ -8562,6 +8562,7 @@ function sayHello() {
         }
     };
 })(jQuery);
+
 /**
  * Owl Carousel v2.2.1
  * Copyright 2013-2017 David Deutsch

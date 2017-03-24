@@ -3,8 +3,8 @@ $(function () {
    // search filters change
 
    (function () {
-      var filterDetailed = $('.js-filter-detailed'),
-         toggleFilters = $('.js-more-filters');
+      let filterDetailed = $('.js-filter-detailed');
+      let toggleFilters = $('.js-more-filters');
 
       toggleFilters.each(function () {
          $(this).on('click', function (e) {

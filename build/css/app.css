@@ -3605,7 +3605,7 @@ html.fp-enabled,
 
 .search-adv__filters-inner {
   height: calc(100vh - 100px);
-  padding: 10px 0;
+  padding: 10px 0 0;
 }
 
 .search-adv__filter-inner {
@@ -3616,7 +3616,7 @@ html.fp-enabled,
 }
 
 .search-adv__filter {
-  padding: 0 25px 0 10px;
+  padding: 0 0 0 10px;
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -3628,6 +3628,7 @@ html.fp-enabled,
 
 .search-adv__filter:not(.search-adv__filter--detailed) {
   height: 100%;
+  padding-bottom: 90px;
 }
 
 .search-adv__filter--detailed {
@@ -3638,23 +3639,14 @@ html.fp-enabled,
   top: 0;
   left: 0;
   right: 0;
-  bottom: 120px;
+  bottom: 100px;
   z-index: 10;
+  padding-top: 10px;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   overflow: hidden;
-  padding-right: 0px;
-}
-
-.search-adv__filter--detailed:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-  right: 25px;
-  height: 1px;
-  background: #d8d8d8;
+  padding-right: 0;
 }
 
 .search-adv__filter--detailed.is-active {
@@ -3802,15 +3794,29 @@ html.fp-enabled,
 }
 
 .search-adv__actions {
-  margin-top: 50px;
-  margin-bottom: -20px;
-  position: relative;
-  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  z-index: 11;
   font-size: 0;
 }
 
+.search-adv__actions:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 25px;
+  height: 1px;
+  background: #d8d8d8;
+}
+
 .search-adv__actions > button {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .search-adv__actions-more {
@@ -3830,10 +3836,11 @@ html.fp-enabled,
 
 .search-adv__btn-find .icon-search {
   position: absolute;
-  top: 9px;
-  left: 39px;
-  width: 30px;
-  height: 30px;
+  top: 50%;
+  left: 27px;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
   fill: #000;
 }
 
@@ -3852,19 +3859,20 @@ html.fp-enabled,
 
 .search-adv__btn-filter {
   position: relative;
-  width: 230px;
+  min-width: 230px;
   padding: 0 20px;
   text-align: left;
 }
 
 .search-adv__btn-filter .icon-arrow {
   position: absolute;
-  top: 12px;
+  top: 50%;
   left: 82%;
   z-index: 1;
   fill: #000;
   width: 25px;
   height: 25px;
+  margin-top: -12px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -10524,6 +10532,10 @@ html.fp-enabled,
     margin-top: 70px;
   }
 
+  .search-adv__filters-inner {
+    height: calc(100vh - 70px);
+  }
+
   .descr-video {
     height: calc(100vh - 70px);
     margin-top: 70px;
@@ -10582,12 +10594,17 @@ html.fp-enabled,
 
 @media only screen and (max-width: 1900px) {
 
+  .search-adv__filter:not(.search-adv__filter--detailed) {
+    padding-bottom: 155px;
+  }
+
   .search-adv__filter--detailed {
-    bottom: 190px;
+    bottom: 155px;
   }
 
   .search-adv__btn-find {
     display: table;
+    width: 150px;
   }
 }
 
@@ -10636,6 +10653,22 @@ html.fp-enabled,
 
   .card__info-item:nth-child(7), .card__info-item:nth-child(8) {
     width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1599px) {
+
+  .search-adv__filter:not(.search-adv__filter--detailed) {
+    padding-bottom: 135px;
+  }
+
+  .search-adv__filter--detailed {
+    bottom: 135px;
+  }
+
+  .search-adv__btn-filter {
+    width: auto;
+    min-width: 212px;
   }
 }
 
@@ -10689,6 +10722,10 @@ html.fp-enabled,
 
 @media only screen and (max-width: 1365px) {
 
+  .search-adv__btn-filter {
+    min-width: 200px;
+  }
+
   .skew-section_price {
     width: 45%;
   }
@@ -10719,6 +10756,13 @@ html.fp-enabled,
 
   .yacht-map__wrapper--card {
     width: 100%;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+
+  .main-card {
+    max-height: 500px;
   }
 }
 
@@ -10760,6 +10804,10 @@ html.fp-enabled,
   .search-adv__wrapper.is-active .search-adv__btn svg {
     -webkit-transform: translate3d(0, 0, 0) rotate(0);
     transform: translate3d(0, 0, 0) rotate(0);
+  }
+
+  .search-adv__filters-inner {
+    height: calc(100vh - 100px);
   }
 
   .search-adv__view {
@@ -10911,15 +10959,6 @@ html.fp-enabled,
   }
 }
 
-@media only screen and (max-height: 750px) {
-
-  .calendar__event-descr {
-    -webkit-transform: translateY(64%);
-    -ms-transform: translateY(64%);
-    transform: translateY(64%);
-  }
-}
-
 @media only screen and (max-width: 1000px) {
 
   .calendar__datepicker {
@@ -10933,6 +10972,15 @@ html.fp-enabled,
   .nav__item {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+
+  .calendar__event-descr {
+    -webkit-transform: translateY(64%);
+    -ms-transform: translateY(64%);
+    transform: translateY(64%);
   }
 }
 
@@ -10951,13 +10999,6 @@ html.fp-enabled,
 
   .ps-container {
     overflow: auto !important;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
   }
 }
 

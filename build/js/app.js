@@ -9601,8 +9601,8 @@ $(function () {
     // search filters change
 
     (function () {
-        var filterDetailed = $('.js-filter-detailed'),
-            toggleFilters = $('.js-more-filters');
+        var filterDetailed = $('.js-filter-detailed');
+        var toggleFilters = $('.js-more-filters');
 
         toggleFilters.each(function () {
             $(this).on('click', function (e) {

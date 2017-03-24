@@ -10794,6 +10794,10 @@ html.fp-enabled,
     transform: translate3d(0, 0, 0) rotate(0);
   }
 
+  .search-adv__filters-inner {
+    height: calc(100vh - 100px);
+  }
+
   .search-adv__view {
     width: 100%;
   }

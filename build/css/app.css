@@ -9201,6 +9201,15 @@ html.fp-enabled,
     height: 130px;
   }
 
+  .news-post__text {
+    padding-left: 30px;
+  }
+
+  .news-post__title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
   .news-post__btn {
     min-width: 120px;
     margin-top: 50px;
@@ -9625,14 +9634,9 @@ html.fp-enabled,
     margin-right: 20px;
   }
 
-  .news-post__text {
-    padding-left: 40px;
-  }
-
   .news-post__title {
-    font-size: 24px;
+    font-size: 21px;
     margin-bottom: 10px;
-    width: 75%;
   }
 
   .news-post__date {
@@ -9641,6 +9645,7 @@ html.fp-enabled,
 
   .news-post__btn {
     min-width: 190px;
+    margin-top: 30px;
   }
 
   .news-extended__date {
@@ -10097,7 +10102,9 @@ html.fp-enabled,
   }
 
   .news-post__title {
+    font-size: 24px;
     margin-bottom: 15px;
+    width: 75%;
   }
 
   .news-post__btn {
@@ -10291,6 +10298,10 @@ html.fp-enabled,
 
   .instructor-card__btn-name {
     font-size: 18px;
+  }
+
+  .news-post__text {
+    padding-left: 40px;
   }
 
   .news-extended__descr {

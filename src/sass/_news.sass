@@ -169,7 +169,9 @@
   &__text
     +rmin(768)
       padding-left: 10px
-    +rmin(1366)
+    +rmin(1024)
+      padding-left: 30px
+    +rmin(1680)
       padding-left: 40px
 
   &__img
@@ -185,12 +187,16 @@
       font-size: 14px
       margin-bottom: 5px
       width: 90%
+    +rmin(1024)
+      font-size: 18px
+      margin-bottom: 5px
     +rmin(1366)
-      font-size: 24px
+      font-size: 21px
       margin-bottom: 10px
-      width: 75%
     +rmin(1600)
+      font-size: 24px
       margin-bottom: 15px
+      width: 75%
 
   &__date
     display: block
@@ -216,6 +222,7 @@
       margin-top: 50px
     +rmin(1366)
       min-width: 190px
+      margin-top: 30px
     +rmin(1600)
       margin-top: 60px
       min-width: 230px

@@ -8351,7 +8351,7 @@ html.fp-enabled,
   }
 
   .checkin {
-    padding-top: 14%;
+    padding-top: 110px;
   }
 
   .checkin__title {
@@ -8359,7 +8359,7 @@ html.fp-enabled,
   }
 
   .checkin-partners {
-    height: 12%;
+    height: 60px;
   }
 
   .checkin-partners__item {
@@ -9015,8 +9015,21 @@ html.fp-enabled,
     font-size: 16px;
   }
 
+  .checkin {
+    padding-top: 150px;
+  }
+
   .checkin__title {
     font-size: 36px;
+  }
+
+  .checkin-partners {
+    height: 80px;
+  }
+
+  .checkin-form__input input {
+    font-size: 18px;
+    padding: 10px 20px;
   }
 
   .contacts {
@@ -9432,11 +9445,6 @@ html.fp-enabled,
   .checkin-form__input label {
     font-size: 14px;
     margin-bottom: 10px;
-  }
-
-  .checkin-form__input input {
-    font-size: 18px;
-    padding: 10px 20px;
   }
 
   .checkin-form__btn {
@@ -9876,7 +9884,7 @@ html.fp-enabled,
 
   .checkin-partners {
     padding-top: 10px;
-    height: 15%;
+    height: 130px;
   }
 
   .checkin-partners__item {

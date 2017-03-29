@@ -75,6 +75,7 @@
   z-index: 900
   text-align: center
   transition: color .2s
+  font-size: 14px
   &.light
     color: #fff
     .yacht-wiki-menu__item.active
@@ -83,7 +84,7 @@
     color: #000
     .yacht-wiki-menu__item.active
       border-bottom-color: #000
-  +rmin(768)
+  +resp
     top: 80px
     font-size: 12px
   +rmin(1600)
@@ -572,6 +573,8 @@
       transition: .3s
       +rmin(768)
         width: 100px
+      +rmin(1024)
+        margin-top: 5px
       +rmin(1600)
         width: 260px
       &:not(:last-child)

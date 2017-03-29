@@ -4403,6 +4403,7 @@ html.fp-enabled,
   z-index: 900;
   text-align: center;
   transition: color .2s;
+  font-size: 14px;
 }
 
 .yacht-wiki-menu.light {
@@ -8242,11 +8243,6 @@ html.fp-enabled,
     right: 20px;
   }
 
-  .yacht-wiki-menu {
-    top: 80px;
-    font-size: 12px;
-  }
-
   .yacht-wiki-menu__item {
     margin-right: 40px;
     padding: 0 2px 7px;
@@ -8595,12 +8591,6 @@ html.fp-enabled,
   .card-open__descr {
     font-size: 14px;
     line-height: 16px;
-  }
-
-  .academy-menu {
-    top: 70px;
-    height: 60px;
-    padding-top: 20px;
   }
 
   .academy-menu__item {
@@ -9025,6 +9015,10 @@ html.fp-enabled,
 
   .checkin-partners {
     height: 80px;
+  }
+
+  .checkin-partners__item {
+    margin-top: 5px;
   }
 
   .checkin-form__input input {
@@ -9575,12 +9569,6 @@ html.fp-enabled,
     font-size: 18px;
     line-height: 18px;
     width: 40%;
-  }
-
-  .academy-menu {
-    top: 70px;
-    height: 60px;
-    padding-top: 15px;
   }
 
   .academy-menu__item {
@@ -10576,6 +10564,11 @@ html.fp-enabled,
     height: calc(100vh - 70px);
   }
 
+  .yacht-wiki-menu {
+    top: 80px;
+    font-size: 12px;
+  }
+
   .descr-video {
     height: calc(100vh - 70px);
     margin-top: 70px;
@@ -10599,6 +10592,12 @@ html.fp-enabled,
   .section {
     height: calc(100vh - 70px);
     margin-top: 70px;
+  }
+
+  .academy-menu {
+    top: 70px;
+    height: 60px;
+    padding-top: 15px;
   }
 
   .license-wrap {

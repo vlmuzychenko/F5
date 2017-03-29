@@ -13,11 +13,13 @@ $(function () {
 
    $('.js-card-slider-nav').slick({
       useTransform: true,
-      slidesToShow: 4,
+      slidesToShow: 6,
       slidesToScroll: 1,
       asNavFor: '.js-card-slider',
       dots: false,
-      focusOnSelect: true
+      arrows: false,
+      focusOnSelect: true,
+      infinity: false
    });
 
    (function () {
@@ -59,4 +61,3 @@ $(function () {
     })();
 
 });
-

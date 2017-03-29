@@ -3080,7 +3080,8 @@ html.fp-enabled,
 }
 
 .card__order-btn + .card__order-btn {
-  margin-left: 29px;
+  margin-left: 0;
+  margin-top: 20px;
 }
 
 .card__rent {
@@ -3171,52 +3172,46 @@ html.fp-enabled,
 
 .card-slider__nav {
   position: absolute;
-  bottom: 30px;
-  left: 0;
-  right: 0;
+  left: 50%;
   text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   height: 100px;
   z-index: 5;
 }
 
 .card-slider__nav .slick-slide {
-  float: none;
   display: inline-block;
   vertical-align: top;
 }
 
-.card-slider__nav-pic {
+.card-slider__nav .slick-track {
+  margin: 0 auto;
+}
+
+.card-slider__nav .slick-track div {
   position: relative;
-  width: 100px !important;
+  width: 99px !important;
   height: 100px;
   background: no-repeat center center;
   background-size: cover;
   cursor: pointer;
   z-index: 6;
+  opacity: .3;
+  transition: .3s;
 }
 
-.card-slider__nav-pic + .card-slider__nav-pic {
-  margin-left: 10px;
+.card-slider__nav .slick-track div:not(:last-child) {
+  margin-right: 10px;
 }
 
-.card-slider__nav-pic::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(197, 197, 197, 0.5);
-  transition: opacity 0.3s;
+.card-slider__nav .slick-track div:hover {
+  opacity: 1;
 }
 
-.card-slider__nav-pic:hover::after {
-  opacity: 0;
-}
-
-.card-slider__nav-pic.slick-current::after {
-  display: none;
-  content: none;
+.card-slider__nav .slick-track div.slick-current {
+  opacity: 1;
 }
 
 .search__inner {
@@ -8238,6 +8233,16 @@ html.fp-enabled,
     font-size: 14px;
   }
 
+  .card-slider__nav {
+    bottom: 0;
+    width: 360px;
+  }
+
+  .card-slider__nav .slick-track div {
+    width: 50px !important;
+    height: 50px;
+  }
+
   .yacht-wiki-btn {
     min-width: 160px;
     right: 20px;
@@ -9339,6 +9344,16 @@ html.fp-enabled,
 
   .btn {
     font-size: 16px;
+  }
+
+  .card-slider__nav {
+    bottom: 30px;
+    width: 660px;
+  }
+
+  .card-slider__nav .slick-track div {
+    width: 100px !important;
+    height: 100px;
   }
 
   .yacht-wiki-menu__item {
@@ -10735,11 +10750,6 @@ html.fp-enabled,
 
   .card__order-btn {
     display: table;
-  }
-
-  .card__order-btn + .card__order-btn {
-    margin-left: 0;
-    margin-top: 20px;
   }
 
   .card__rent::before {

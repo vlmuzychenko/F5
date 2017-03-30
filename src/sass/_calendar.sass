@@ -84,33 +84,38 @@
          color: #fff
          z-index: 3
          font-size: 16px
-         transform: translateY(74%)
+         transform: translateY(55%)
          +trs
          +rh(750)
-            transform: translateY(64%)
+            transform: translateY(40%)
          +rh(680)
             padding-top: 10px
             padding-bottom: 10px
-            transform: translateY(64%)
+            transform: translateY(40%)
       &-text
-         +text-overflow
+        white-space: normal
+        &:first-child
+          height: 60px
+        & + &
+          color: $accent
       &-more
-         +vcenter
-         border: 1px solid #f6cb02
+         display: block
+         margin: 0 auto
+         margin-top: 30px
          color: #fff
-         background-color: transparent
          font-size: 14px
          width: 160px
          height: 40px
          line-height: 40px
-         .icon-arrow
-            position: absolute
-            top: 6px
-            right: 11px
-            fill: $accent
-            +rotate(180)
-            width: 25px
-            height: 25px
+         border: 1px solid $accent
+         text-align: center
+         text-transform: uppercase
+         border-radius: 25px
+         color: $accent
+         background-color: rgba(#000, .2)
+         &:hover
+           background-color: $accent
+           color: #000
       &:hover &-descr
          transform: translateY(0)
    &__chapter
@@ -145,7 +150,7 @@
       left: 0
       right: 0
       height: 80px
-      padding: 15px 0 15px 235px
+      padding: 15px 0 15px 15px
       box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21)
       text-align: center
       z-index: 5
@@ -161,6 +166,7 @@
 .directions
    &--calendar
       width: 220px
+      display: none
       +resp
          width: 158px
    &__title
@@ -171,6 +177,13 @@
       text-align: center
       line-height: 80px
       box-shadow: 0px 0px 8px 0px rgba(#000, 0.21)
+   &__icon
+     width: 100%
+     height: 80%
+     text-align: center
+     svg
+       width: 80%
+       height: 95%
    &__items
       display: flex
       flex-direction: column
@@ -178,8 +191,9 @@
    &__link
       position: relative
       display: block
-      padding: 10px 0 0 10px
+      padding: 10px 0 0 0
       font-size: 30px
+      text-align: center
       height: 100%
       box-shadow: 3px 0px 8px -3px rgba(#000, 0.21)
       +futura-bold
@@ -192,20 +206,19 @@
             transform: translate3d(-50%,-50%,0) scale(0.91)
       &--academy
          background-color: #f6cb02
-         color: #ffffff
-         &::before
-            +s('academy')
+         color: #000
 
       &--wiki
          background-color: #fff
-         color: #000000
-         &::before
-            +s('yacht-wiki')
+         color: #9d01b9
       &--events
          background-color: #000
          color: $accent
-         &::before
-            +s('events')
+      .icon-academy-ico,
+      .icon-yacht-week-ico,
+      .icon-event-ico
+        font-size: 100px
+        width: 1em
 
 .is-touch
    .calendar__row

@@ -2302,6 +2302,10 @@ html.fp-enabled,
   padding-top: 80px;
   min-height: 400px;
   height: 100%;
+  background-image: url("../img/calendar_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
   *zoom: 1;
 }
 
@@ -2463,10 +2467,11 @@ html.fp-enabled,
   left: 0;
   right: 0;
   height: 80px;
-  padding: 15px 0 15px 15px;
+  padding: 15px 0 15px 235px;
   box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21);
   text-align: center;
   z-index: 5;
+  background-color: #fff;
 }
 
 .calendar__datepicker .datepicker {
@@ -7624,6 +7629,15 @@ html.fp-enabled,
   background-position: 50% 50%;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.news-post__img:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
 
 .news-post__title {
@@ -9670,7 +9684,7 @@ html.fp-enabled,
   }
 
   .checkbox-wrap {
-    margin-left: 6%;
+    margin-left: 18%;
   }
 
   .news-content-wrap {
@@ -10463,14 +10477,6 @@ html.fp-enabled,
     right: 20px;
   }
 
-  .more .btn {
-    height: 30px;
-    width: 140px;
-    line-height: 30px;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-
   .popup {
     padding-top: 70px;
   }
@@ -10814,18 +10820,18 @@ html.fp-enabled,
   }
 }
 
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
 @media only screen and (max-width: 1240px) {
 
   .header {
     padding-right: 20px;
     padding-left: 80px;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+
+  .main-card {
+    max-height: 500px;
   }
 }
 
@@ -10871,6 +10877,31 @@ html.fp-enabled,
 
   .yacht-map__wrapper:not(.yacht-map__wrapper--card) {
     width: 100%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
   }
 }
 
@@ -10995,38 +11026,24 @@ html.fp-enabled,
 
 @media only screen and (max-width: 1024px) {
 
+  .more .btn {
+    height: 30px;
+    width: 140px;
+    line-height: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .calendar__event-more {
+    height: 30px;
+    width: 140px;
+    line-height: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
   .main-card {
     height: 60vh !important;
-  }
-}
-
-@media only screen and (max-height: 768px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-
-  .yacht__card {
-    width: calc(50% - 30px);
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-
-  .calendar__datepicker {
-    padding-left: 168px;
-  }
-
-  .nav {
-    min-width: 0;
-  }
-
-  .nav__item {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -11039,6 +11056,25 @@ html.fp-enabled,
   }
 }
 
+@media only screen and (max-width: 1023px) {
+
+  .yacht__card {
+    width: calc(50% - 30px);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .nav {
+    min-width: 0;
+  }
+
+  .nav__item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 @media only screen and (max-width: 840px) {
 
   .header__lang {
@@ -11047,24 +11083,6 @@ html.fp-enabled,
 
   .nav {
     margin-right: 15px;
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
-  }
-}
-
-@media only screen and (max-height: 680px) {
-
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
   }
 }
 

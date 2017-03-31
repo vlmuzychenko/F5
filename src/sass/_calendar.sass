@@ -19,6 +19,8 @@
       padding-top: 80px
       min-height: 400px
       height: 100%
+      background-image: url('../img/calendar_bg.jpg')
+      +cover
       +clr
       +resp
          padding-top: 50px
@@ -116,6 +118,12 @@
          &:hover
            background-color: $accent
            color: #000
+         +r(1024)
+           height: 30px
+           width: 140px
+           line-height: 30px
+           font-size: 14px
+           text-transform: uppercase
       &:hover &-descr
          transform: translateY(0)
    &__chapter
@@ -150,12 +158,11 @@
       left: 0
       right: 0
       height: 80px
-      padding: 15px 0 15px 15px
+      padding: 15px 0 15px 235px
       box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21)
       text-align: center
       z-index: 5
-      +r(1000)
-         padding-left: 168px
+      background-color: #fff
       +resp
          height: 50px
          padding-top: 10px

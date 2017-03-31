@@ -92,7 +92,7 @@
   +rmin(768)
     margin-left: 0
   +rmin(1366)
-    margin-left: 6%
+    margin-left: 18%
 
 .news-content-wrap
   +clr
@@ -111,8 +111,6 @@
   display: flex
   align-content: space-between
   flex-flow: row wrap
-
-
 
 .news-post
   box-sizing: border-box
@@ -178,6 +176,13 @@
     +cover
     width: 100%
     height: 100%
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background: linear-gradient(to top, rgba(0, 0, 0, .5), transparent)
   &__title
     color: #fff
     +futura-demi

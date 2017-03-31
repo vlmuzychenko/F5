@@ -16,14 +16,19 @@
             line-height: 50px
             font-size: 18px
    &__layout
-      padding-top: 80px
       min-height: 400px
       height: 100%
       background-image: url('../img/calendar_bg.jpg')
       +cover
       +clr
-      +resp
+      +rmin(768)
+        padding-top: 40px
+      +rmin(1024)
          padding-top: 50px
+      +rmin(1366)
+        padding-top: 60px
+      +rmin(1600)
+        padding-top: 80px
    &__row
       +clr
       white-space: nowrap
@@ -85,25 +90,30 @@
          background: rgba(#000, .5)
          color: #fff
          z-index: 3
-         font-size: 16px
          transform: translateY(55%)
          +trs
          +rh(750)
-            transform: translateY(40%)
+           transform: translateY(40%)
          +rh(680)
-            padding-top: 10px
-            padding-bottom: 10px
-            transform: translateY(40%)
+           padding-top: 10px
+           padding-bottom: 10px
+           transform: translateY(40%)
+         +rmin(768)
+           font-size: 11px
+         +rmin(1024)
+           font-size: 16px
       &-text
         white-space: normal
         &:first-child
-          height: 60px
+          +rmin(768)
+            height: 40px
+          +rmin(1024)
+            height: 60px
         & + &
           color: $accent
       &-more
          display: block
          margin: 0 auto
-         margin-top: 30px
          color: #fff
          font-size: 14px
          width: 160px
@@ -115,6 +125,10 @@
          border-radius: 25px
          color: $accent
          background-color: rgba(#000, .2)
+         +rmin(768)
+           margin-top: 15px
+         +rmin(1024)
+           margin-top: 30px
          &:hover
            background-color: $accent
            color: #000
@@ -127,10 +141,17 @@
       &:hover &-descr
          transform: translateY(0)
    &__chapter
-      min-height: 160px
-      height: 33.33%
       max-height: 300px
       +clr
+      +rmin(768)
+        min-height: 119px
+        height: 32%
+      +rmin(1024)
+        height: 33.1%
+        min-height: 130px
+      +rmin(1600)
+        min-height: 160px
+        height: 33.33%
       &:first-child
          .calendar__items
             padding-top: 3px
@@ -157,16 +178,24 @@
       top: 0
       left: 0
       right: 0
-      height: 80px
-      padding: 15px 0 15px 235px
       box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21)
       text-align: center
       z-index: 5
       background-color: #fff
-      +resp
-         height: 50px
-         padding-top: 10px
-         padding-bottom: 10px
+      +rmin(768)
+        height: 35px
+        padding-top: 2px
+        padding-bottom: 0px
+      +rmin(1024)
+        height: 50px
+        padding-top: 10px
+        padding-bottom: 10px
+      +rmin(1366)
+        height: 60px
+        padding: 15px 0 15px 235px
+      +rmin(1600)
+        height: 80px
+
       .datepicker
          display: inline-block
 
@@ -190,7 +219,7 @@
      text-align: center
      svg
        width: 80%
-       height: 95%
+       height: 80%
    &__items
       display: flex
       flex-direction: column

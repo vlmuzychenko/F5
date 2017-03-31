@@ -15,9 +15,12 @@
       //flex: 1 0 auto
       //max-height: 440px
       overflow: auto
-      min-height: 350px
       height: calc(100vh - 420px - 100px)
       +clr
+      +rmin(768)
+        min-height: 240px
+      +rmin(1600)
+        min-height: 350px
       +r(1124)
          height: auto
          min-height: 0
@@ -138,9 +141,12 @@
    &__row
       display: flex
       justify-content: center
-      min-height: 420px
       height: calc(100vh - 540px)
       //height: 400px
+      +rmin(1024)
+        min-height: 310px
+      +rmin(1366)
+        min-height: 420px
       +r(1124)
          height: auto
          flex-wrap: wrap

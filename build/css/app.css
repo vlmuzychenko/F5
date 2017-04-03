@@ -4389,7 +4389,7 @@ html.fp-enabled,
   z-index: 900;
   text-align: center;
   transition: color .2s;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .yacht-wiki-menu.light {
@@ -4413,8 +4413,8 @@ html.fp-enabled,
   font-family: Casper-Bold, Arial, sans-serif;
   text-transform: uppercase;
   margin-right: 70px;
-  border-bottom: 2px solid transparent;
   transition: border-color .2s;
+  font-size: 16px;
 }
 
 .yacht-wiki-menu__item.active {
@@ -4492,7 +4492,7 @@ html.fp-enabled,
 }
 
 .descr__video-btn {
-  width: 270px;
+  width: 300px;
   position: absolute;
   text-align: center;
   cursor: pointer;
@@ -4500,16 +4500,20 @@ html.fp-enabled,
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: 16%;
+  bottom: 25%;
 }
 
 .descr__video-btn span {
-  font-size: 30px;
-  font-family: Casper-Bold, Arial, sans-serif;
+  font-family: FuturaPT-Demi, Arial, sans-serif;
   color: #fff;
+  text-transform: uppercase;
   display: block;
   padding-top: 100px;
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.descr__video-btn span:hover:after {
+  background-image: url(../img/video-btn_hover.png);
 }
 
 .descr__video-btn span:after {
@@ -4518,6 +4522,7 @@ html.fp-enabled,
   position: absolute;
   width: 95px;
   height: 95px;
+  transition: background-image .3s;
   background-image: url(../img/video-btn.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -6458,6 +6463,7 @@ html.fp-enabled,
   margin-right: 70px;
   border-bottom: 2px solid transparent;
   transition: border-color .2s;
+  font-size: 16px;
 }
 
 .academy-menu__item.active {
@@ -6765,22 +6771,28 @@ html.fp-enabled,
 }
 
 .course__video-btn {
-  width: 270px;
+  width: 300px;
   position: absolute;
   text-align: center;
   cursor: pointer;
   left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 25%;
 }
 
 .course__video-btn span {
-  font-family: Casper-Bold, Arial, sans-serif;
+  font-family: FuturaPT-Demi, Arial, sans-serif;
   color: #fff;
+  text-transform: uppercase;
   display: block;
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+  padding-top: 100px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.course__video-btn span:hover:after {
+  background-image: url(../img/video-btn_hover.png);
 }
 
 .course__video-btn span:after {
@@ -6789,6 +6801,7 @@ html.fp-enabled,
   position: absolute;
   width: 95px;
   height: 95px;
+  transition: background-image .3s;
   background-image: url(../img/video-btn.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -8225,6 +8238,73 @@ html.fp-enabled,
   bottom: -20px;
 }
 
+.mouse-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: none;
+}
+
+.mouse-scroll__item {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 34px;
+  height: 54px;
+  background: #fff;
+  border-radius: 14px;
+  border: 2px #fff solid;
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+.mouse-scroll__item:before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  width: 4px;
+  height: 4px;
+  background: #5e69ff;
+  border-radius: 4px;
+  -webkit-animation: scrollanimation 2s infinite;
+  animation: scrollanimation 2s infinite;
+}
+
+.mouse-scroll__text {
+  color: #fff;
+  text-transform: lowercase;
+  font-family: FuturaPT-Demi, Arial, sans-serif;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+}
+
+@-webkit-keyframes scrollanimation {
+  0% {
+    height: 5px;
+  }
+  50% {
+    height: 24px;
+  }
+  100% {
+    height: 5px;
+  }
+}
+
+@keyframes scrollanimation {
+  0% {
+    height: 5px;
+  }
+  50% {
+    height: 24px;
+  }
+  100% {
+    height: 5px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
 
   .btn {
@@ -8282,6 +8362,8 @@ html.fp-enabled,
   .yacht-wiki-menu__item {
     margin-right: 40px;
     padding: 0 2px 7px;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
   }
 
   .descr__title {
@@ -8303,18 +8385,14 @@ html.fp-enabled,
     line-height: 25px;
   }
 
-  .descr__video-btn {
-    bottom: 25%;
-  }
-
   .descr__video-btn span {
-    font-size: 21px;
-    padding-top: 55px;
+    font-size: 24px;
+    padding-top: 75px;
   }
 
   .descr__video-btn span:after {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
   }
 
   .descr__btn-container {
@@ -8632,6 +8710,7 @@ html.fp-enabled,
   .academy-menu__item {
     margin-right: 9px;
     padding: 0 2px 7px;
+    border-bottom: 2px solid transparent;
     font-size: 11px;
   }
 
@@ -8696,13 +8775,13 @@ html.fp-enabled,
   }
 
   .course__video-btn span {
-    font-size: 16px;
-    padding-top: 55px;
+    font-size: 24px;
+    padding-top: 75px;
   }
 
   .course__video-btn span:after {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
   }
 
   .course-right {
@@ -9055,6 +9134,12 @@ html.fp-enabled,
     right: 70px;
   }
 
+  .yacht-wiki-menu__item {
+    margin-right: 60px;
+    padding: 0 2px 10px;
+    border-bottom: 3px solid transparent;
+  }
+
   .descr__btn-container {
     right: 70px;
   }
@@ -9199,7 +9284,8 @@ html.fp-enabled,
   .academy-menu__item {
     margin-right: 30px;
     padding: 0 2px 10px;
-    font-size: 12px;
+    border-bottom: 3px solid transparent;
+    font-size: 14px;
   }
 
   .license-card_open:after {
@@ -9404,6 +9490,10 @@ html.fp-enabled,
     bottom: 85px;
     right: 8%;
   }
+
+  .mouse-scroll {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -9435,11 +9525,6 @@ html.fp-enabled,
     min-height: 420px;
   }
 
-  .yacht-wiki-menu__item {
-    margin-right: 60px;
-    padding: 0 2px 10px;
-  }
-
   .descr__title {
     font-size: 14px;
   }
@@ -9456,16 +9541,6 @@ html.fp-enabled,
   .descr__title-date_year {
     font-size: 90px;
     line-height: 50px;
-  }
-
-  .descr__video-btn span {
-    font-size: 24px;
-    padding-top: 75px;
-  }
-
-  .descr__video-btn span:after {
-    width: 70px;
-    height: 70px;
   }
 
   .descr__btn {
@@ -9665,10 +9740,6 @@ html.fp-enabled,
     width: 40%;
   }
 
-  .academy-menu__item {
-    font-size: 14px;
-  }
-
   .license-card-open__title {
     font-size: 105px;
     line-height: 75px;
@@ -9685,16 +9756,6 @@ html.fp-enabled,
   .course__icon {
     width: 50px;
     height: 50px;
-  }
-
-  .course__video-btn span {
-    font-size: 24px;
-    padding-top: 75px;
-  }
-
-  .course__video-btn span:after {
-    width: 70px;
-    height: 70px;
   }
 
   .course-right__icon {
@@ -9877,11 +9938,12 @@ html.fp-enabled,
 
   .yacht-wiki-menu {
     top: 130px;
-    font-size: 14px;
   }
 
   .yacht-wiki-menu__item {
     margin-right: 70px;
+    border-bottom: 4px solid transparent;
+    font-size: 16px;
   }
 
   .descr__title {
@@ -9901,10 +9963,6 @@ html.fp-enabled,
   .descr__title-date_year {
     font-size: 140px;
     line-height: 75px;
-  }
-
-  .descr__video-btn {
-    bottom: 16%;
   }
 
   .descr__video-btn span {
@@ -10167,6 +10225,8 @@ html.fp-enabled,
 
   .academy-menu__item {
     margin-right: 70px;
+    border-bottom: 4px solid transparent;
+    font-size: 16px;
   }
 
   .license-card_open:after {
@@ -10662,7 +10722,6 @@ html.fp-enabled,
 
   .yacht-wiki-menu {
     top: 80px;
-    font-size: 12px;
   }
 
   .descr-video {
@@ -10864,10 +10923,6 @@ html.fp-enabled,
     width: 80%;
     margin-left: 20%;
   }
-
-  .course-skew {
-    width: 45%;
-  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -10919,6 +10974,13 @@ html.fp-enabled,
   }
 }
 
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
 @media only screen and (max-width: 1240px) {
 
   .header {
@@ -10931,13 +10993,6 @@ html.fp-enabled,
 
   .ps-container {
     overflow: auto !important;
-  }
-}
-
-@media only screen and (max-height: 768px) {
-
-  .main-card {
-    max-height: 500px;
   }
 }
 
@@ -11141,6 +11196,13 @@ html.fp-enabled,
 
   .yacht__card {
     width: calc(50% - 30px);
+  }
+}
+
+@media only screen and (max-width: 960px) {
+
+  .course-skew {
+    width: 45%;
   }
 }
 

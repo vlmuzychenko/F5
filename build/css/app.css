@@ -154,6 +154,13 @@ html {
   font-style: normal;
 }
 
+@font-face {
+  font-family: FuturaPT-Book;
+  src: url("fonts/FuturaPT-Book.woff2") format("woff2"), url("fonts/FuturaPT-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -8276,7 +8283,7 @@ html.fp-enabled,
 .mouse-scroll__text {
   color: #fff;
   text-transform: lowercase;
-  font-family: FuturaPT-Demi, Arial, sans-serif;
+  font-family: FuturaPT-Book, Arial, sans-serif;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
   font-size: 24px;
 }
@@ -9942,7 +9949,6 @@ html.fp-enabled,
 
   .yacht-wiki-menu__item {
     margin-right: 70px;
-    border-bottom: 4px solid transparent;
     font-size: 16px;
   }
 

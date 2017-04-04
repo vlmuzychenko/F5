@@ -378,19 +378,19 @@ a {
   height: 27px;
 }
 
-.checkbox__pic::after {
-  content: '';
+.checkbox__pic_search {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
   position: absolute;
-  top: -27px;
-  left: -20px;
+  top: -33px;
+  left: -38px;
   -webkit-transform: scale(0.34);
   -ms-transform: scale(0.34);
   transform: scale(0.34);
   display: block;
-  background-image: url("../img/sprite.png");
   width: 60px;
   height: 78px;
-  background-position: -99px -115px;
 }
 
 .checkbox__name {
@@ -3743,7 +3743,7 @@ html.fp-enabled,
   display: inline-block;
   width: 280px;
   max-width: 50%;
-  padding: 0 11px;
+  padding: 0 25px;
 }
 
 .search-adv__field select {

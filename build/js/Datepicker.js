@@ -5,153 +5,153 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Datepicker = function () {
-	function Datepicker() {
-		_classCallCheck(this, Datepicker);
+		function Datepicker() {
+				_classCallCheck(this, Datepicker);
 
-		this.config = {
-			el: '.js-datepicker',
-			moveBtn: '.js-datepicker-btn',
-			openBtn: '.js-open-datepicker',
-			yearInput: '.js-datepicker-year',
-			monthInput: '.js-datepicker-month',
-			selectText: '.js-datepicker-text',
-			dropdown: '.js-datepicker-dropdown'
-		};
+				this.config = {
+						el: '.js-datepicker',
+						moveBtn: '.js-datepicker-btn',
+						openBtn: '.js-open-datepicker',
+						yearInput: '.js-datepicker-year',
+						monthInput: '.js-datepicker-month',
+						selectText: '.js-datepicker-text',
+						dropdown: '.js-datepicker-dropdown'
+				};
 
-		this.openBtn = $(this.config.openBtn);
-		this.el = $(this.config.el);
-		this.inputs = this.el.find('input');
+				this.openBtn = $(this.config.openBtn);
+				this.el = $(this.config.el);
+				this.inputs = this.el.find('input');
 
-		this.selectText = $(this.config.selectText);
-		this.initialText = this.selectText.text().split(' ');
-		this.moveBtn = $(this.config.moveBtn);
+				this.selectText = $(this.config.selectText);
+				this.initialText = this.selectText.text().split(' ');
+				this.moveBtn = $(this.config.moveBtn);
 
-		this.text = {
-			month: this.initialText[0],
-			year: this.initialText[1]
-		};
+				this.text = {
+						month: this.initialText[0],
+						year: this.initialText[1]
+				};
 
-		this.openBtn.on('click', this._toggleOpen.bind(this));
-		this.inputs.on('change', this._handleChange.bind(this));
-		this.moveBtn.on('click', this._move.bind(this));
-	}
-
-	_createClass(Datepicker, [{
-		key: '_toggleOpen',
-		value: function _toggleOpen(e) {
-			var _config = this.config,
-			    el = _config.el,
-			    dropdown = _config.dropdown;
-
-
-			var target = $(e.target);
-			var parent = target.parents(el);
-			var dropDown = parent.find(dropdown);
-
-			dropDown.toggleClass('is-open');
-
-			e.preventDefault();
+				this.openBtn.on('click', this._toggleOpen.bind(this));
+				this.inputs.on('change', this._handleChange.bind(this));
+				this.moveBtn.on('click', this._move.bind(this));
 		}
-	}, {
-		key: '_handleChange',
-		value: function _handleChange(e) {
-			var _config2 = this.config,
-			    el = _config2.el,
-			    dropdown = _config2.dropdown;
+
+		_createClass(Datepicker, [{
+				key: '_toggleOpen',
+				value: function _toggleOpen(e) {
+						var _config = this.config,
+						    el = _config.el,
+						    dropdown = _config.dropdown;
 
 
-			var target = $(e.target);
-			var parent = target.parents(el);
-			var dropDown = parent.find(dropdown);
-			var type = target.data('type');
-			var val = target.data('val');
+						var target = $(e.target);
+						var parent = target.parents(el);
+						var dropDown = parent.find(dropdown);
 
-			this.text[type] = val;
+						dropDown.toggleClass('is-open');
 
-			this._updateText();
+						e.preventDefault();
+				}
+		}, {
+				key: '_handleChange',
+				value: function _handleChange(e) {
+						var _config2 = this.config,
+						    el = _config2.el,
+						    dropdown = _config2.dropdown;
 
-			if (type == 'month') {
-				dropDown.removeClass('is-open');
-			}
-		}
-	}, {
-		key: '_updateText',
-		value: function _updateText() {
-			var _text = this.text,
-			    month = _text.month,
-			    year = _text.year;
 
-			var text = month + ' ' + year;
+						var target = $(e.target);
+						var parent = target.parents(el);
+						var dropDown = parent.find(dropdown);
+						var type = target.data('type');
+						var val = target.data('val');
 
-			this.selectText.text(text);
-		}
-	}, {
-		key: '_move',
-		value: function _move(e) {
-			var _config3 = this.config,
-			    el = _config3.el,
-			    dropdown = _config3.dropdown,
-			    monthInput = _config3.monthInput,
-			    yearInput = _config3.yearInput;
+						this.text[type] = val;
 
-			var target = $(e.currentTarget);
-			var direction = target.data('direction');
-			var parent = target.parents(el);
+						this._updateText();
 
-			var IS_LEAF_TO_NEXT_MONTH = direction == 'next';
+						if (type == 'month') {
+								dropDown.removeClass('is-open');
+						}
+				}
+		}, {
+				key: '_updateText',
+				value: function _updateText() {
+						var _text = this.text,
+						    month = _text.month,
+						    year = _text.year;
 
-			//year data
-			var yearInputs = parent.find(yearInput).find('input');
-			var currentYearIndex = [].findIndex.call(yearInputs.toArray(), function (item, i, array) {
-				return item.checked;
-			});
+						var text = month + ' ' + year;
 
-			var nextYearIndex = IS_LEAF_TO_NEXT_MONTH ? currentYearIndex + 1 : currentYearIndex - 1;
+						this.selectText.text(text);
+				}
+		}, {
+				key: '_move',
+				value: function _move(e) {
+						var _config3 = this.config,
+						    el = _config3.el,
+						    dropdown = _config3.dropdown,
+						    monthInput = _config3.monthInput,
+						    yearInput = _config3.yearInput;
 
-			var nextYear = $(yearInputs[nextYearIndex]);
+						var target = $(e.currentTarget);
+						var direction = target.data('direction');
+						var parent = target.parents(el);
 
-			//month data
-			var monthInputs = parent.find(monthInput).find('input');
-			var currentMonthIndex = [].findIndex.call(monthInputs.toArray(), function (item, i, array) {
-				return item.checked;
-			});
+						var IS_LEAF_TO_NEXT_MONTH = direction == 'next';
 
-			var nextMonthIndex = IS_LEAF_TO_NEXT_MONTH ? currentMonthIndex + 1 : currentMonthIndex - 1;
+						//year data
+						var yearInputs = parent.find(yearInput).find('input');
+						var currentYearIndex = [].findIndex.call(yearInputs.toArray(), function (item, i, array) {
+								return item.checked;
+						});
 
-			var nextMonth = $(monthInputs[nextMonthIndex]);
+						var nextYearIndex = IS_LEAF_TO_NEXT_MONTH ? currentYearIndex + 1 : currentYearIndex - 1;
 
-			//if it last or very first - do nothing
-			if (nextMonthIndex > monthInputs.length - 1 && nextYearIndex > yearInputs.length - 1 || nextMonthIndex < 0 && nextYearIndex < 0) return;
+						var nextYear = $(yearInputs[nextYearIndex]);
 
-			var FIRST_MONTH = 0;
-			var LAST_MONTH = monthInputs.length - 1;
+						//month data
+						var monthInputs = parent.find(monthInput).find('input');
+						var currentMonthIndex = [].findIndex.call(monthInputs.toArray(), function (item, i, array) {
+								return item.checked;
+						});
 
-			var shouldLeaf = IS_LEAF_TO_NEXT_MONTH ? currentMonthIndex == monthInputs.length - 1 && currentYearIndex != yearInputs.length - 1 : currentMonthIndex == 0 && currentYearIndex != 0;
+						var nextMonthIndex = IS_LEAF_TO_NEXT_MONTH ? currentMonthIndex + 1 : currentMonthIndex - 1;
 
-			if (shouldLeaf) {
+						var nextMonth = $(monthInputs[nextMonthIndex]);
 
-				nextYear.prop("checked", true);
+						//if it last or very first - do nothing
+						if (nextMonthIndex > monthInputs.length - 1 && nextYearIndex > yearInputs.length - 1 || nextMonthIndex < 0 && nextYearIndex < 0) return;
 
-				var valYear = nextYear.data('val');
+						var FIRST_MONTH = 0;
+						var LAST_MONTH = monthInputs.length - 1;
 
-				this.text.year = valYear;
+						var shouldLeaf = IS_LEAF_TO_NEXT_MONTH ? currentMonthIndex == monthInputs.length - 1 && currentYearIndex != yearInputs.length - 1 : currentMonthIndex == 0 && currentYearIndex != 0;
 
-				var newMonthIndex = IS_LEAF_TO_NEXT_MONTH ? FIRST_MONTH : LAST_MONTH;
+						if (shouldLeaf) {
 
-				nextMonth = $(monthInputs[newMonthIndex]);
-			}
+								nextYear.prop("checked", true);
 
-			nextMonth.prop("checked", true);
+								var valYear = nextYear.data('val');
 
-			var valMonth = nextMonth.data('val');
+								this.text.year = valYear;
 
-			this.text.month = valMonth;
+								var newMonthIndex = IS_LEAF_TO_NEXT_MONTH ? FIRST_MONTH : LAST_MONTH;
 
-			this._updateText();
-		}
-	}]);
+								nextMonth = $(monthInputs[newMonthIndex]);
+						}
 
-	return Datepicker;
+						nextMonth.prop("checked", true);
+
+						var valMonth = nextMonth.data('val');
+
+						this.text.month = valMonth;
+
+						this._updateText();
+				}
+		}]);
+
+		return Datepicker;
 }();
 
 new Datepicker();

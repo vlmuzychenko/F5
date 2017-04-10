@@ -144,6 +144,9 @@
       width: 280px
       max-width: 50%
       padding: 0 25px
+      &_full-w
+        max-width: 100%
+        width: 100%
       select
          display: none
       input
@@ -403,11 +406,11 @@
       &-info
          position: relative
          margin-bottom: 5px
-         padding-left: 30px
          color: #6c6c6c
          font-size: 14px
          &::before
             content: ''
+            display: none
             position: absolute
             top: 0
             left: 0
@@ -427,12 +430,13 @@
             display: inline-block
 
       &-price
-         margin-top: 15px
+         margin-top: 35px
          font-size: 18px
          color: #010101
          text-align: right
          +futura-demi
       &-favourite
+         display: none
          float: right
          margin-left: 5px
          background-color: transparent

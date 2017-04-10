@@ -449,6 +449,38 @@
          &.is-selected
             .icon-fav-star
                fill: $accent
+   &__preloader-container
+     width: 100%
+     height: 100%
+     position: absolute
+     left: 0
+     top: 0
+     background-color: #fff
+     display: none
+   &__preloader
+     width: 450px
+     position: absolute
+     left: 50%
+     top: 35%
+     transform: translate(-50%, 0%)
+     text-align: center
+     display: none
+     &_res-no
+       display: none
+   &__preloader-icon
+     width: 55px
+     margin: 0 auto
+     margin-top: 10%
+   &__preloader-text
+     +futura-bold
+     color: #333333
+     text-transform: uppercase
+     font-size: 20px
+     opacity: .8
+     padding-top: 15px
+     span
+       +futura-book
+       display: block
 
 .yacht-map
    height: calc(50vh - 100px)
@@ -550,3 +582,11 @@
       &-price
          font-size: 18px
          +futura-demi
+
+keyframes spinMaSearch
+  0%
+    transform: rotate(0deg)
+  40%
+    transform: rotate(360deg)
+  100%
+    transform: rotate(360deg)

@@ -4146,6 +4146,52 @@ html.fp-enabled,
   fill: #f6cb02;
 }
 
+.yacht__preloader-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  display: none;
+}
+
+.yacht__preloader {
+  width: 450px;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  text-align: center;
+  display: none;
+}
+
+.yacht__preloader_res-no {
+  display: none;
+}
+
+.yacht__preloader-icon {
+  width: 55px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.yacht__preloader-text {
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+  color: #333333;
+  text-transform: uppercase;
+  font-size: 20px;
+  opacity: .8;
+  padding-top: 15px;
+}
+
+.yacht__preloader-text span {
+  font-family: FuturaPT-Book, Arial, sans-serif;
+  display: block;
+}
+
 .yacht-map {
   height: calc(50vh - 100px);
 }
@@ -4288,6 +4334,24 @@ html.fp-enabled,
 .yacht-map__window-price {
   font-size: 18px;
   font-family: FuturaPT-Demi, Arial, sans-serif;
+}
+
+keyframes spinMaSearch 0% {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+keyframes spinMaSearch 40% {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+keyframes spinMaSearch 100% {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .skew-section {

@@ -4156,6 +4156,10 @@ html.fp-enabled,
   display: none;
 }
 
+.yacht__preloader-container.active {
+  display: block;
+}
+
 .yacht__preloader {
   width: 450px;
   position: absolute;
@@ -4168,8 +4172,16 @@ html.fp-enabled,
   display: none;
 }
 
+.yacht__preloader.active {
+  display: block;
+}
+
 .yacht__preloader_res-no {
   display: none;
+}
+
+.yacht__preloader_res-no.active {
+  display: block;
 }
 
 .yacht__preloader-icon {

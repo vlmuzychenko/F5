@@ -457,6 +457,8 @@
      top: 0
      background-color: #fff
      display: none
+     &.active
+       display: block
    &__preloader
      width: 450px
      position: absolute
@@ -465,8 +467,12 @@
      transform: translate(-50%, 0%)
      text-align: center
      display: none
+     &.active
+       display: block
      &_res-no
        display: none
+       &.active
+         display: block
    &__preloader-icon
      width: 55px
      margin: 0 auto

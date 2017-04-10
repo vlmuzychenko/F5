@@ -3052,7 +3052,7 @@ html.fp-enabled,
 .card__order-btn {
   display: block;
   vertical-align: top;
-  margin-left: 50px;
+  margin: 0 auto;
   width: 230px;
 }
 

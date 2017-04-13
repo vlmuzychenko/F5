@@ -3724,7 +3724,7 @@ html.fp-enabled,
 
 .search-adv__field_full-w {
   max-width: 100%;
-  width: 100%;
+  width: 560px;
 }
 
 .search-adv__field select {

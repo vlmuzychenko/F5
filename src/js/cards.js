@@ -160,7 +160,7 @@ $('.card-open__item:nth-child(6) .card-open__link span').hover(function(){
 
     var openPopup = new TimelineMax();
     openPopup
-    .to($('.popup-wrap'), 0, {opacity:'1', display:'block', ease:Sine.easeOut})
+    .to($('.popup-wrap'), 0, {className:'+=js-opened', opacity:'1', display:'block', ease:Sine.easeOut})
     .fromTo($('.popup-contacts'), 1, {x:'0%', opacity:'0', display:'none'}, {x:'-50%', opacity:'1', display:'block'}, 0)
     .fromTo($('.popup-substrate'), 1, {x:'-100%', opacity:'0', display:'none'}, {x:'-50%', opacity:'1', display:'block'}, 0);
   });
@@ -170,14 +170,16 @@ $('.card-open__item:nth-child(6) .card-open__link span').hover(function(){
     closePopup
     .fromTo($('.popup-contacts'), 1, {x:'-50%', opacity:'1', display:'block'}, {x:'0%', opacity:'0', display:'none'}, 0)
     .fromTo($('.popup-substrate'), 1, {x:'-50%', opacity:'1', display:'block'}, {x:'-100%', opacity:'0', display:'none'}, 0)
-    .to($('.popup-wrap'), 0, { display:'none', ease:Sine.easeOut}, .5);
+    .to($('.popup-wrap'), 0, {className:'-=js-opened', display:'none', ease:Sine.easeOut}, .5);
   });
 
   $('.js-send').click(function(){
     var sendPopup = new TimelineMax();
     sendPopup
     .fromTo($('.popup-contacts'), 1, {x:'-50%', opacity:'1', display:'block'}, {x:'0%', opacity:'0', display:'none'}, 0)
-    .to($('.popup-substrate__content'), 0, {className:'+=show'}, 0);
+    .to($('.popup-substrate__content'), 0, {className:'+=show'}, 0)
+    .to($('.popup-wrap'), 0, {className:'-=js-opened'}, 0)
+    .to($('.popup-wrap'), 0, {className:'+=js-opened_substrate'}, 0);
     $('#timer').html('5');
 
 
@@ -187,7 +189,7 @@ $('.card-open__item:nth-child(6) .card-open__link span').hover(function(){
         obj.innerHTML--;
         if(obj.innerHTML==0){
           TweenLite.fromTo($('.popup-substrate'), 1, {x:'-50%', opacity:'1', display:'block'}, {x:'-100%', opacity:'0', display:'none'});
-          TweenLite.to($('.popup-wrap'), 1, {delay:.5, opacity:'0', display:'none', ease:Sine.easeOut});
+          TweenLite.to($('.popup-wrap'), 1, {className:'-=js-opened', delay:.5, opacity:'0', display:'none', ease:Sine.easeOut});
           TweenLite.to($('.popup-substrate__content'), 1, {delay:.5, className:'-=show'});
         } else {setTimeout(timery,1000);}
       }
@@ -201,7 +203,25 @@ $('.card-open__item:nth-child(6) .card-open__link span').hover(function(){
     var closeSecondPopup = new TimelineMax();
     closeSecondPopup
     .fromTo($('.popup-substrate'), 1, {x:'-50%', opacity:'1', display:'block'}, {x:'-100%', opacity:'0', display:'none'}, 0)
-    .to($('.popup-wrap'), 1, {opacity:'0', display:'none', ease:Sine.easeOut}, .5)
+    .to($('.popup-wrap'), 1, {className:'-=js-opened_substrate', opacity:'0', display:'none', ease:Sine.easeOut}, .5)
     .to($('.popup-substrate__content'), 1, {className:'-=show'}, 1.1);
   });
+});
+
+$(document).keydown(function(e) {
+  if (e.keyCode == 27) {
+    if ($('.popup-wrap').hasClass('js-opened')) {
+      var closePopup = new TimelineMax();
+      closePopup
+      .fromTo($('.popup-contacts'), 1, {x:'-50%', opacity:'1', display:'block'}, {x:'0%', opacity:'0', display:'none'}, 0)
+      .fromTo($('.popup-substrate'), 1, {x:'-50%', opacity:'1', display:'block'}, {x:'-100%', opacity:'0', display:'none'}, 0)
+      .to($('.popup-wrap'), 0, {className:'-=js-opened', display:'none', ease:Sine.easeOut}, .5);
+    } else if ($('.popup-wrap').hasClass('js-opened_substrate')) {
+      var closeSecondPopup = new TimelineMax();
+      closeSecondPopup
+      .fromTo($('.popup-substrate'), 1, {x:'-50%', opacity:'1', display:'block'}, {x:'-100%', opacity:'0', display:'none'}, 0)
+      .to($('.popup-wrap'), 1, {className:'-=js-opened_substrate', opacity:'0', display:'none', ease:Sine.easeOut}, .5)
+      .to($('.popup-substrate__content'), 1, {className:'-=show'}, 1.1);
+    }
+  }
 });

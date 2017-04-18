@@ -429,7 +429,9 @@ a {
 }
 
 .img-check input:checked ~ .search__type-pic,
-.img-check input:checked ~ .search__type-name {
+.img-check input:checked ~ .search__type-name,
+.img-check input:checked ~ .img-check__pic,
+.img-check input:checked ~ .img-check__name {
   opacity: 1;
   color: #000;
 }

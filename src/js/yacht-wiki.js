@@ -86,7 +86,7 @@ $(function () {
 
     var openPopup = new TimelineMax();
     openPopup
-    .to($('.popup-wrap'), 0, {opacity:'1', display:'block', ease:Sine.easeOut})
+    .to($('.popup-wrap'), 0, {className:'+=js-opened', opacity:'1', display:'block', ease:Sine.easeOut})
     .fromTo($('.popup-contacts'), 1, {x:'0%', opacity:'0', display:'none'}, {x:'-50%', opacity:'1', display:'block'}, 0)
     .fromTo($('.popup-substrate'), 1, {x:'-100%', opacity:'0', display:'none'}, {x:'-50%', opacity:'1', display:'block'}, 0);
   });

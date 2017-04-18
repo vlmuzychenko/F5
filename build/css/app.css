@@ -2821,8 +2821,10 @@ html.fp-enabled,
 .card__label {
   z-index: -1;
   position: fixed;
-  left: -311px;
-  top: 400px;
+  left: -470px;
+  top: 560px;
+  width: 1000px;
+  text-align: right;
   color: rgba(1, 1, 1, 0.1);
   font-size: 90px;
   white-space: nowrap;
@@ -3048,6 +3050,7 @@ html.fp-enabled,
 }
 
 .card__order {
+  margin-top: 70px;
   font-size: 0;
 }
 

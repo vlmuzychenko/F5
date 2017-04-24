@@ -4754,6 +4754,7 @@ keyframes spinMaSearch 100% {
 
 .price-wrap {
   height: 100vh;
+  background-color: #fff;
 }
 
 .price {

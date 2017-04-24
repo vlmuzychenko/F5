@@ -18,6 +18,11 @@ function onYouTubeIframeAPIReady() {
     events: {
       onReady: function(e) {
         e.target.mute();
+      },
+      onStateChange: function(e) {
+        if(e.data == 2) {
+          e.target.playVideo();
+        }
       }
     }
   });

@@ -5161,6 +5161,24 @@ keyframes spinMaSearch 100% {
   color: #000;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-video__container,
+.bg-video__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 .wiki-main {
   margin-top: 100px;
   width: 100%;
@@ -8462,6 +8480,24 @@ keyframes spinMaSearch 100% {
   }
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-video__container,
+.bg-video__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 @media only screen and (min-width: 768px) {
 
   .btn {
@@ -11110,22 +11146,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 1023px) {
-
-  .yacht__card {
-    width: calc(50% - 30px);
-  }
-}
-
-@media only screen and (max-height: 750px) {
-
-  .calendar__event-descr {
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
 @media only screen and (max-width: 1366px) {
 
   .more .btn {
@@ -11150,6 +11170,26 @@ keyframes spinMaSearch 100% {
   .content-section_price {
     width: 80%;
     margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+
+  .header__lang {
+    margin-left: 15px;
+  }
+
+  .nav {
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
   }
 }
 
@@ -11222,6 +11262,13 @@ keyframes spinMaSearch 100% {
 
   .yacht-map__wrapper:not(.yacht-map__wrapper--card) {
     width: 100%;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+
+  .main-card {
+    max-height: 500px;
   }
 }
 
@@ -11359,6 +11406,38 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+
+  .yacht__card {
+    width: calc(50% - 30px);
+  }
+}
+
 @media only screen and (max-width: 1000px) {
 
   .nav {
@@ -11368,13 +11447,6 @@ keyframes spinMaSearch 100% {
   .nav__item {
     padding-left: 15px;
     padding-right: 15px;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
   }
 }
 
@@ -11393,39 +11465,18 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-height: 680px) {
+@media (min-aspect-ratio: 16 / 9) {
 
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
-@media only screen and (max-width: 840px) {
-
-  .header__lang {
-    margin-left: 15px;
+  .bg-video__container,
+  .bg-video__container iframe {
+    height: 300%;
+    top: -100%;
   }
 
-  .nav {
-    margin-right: 15px;
-  }
-}
-
-@media only screen and (max-height: 768px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
+  .bg-video__container,
+  .bg-video__container iframe {
+    height: 300%;
+    top: -100%;
   }
 }
 

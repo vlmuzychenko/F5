@@ -51,7 +51,8 @@
         <li data-menuanchor="practice" class="academy-menu__item"><a href="#practice">Практический курс</a></li>
         <li data-menuanchor="instructors" class="academy-menu__item"><a href="#instructors">Инструкторы</a></li>
         <li data-menuanchor="learning" class="academy-menu__item"><a href="#learning">Классы обучения</a></li>
-        <li data-menuanchor="fmk" class="academy-menu__item"><a href="#fmk">Флотилии молодых капитанов</a></li>
+        <li data-menuanchor="fmk" class="academy-menu__item"><a href="#fmk">Ф. М. К.</a></li>
+        <li data-menuanchor="registration" class="academy-menu__item"><a href="#registration">Записаться</a></li>
       </ul>
       <div class="academy-wrap">
         <section class="fp-section">
@@ -347,34 +348,61 @@
           <div class="academy-video academy-video_fmk">
             <div class="academy-video__close close close_yellow js-close-fmk"></div><iframe width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen></iframe></div>
         </section>
-      </div>
-      <div class="popup-wrap">
-        <div class="popup-contacts">
-          <div class="input-container"><input type="text" id="name" placeholder="ФИО" require class="input-contacts error"><label for="name">ФИО</label></div>
-          <div class="input-container"><input type="text" id="phone" placeholder="(0--) --- -- --" require class="input-contacts"><label for="phone">Телефон</label></div>
-          <div class="input-container"><input type="text" id="email" placeholder="name@mail.com" require class="input-contacts"><label for="email">Email</label></div>
-          <div class="input-container">
-            <div class="input-contacts input-contacts_dropdown js-select-field"><select class="js-select-single"><option> <span>25.02 </span><span>(по субботам)</span></option><option>28.02 (по вторникам и четвергам)</option><option>6.03 (по понедельникам и средам)</option><option>Не определился </option></select></div>
-            <label
-              for="">Старт ближайшего курса
-              <div class="input-contacts__descr"><span>Занятия проводятся по таким дням:</span>
-                <ol>
-                  <li>1. Понедельник-среда</li>
-                  <li>2. Вторник-четверг</li>
-                  <li>3. Суббота (занятие длится _ часов)</li>
-                </ol>
+        <section class="fp-section">
+          <div class="checkin checkin_academy">
+            <div class="checkin__content">
+              <div class="checkin__title"> <span></span>Не раздумывайте! Записывайтесь!</div>
+              <div class="checkin-social">
+                <a href="#" class="checkin-social__link checkin-social__link_yt"></a>
+                <a href="#" class="checkin-social__link checkin-social__link_fb"></a>
+                <a href="#" class="checkin-social__link checkin-social__link_inst"></a>
               </div>
-              </label>
-          </div><button type="submit" class="btn btn_popup js-send">Отправить</button><button type="button" class="close close_black js-popup-close"></button></div>
-        <div class="popup-substrate">
-          <div class="popup-substrate__content"><img src="img/popup-logo.png" class="popup-substrate__logo">
-            <div class="popup-substrate__text">
-              <p>Спасибо!</p>
-              <p>Мы обработаем заявку и свяжемся с Вами в ближайшее время.</p>
-            </div><img src="img/popup-icon.png" class="popup-substrate__icon">
-            <div class="popup-substrate__timer">окно закроется через<span id="timer">5</span>сек</div><button type="button" class="close close_white js-popup-substrate-close"></button></div>
-        </div>
+              <div class="checkin-form">
+                <div class="checkin-form__input checkin-form__input_dark"><label for="name">Имя и фамилия</label><input type="text" id="name" placeholder="Имя Фамилия"></div>
+                <div class="checkin-form__input checkin-form__input_dark"><label for="phone">Телефон</label><input type="text" id="phone" placeholder="(0--) --- -- --"></div>
+                <div class="checkin-form__input checkin-form__input_dark"><label for="email">Email</label><input type="text" id="email" placeholder="name@mail.com"></div>
+                <div class="checkin-form__input checkin-form__input_dark checkin-form__input_dropdown js-select-field"><label for="">Старт ближайшего курса</label><select class="js-select-single"><option>25.02 (по субботам)</option><option>28.02 (по вторникам и четвергам)</option><option>6.03 (по понедельникам и средам)</option><option>Не определился </option></select></div>
+                <div
+                  class="checkin-form__descr"><span>Занятия проводятся по таким дням:</span>
+                  <ol>
+                    <li>1. Понедельник-среда</li>
+                    <li>2. Вторник-четверг</li>
+                    <li>3. Суббота (занятие длится _ часов)</li>
+                  </ol>
+              </div>
+              <div class="checkin-form__btn-container"><a href="#" class="btn btn_yellow checkin-form__btn">Записаться</a><a href="#" class="btn btn_dark checkin-form__btn">Календарь     </a></div>
+            </div>
+          </div>
       </div>
+      </section>
+    </div>
+    <div class="popup-wrap">
+      <div class="popup-contacts">
+        <div class="input-container"><input type="text" id="name" placeholder="ФИО" require class="input-contacts error"><label for="name">ФИО</label></div>
+        <div class="input-container"><input type="text" id="phone" placeholder="(0--) --- -- --" require class="input-contacts"><label for="phone">Телефон</label></div>
+        <div class="input-container"><input type="text" id="email" placeholder="name@mail.com" require class="input-contacts"><label for="email">Email</label></div>
+        <div class="input-container">
+          <div class="input-contacts input-contacts_dropdown js-select-field"><select class="js-select-single"><option> <span>25.02 </span><span>(по субботам)</span></option><option>28.02 (по вторникам и четвергам)</option><option>6.03 (по понедельникам и средам)</option><option>Не определился </option></select></div>
+          <label
+            for="">Старт ближайшего курса
+            <div class="input-contacts__descr"><span>Занятия проводятся по таким дням:</span>
+              <ol>
+                <li>1. Понедельник-среда</li>
+                <li>2. Вторник-четверг</li>
+                <li>3. Суббота (занятие длится _ часов)</li>
+              </ol>
+            </div>
+            </label>
+        </div><button type="submit" class="btn btn_popup js-send">Отправить</button><button type="button" class="close close_black js-popup-close"></button></div>
+      <div class="popup-substrate">
+        <div class="popup-substrate__content"><img src="img/popup-logo.png" class="popup-substrate__logo">
+          <div class="popup-substrate__text">
+            <p>Спасибо!</p>
+            <p>Мы обработаем заявку и свяжемся с Вами в ближайшее время.</p>
+          </div><img src="img/popup-icon.png" class="popup-substrate__icon">
+          <div class="popup-substrate__timer">окно закроется через<span id="timer">5</span>сек</div><button type="button" class="close close_white js-popup-substrate-close"></button></div>
+      </div>
+    </div>
     </div>
     <!--END out-->
     <div data-popup="feedback" class="popup js-popup">

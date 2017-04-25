@@ -16,7 +16,9 @@ block content
        li(data-menuanchor="learning").academy-menu__item
            a(href="#learning") Классы обучения
        li(data-menuanchor="fmk").academy-menu__item
-           a(href="#fmk") Флотилии молодых капитанов
+           a(href="#fmk") Ф. М. К.
+       li(data-menuanchor="registration").academy-menu__item
+           a(href="#registration") Записаться
    .academy-wrap
        section.fp-section
          .license
@@ -286,7 +288,49 @@ block content
          .academy-video.academy-video_fmk
            .academy-video__close.close.close_yellow.js-close-fmk
            iframe(width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen)
-             
+       section.fp-section
+         .checkin.checkin_academy
+           .checkin__content
+             .checkin__title 
+               span
+               | Не раздумывайте! Записывайтесь!
+             .checkin-social
+               a(href="#").checkin-social__link.checkin-social__link_yt
+               a(href="#").checkin-social__link.checkin-social__link_fb
+               a(href="#").checkin-social__link.checkin-social__link_inst
+             .checkin-form
+               .checkin-form__input.checkin-form__input_dark
+                 label(for="name") Имя и фамилия
+                 input(type="text" id="name" placeholder="Имя Фамилия")
+                 
+
+               .checkin-form__input.checkin-form__input_dark
+                 label(for="phone") Телефон
+                 input(type="text" id="phone" placeholder="(0--) --- -- --")
+                 
+
+               .checkin-form__input.checkin-form__input_dark
+                 label(for="email") Email
+                 input(type="text" id="email" placeholder="name@mail.com")
+                 
+               .checkin-form__input.checkin-form__input_dark.checkin-form__input_dropdown.js-select-field
+                 label(for="") Старт ближайшего курса
+                 select.js-select-single
+                   option 25.02 (по субботам)
+                   option 28.02 (по вторникам и четвергам)
+                   option 6.03 (по понедельникам и средам)
+                   option Не определился 
+                 
+                .checkin-form__descr
+                  span Занятия проводятся по таким дням:
+                  ol
+                    li 1. Понедельник-среда
+                    li 2. Вторник-четверг
+                    li 3. Суббота (занятие длится _ часов)
+
+               .checkin-form__btn-container
+                 a.btn.btn_yellow.checkin-form__btn(href="#") Записаться
+                 a.btn.btn_dark.checkin-form__btn(href="#") Календарь     
     .popup-wrap
       .popup-contacts
         .input-container

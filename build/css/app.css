@@ -4991,191 +4991,6 @@ keyframes spinMaSearch 100% {
   font-size: 24px;
 }
 
-.checkin {
-  padding-top: 200px;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  background-image: url(../img/registration.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.checkin__title {
-  font-family: FuturaPT-Bold, Arial, sans-serif;
-  font-size: 48px;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.checkin-partners {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #2e3192;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.checkin-partners__item {
-  width: 260px;
-  text-transform: uppercase;
-  display: inline-block;
-  vertical-align: bottom;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 10px;
-  transition: .3s;
-}
-
-.checkin-partners__item:hover {
-  border-bottom: 2px solid #f6cb02;
-}
-
-.checkin-social {
-  text-align: center;
-  margin: 25px 0;
-}
-
-.checkin-social__link {
-  display: inline-block;
-  min-width: 40px;
-  height: 40px;
-  background-color: transparent;
-  position: relative;
-}
-
-.checkin-social__link:not(:last-child) {
-  margin-right: 50px;
-}
-
-.checkin-social__link:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.checkin-social__link_fb:before {
-  background-image: url(../img/fb.png);
-  width: 16px;
-  height: 31px;
-}
-
-.checkin-social__link_inst:before {
-  background-image: url(../img/inst.png);
-  width: 32px;
-  height: 32px;
-}
-
-.checkin-social__link_yt:before {
-  background-image: url(../img/yt.png);
-  width: 26px;
-  height: 30px;
-}
-
-.checkin-form {
-  width: 500px;
-  margin: 0 auto;
-}
-
-.checkin-form__input label {
-  font-size: 18px;
-  color: #fff;
-  padding-left: 20px;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.checkin-form__input input {
-  font-size: 26px;
-  color: #003366;
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 100%;
-}
-
-.checkin-form__input input::-webkit-input-placeholder {
-  color: #003366;
-}
-
-.checkin-form__input input::-moz-placeholder {
-  color: #003366;
-}
-
-.checkin-form__input input:-ms-input-placeholder {
-  color: #003366;
-}
-
-.checkin-form__input input::placeholder {
-  color: #003366;
-}
-
-.checkin-form__input input.error {
-  background-color: #ff6e6e;
-}
-
-.checkin-form__input input.error::-webkit-input-placeholder {
-  color: #cc3333;
-}
-
-.checkin-form__input input.error::-moz-input-placeholder {
-  color: #cc3333;
-}
-
-.checkin-form__input input.error::-ms-input-placeholder {
-  color: #cc3333;
-}
-
-.checkin-form__btn-container {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.checkin-form__btn {
-  display: inline-block;
-  transition: .3s;
-  text-transform: uppercase;
-}
-
-.checkin-form__btn:not(:last-child) {
-  margin-right: 20px;
-}
-
-.checkin-form__btn_reg {
-  background-color: #f6cb02;
-  border-color: #f6cb02;
-}
-
-.checkin-form__btn_reg:hover {
-  background-color: #fff;
-  border-color: #000;
-}
-
-.checkin-form__btn_calendar {
-  background-color: rgba(0, 55, 113, 0.6);
-  border-color: #f6cb02;
-  color: #f6cb02;
-}
-
-.checkin-form__btn_calendar:hover {
-  background-color: #f6cb02;
-  color: #000;
-}
-
 .bg-video {
   position: absolute;
   top: 0;
@@ -6905,7 +6720,7 @@ keyframes spinMaSearch 100% {
   -ms-transform: skewX(10deg);
   transform: skewX(10deg);
   box-sizing: border-box;
-  padding: 5% 15% 0;
+  padding: 0% 10% 0;
   text-align: right;
   margin-right: 5%;
 }
@@ -6918,10 +6733,6 @@ keyframes spinMaSearch 100% {
   font-size: 16px;
   margin-top: 5%;
   font-family: FuturaPT-Demi, Arial, sans-serif;
-}
-
-.course-right__item:nth-child(2n+1) {
-  margin-right: 5%;
 }
 
 .course-right__icon {
@@ -8472,6 +8283,288 @@ keyframes spinMaSearch 100% {
   margin-left: 15px;
 }
 
+.checkin {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url(../img/registration.jpg);
+  padding-top: 110px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.checkin_academy {
+  background-image: url(../img/academy/registration-bg.jpg);
+  padding-top: 135px;
+}
+
+.checkin__title {
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+}
+
+.checkin__title span {
+  display: block;
+  color: #f6cb02;
+}
+
+.checkin-partners {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #2e3192;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  height: 60px;
+}
+
+.checkin-partners__item {
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: bottom;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 10px;
+  transition: .3s;
+  width: 100px;
+}
+
+.checkin-partners__item:hover {
+  border-bottom: 2px solid #f6cb02;
+}
+
+.checkin-social {
+  text-align: center;
+}
+
+.checkin-social__link {
+  display: inline-block;
+  min-width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: relative;
+}
+
+.checkin-social__link:not(:last-child) {
+  margin-right: 50px;
+}
+
+.checkin-social__link:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.checkin-social__link_fb:before {
+  background-image: url(../img/fb.png);
+  width: 16px;
+  height: 20px;
+}
+
+.checkin-social__link_inst:before {
+  background-image: url(../img/inst.png);
+  width: 32px;
+  height: 20px;
+}
+
+.checkin-social__link_yt:before {
+  background-image: url(../img/yt.png);
+  width: 26px;
+  height: 20px;
+}
+
+.checkin-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.checkin-form__input {
+  margin-bottom: 5px;
+}
+
+.checkin-form__input label {
+  color: #fff;
+  padding-left: 20px;
+  display: block;
+  font-size: 12px;
+}
+
+.checkin-form__input input {
+  color: #003366;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  font-size: 14px;
+  padding: 5px 20px;
+}
+
+.checkin-form__input input::-webkit-input-placeholder {
+  color: #003366;
+}
+
+.checkin-form__input input::-moz-placeholder {
+  color: #003366;
+}
+
+.checkin-form__input input:-ms-input-placeholder {
+  color: #003366;
+}
+
+.checkin-form__input input::placeholder {
+  color: #003366;
+}
+
+.checkin-form__input input.error {
+  background-color: #ff6e6e;
+}
+
+.checkin-form__input input.error::-webkit-input-placeholder {
+  color: #cc3333;
+}
+
+.checkin-form__input input.error::-moz-input-placeholder {
+  color: #cc3333;
+}
+
+.checkin-form__input input.error::-ms-input-placeholder {
+  color: #cc3333;
+}
+
+.checkin-form__input_dark input {
+  color: #f6cb02;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.checkin-form__input_dark input::-webkit-input-placeholder {
+  color: #f6cb02;
+}
+
+.checkin-form__input_dark input::-moz-placeholder {
+  color: #f6cb02;
+}
+
+.checkin-form__input_dark input:-ms-input-placeholder {
+  color: #f6cb02;
+}
+
+.checkin-form__input_dark input::placeholder {
+  color: #f6cb02;
+}
+
+.checkin-form__input_dropdown {
+  padding: 0 !important;
+  border: 0;
+}
+
+.checkin-form__input_dropdown .ms-choice {
+  border: none;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  height: auto;
+  line-height: 1em;
+  font-size: 14px;
+  padding: 10px 12px;
+  color: #f6cb02;
+}
+
+.checkin-form__input_dropdown .ms-choice:focus {
+  background-color: #f6cb02;
+  color: #000;
+}
+
+.checkin-form__input_dropdown .ms-choice span {
+  padding: 0;
+  position: static;
+}
+
+.checkin-form__input_dropdown .ms-choice > div {
+  border-color: #fff transparent transparent transparent;
+}
+
+.checkin-form__input_dropdown .ms-drop {
+  background-color: #f6cb02;
+  border: 0;
+}
+
+.checkin-form__input_dropdown .ms-drop.bottom {
+  box-shadow: none;
+}
+
+.checkin-form__input_dropdown .ms-drop ul > li label {
+  color: #000;
+  font-size: 14px;
+  padding: 9px 12px;
+}
+
+.checkin-form__input_dropdown .ms-drop ul > li label:hover {
+  background-color: #ffefa3;
+}
+
+.checkin-form__btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.checkin-form__btn {
+  display: inline-block;
+  transition: .3s;
+  text-transform: uppercase;
+  min-width: 160px;
+}
+
+.checkin-form__btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.checkin-form__btn_reg {
+  background-color: #f6cb02;
+  border-color: #f6cb02;
+}
+
+.checkin-form__btn_reg:hover {
+  background-color: #fff;
+  border-color: #000;
+}
+
+.checkin-form__btn_calendar {
+  background-color: rgba(0, 55, 113, 0.6);
+  border-color: #f6cb02;
+  color: #f6cb02;
+}
+
+.checkin-form__btn_calendar:hover {
+  background-color: #f6cb02;
+  color: #000;
+}
+
+.checkin-form__descr {
+  padding-left: 20px;
+  color: #f6cb02;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+
+.checkin-form__descr span {
+  display: block;
+}
+
 @media only screen and (min-width: 768px) {
 
   .calendar__layout {
@@ -8622,64 +8715,6 @@ keyframes spinMaSearch 100% {
   .controll__btn {
     height: 40px;
     width: 80px;
-  }
-
-  .checkin {
-    padding-top: 110px;
-  }
-
-  .checkin__title {
-    font-size: 16px;
-  }
-
-  .checkin-partners {
-    height: 60px;
-  }
-
-  .checkin-partners__item {
-    width: 100px;
-  }
-
-  .checkin-partners__item:not(:last-child) {
-    margin-right: 100px;
-  }
-
-  .checkin-social {
-    margin: 5px 0;
-  }
-
-  .checkin-social__link_fb:before {
-    height: 20px;
-  }
-
-  .checkin-social__link_inst:before {
-    height: 20px;
-  }
-
-  .checkin-social__link_yt:before {
-    height: 20px;
-  }
-
-  .checkin-form__input {
-    margin-bottom: 10px;
-  }
-
-  .checkin-form__input label {
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-
-  .checkin-form__input input {
-    font-size: 14px;
-    padding: 5px 20px;
-  }
-
-  .checkin-form__btn-container {
-    margin-top: 20px;
-  }
-
-  .checkin-form__btn {
-    min-width: 160px;
   }
 
   .wiki-top {
@@ -9030,6 +9065,10 @@ keyframes spinMaSearch 100% {
     height: 104px;
     right: -195px;
   }
+
+  .checkin-partners__item:not(:last-child) {
+    margin-right: 100px;
+  }
 }
 
 @media only screen and (min-width: 800px) {
@@ -9130,27 +9169,6 @@ keyframes spinMaSearch 100% {
 
   .programm__descr {
     font-size: 16px;
-  }
-
-  .checkin {
-    padding-top: 150px;
-  }
-
-  .checkin__title {
-    font-size: 36px;
-  }
-
-  .checkin-partners {
-    height: 80px;
-  }
-
-  .checkin-partners__item {
-    margin-top: 5px;
-  }
-
-  .checkin-form__input input {
-    font-size: 18px;
-    padding: 10px 20px;
   }
 
   .contacts {
@@ -9295,10 +9313,6 @@ keyframes spinMaSearch 100% {
 
   .course__btn {
     min-width: 190px;
-  }
-
-  .course-right {
-    margin-right: 10%;
   }
 
   .course-right__item {
@@ -9464,6 +9478,52 @@ keyframes spinMaSearch 100% {
   .btn-container {
     right: 70px;
   }
+
+  .checkin {
+    padding-top: 150px;
+  }
+
+  .checkin__title {
+    font-size: 34px;
+  }
+
+  .checkin-partners {
+    height: 80px;
+  }
+
+  .checkin-partners__item {
+    margin-top: 5px;
+  }
+
+  .checkin-form__input {
+    margin-bottom: 10px;
+  }
+
+  .checkin-form__input input {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .checkin-form__input_dropdown .ms-choice {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .checkin-form__input_dropdown .ms-drop ul > li label {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .checkin-form__descr {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .course-right {
+    margin-right: 10%;
+  }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -9549,39 +9609,6 @@ keyframes spinMaSearch 100% {
 
   .programm__descr {
     font-size: 18px;
-  }
-
-  .checkin {
-    padding-top: 160px;
-  }
-
-  .checkin-social {
-    margin: 10px 0;
-  }
-
-  .checkin-social__link_fb:before {
-    height: 31px;
-  }
-
-  .checkin-social__link_inst:before {
-    height: 32px;
-  }
-
-  .checkin-social__link_yt:before {
-    height: 30px;
-  }
-
-  .checkin-form__input {
-    margin-bottom: 15px;
-  }
-
-  .checkin-form__input label {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .checkin-form__btn {
-    min-width: 190px;
   }
 
   .wiki-top {
@@ -9840,6 +9867,38 @@ keyframes spinMaSearch 100% {
   .btn-container__btn {
     min-width: 190px;
   }
+
+  .checkin {
+    padding-top: 140px;
+  }
+
+  .checkin-social {
+    margin: 10px 0;
+  }
+
+  .checkin-social__link_fb:before {
+    height: 31px;
+  }
+
+  .checkin-social__link_inst:before {
+    height: 32px;
+  }
+
+  .checkin-social__link_yt:before {
+    height: 30px;
+  }
+
+  .checkin-form__input {
+    margin-bottom: 12px;
+  }
+
+  .checkin-form__input label {
+    font-size: 14px;
+  }
+
+  .checkin-form__btn {
+    min-width: 190px;
+  }
 }
 
 @media only screen and (min-width: 1368px) {
@@ -10016,52 +10075,6 @@ keyframes spinMaSearch 100% {
   .controll__btn {
     width: 100px;
     height: 50px;
-  }
-
-  .checkin {
-    padding-top: 200px;
-  }
-
-  .checkin__title {
-    font-size: 48px;
-  }
-
-  .checkin-partners {
-    padding-top: 10px;
-    height: 130px;
-  }
-
-  .checkin-partners__item {
-    width: 260px;
-  }
-
-  .checkin-partners__item:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  .checkin-social {
-    margin: 25px 0;
-  }
-
-  .checkin-form__input {
-    margin-bottom: 20px;
-  }
-
-  .checkin-form__input label {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-
-  .checkin-form__input input {
-    font-size: 26px;
-  }
-
-  .checkin-form__btn-container {
-    margin-top: 50px;
-  }
-
-  .checkin-form__btn {
-    min-width: 230px;
   }
 
   .wiki-top {
@@ -10369,6 +10382,66 @@ keyframes spinMaSearch 100% {
 
   .btn-container__btn {
     min-width: 230px;
+  }
+
+  .checkin {
+    padding-top: 200px;
+  }
+
+  .checkin__title {
+    font-size: 48px;
+  }
+
+  .checkin-partners {
+    padding-top: 10px;
+    height: 130px;
+  }
+
+  .checkin-partners__item {
+    width: 260px;
+  }
+
+  .checkin-partners__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .checkin-social {
+    margin: 25px 0;
+  }
+
+  .checkin-form__input {
+    margin-bottom: 20px;
+  }
+
+  .checkin-form__input label {
+    font-size: 18px;
+  }
+
+  .checkin-form__input input {
+    font-size: 26px;
+  }
+
+  .checkin-form__input_dropdown .ms-choice {
+    font-size: 26px;
+    padding: 12px 20px;
+  }
+
+  .checkin-form__input_dropdown .ms-drop ul > li label {
+    font-size: 21px;
+    padding: 12px 20px;
+  }
+
+  .checkin-form__btn-container {
+    margin-top: 50px;
+  }
+
+  .checkin-form__btn {
+    min-width: 230px;
+  }
+
+  .checkin-form__descr {
+    font-size: 18px;
+    margin-top: 20px;
   }
 }
 
@@ -10827,6 +10900,32 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media (min-aspect-ratio: 16 / 9) {
+
+  .bg-video__container,
+  .bg-video__container iframe {
+    height: 300%;
+    top: -100%;
+  }
+
+  .bg-video__container,
+  .bg-video__container iframe {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
 @media only screen and (max-width: 1599px) {
 
   .search-adv__filter:not(.search-adv__filter--detailed) {
@@ -10906,26 +11005,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 840px) {
-
-  .header__lang {
-    margin-left: 15px;
-  }
-
-  .nav {
-    margin-right: 15px;
-  }
-}
-
-@media only screen and (max-height: 750px) {
-
-  .calendar__event-descr {
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
 @media only screen and (max-width: 1320px) {
 
   .search-adv__wrapper {
@@ -10995,13 +11074,6 @@ keyframes spinMaSearch 100% {
 
   .yacht-map__wrapper:not(.yacht-map__wrapper--card) {
     width: 100%;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
   }
 }
 
@@ -11139,28 +11211,10 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
-  }
-}
-
 @media only screen and (max-height: 768px) {
 
   .main-card {
     max-height: 500px;
-  }
-}
-
-@media only screen and (max-height: 680px) {
-
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
   }
 }
 
@@ -11198,18 +11252,37 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media (min-aspect-ratio: 16 / 9) {
+@media only screen and (max-height: 900px) {
 
-  .bg-video__container,
-  .bg-video__container iframe {
-    height: 300%;
-    top: -100%;
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+
+  .header__lang {
+    margin-left: 15px;
   }
 
-  .bg-video__container,
-  .bg-video__container iframe {
-    height: 300%;
-    top: -100%;
+  .nav {
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
   }
 }
 

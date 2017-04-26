@@ -2923,7 +2923,6 @@ html.fp-enabled,
   -ms-user-select: none;
   user-select: none;
   cursor: default;
-  display: none;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);

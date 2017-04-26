@@ -16,43 +16,25 @@ block content
        li(data-menuanchor="learning").academy-menu__item
            a(href="#learning") Классы обучения
        li(data-menuanchor="fmk").academy-menu__item
-           a(href="#fmk") Флотилии молодых капитанов
+           a(href="#fmk") Ф. М. К.
+       li(data-menuanchor="registration").academy-menu__item
+           a(href="#registration") Записаться
    .academy-wrap
        section.fp-section
-         .license-wrap
-           .license-cards-container
-             .license-card-container.license-card-container_open
-               .license-card.license-card_open
-                 .license-card-open
-                   .license-card-open__content-container
-                     .license-card-open__content
-                       .license-card-open__title Лицензия IYT
-                       .license-card-open__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                       .license-card-open__btn-container
-                         a.btn.btn_yellow.course__btn(href="#") Записаться
-                   .license-card-open__img-wrap
-                     .license-card-open__img
-                   button.close.close_card.card-open__close.js-card-close
-
-             //.license-card-container
-               .license-card
-                 .license-card-small
-                   .license-card-small__title
-                     .license-card-small__title-inner
-                       div
-                         p лицензия Brodica
-                           span в скором времени
-
-             //.license-card-container
-               .license-card
-                 .license-card-small
-                   .license-card-small__title
-                     .license-card-small__title-inner
-                       div
-                         p лицензия Rya
-                           span в скором времени
-
-
+         .license
+           .license__content
+             .license__title IYT - International Yacht Training
+             ul.license__list
+               li.license__list-item Профессиональные курсы IYT MOY 200T официально одобрены американским US Coastguard и английской MCA, они легитимны на яхтах под всеми флагами британского содружества, США и ещё ряда островных государств в Карибском бассейне и тихом океане. 
+               li.license__list-item Любительские сертификаты IYT распознаются чартерными компаниями повсеместно. 
+               li.license__list-item В школах сети IYT вы можете, одновременно с дипломом IYT, получить европейский сертификат ICC.
+            .mouse-scroll
+              .mouse-scroll__item.mouse-scroll__item_black
+              .mouse-scroll__text скрольте вниз
+            .btn-container
+                a.btn.btn_yellow.btn-container__btn(href="#") Записаться
+                a.btn.btn_dark.btn-container__btn(href="#") Календарь
+           
        section.fp-section
          .academy-content-wrap.academy-content-wrap_teoretic
            .course-skew.course-skew_left
@@ -306,7 +288,49 @@ block content
          .academy-video.academy-video_fmk
            .academy-video__close.close.close_yellow.js-close-fmk
            iframe(width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen)
-             
+       section.fp-section
+         .checkin.checkin_academy
+           .checkin__content
+             .checkin__title 
+               span
+               | Не раздумывайте! Записывайтесь!
+             .checkin-social
+               a(href="#").checkin-social__link.checkin-social__link_yt
+               a(href="#").checkin-social__link.checkin-social__link_fb
+               a(href="#").checkin-social__link.checkin-social__link_inst
+             .checkin-form
+               .checkin-form__input.checkin-form__input_dark
+                 label(for="name") Имя и фамилия
+                 input(type="text" id="name" placeholder="Имя Фамилия")
+                 
+
+               .checkin-form__input.checkin-form__input_dark
+                 label(for="phone") Телефон
+                 input(type="text" id="phone" placeholder="(0--) --- -- --")
+                 
+
+               .checkin-form__input.checkin-form__input_dark
+                 label(for="email") Email
+                 input(type="text" id="email" placeholder="name@mail.com")
+                 
+               .checkin-form__input.checkin-form__input_dark.checkin-form__input_dropdown.js-select-field
+                 label(for="") Старт ближайшего курса
+                 select.js-select-single
+                   option 25.02 (по субботам)
+                   option 28.02 (по вторникам и четвергам)
+                   option 6.03 (по понедельникам и средам)
+                   option Не определился 
+                 
+                .checkin-form__descr
+                  span Занятия проводятся по таким дням:
+                  ol
+                    li 1. Понедельник-среда
+                    li 2. Вторник-четверг
+                    li 3. Суббота (занятие длится _ часов)
+
+               .checkin-form__btn-container
+                 a.btn.btn_yellow.checkin-form__btn(href="#") Записаться
+                 a.btn.btn_dark.checkin-form__btn(href="#") Календарь     
     .popup-wrap
       .popup-contacts
         .input-container

@@ -206,6 +206,9 @@ a {
   outline: none;
   background-color: #fff;
   text-transform: uppercase;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
   font-family: Casper-Bold, Arial, sans-serif;
   transition: all .25s ease-in-out;
 }
@@ -278,6 +281,11 @@ a {
   position: relative;
   font-family: Casper-Regular, Arial, sans-serif;
   transition: all .25s ease-in-out;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  border-radius: 20px;
+  width: 110px;
 }
 
 .btn-share:hover, .btn-share.is-shared {
@@ -302,6 +310,8 @@ a {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   left: 82%;
+  width: 34px;
+  height: 34px;
   transition: all .25s ease-in-out;
 }
 
@@ -316,10 +326,14 @@ a {
 
 .btn-share__icon:before {
   color: #475993;
+  left: -65px;
+  top: -4px;
 }
 
 .btn-share__icon:after {
   color: #fff;
+  left: 40px;
+  top: -44px;
 }
 
 .btn-share__icon i {
@@ -4754,6 +4768,7 @@ keyframes spinMaSearch 100% {
 
 .price-wrap {
   height: 100vh;
+  background-color: #fff;
 }
 
 .price {
@@ -4976,189 +4991,22 @@ keyframes spinMaSearch 100% {
   font-size: 24px;
 }
 
-.checkin {
-  padding-top: 200px;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  background-image: url(../img/registration.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.checkin__title {
-  font-family: FuturaPT-Bold, Arial, sans-serif;
-  font-size: 48px;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.checkin-partners {
+.bg-video {
   position: absolute;
+  top: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
-  background-color: #2e3192;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
+  left: 0;
 }
 
-.checkin-partners__item {
-  width: 260px;
-  text-transform: uppercase;
-  display: inline-block;
-  vertical-align: bottom;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 10px;
-  transition: .3s;
-}
-
-.checkin-partners__item:hover {
-  border-bottom: 2px solid #f6cb02;
-}
-
-.checkin-social {
-  text-align: center;
-  margin: 25px 0;
-}
-
-.checkin-social__link {
-  display: inline-block;
-  min-width: 40px;
-  height: 40px;
-  background-color: transparent;
-  position: relative;
-}
-
-.checkin-social__link:not(:last-child) {
-  margin-right: 50px;
-}
-
-.checkin-social__link:before {
-  content: '';
+.bg-video__container,
+.bg-video__container iframe {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.checkin-social__link_fb:before {
-  background-image: url(../img/fb.png);
-  width: 16px;
-  height: 31px;
-}
-
-.checkin-social__link_inst:before {
-  background-image: url(../img/inst.png);
-  width: 32px;
-  height: 32px;
-}
-
-.checkin-social__link_yt:before {
-  background-image: url(../img/yt.png);
-  width: 26px;
-  height: 30px;
-}
-
-.checkin-form {
-  width: 500px;
-  margin: 0 auto;
-}
-
-.checkin-form__input label {
-  font-size: 18px;
-  color: #fff;
-  padding-left: 20px;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.checkin-form__input input {
-  font-size: 26px;
-  color: #003366;
-  background-color: rgba(255, 255, 255, 0.7);
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
-.checkin-form__input input::-webkit-input-placeholder {
-  color: #003366;
-}
-
-.checkin-form__input input::-moz-placeholder {
-  color: #003366;
-}
-
-.checkin-form__input input:-ms-input-placeholder {
-  color: #003366;
-}
-
-.checkin-form__input input::placeholder {
-  color: #003366;
-}
-
-.checkin-form__input input.error {
-  background-color: #ff6e6e;
-}
-
-.checkin-form__input input.error::-webkit-input-placeholder {
-  color: #cc3333;
-}
-
-.checkin-form__input input.error::-moz-input-placeholder {
-  color: #cc3333;
-}
-
-.checkin-form__input input.error::-ms-input-placeholder {
-  color: #cc3333;
-}
-
-.checkin-form__btn-container {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.checkin-form__btn {
-  display: inline-block;
-  transition: .3s;
-  text-transform: uppercase;
-}
-
-.checkin-form__btn:not(:last-child) {
-  margin-right: 20px;
-}
-
-.checkin-form__btn_reg {
-  background-color: #f6cb02;
-  border-color: #f6cb02;
-}
-
-.checkin-form__btn_reg:hover {
-  background-color: #fff;
-  border-color: #000;
-}
-
-.checkin-form__btn_calendar {
-  background-color: rgba(0, 55, 113, 0.6);
-  border-color: #f6cb02;
-  color: #f6cb02;
-}
-
-.checkin-form__btn_calendar:hover {
-  background-color: #f6cb02;
-  color: #000;
+  height: 100%;
+  pointer-events: none;
 }
 
 .wiki-main {
@@ -6616,17 +6464,18 @@ keyframes spinMaSearch 100% {
   display: inline-block;
   font-family: Casper-Bold, Arial, sans-serif;
   text-transform: uppercase;
-  margin-right: 70px;
-  border-bottom: 2px solid transparent;
   transition: border-color .2s;
-  font-size: 16px;
+  margin-right: 9px;
+  padding: 0 2px 7px;
+  border-bottom: 2px solid transparent;
+  font-size: 11px;
 }
 
 .academy-menu__item.active {
   border-bottom-color: #000;
 }
 
-.license-wrap {
+.license {
   margin-top: 100px;
   width: 100vw;
   overflow: hidden;
@@ -6635,160 +6484,44 @@ keyframes spinMaSearch 100% {
   background-position: 50% 50%;
   height: calc(100vh - 185px);
   margin-top: 185px;
-}
-
-.license-cards-container {
-  width: 90%;
-  max-width: 1650px;
-  height: 100%;
-  margin: 0 auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.license-card-container {
-  position: relative;
-  width: 30px;
-}
-
-.license-card-container_open {
-  width: 90%;
-  transition: 1.2s;
-}
-
-.license-card {
-  width: 100%;
-  height: 60vh;
-  position: relative;
-  -webkit-transform-origin: left 50%;
-  -ms-transform-origin: left 50%;
-  transform-origin: left 50%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.license-card_open {
-  height: 70vh !important;
-}
-
-.license-card_open:after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  border-radius: 50%;
-  bottom: 0;
-}
-
-.license-card-small {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  background-color: #f6cb02;
-}
-
-.license-card-small__title {
-  font-family: FuturaPT-Bold, Arial, sans-serif;
-  font-weight: 800;
-  line-height: 30px;
-  color: #000;
-  text-transform: uppercase;
-  position: absolute;
-  -webkit-transform: rotateZ(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotateZ(-90deg);
-  width: 500px;
-  bottom: 245px;
-  left: -240px;
-}
-
-.license-card-small__title span {
-  color: #fff;
-}
-
-.license-card-open {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: .5s;
-  opacity: 1;
-  display: block;
-  *zoom: 1;
-}
-
-.license-card-open:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-.license-card-open__content-container {
-  width: 70%;
-  height: 100%;
-  background-color: #000;
-  float: left;
-  position: relative;
-  z-index: 100;
-  box-shadow: 15px 0 15px -3px rgba(0, 0, 0, 0.5);
-}
-
-.license-card-open__img-wrap {
-  width: 30%;
-  height: 100%;
-  float: right;
-  position: relative;
-  z-index: 50;
-  overflow: hidden;
-}
-
-.license-card-open__img {
-  width: 100%;
-  height: 100%;
-  transition: .5s;
-  position: absolute;
-  z-index: 100;
+  background-image: url(../img/academy/license-bg.png);
   background-size: cover;
-  background-image: url(../img/academy-img.jpg);
+  background-position: 50% 50%;
 }
 
-.license-card-open__title {
-  color: #363636;
-  white-space: nowrap;
-  text-transform: uppercase;
-  position: absolute;
-  top: 0;
-  text-align: left;
-  width: 100%;
-  font-weight: 800;
+.license__content {
+  padding-top: 4%;
+  padding-left: 30px;
+}
+
+.license__title {
   font-family: FuturaPT-Bold, Arial, sans-serif;
-}
-
-.license-card-open__descr {
-  color: #fff;
-  font-family: Casper-Regular, Arial, sans-serif;
-  margin: 20% auto 0;
-}
-
-.license-card-open__btn-container {
-  position: absolute;
-  bottom: 10%;
-  width: 100%;
-  text-align: center;
-}
-
-.license-card-open__btn {
-  min-width: 230px;
-  display: inline-block;
-  transition: .3s;
+  font-size: 30px;
+  color: #f6cb02;
   text-transform: uppercase;
+}
+
+.license__list {
+  font-size: 16px;
+  color: #fff;
+  max-width: 60%;
+  margin-top: 30px;
+}
+
+.license__list-item {
+  text-indent: 20px;
+  position: relative;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+}
+
+.license__list-item:before {
+  content: '/';
+  position: absolute;
+  left: -20px;
+  top: 0;
+  font-size: 1em;
+  color: #f6cb02;
+  font-family: FuturaPT-Demi, Arial, sans-serif;
 }
 
 .course-skew {
@@ -6820,9 +6553,9 @@ keyframes spinMaSearch 100% {
   transform: skewX(10deg);
   margin-left: 10%;
   box-sizing: border-box;
-  padding-left: 10%;
-  padding-top: 5%;
   height: 100%;
+  padding-left: 5%;
+  padding-top: 3%;
 }
 
 .course__video {
@@ -6842,29 +6575,38 @@ keyframes spinMaSearch 100% {
   left: 75%;
 }
 
+.course__item {
+  margin-top: 5px;
+}
+
 .course__title {
   font-family: FuturaPT-Demi, Arial, sans-serif;
   color: #fff;
+  font-size: 18px;
 }
 
 .course__subtitle {
   font-family: FuturaPT-Demi, Arial, sans-serif;
   color: #f6cb02;
+  font-size: 12px;
 }
 
 .course__date {
   color: #f6cb02;
   font-size: 36px;
+  font-size: 18px;
   font-family: Casper-Regular, Arial, sans-serif;
 }
 
 .course__btn-container {
   position: absolute;
   bottom: 35px;
+  bottom: 10px;
 }
 
 .course__btn {
   display: inline-block;
+  min-width: 120px;
 }
 
 .course__btn:not(last-child) {
@@ -6895,6 +6637,8 @@ keyframes spinMaSearch 100% {
 .course__icon {
   position: relative;
   margin-bottom: 5px;
+  width: 40px;
+  height: 40px;
 }
 
 .course__icon::before {
@@ -6945,6 +6689,8 @@ keyframes spinMaSearch 100% {
   display: block;
   padding-top: 100px;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  padding-top: 75px;
 }
 
 .course__video-btn span:hover:after {
@@ -6955,8 +6701,8 @@ keyframes spinMaSearch 100% {
   content: '';
   display: block;
   position: absolute;
-  width: 95px;
-  height: 95px;
+  width: 70px;
+  height: 70px;
   transition: background-image .3s;
   background-image: url(../img/video-btn.png);
   background-repeat: no-repeat;
@@ -6973,18 +6719,19 @@ keyframes spinMaSearch 100% {
   -webkit-transform: skewX(10deg);
   -ms-transform: skewX(10deg);
   transform: skewX(10deg);
-  margin-right: 20%;
   box-sizing: border-box;
-  padding-right: 10%;
-  padding-left: 15%;
-  padding-top: 15%;
+  padding: 0% 10% 0;
   text-align: right;
+  margin-right: 5%;
 }
 
 .course-right__item {
   display: inline-block;
   text-align: center;
   vertical-align: top;
+  width: 114px;
+  font-size: 16px;
+  margin-top: 5%;
   font-family: FuturaPT-Demi, Arial, sans-serif;
 }
 
@@ -7036,6 +6783,7 @@ keyframes spinMaSearch 100% {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  height: 90px;
 }
 
 .fmk-top__item {
@@ -7046,6 +6794,8 @@ keyframes spinMaSearch 100% {
 .fmk-top__icon {
   position: relative;
   margin: 0 auto;
+  width: 35px;
+  height: 35px;
 }
 
 .fmk-top__icon::before {
@@ -7064,14 +6814,19 @@ keyframes spinMaSearch 100% {
 
 .fmk-top__icon_2:before {
   background-image: url(../img/academy/fmk-2.png);
+  width: 35px;
+  height: 35px;
 }
 
 .fmk-top__icon_3::before {
   background-image: url(../img/academy/fmk-3.png);
+  width: 35px;
+  height: 35px;
 }
 
 .fmk-top__text {
   font-family: FuturaPT-Demi, Arial, sans-serif;
+  font-size: 12px;
 }
 
 .fmk-skew {
@@ -7088,6 +6843,7 @@ keyframes spinMaSearch 100% {
 
 .fmk-content {
   position: relative;
+  height: calc(100% - 90px);
 }
 
 .fmk {
@@ -7105,6 +6861,8 @@ keyframes spinMaSearch 100% {
   color: #fff;
   width: 95%;
   font-family: FuturaPT-Demi, Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 25px;
 }
 
 .fmk__text_yellow {
@@ -7118,6 +6876,7 @@ keyframes spinMaSearch 100% {
 .fmk__btn {
   display: inline-block;
   margin: 0 auto;
+  min-width: 120px;
 }
 
 .fmk-video {
@@ -7151,6 +6910,7 @@ keyframes spinMaSearch 100% {
 }
 
 .gallery__arrow {
+  width: 40px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -7194,6 +6954,8 @@ keyframes spinMaSearch 100% {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  width: 25px;
+  height: 60px;
 }
 
 .gallery .slick-dots {
@@ -7239,10 +7001,14 @@ keyframes spinMaSearch 100% {
   color: #585858;
   text-transform: uppercase;
   box-shadow: inset 0px 1px 4px -1px rgba(0, 0, 0, 0.2);
+  font-size: 21px;
+  line-height: 50px;
+  height: 50px;
 }
 
 .instructors {
   *zoom: 1;
+  height: calc(100% - 50px);
 }
 
 .instructors:after {
@@ -7290,11 +7056,13 @@ keyframes spinMaSearch 100% {
   color: #fff;
   text-transform: uppercase;
   margin-top: 50%;
+  font-size: 21px;
 }
 
 .instructor__btn {
   display: inline-block;
   margin-top: 50px;
+  min-width: 120px;
 }
 
 .instructor-cards {
@@ -7429,7 +7197,6 @@ keyframes spinMaSearch 100% {
 }
 
 .instructor-card__bg-title {
-  font-size: 200px;
   position: absolute;
   width: 25%;
   font-family: FuturaPT-Bold, Arial, sans-serif;
@@ -7438,8 +7205,11 @@ keyframes spinMaSearch 100% {
   transform: rotate(-90deg);
   color: #232323;
   text-transform: uppercase;
-  line-height: 190px;
   opacity: 0;
+  font-size: 68px;
+  top: 65%;
+  line-height: 70px;
+  left: 10px;
 }
 
 .instructor-card__title {
@@ -7450,6 +7220,7 @@ keyframes spinMaSearch 100% {
   -webkit-transform: translateY(20%);
   -ms-transform: translateY(20%);
   transform: translateY(20%);
+  font-size: 21px;
 }
 
 .instructor-card__subtitle {
@@ -7460,6 +7231,8 @@ keyframes spinMaSearch 100% {
   -ms-transform: translateY(20%);
   transform: translateY(20%);
   font-family: Casper-Regular, Arial, sans-serif;
+  margin-bottom: 15px;
+  font-size: 14px;
 }
 
 .instructor-card__line {
@@ -7483,6 +7256,7 @@ keyframes spinMaSearch 100% {
 .instructor-card__descr-value {
   color: #f6cb02;
   font-family: FuturaPT-Bold, Arial, sans-serif;
+  font-size: 24px;
 }
 
 .instructor-card__descr-title {
@@ -7490,11 +7264,15 @@ keyframes spinMaSearch 100% {
   text-transform: uppercase;
   color: #fff;
   font-family: Casper-Regular, Arial, sans-serif;
+  font-size: 11px;
+  margin-bottom: 15px;
 }
 
 .instructor-card__descr-icon {
   position: relative;
   margin: 0 auto;
+  width: 70px;
+  height: 70px;
 }
 
 .instructor-card__descr-icon::before {
@@ -7528,6 +7306,8 @@ keyframes spinMaSearch 100% {
 .controll-btn_yellow {
   border: 1px solid #f6cb02;
   position: relative;
+  height: 40px;
+  width: 80px;
 }
 
 .controll-btn_yellow:hover {
@@ -7578,6 +7358,8 @@ keyframes spinMaSearch 100% {
   position: absolute;
   width: 200%;
   white-space: nowrap;
+  font-size: 11px;
+  top: -25px;
 }
 
 .controll-btn_right .instructor-card__btn-name {
@@ -8430,6 +8212,10 @@ keyframes spinMaSearch 100% {
   animation: scrollanimation 2s infinite;
 }
 
+.mouse-scroll__item_black:before {
+  background-color: #000;
+}
+
 .mouse-scroll__text {
   color: #fff;
   text-transform: lowercase;
@@ -8462,36 +8248,324 @@ keyframes spinMaSearch 100% {
   }
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-video__container,
+.bg-video__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+}
+
+.btn-container__btn {
+  display: inline-block;
+  transition: .3s;
+  text-transform: uppercase;
+  min-width: 160px;
+}
+
+.btn-container__btn + .btn-container__btn {
+  margin-left: 15px;
+}
+
+.checkin {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url(../img/registration.jpg);
+  padding-top: 110px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.checkin_academy {
+  background-image: url(../img/academy/registration-bg.jpg);
+  padding-top: 135px;
+}
+
+.checkin__title {
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+}
+
+.checkin__title span {
+  display: block;
+  color: #f6cb02;
+}
+
+.checkin-partners {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #2e3192;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  height: 60px;
+}
+
+.checkin-partners__item {
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: bottom;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 10px;
+  transition: .3s;
+  width: 100px;
+}
+
+.checkin-partners__item:hover {
+  border-bottom: 2px solid #f6cb02;
+}
+
+.checkin-social {
+  text-align: center;
+}
+
+.checkin-social__link {
+  display: inline-block;
+  min-width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: relative;
+}
+
+.checkin-social__link:not(:last-child) {
+  margin-right: 50px;
+}
+
+.checkin-social__link:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.checkin-social__link_fb:before {
+  background-image: url(../img/fb.png);
+  width: 16px;
+  height: 20px;
+}
+
+.checkin-social__link_inst:before {
+  background-image: url(../img/inst.png);
+  width: 32px;
+  height: 20px;
+}
+
+.checkin-social__link_yt:before {
+  background-image: url(../img/yt.png);
+  width: 26px;
+  height: 20px;
+}
+
+.checkin-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.checkin-form__input {
+  margin-bottom: 5px;
+}
+
+.checkin-form__input label {
+  color: #fff;
+  padding-left: 20px;
+  display: block;
+  font-size: 12px;
+}
+
+.checkin-form__input input {
+  color: #003366;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  font-size: 14px;
+  padding: 5px 20px;
+}
+
+.checkin-form__input input::-webkit-input-placeholder {
+  color: #003366;
+}
+
+.checkin-form__input input::-moz-placeholder {
+  color: #003366;
+}
+
+.checkin-form__input input:-ms-input-placeholder {
+  color: #003366;
+}
+
+.checkin-form__input input::placeholder {
+  color: #003366;
+}
+
+.checkin-form__input input.error {
+  background-color: #ff6e6e;
+}
+
+.checkin-form__input input.error::-webkit-input-placeholder {
+  color: #cc3333;
+}
+
+.checkin-form__input input.error::-moz-input-placeholder {
+  color: #cc3333;
+}
+
+.checkin-form__input input.error::-ms-input-placeholder {
+  color: #cc3333;
+}
+
+.checkin-form__input_dark input {
+  color: #f6cb02;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.checkin-form__input_dark input::-webkit-input-placeholder {
+  color: #f6cb02;
+}
+
+.checkin-form__input_dark input::-moz-placeholder {
+  color: #f6cb02;
+}
+
+.checkin-form__input_dark input:-ms-input-placeholder {
+  color: #f6cb02;
+}
+
+.checkin-form__input_dark input::placeholder {
+  color: #f6cb02;
+}
+
+.checkin-form__input_dropdown {
+  padding: 0 !important;
+  border: 0;
+}
+
+.checkin-form__input_dropdown .ms-choice {
+  border: none;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  height: auto;
+  line-height: 1em;
+  font-size: 14px;
+  padding: 10px 12px;
+  color: #f6cb02;
+}
+
+.checkin-form__input_dropdown .ms-choice:focus {
+  background-color: #f6cb02;
+  color: #000;
+}
+
+.checkin-form__input_dropdown .ms-choice span {
+  padding: 0;
+  position: static;
+}
+
+.checkin-form__input_dropdown .ms-choice > div {
+  border-color: #fff transparent transparent transparent;
+}
+
+.checkin-form__input_dropdown .ms-drop {
+  background-color: #f6cb02;
+  border: 0;
+}
+
+.checkin-form__input_dropdown .ms-drop.bottom {
+  box-shadow: none;
+}
+
+.checkin-form__input_dropdown .ms-drop ul > li label {
+  color: #000;
+  font-size: 14px;
+  padding: 9px 12px;
+}
+
+.checkin-form__input_dropdown .ms-drop ul > li label:hover {
+  background-color: #ffefa3;
+}
+
+.checkin-form__btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.checkin-form__btn {
+  display: inline-block;
+  transition: .3s;
+  text-transform: uppercase;
+  min-width: 160px;
+}
+
+.checkin-form__btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.checkin-form__btn_reg {
+  background-color: #f6cb02;
+  border-color: #f6cb02;
+}
+
+.checkin-form__btn_reg:hover {
+  background-color: #fff;
+  border-color: #000;
+}
+
+.checkin-form__btn_calendar {
+  background-color: rgba(0, 55, 113, 0.6);
+  border-color: #f6cb02;
+  color: #f6cb02;
+}
+
+.checkin-form__btn_calendar:hover {
+  background-color: #f6cb02;
+  color: #000;
+}
+
+.checkin-form__descr {
+  padding-left: 20px;
+  color: #f6cb02;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+
+.checkin-form__descr span {
+  display: block;
+}
+
 @media only screen and (min-width: 768px) {
-
-  .btn {
-    height: 40px;
-    line-height: 40px;
-    font-size: 14px;
-  }
-
-  .btn-share {
-    height: 40px;
-    line-height: 40px;
-    font-size: 14px;
-    border-radius: 20px;
-    width: 110px;
-  }
-
-  .btn-share__icon {
-    width: 34px;
-    height: 34px;
-  }
-
-  .btn-share__icon:before {
-    left: -65px;
-    top: -4px;
-  }
-
-  .btn-share__icon:after {
-    left: 40px;
-    top: -44px;
-  }
 
   .calendar__layout {
     padding-top: 40px;
@@ -8641,64 +8715,6 @@ keyframes spinMaSearch 100% {
   .controll__btn {
     height: 40px;
     width: 80px;
-  }
-
-  .checkin {
-    padding-top: 110px;
-  }
-
-  .checkin__title {
-    font-size: 16px;
-  }
-
-  .checkin-partners {
-    height: 60px;
-  }
-
-  .checkin-partners__item {
-    width: 100px;
-  }
-
-  .checkin-partners__item:not(:last-child) {
-    margin-right: 100px;
-  }
-
-  .checkin-social {
-    margin: 5px 0;
-  }
-
-  .checkin-social__link_fb:before {
-    height: 20px;
-  }
-
-  .checkin-social__link_inst:before {
-    height: 20px;
-  }
-
-  .checkin-social__link_yt:before {
-    height: 20px;
-  }
-
-  .checkin-form__input {
-    margin-bottom: 10px;
-  }
-
-  .checkin-form__input label {
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-
-  .checkin-form__input input {
-    font-size: 14px;
-    padding: 5px 20px;
-  }
-
-  .checkin-form__btn-container {
-    margin-top: 20px;
-  }
-
-  .checkin-form__btn {
-    min-width: 160px;
   }
 
   .wiki-top {
@@ -8890,200 +8906,6 @@ keyframes spinMaSearch 100% {
     line-height: 16px;
   }
 
-  .academy-menu__item {
-    margin-right: 9px;
-    padding: 0 2px 7px;
-    border-bottom: 2px solid transparent;
-    font-size: 11px;
-  }
-
-  .license-card {
-    height: 70vh;
-  }
-
-  .license-card-small__title {
-    font-size: 16px;
-  }
-
-  .license-card-small__title span {
-    font-size: 12px;
-  }
-
-  .license-card-open__title {
-    font-size: 60px;
-    line-height: 50px;
-  }
-
-  .license-card-open__descr {
-    width: 90%;
-    font-size: 14px;
-  }
-
-  .license-card-open__btn {
-    min-width: 160px;
-  }
-
-  .course {
-    padding-left: 5%;
-    padding-top: 3%;
-  }
-
-  .course__item {
-    margin-top: 5px;
-  }
-
-  .course__title {
-    font-size: 18px;
-  }
-
-  .course__subtitle {
-    font-size: 12px;
-  }
-
-  .course__date {
-    font-size: 18px;
-  }
-
-  .course__btn-container {
-    bottom: 10px;
-  }
-
-  .course__btn {
-    min-width: 120px;
-  }
-
-  .course__icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .course__video-btn span {
-    font-size: 24px;
-    padding-top: 75px;
-  }
-
-  .course__video-btn span:after {
-    width: 70px;
-    height: 70px;
-  }
-
-  .course-right {
-    margin-right: 5%;
-  }
-
-  .course-right__item {
-    width: 114px;
-    font-size: 16px;
-    margin-top: 5%;
-  }
-
-  .course-right__item:nth-child(2n+1) {
-    margin-right: 5%;
-  }
-
-  .fmk-top {
-    height: 90px;
-  }
-
-  .fmk-top__icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  .fmk-top__icon_2:before {
-    width: 35px;
-    height: 35px;
-  }
-
-  .fmk-top__icon_3::before {
-    width: 35px;
-    height: 35px;
-  }
-
-  .fmk-top__text {
-    font-size: 12px;
-  }
-
-  .fmk-content {
-    height: calc(100% - 90px);
-  }
-
-  .fmk__text {
-    font-size: 14px;
-    margin-bottom: 25px;
-  }
-
-  .fmk__btn {
-    min-width: 120px;
-  }
-
-  .gallery__arrow {
-    width: 40px;
-  }
-
-  .gallery__arrow-icon {
-    width: 25px;
-    height: 60px;
-  }
-
-  .instructors-title {
-    font-size: 21px;
-    line-height: 50px;
-    height: 50px;
-  }
-
-  .instructors {
-    height: calc(100% - 50px);
-  }
-
-  .instructor__name {
-    font-size: 21px;
-  }
-
-  .instructor__btn {
-    min-width: 120px;
-  }
-
-  .instructor-card__bg-title {
-    font-size: 68px;
-    top: 65%;
-    line-height: 70px;
-    left: 10px;
-  }
-
-  .instructor-card__title {
-    font-size: 21px;
-  }
-
-  .instructor-card__subtitle {
-    margin-bottom: 15px;
-    font-size: 14px;
-  }
-
-  .instructor-card__descr-value {
-    font-size: 24px;
-  }
-
-  .instructor-card__descr-title {
-    font-size: 11px;
-    margin-bottom: 15px;
-  }
-
-  .instructor-card__descr-icon {
-    width: 70px;
-    height: 70px;
-  }
-
-  .controll-btn_yellow {
-    height: 40px;
-    width: 80px;
-  }
-
-  .instructor-card__btn-name {
-    font-size: 11px;
-    top: -25px;
-  }
-
   .news-top {
     height: 60px;
   }
@@ -9243,6 +9065,10 @@ keyframes spinMaSearch 100% {
     height: 104px;
     right: -195px;
   }
+
+  .checkin-partners__item:not(:last-child) {
+    margin-right: 100px;
+  }
 }
 
 @media only screen and (min-width: 800px) {
@@ -9343,27 +9169,6 @@ keyframes spinMaSearch 100% {
 
   .programm__descr {
     font-size: 16px;
-  }
-
-  .checkin {
-    padding-top: 150px;
-  }
-
-  .checkin__title {
-    font-size: 36px;
-  }
-
-  .checkin-partners {
-    height: 80px;
-  }
-
-  .checkin-partners__item {
-    margin-top: 5px;
-  }
-
-  .checkin-form__input input {
-    font-size: 18px;
-    padding: 10px 20px;
   }
 
   .contacts {
@@ -9474,21 +9279,16 @@ keyframes spinMaSearch 100% {
     font-size: 14px;
   }
 
-  .license-card_open:after {
-    box-shadow: 0 50px 20px 5px rgba(0, 0, 0, 0.5);
+  .license__content {
+    padding-left: 100px;
   }
 
-  .license-card-small__title {
-    font-size: 24px;
+  .license__title {
+    font-size: 50px;
   }
 
-  .license-card-small__title span {
-    font-size: 18px;
-  }
-
-  .license-card-open__descr {
-    font-size: 18px;
-    width: 75%;
+  .license__list {
+    font-size: 21px;
   }
 
   .course__item {
@@ -9513,12 +9313,6 @@ keyframes spinMaSearch 100% {
 
   .course__btn {
     min-width: 190px;
-  }
-
-  .course-right {
-    margin-right: 10%;
-    padding-right: 15%;
-    padding-top: 5%;
   }
 
   .course-right__item {
@@ -9680,6 +9474,56 @@ keyframes spinMaSearch 100% {
   .mouse-scroll {
     display: block;
   }
+
+  .btn-container {
+    right: 70px;
+  }
+
+  .checkin {
+    padding-top: 150px;
+  }
+
+  .checkin__title {
+    font-size: 34px;
+  }
+
+  .checkin-partners {
+    height: 80px;
+  }
+
+  .checkin-partners__item {
+    margin-top: 5px;
+  }
+
+  .checkin-form__input {
+    margin-bottom: 10px;
+  }
+
+  .checkin-form__input input {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .checkin-form__input_dropdown .ms-choice {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .checkin-form__input_dropdown .ms-drop ul > li label {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .checkin-form__descr {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .course-right {
+    margin-right: 10%;
+  }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -9765,39 +9609,6 @@ keyframes spinMaSearch 100% {
 
   .programm__descr {
     font-size: 18px;
-  }
-
-  .checkin {
-    padding-top: 160px;
-  }
-
-  .checkin-social {
-    margin: 10px 0;
-  }
-
-  .checkin-social__link_fb:before {
-    height: 31px;
-  }
-
-  .checkin-social__link_inst:before {
-    height: 32px;
-  }
-
-  .checkin-social__link_yt:before {
-    height: 30px;
-  }
-
-  .checkin-form__input {
-    margin-bottom: 15px;
-  }
-
-  .checkin-form__input label {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .checkin-form__btn {
-    min-width: 190px;
   }
 
   .wiki-top {
@@ -9926,15 +9737,6 @@ keyframes spinMaSearch 100% {
     width: 40%;
   }
 
-  .license-card-open__title {
-    font-size: 105px;
-    line-height: 75px;
-  }
-
-  .license-card-open__btn {
-    min-width: 190px;
-  }
-
   .course {
     padding-top: 3%;
   }
@@ -10060,6 +9862,42 @@ keyframes spinMaSearch 100% {
     width: 350px;
     height: 135px;
     right: -335px;
+  }
+
+  .btn-container__btn {
+    min-width: 190px;
+  }
+
+  .checkin {
+    padding-top: 140px;
+  }
+
+  .checkin-social {
+    margin: 10px 0;
+  }
+
+  .checkin-social__link_fb:before {
+    height: 31px;
+  }
+
+  .checkin-social__link_inst:before {
+    height: 32px;
+  }
+
+  .checkin-social__link_yt:before {
+    height: 30px;
+  }
+
+  .checkin-form__input {
+    margin-bottom: 12px;
+  }
+
+  .checkin-form__input label {
+    font-size: 14px;
+  }
+
+  .checkin-form__btn {
+    min-width: 190px;
   }
 }
 
@@ -10239,52 +10077,6 @@ keyframes spinMaSearch 100% {
     height: 50px;
   }
 
-  .checkin {
-    padding-top: 200px;
-  }
-
-  .checkin__title {
-    font-size: 48px;
-  }
-
-  .checkin-partners {
-    padding-top: 10px;
-    height: 130px;
-  }
-
-  .checkin-partners__item {
-    width: 260px;
-  }
-
-  .checkin-partners__item:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  .checkin-social {
-    margin: 25px 0;
-  }
-
-  .checkin-form__input {
-    margin-bottom: 20px;
-  }
-
-  .checkin-form__input label {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-
-  .checkin-form__input input {
-    font-size: 26px;
-  }
-
-  .checkin-form__btn-container {
-    margin-top: 50px;
-  }
-
-  .checkin-form__btn {
-    min-width: 230px;
-  }
-
   .wiki-top {
     height: 130px;
   }
@@ -10437,25 +10229,12 @@ keyframes spinMaSearch 100% {
     font-size: 16px;
   }
 
-  .license-card_open:after {
-    box-shadow: 0 65px 20px 5px rgba(0, 0, 0, 0.5);
+  .license__title {
+    font-size: 60px;
   }
 
-  .license-card {
-    height: 60vh;
-  }
-
-  .license-card-small__title {
+  .license__list {
     font-size: 30px;
-  }
-
-  .license-card-open__title {
-    font-size: 134px;
-    line-height: 90px;
-  }
-
-  .license-card-open__btn {
-    min-width: 230px;
   }
 
   .course__btn {
@@ -10600,6 +10379,70 @@ keyframes spinMaSearch 100% {
     right: -500px;
     bottom: -30px;
   }
+
+  .btn-container__btn {
+    min-width: 230px;
+  }
+
+  .checkin {
+    padding-top: 200px;
+  }
+
+  .checkin__title {
+    font-size: 48px;
+  }
+
+  .checkin-partners {
+    padding-top: 10px;
+    height: 130px;
+  }
+
+  .checkin-partners__item {
+    width: 260px;
+  }
+
+  .checkin-partners__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .checkin-social {
+    margin: 25px 0;
+  }
+
+  .checkin-form__input {
+    margin-bottom: 20px;
+  }
+
+  .checkin-form__input label {
+    font-size: 18px;
+  }
+
+  .checkin-form__input input {
+    font-size: 26px;
+  }
+
+  .checkin-form__input_dropdown .ms-choice {
+    font-size: 26px;
+    padding: 12px 20px;
+  }
+
+  .checkin-form__input_dropdown .ms-drop ul > li label {
+    font-size: 21px;
+    padding: 12px 20px;
+  }
+
+  .checkin-form__btn-container {
+    margin-top: 50px;
+  }
+
+  .checkin-form__btn {
+    min-width: 230px;
+  }
+
+  .checkin-form__descr {
+    font-size: 18px;
+    margin-top: 20px;
+  }
 }
 
 @media only screen and (min-width: 1680px) {
@@ -10632,8 +10475,7 @@ keyframes spinMaSearch 100% {
 
   .course-right {
     margin-right: 20%;
-    padding-right: 10%;
-    padding-top: 15%;
+    padding: 15% 10% 0 15%;
   }
 
   .fmk-top {
@@ -10963,7 +10805,7 @@ keyframes spinMaSearch 100% {
     padding-top: 15px;
   }
 
-  .license-wrap {
+  .license {
     height: calc(100vh - 130px);
     margin-top: 130px;
   }
@@ -11058,6 +10900,32 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media (min-aspect-ratio: 16 / 9) {
+
+  .bg-video__container,
+  .bg-video__container iframe {
+    height: 300%;
+    top: -100%;
+  }
+
+  .bg-video__container,
+  .bg-video__container iframe {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
 @media only screen and (max-width: 1599px) {
 
   .search-adv__filter:not(.search-adv__filter--detailed) {
@@ -11107,22 +10975,6 @@ keyframes spinMaSearch 100% {
 
   .search__rent-date {
     padding: 0 20px;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-
-  .yacht__card {
-    width: calc(50% - 30px);
-  }
-}
-
-@media only screen and (max-height: 750px) {
-
-  .calendar__event-descr {
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
   }
 }
 
@@ -11359,6 +11211,20 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+
+  .yacht__card {
+    width: calc(50% - 30px);
+  }
+}
+
 @media only screen and (max-width: 1000px) {
 
   .nav {
@@ -11368,13 +11234,6 @@ keyframes spinMaSearch 100% {
   .nav__item {
     padding-left: 15px;
     padding-right: 15px;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
   }
 }
 
@@ -11393,14 +11252,17 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-height: 680px) {
+@media only screen and (max-height: 900px) {
 
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
   }
 }
 
@@ -11415,17 +11277,12 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-height: 768px) {
+@media only screen and (max-height: 750px) {
 
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
   }
 }
 

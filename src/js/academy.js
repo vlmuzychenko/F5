@@ -1,7 +1,7 @@
 $(function () {
   $('.academy-wrap').fullpage({
     verticalCentered: true,
-    anchors: ['license', 'teoretic', 'practice', 'instructors', 'learning', 'fmk'],
+    anchors: ['license', 'teoretic', 'practice', 'instructors', 'learning', 'fmk', 'registration'],
     menu: '.academy-menu',
     css3: true,
   });

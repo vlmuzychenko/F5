@@ -21,17 +21,13 @@
       display: inline-block
       +casp-bold
       text-transform: uppercase
-      margin-right: 70px
-      border-bottom: 2px solid transparent
       transition: border-color .2s
-      font-size: 16px
+      margin-right: 9px
+      padding: 0 2px 7px
+      border-bottom: 2px solid transparent
+      font-size: 11px
       &.active
         border-bottom-color: #000
-      +rmin(768)
-        margin-right: 9px
-        padding: 0 2px 7px
-        border-bottom: 2px solid transparent
-        font-size: 11px
       +rmin(1024)
         margin-right: 30px
         padding: 0 2px 10px
@@ -42,8 +38,7 @@
         border-bottom: 4px solid transparent
         font-size: 16px
 
-
-.license-wrap
+.license
   margin-top: 100px
   width: 100vw
   overflow: hidden
@@ -52,165 +47,47 @@
   background-position: 50% 50%
   height: calc(100vh - 185px)
   margin-top: 185px
+  background-image: url(../img/academy/license-bg.png)
+  background-size: cover
+  background-position: 50% 50%
   +resp
      height: calc(100vh - 130px)
      margin-top: 130px
-
-.license-cards-container
-  width: 90%
-  max-width: 1650px
-  height: 100%
-  margin: 0 auto
-  display: flex
-  justify-content: center
-
-
-.license-card-container
-  position: relative
-  width: 30px
-  &_open
-    width: 90%
-    transition: 1.2s
-
-.license-card
-  width: 100%
-  height: 60vh
-  position: relative
-  transform-origin: left 50%
-  transform-style: preserve-3d
-  backface-visibility: hidden
-  &_open
-    height: 70vh !important
-    &:after
-      content: ''
-      display: block
-      position: absolute
-      width: 100%
-      height: 3px
-      border-radius: 50%
-      bottom: 0
-      +rmin(1024)
-        box-shadow: 0 50px 20px 5px rgba(0,0,0,.5)
-      +rmin(1600)
-        box-shadow: 0 65px 20px 5px rgba(0,0,0,.5)
-
-  +rmin(768)
-    height: 70vh
-  +rmin(1600)
-    height: 60vh
-
-
-.license-card-small
-  width: 100%
-  height: 100%
-  position: absolute
-  overflow: hidden
-  background-color: $accent
+  &__content
+    padding-top: 4%
+    padding-left: 30px
+    +rmin(1024)
+      padding-left: 100px
   &__title
     +futura-bold
-    font-weight: 800
-    line-height: 30px
-    color: #000
+    font-size: 30px
+    color: $accent
     text-transform: uppercase
-    position: absolute
-    transform: rotateZ(-90deg)
-    width: 500px
-    bottom: 245px
-    left: -240px
-    +rmin(768)
-      font-size: 16px
     +rmin(1024)
-      font-size: 24px
+      font-size: 50px
+    +rmin(1600)
+      font-size: 60px
+  &__list
+    font-size: 16px
+    color: #fff
+    max-width: 60%
+    margin-top: 30px
+    +rmin(1024)
+      font-size: 21px
     +rmin(1600)
       font-size: 30px
-    span
-      color: #fff
-      +rmin(768)
-        font-size: 12px
-      +rmin(1024)
-        font-size: 18px
-
-.license-card-open
-    width: 100%
-    height: 100%
-    position: absolute
-    transition: .5s
-    opacity: 1
-    display: block
-    +clr
-
-    &__content-container
-      width: 70%
-      height: 100%
-      background-color: #000
-      float: left
-      position: relative
-      z-index: 100
-      box-shadow: 15px 0 15px -3px rgba(0, 0, 0, 0.5)
-    &__img-wrap
-      width: 30%
-      height: 100%
-      float: right
-      position: relative
-      z-index: 50
-      overflow: hidden
-    &__img
-      width: 100%
-      height: 100%
-      transition: .5s
+  &__list-item
+    text-indent: 20px
+    position: relative
+    +futura-book
+    &:before
+      content: '/'
       position: absolute
-      z-index: 100
-      background-size: cover
-      background-image: url(../img/academy-img.jpg)
-
-    &__title
-      color: #363636
-      white-space: nowrap
-      text-transform: uppercase
-      position: absolute
+      left: -20px
       top: 0
-      text-align: left
-      width: 100%
-      font-weight: 800
-      +futura-bold
-      +rmin(768)
-        font-size: 60px
-        line-height: 50px
-      +rmin(1366)
-        font-size: 105px
-        line-height: 75px
-      +rmin(1600)
-        font-size: 134px
-        line-height: 90px
-
-    &__descr
-      color: #fff
-      +casp-reg
-      margin: 20% auto 0
-      +rmin(768)
-        width: 90%
-        font-size: 14px
-      +rmin(1024)
-        font-size: 18px
-        width: 75%
-
-    &__btn-container
-      position: absolute
-      bottom: 10%
-      width: 100%
-      text-align: center
-
-    &__btn
-      min-width: 230px
-      display: inline-block
-      transition: .3s
-      text-transform: uppercase
-      +rmin(768)
-        min-width: 160px
-      +rmin(1366)
-        min-width: 190px
-      +rmin(1600)
-        min-width: 230px
+      font-size: 1em
+      color: $accent
+      +futura-demi
 
 .course-skew
   width: 40%
@@ -233,12 +110,9 @@
   transform: skewX(10deg)
   margin-left: 10%
   box-sizing: border-box
-  padding-left: 10%
-  padding-top: 5%
   height: 100%
-  +rmin(768)
-    padding-left: 5%
-    padding-top: 3%
+  padding-left: 5%
+  padding-top: 3%
   +rmin(1366)
     padding-top: 3%
   +rmin(1680)
@@ -253,8 +127,7 @@
       .course__video-btn
         left: 75%
   &__item
-    +rmin(768)
-      margin-top: 5px
+    margin-top: 5px
     +rmin(1024)
       margin-top: 18px
     +rmin(1680)
@@ -262,8 +135,7 @@
   &__title
     +futura-demi
     color: #fff
-    +rmin(768)
-      font-size: 18px
+    font-size: 18px
     +rmin(1024)
       font-size: 24px
     +rmin(1680)
@@ -271,8 +143,7 @@
   &__subtitle
     +futura-demi
     color: $accent
-    +rmin(768)
-      font-size: 12px
+    font-size: 12px
     +rmin(1024)
       font-size: 18px
     +rmin(1680)
@@ -280,8 +151,7 @@
   &__date
     color: $accent
     font-size: 36px
-    +rmin(768)
-      font-size: 18px
+    font-size: 18px
     +rmin(1024)
       font-size: 24px
     +rmin(1680)
@@ -290,14 +160,12 @@
   &__btn-container
     position: absolute
     bottom: 35px
-    +rmin(768)
-      bottom: 10px
+    bottom: 10px
     +rmin(1024)
       bottom: 35px
   &__btn
     display: inline-block
-    +rmin(768)
-      min-width: 120px
+    min-width: 120px
     +rmin(1024)
       min-width: 190px
     +rmin(1600)
@@ -320,9 +188,8 @@
   &__icon
     position: relative
     margin-bottom: 5px
-    +rmin(768)
-      width: 40px
-      height: 40px
+    width: 40px
+    height: 40px
     +rmin(1366)
       width: 50px
       height: 50px
@@ -361,9 +228,8 @@
       display: block
       padding-top: 100px
       text-shadow: 0 2px 3px rgba(0,0,0,.4)
-      +rmin(768)
-        font-size: 24px
-        padding-top: 75px
+      font-size: 24px
+      padding-top: 75px
       +rmin(1600)
         font-size: 30px
         padding-top: 100px
@@ -374,56 +240,43 @@
         content: ''
         display: block
         position: absolute
-        width: 95px
-        height: 95px
+        width: 70px
+        height: 70px
         transition: background-image .3s
         background-image: url(../img/video-btn.png)
         +cover
         top: 0
         left: 50%
         transform: translateX(-50%)
-        +rmin(768)
-          width: 70px
-          height: 70px
         +rmin(1600)
           width: 95px
           height: 95px
 
 .course-right
   transform: skewX(10deg)
-  margin-right: 20%
   box-sizing: border-box
-  padding-right: 10%
-  padding-left: 15%
-  padding-top: 15%
+  padding: 0% 10% 0
   text-align: right
-  +rmin(768)
-    margin-right: 5%
-  +rmin(1024)
+  margin-right: 5%
+  +rmin(1200)
     margin-right: 10%
-    padding-right: 15%
-    padding-top: 5%
   +rmin(1680)
     margin-right: 20%
-    padding-right: 10%
-    padding-top: 15%
+    padding: 15% 10% 0 15%
 
   &__item
     display: inline-block
     text-align: center
     vertical-align: top
+    width: 114px
+    font-size: 16px
+    margin-top: 5%
     +futura-demi
-    +rmin(768)
-      width: 114px
-      font-size: 16px
-      margin-top: 5%
     +rmin(1024)
       width: 150px
       font-size: 21px
       margin-top: 20%
     &:nth-child(2n+1)
-      +rmin(768)
-        margin-right: 5%
       +rmin(1368)
         margin-right: 15%
       +rmin(1920)
@@ -469,8 +322,7 @@
   background-color: $accent
   display: flex
   justify-content: space-around
-  +rmin(768)
-    height: 90px
+  height: 90px
   +rmin(1024)
     height: 120px
   +rmin(1680)
@@ -482,9 +334,8 @@
   &__icon
     position: relative
     margin: 0 auto
-    +rmin(768)
-      width: 35px
-      height: 35px
+    width: 35px
+    height: 35px
     +rmin(1024)
       width: 80px
       height: 50px
@@ -503,9 +354,8 @@
       background-image: url(../img/academy/fmk-1.png)
     &_2:before
       background-image: url(../img/academy/fmk-2.png)
-      +rmin(768)
-        width: 35px
-        height: 35px
+      width: 35px
+      height: 35px
       +rmin(1024)
         width: 50px
         height: 50px
@@ -515,9 +365,8 @@
 
     &_3::before
       background-image: url(../img/academy/fmk-3.png)
-      +rmin(768)
-        width: 35px
-        height: 35px
+      width: 35px
+      height: 35px
       +rmin(1024)
         width: 50px
         height: 50px
@@ -526,8 +375,7 @@
         height: 70px
   &__text
     +futura-demi
-    +rmin(768)
-      font-size: 12px
+    font-size: 12px
     +rmin(1024)
       font-size: 18px
     +rmin(1680)
@@ -544,8 +392,7 @@
 
 .fmk-content
   position: relative
-  +rmin(768)
-    height: calc(100% - 90px)
+  height: calc(100% - 90px)
   +rmin(1024)
     height: calc(100% - 120px)
   +rmin(1680)
@@ -562,9 +409,8 @@
     color: #fff
     width: 95%
     +futura-demi
-    +rmin(768)
-      font-size: 14px
-      margin-bottom: 25px
+    font-size: 14px
+    margin-bottom: 25px
     +rmin(1024)
       font-size: 21px
       margin-bottom: 40px
@@ -578,8 +424,7 @@
   &__btn
     display: inline-block
     margin: 0 auto
-    +rmin(768)
-      min-width: 120px
+    min-width: 120px
     +rmin(1024)
       min-width: 190px
     +rmin(1600)
@@ -607,7 +452,7 @@
       width: 100%
       +cover
   &__arrow
-
+    width: 40px
     height: 100%
     background-color: rgba(#000, .8)
     position: absolute
@@ -615,8 +460,6 @@
     cursor: pointer
     opacity: 0
     transition: .3s
-    +rmin(768)
-      width: 40px
     +rmin(1366)
       width: 50px
     +rmin(1680)
@@ -643,9 +486,8 @@
     position: absolute
     top: 50%
     transform: translateX(-50%)
-    +rmin(768)
-      width: 25px
-      height: 60px
+    width: 25px
+    height: 60px
     +rmin(1366)
       width: 25px
       height: 60px
@@ -684,10 +526,9 @@
   color: #585858
   text-transform: uppercase
   box-shadow: inset 0px 1px 4px -1px rgba(0,0,0,0.2)
-  +rmin(768)
-    font-size: 21px
-    line-height: 50px
-    height: 50px
+  font-size: 21px
+  line-height: 50px
+  height: 50px
   +rmin(1366)
     font-size: 21px
     line-height: 50px
@@ -699,8 +540,7 @@
 
 .instructors
   +clr
-  +rmin(768)
-    height: calc(100% - 50px)
+  height: calc(100% - 50px)
   +rmin(1366)
     height: calc(100% - 50px)
   +rmin(1680)
@@ -739,15 +579,13 @@
     color: #fff
     text-transform: uppercase
     margin-top: 50%
-    +rmin(768)
-      font-size: 21px
+    font-size: 21px
     +rmin(1024)
       font-size: 30px
   &__btn
     display: inline-block
     margin-top: 50px
-    +rmin(768)
-      min-width: 120px
+    min-width: 120px
     +rmin(1024)
       min-width: 190px
     +rmin(1600)
@@ -833,20 +671,17 @@
     position: relative
     z-index: 20
   &__bg-title
-    font-size: 200px
     position: absolute
     width: 25%
     +futura-bold
     transform: rotate(-90deg)
     color: #232323
     text-transform: uppercase
-    line-height: 190px
     opacity: 0
-    +rmin(768)
-      font-size: 68px
-      top: 65%
-      line-height: 70px
-      left: 10px
+    font-size: 68px
+    top: 65%
+    line-height: 70px
+    left: 10px
     +rmin(1366)
       font-size: 140px
       top: 55%
@@ -862,8 +697,7 @@
     color: #fff
     opacity: 0
     transform: translateY(20%)
-    +rmin(768)
-      font-size: 21px
+    font-size: 21px
     +rmin(1024)
       font-size: 36px
     +rmin(1680)
@@ -874,9 +708,8 @@
     opacity: 0
     transform: translateY(20%)
     +casp-reg
-    +rmin(768)
-      margin-bottom: 15px
-      font-size: 14px
+    margin-bottom: 15px
+    font-size: 14px
     +rmin(1024)
       margin-bottom: 30px
       font-size: 24px
@@ -897,8 +730,7 @@
   &__descr-value
     color: $accent
     +futura-bold
-    +rmin(768)
-      font-size: 24px
+    font-size: 24px
     +rmin(1024)
       font-size: 48px
     +rmin(1680)
@@ -908,9 +740,8 @@
     text-transform: uppercase
     color: #fff
     +casp-reg
-    +rmin(768)
-      font-size: 11px
-      margin-bottom: 15px
+    font-size: 11px
+    margin-bottom: 15px
     +rmin(1024)
       font-size: 18px
       margin-bottom: 30px
@@ -920,9 +751,8 @@
   &__descr-icon
     position: relative
     margin: 0 auto
-    +rmin(768)
-      width: 70px
-      height: 70px
+    width: 70px
+    height: 70px
     +rmin(1024)
       width: 130px
       height: 130px
@@ -948,9 +778,8 @@
 .controll-btn_yellow
   border: 1px solid $accent
   position: relative
-  +rmin(768)
-    height: 40px
-    width: 80px
+  height: 40px
+  width: 80px
   +rmin(1600)
     width: 100px
     height: 50px
@@ -983,9 +812,8 @@
   position: absolute
   width: 200%
   white-space: nowrap
-  +rmin(768)
-    font-size: 11px
-    top: -25px
+  font-size: 11px
+  top: -25px
   +rmin(1366)
     font-size: 14px
     top: -35px

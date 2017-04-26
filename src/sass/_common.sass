@@ -73,12 +73,11 @@ a
    outline: none
    background-color: #fff
    text-transform: uppercase
+   height: 40px
+   line-height: 40px
+   font-size: 14px
    +casp-bold
    +trs
-   +rmin(768)
-      height: 40px
-      line-height: 40px
-      font-size: 14px
    +rmin(1366)
       font-size: 16px
    +rmin(1600)
@@ -134,6 +133,11 @@ a
    position: relative
    +casp-reg
    +trs
+   height: 40px
+   line-height: 40px
+   font-size: 14px
+   border-radius: 20px
+   width: 110px
    &:hover,
    &.is-shared
      background-color: #475993
@@ -143,12 +147,6 @@ a
        i
          path
            fill: #475993
-   +rmin(768)
-      height: 40px
-      line-height: 40px
-      font-size: 14px
-      border-radius: 20px
-      width: 110px
    +rmin(1600)
       height: 50px
       line-height: 50px
@@ -162,10 +160,9 @@ a
      top: 50%
      transform: translate(-50%, -50%)
      left: 82%
+     width: 34px
+     height: 34px
      +trs
-     +rmin(768)
-       width: 34px
-       height: 34px
      +rmin(1600)
        width: 40px
        height: 40px
@@ -179,17 +176,15 @@ a
        display: block
      &:before
        color: #475993
-       +rmin(768)
-         left: -65px
-         top: -4px
+       left: -65px
+       top: -4px
        +rmin(1600)
          left: -69px
          top: -5px
      &:after
        color: #fff
-       +rmin(768)
-         left: 40px
-         top: -44px
+       left: 40px
+       top: -44px
        +rmin(1600)
          left: 45px
          top: -55px

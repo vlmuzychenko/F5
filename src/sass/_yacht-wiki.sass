@@ -139,7 +139,6 @@
   background-size: cover
   background-position: 0 0
   background-image: url(../img/descr-bg-1.jpg)
-
   &__title
     bottom: 40%
     position: absolute
@@ -325,6 +324,7 @@
 
 .price-wrap
   height: 100vh
+  background-color: #fff
 .price
   height: 70.5%
   border-width: 13px
@@ -519,201 +519,20 @@
     fill: #000
     font-size: 24px
 
-.checkin
-  padding-top: 200px
-  height: 100vh
-  width: 100%
-  position: relative
-  background-image: url(../img/registration.jpg)
-  +cover
-  +rmin(768)
-    padding-top: 110px
-  +rmin(1024)
-    padding-top: 150px
-  +rmin(1366)
-    padding-top: 160px
-  +rmin(1600)
-    padding-top: 200px
-
-  &__title
-    +futura-bold
-    font-size: 48px
-    color: #fff
-    text-transform: uppercase
-    text-align: center
-    +rmin(768)
-      font-size: 16px
-    +rmin(1024)
-      font-size: 36px
-    +rmin(1600)
-      font-size: 48px
-
-.checkin-partners
+.bg-video
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  &__container,
+  &__container iframe
     position: absolute
-    bottom: 0
+    top: 0
+    left: 0
     width: 100%
-    background-color: #2e3192
-    display: flex
-    align-items: center
-    justify-content: center
-    text-align: center
-    +rmin(768)
-      height: 60px
-    +rmin(1024)
-      height: 80px
-    +rmin(1600)
-      padding-top: 10px
-      height: 130px
-
-    &__item
-      width: 260px
-      text-transform: uppercase
-      display: inline-block
-      vertical-align: bottom
-      border-bottom: 2px solid transparent
-      padding-bottom: 10px
-      transition: .3s
-      +rmin(768)
-        width: 100px
-      +rmin(1024)
-        margin-top: 5px
-      +rmin(1600)
-        width: 260px
-      &:not(:last-child)
-        +rmin(768)
-          margin-right: 100px
-        +rmin(1600)
-          margin-right: 20px
-      &:hover
-        border-bottom: 2px solid $accent
-
-.checkin-social
-  text-align: center
-  margin: 25px 0
-  +rmin(768)
-    margin: 5px 0
-  +rmin(1366)
-    margin: 10px 0
-  +rmin(1600)
-    margin: 25px 0
-  &__link
-    display: inline-block
-    min-width: 40px
-    height: 40px
-    background-color: transparent
-    position: relative
-    &:not(:last-child)
-      margin-right: 50px
-    &:before
-      content: ''
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -50%)
-      background-size: contain
-      background-repeat: no-repeat
-    &_fb:before
-      background-image: url(../img/fb.png)
-      width: 16px
-      height: 31px
-      +rmin(768)
-        height: 20px
-      +rmin(1366)
-        height: 31px
-    &_inst:before
-      background-image: url(../img/inst.png)
-      width: 32px
-      height: 32px
-      +rmin(768)
-        height: 20px
-      +rmin(1366)
-        height: 32px
-    &_yt:before
-      background-image: url(../img/yt.png)
-      width: 26px
-      height: 30px
-      +rmin(768)
-        height: 20px
-      +rmin(1366)
-        height: 30px
-
-.checkin-form
-  width: 500px
-  margin: 0 auto
-
-  &__input
-    +rmin(768)
-      margin-bottom: 10px
-    +rmin(1366)
-      margin-bottom: 15px
-    +rmin(1600)
-      margin-bottom: 20px
-    label
-      font-size: 18px
-      color: #fff
-      padding-left: 20px
-      display: block
-      margin-bottom: 5px
-      +rmin(768)
-        font-size: 12px
-        margin-bottom: 10px
-      +rmin(1366)
-        font-size: 14px
-        margin-bottom: 10px
-      +rmin(1600)
-        font-size: 18px
-        margin-bottom: 15px
-    input
-      font-size: 26px
-      color: #003366
-      background-color: rgba(255,255,255,.7)
-      width: 100%
-      +placeholder-color(#003366)
-      +rmin(768)
-        font-size: 14px
-        padding: 5px 20px
-      +rmin(1024)
-        font-size: 18px
-        padding: 10px 20px
-      +rmin(1600)
-        font-size: 26px
-      &.error
-        background-color: #ff6e6e
-        &::-webkit-input-placeholder
-          color: #cc3333
-        &::-moz-input-placeholder
-          color: #cc3333
-        &::-ms-input-placeholder
-          color: #cc3333
-  &__btn-container
-    text-align: center
-    margin-top: 50px
-    +rmin(768)
-      margin-top: 20px
-    +rmin(1600)
-      margin-top: 50px
-  &__btn
-    display: inline-block
-    transition: .3s
-    text-transform: uppercase
-    +rmin(768)
-      min-width: 160px
-    +rmin(1366)
-      min-width: 190px
-    +rmin(1600)
-      min-width: 230px
-    &:not(:last-child)
-      margin-right: 20px
-    &_reg
-      background-color: $accent
-      border-color: $accent
-      &:hover
-        background-color: #fff
-        border-color: #000
-    &_calendar
-      background-color: rgba(0,55,113,.6)
-      border-color: $accent
-      color: $accent
-      &:hover
-        background-color: $accent
-        color: #000
+    height: 100%
+    pointer-events: none
+    @media (min-aspect-ratio: 16/9)
+      height: 300%
+      top: -100%

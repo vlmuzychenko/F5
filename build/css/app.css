@@ -249,7 +249,7 @@ a {
 .btn_dark {
   border-color: #f6cb02;
   color: #f6cb02;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(6, 11, 12, 0.6);
 }
 
 .btn_dark:hover {
@@ -8412,6 +8412,7 @@ keyframes spinMaSearch 100% {
   width: 100%;
   font-size: 14px;
   padding: 5px 20px;
+  font-family: Casper-Regular, Arial, sans-serif;
 }
 
 .checkin-form__input input::-webkit-input-placeholder {

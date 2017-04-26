@@ -29,7 +29,7 @@
       position: relative
       +resp
          height: calc(100vh - 70px)
-         margin-top: 70px
+         margin-top: 10px
       +r($tab)
          position: fixed
          height: auto
@@ -52,7 +52,7 @@
    &__info
       height: 100%
       position: relative
-      padding: 55px 75px 80px 75px
+      padding: 55px 50px 80px 50px
       +r(1400)
          padding-right: 30px
       +r($tab)
@@ -73,6 +73,7 @@
       line-height: 1
       user-select: none
       cursor: default
+      display: none
       +rotate(-90)
       +futura-bold
       +r($tab)
@@ -95,16 +96,11 @@
       text-align: center
       +r($tab)
          margin: 0 -5px
-   &__info-inner
-      margin-left: 50px
-      +r(1400)
-         margin-left: 0
    &__info-item
       display: inline-block
       vertical-align: top
       width: 33.33333%
       margin-bottom: 45px
-      padding: 0 5px
       color: #6c6c6c
       text-align: center
       +r(1400)
@@ -141,11 +137,12 @@
       font-size: 24px
       +futura-demi
       word-break: break-all
+      color: #161616
       +r(1400)
          font-size: 20px
    &__info-descr
       margin-top: 5px
-      font-size: 18px
+      font-size: 22px
    &__info-link
       color: #d9b300
       font-size: 18px
@@ -154,15 +151,17 @@
          text-decoration: none
    &__feature
       margin-bottom: 25px
+      font-size: 26px
       &:last-child
          margin-bottom: 0
    &__feature-title
       margin-bottom: 7px
-      color: #585858
+      color: #161616
       +futura-demi
-   &__feature-text
+   &__feautre-text
       margin-bottom: 3px
       color: #6c6c6c
+      +futura-book
    &__actions
       margin: 30px 0 70px
       font-size: 0
@@ -208,11 +207,14 @@
    &__rent
       position: relative
       margin-top: 85px
+      font-size: 26px
+      +r(1366)
+        font-size: 21px
       &::before
          content: ''
          position: absolute
-         width: 120%
-         left: -40px
+         width: 100%
+         left: 0px
          top: -30px
          border-top: 1px solid rgba(#000, .15)
          +r(1400)
@@ -228,13 +230,14 @@
       &:nth-child(1)
          width: 60%
       &:nth-child(2)
-         width: 40%
-         text-align: center
+         width: 38%
+         margin-left: 2%
    &__rent-title
       margin-bottom: 10px
-      color: #585858
+      color: #161616
       +futura-demi
    &__rent-text
+
       margin-bottom: 5px
       &:last-child
          margin-bottom: 0
@@ -261,21 +264,30 @@
       width: 100%
       height: calc(100vh - 98px)
       pointer-events: none
-      background: no-repeat center center
-      background-size: cover
+      background-color: #141314
+      +resp
+        height: calc(100vh - 70px)
+      img
+        max-width: 70%
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: 10%
+        +r(1124)
+          max-width: 55%
    &__nav
       position: absolute
       left: 50%
       text-align: center
       transform: translateX(-50%)
-      height: 100px
+      height: 60px
       z-index: 5
-      +rmin(768)
-        bottom: 0
-        width: 360px
+      bottom: 0
+      width: 360px
       +rmin(1366)
-        bottom: 30px
+        bottom: 15px
         width: 660px
+        height: 100px
       .slick-slide
          display: inline-block
          vertical-align: top

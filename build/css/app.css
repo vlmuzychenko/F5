@@ -6504,6 +6504,15 @@ keyframes spinMaSearch 100% {
   transition: color .2s;
   background-color: #fff;
   box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .academy-menu__item {
@@ -10467,7 +10476,6 @@ keyframes spinMaSearch 100% {
   .academy-menu {
     top: 100px;
     height: 85px;
-    padding-top: 25px;
   }
 
   .course {
@@ -10823,7 +10831,6 @@ keyframes spinMaSearch 100% {
   .academy-menu {
     top: 70px;
     height: 60px;
-    padding-top: 15px;
   }
 
   .license {

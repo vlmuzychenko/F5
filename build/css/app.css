@@ -4580,17 +4580,40 @@ keyframes spinMaSearch 100% {
   display: inline-block;
   font-family: Casper-Bold, Arial, sans-serif;
   text-transform: uppercase;
-  margin-right: 70px;
   transition: border-color .2s;
-  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  position: relative;
 }
 
 .yacht-wiki-menu__item.active {
   border-bottom-color: #000;
 }
 
+.yacht-wiki-menu__item.active a {
+  font-size: 15px;
+}
+
+.yacht-wiki-menu__item + .yacht-wiki-menu__item {
+  margin-left: 20px;
+}
+
+.yacht-wiki-menu__item + .yacht-wiki-menu__item:before {
+  content: '/';
+  position: absolute;
+  font-size: 1em;
+  font-size: 11px;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -10px;
+}
+
 .yacht-wiki-menu__item a {
   display: block;
+  padding: 0 2px 5px;
+  transition: font-size .5s;
+  font-size: 11px;
 }
 
 .descr-video {
@@ -4627,6 +4650,8 @@ keyframes spinMaSearch 100% {
   position: absolute;
   font-family: Arial;
   padding-left: 30px;
+  font-size: 8px;
+  height: 35vh;
 }
 
 .descr__title span {
@@ -4636,12 +4661,12 @@ keyframes spinMaSearch 100% {
 }
 
 .descr__title-name {
-  font-size: 140px;
   display: block;
   text-transform: uppercase;
   font-weight: 800;
-  line-height: 105px;
   color: #fff;
+  font-size: 45px;
+  line-height: 35px;
 }
 
 .descr__title-name_pink {
@@ -4650,17 +4675,17 @@ keyframes spinMaSearch 100% {
 }
 
 .descr__title-date {
-  font-size: 72px;
   display: block;
   font-weight: 900;
   color: #f6cb02;
+  font-size: 30px;
 }
 
 .descr__title-date_year {
   display: block;
   color: #fff;
-  font-size: 140px;
-  line-height: 75px;
+  font-size: 45px;
+  line-height: 25px;
 }
 
 .descr__video-btn {
@@ -4680,8 +4705,9 @@ keyframes spinMaSearch 100% {
   color: #fff;
   text-transform: uppercase;
   display: block;
-  padding-top: 100px;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  padding-top: 75px;
 }
 
 .descr__video-btn span:hover:after {
@@ -4704,18 +4730,21 @@ keyframes spinMaSearch 100% {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
 }
 
 .descr__btn-container {
   position: absolute;
   bottom: 40px;
+  right: 20px;
 }
 
 .descr__btn {
-  min-width: 230px;
   display: inline-block;
   transition: .3s;
   text-transform: uppercase;
+  min-width: 160px;
 }
 
 .descr__btn:not(last-child) {
@@ -4748,6 +4777,7 @@ keyframes spinMaSearch 100% {
   height: 100vh;
   background-color: #fff;
   position: relative;
+  padding-top: 130px;
 }
 
 .details__controll-btn-container {
@@ -4769,11 +4799,11 @@ keyframes spinMaSearch 100% {
 }
 
 .carousel li {
-  border: 20px solid #fff;
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
-  width: 1130px;
-  height: 730px;
   overflow: hidden;
+  width: 400px;
+  height: 260px;
+  border: 8px solid #fff;
 }
 
 .price-wrap {
@@ -4783,13 +4813,14 @@ keyframes spinMaSearch 100% {
 
 .price {
   height: 70.5%;
-  border-width: 13px;
   border-style: solid;
   position: absolute;
   top: 23%;
   left: 0;
   border-image: linear-gradient(to bottom, #dd4bea 0%, #5f31f2 100%);
   border-image-slice: 1;
+  border-width: 9px;
+  width: 70%;
 }
 
 .price__content {
@@ -4798,12 +4829,12 @@ keyframes spinMaSearch 100% {
 }
 
 .price__title {
-  font-size: 98px;
   font-family: FuturaPT-Bold, Arial, sans-serif;
   color: #d12eff;
   text-align: right;
   padding-right: 10%;
   height: 25%;
+  font-size: 60px;
 }
 
 .price__title_period {
@@ -4813,7 +4844,7 @@ keyframes spinMaSearch 100% {
 }
 
 .price__list-wrap {
-  font-size: 21px;
+  font-size: 12px;
   font-family: FuturaPT-Demi, Arial, sans-serif;
 }
 
@@ -4848,6 +4879,7 @@ keyframes spinMaSearch 100% {
 
 .price__list-title {
   color: #000;
+  padding-top: 10px;
 }
 
 .programm-wrap {
@@ -4867,7 +4899,7 @@ keyframes spinMaSearch 100% {
   font-family: FuturaPT-Demi, Arial, sans-serif;
   width: 60%;
   margin-left: 35%;
-  margin-top: 110px;
+  margin-top: 60px;
 }
 
 .programm__slider_show .programm__title,
@@ -4908,22 +4940,22 @@ keyframes spinMaSearch 100% {
 }
 
 .programm__title {
-  font-size: 48px;
   margin-bottom: 10px;
   -webkit-transform: translateY(70px);
   -ms-transform: translateY(70px);
   transform: translateY(70px);
   opacity: 0;
+  font-size: 24px;
 }
 
 .programm__day {
-  font-size: 30px;
   text-align: right;
   margin-bottom: 20px;
   -webkit-transform: translateY(70px);
   -ms-transform: translateY(70px);
   transform: translateY(70px);
   opacity: 0;
+  font-size: 18px;
 }
 
 .programm__day span {
@@ -4937,12 +4969,14 @@ keyframes spinMaSearch 100% {
   -ms-transform: translateY(70px);
   transform: translateY(70px);
   opacity: 0;
+  font-size: 12px;
 }
 
 .programm__btn-container {
   text-align: right;
   width: 60%;
   margin-left: 35%;
+  margin-top: 20px;
 }
 
 .controll-btn,
@@ -4951,6 +4985,8 @@ keyframes spinMaSearch 100% {
   background: none;
   border-radius: 30px;
   transition: .3s;
+  height: 40px;
+  width: 80px;
 }
 
 .controll-btn:hover,
@@ -6475,14 +6511,39 @@ keyframes spinMaSearch 100% {
   font-family: Casper-Bold, Arial, sans-serif;
   text-transform: uppercase;
   transition: border-color .2s;
-  margin-right: 9px;
-  padding: 0 2px 7px;
   border-bottom: 2px solid transparent;
-  font-size: 11px;
+  position: relative;
 }
 
 .academy-menu__item.active {
   border-bottom-color: #000;
+}
+
+.academy-menu__item.active a {
+  display: block;
+  font-size: 15px;
+}
+
+.academy-menu__item + .academy-menu__item {
+  margin-left: 9px;
+}
+
+.academy-menu__item + .academy-menu__item:before {
+  content: '/';
+  position: absolute;
+  font-size: 1em;
+  font-size: 11px;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -4px;
+}
+
+.academy-menu__item a {
+  font-size: 11px;
+  padding: 0 2px 5px;
+  transition: font-size .5s;
 }
 
 .license {
@@ -8619,108 +8680,8 @@ keyframes spinMaSearch 100% {
     right: 20px;
   }
 
-  .yacht-wiki-menu__item {
-    margin-right: 40px;
-    border-bottom: 2px solid transparent;
-    font-size: 14px;
-  }
-
-  .yacht-wiki-menu__item a {
-    padding: 0 2px 7px;
-  }
-
-  .descr__title {
-    font-size: 8px;
-    height: 35vh;
-  }
-
-  .descr__title-name {
-    font-size: 45px;
-    line-height: 35px;
-  }
-
-  .descr__title-date {
-    font-size: 30px;
-  }
-
-  .descr__title-date_year {
-    font-size: 45px;
-    line-height: 25px;
-  }
-
-  .descr__video-btn span {
-    font-size: 24px;
-    padding-top: 75px;
-  }
-
-  .descr__video-btn span:after {
-    width: 70px;
-    height: 70px;
-  }
-
-  .descr__btn-container {
-    right: 20px;
-  }
-
-  .descr__btn {
-    min-width: 160px;
-  }
-
-  .details {
-    padding-top: 130px;
-  }
-
-  .carousel li {
-    width: 400px;
-    height: 260px;
-    border: 8px solid #fff;
-  }
-
-  .price {
-    border-width: 9px;
-    width: 70%;
-  }
-
-  .price__title {
-    font-size: 60px;
-  }
-
   .price__title_period {
     font-size: 30px;
-  }
-
-  .price__list-wrap {
-    font-size: 12px;
-  }
-
-  .price__list-title {
-    padding-top: 10px;
-  }
-
-  .programm__slider {
-    margin-top: 60px;
-  }
-
-  .programm__title {
-    font-size: 24px;
-  }
-
-  .programm__day {
-    font-size: 18px;
-  }
-
-  .programm__descr {
-    font-size: 12px;
-  }
-
-  .programm__btn-container {
-    margin-top: 20px;
-  }
-
-  .controll-btn,
-  .controll__btn {
-    height: 40px;
-    width: 80px;
   }
 
   .wiki-top {
@@ -9149,13 +9110,25 @@ keyframes spinMaSearch 100% {
     right: 70px;
   }
 
+  .yacht-wiki-menu__item.active a {
+    font-size: 18px;
+  }
+
   .yacht-wiki-menu__item {
-    margin-right: 60px;
     border-bottom: 3px solid transparent;
   }
 
+  .yacht-wiki-menu__item + .yacht-wiki-menu__item {
+    margin-left: 30px;
+  }
+
+  .yacht-wiki-menu__item + .yacht-wiki-menu__item:before {
+    left: -15px;
+    font-size: 14px;
+  }
+
   .yacht-wiki-menu__item a {
-    padding: 0 2px 10px;
+    font-size: 14px;
   }
 
   .descr__btn-container {
@@ -9279,9 +9252,23 @@ keyframes spinMaSearch 100% {
   }
 
   .academy-menu__item {
-    margin-right: 30px;
-    padding: 0 2px 10px;
     border-bottom: 3px solid transparent;
+  }
+
+  .academy-menu__item.active a {
+    font-size: 18px;
+  }
+
+  .academy-menu__item + .academy-menu__item {
+    margin-left: 30px;
+  }
+
+  .academy-menu__item + .academy-menu__item:before {
+    left: -15px;
+    font-size: 14px;
+  }
+
+  .academy-menu__item a {
     font-size: 14px;
   }
 
@@ -9994,8 +9981,20 @@ keyframes spinMaSearch 100% {
     top: 130px;
   }
 
-  .yacht-wiki-menu__item {
-    margin-right: 70px;
+  .yacht-wiki-menu__item.active a {
+    font-size: 20px;
+  }
+
+  .yacht-wiki-menu__item + .yacht-wiki-menu__item {
+    margin-left: 40px;
+  }
+
+  .yacht-wiki-menu__item + .yacht-wiki-menu__item:before {
+    left: -20px;
+    font-size: 16px;
+  }
+
+  .yacht-wiki-menu__item a {
     font-size: 16px;
   }
 
@@ -10230,9 +10229,20 @@ keyframes spinMaSearch 100% {
     line-height: 99px;
   }
 
-  .academy-menu__item {
-    margin-right: 70px;
-    border-bottom: 4px solid transparent;
+  .academy-menu__item.active a {
+    font-size: 20px;
+  }
+
+  .academy-menu__item + .academy-menu__item {
+    margin-left: 70px;
+  }
+
+  .academy-menu__item + .academy-menu__item:before {
+    left: -35px;
+    font-size: 16px;
+  }
+
+  .academy-menu__item a {
     font-size: 16px;
   }
 

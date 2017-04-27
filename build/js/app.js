@@ -9915,7 +9915,7 @@ $(function () {
 $(function () {
     $('.yacht-wiki-fp_reg').fullpage({
         verticalCentered: true,
-        anchors: ['description', 'details', 'price', 'programm', 'registration'],
+        anchors: ['description', 'details', 'entertainment', 'price', 'flot', 'programm', 'registration'],
         menu: '.yacht-wiki-menu',
         css3: true,
         onLeave: function onLeave(anchorLink, index) {
@@ -9942,28 +9942,28 @@ $(function () {
         }
     });
 
-    $('.js-programm-slider').slick({
-        fade: true,
-        infinite: false,
-        draggable: false,
-        prevArrow: $('.js-programm-left'),
-        nextArrow: $('.js-programm-right')
-    });
+    if ($('.js-programm-slider').length > 0) {
+        for (var i = 0; i < $('.js-programm-slider').length; i++) {
+            var slider = $('.js-programm-slider').eq(i);
+            slider.slick({
+                fade: true,
+                infinite: false,
+                draggable: false,
+                prevArrow: slider.next().find('.js-programm-left'),
+                nextArrow: slider.next().find('.js-programm-right')
+            });
 
-    $('.js-programm-btn').click(function () {
-        var bg = $('.js-programm-slider .slick-active').data('bgImg');
-        var bgPic = $('.js-programm-slider .slick-active').data('bgImgPic');
-        $('.js-section-bg').css('background-image', bg);
-        $('.programm').css('background-image', bgPic);
-    });
-
-    $('.js-programm__slider1').slick({
-        fade: true,
-        infinite: false,
-        draggable: false,
-        prevArrow: $('.js-programm-left'),
-        nextArrow: $('.js-programm-right')
-    });
+            slider.next().find('.js-programm-btn').click(function () {
+                var slider = $(this).parents('.programm__btn-container').prev();
+                var bg = slider.find('.slick-active').data('bgImg');
+                var bgPic = slider.find('.slick-active').data('bgImgPic');
+                console.log(bg);
+                console.log(bgPic);
+                slider.parent().css('background-image', bgPic);
+                slider.parent().prev().find('.js-section-bg').css('background-image', bg);
+            });
+        }
+    }
 
     function carouselSlider() {
         var carouselItems = $('.carousel li').length;

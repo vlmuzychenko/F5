@@ -9,8 +9,12 @@ block content
             a(href="#description") описание события
         li(data-menuanchor="details").yacht-wiki-menu__item
             a(href="#details") детали и условия
+        li(data-menuanchor="entertainment").yacht-wiki-menu__item
+            a(href="#entertainment") развлечения
         li(data-menuanchor="price").yacht-wiki-menu__item
             a(href="#price") стоимость
+        li(data-menuanchor="flot").yacht-wiki-menu__item
+            a(href="#flot") Флот
         li(data-menuanchor="programm").yacht-wiki-menu__item
             a(href="#programm") программа
         li(data-menuanchor="registration").yacht-wiki-menu__item
@@ -37,6 +41,36 @@ block content
             .descr-video
               .descr-video__close.close.close_yellow
               iframe(width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen)
+        section.fp-section
+            .details
+              ul.carousel
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+              .details__controll-btn-container
+                button(type="button").controll__btn.controll__btn_left.js-details-left
+                  +icon('icon-arrow')
+                button(type="button").controll__btn.controll__btn_right.js-details-right
+                  +icon('icon-arrow')
+              a.btn.yacht-wiki-btn.js-enroll(href="#") Записаться
+              
         section.fp-section
             .details
               ul.carousel
@@ -105,6 +139,58 @@ block content
                         li алкоголь
                         li скоростной интернет
                 a.btn.yacht-wiki-btn.js-enroll(href="#") Записаться
+        section.fp-section
+          .programm-wrap
+            .skew-section.skew-section_programm
+              .skew-section__img.js-section-bg
+            .content-section.programm.js-programm-bg
+              .programm__slider.js-programm-slider
+                .programm__slide(data-bg-img='url(img/days/programm-img-1.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-1.jpg)')
+                  .programm__title о. Ибица 24-25.06
+                  .programm__day
+                    span 24.06 - День 1
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-2.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-2.jpg)')
+                  .programm__title о. Мальорка 25-27.06
+                  .programm__day
+                    span 25.06 - День 2
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-3.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-3.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 3
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-4.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-4.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 4
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-5.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-5.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 5
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-6.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-6.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 6
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-7.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-7.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 7
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-8.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-8.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 8
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+              .programm__btn-container
+                button(type="button").controll__btn.controll__btn_left.js-programm-btn.js-programm-left
+                  +icon('icon-arrow')
+                button(type="button").controll__btn.controll__btn_right.js-programm-btn.js-programm-right
+                  +icon('icon-arrow')
+            a.btn.yacht-wiki-btn.js-enroll(href="#") Записаться
         section.fp-section
           .programm-wrap
             .skew-section.skew-section_programm

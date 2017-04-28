@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Yacht Wiki</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=768, initial-scale=1">
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header"><a href="#" class="header__back-btn"><i class="header__back-icon"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></i></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <ul class="nav js-nav">
+          <li class="nav__item is-active"><a href="#" class="nav__link">Сервисы</a>
+            <!--a.nav__link(href='#') Services-->
+            <ul class="nav__sub-nav">
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Яхт-вики</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Аренда яхт</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Регаты</a></li>
+              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Академия</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Календарь</a>
+            <!--a.nav__link(href='#') Calendar-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Новости</a>
+            <!--a.nav__link(href='#') News-->
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a>
+            <!--a.nav__link(href='#') Contacts-->
+          </li>
+          <li class="nav__line js-moving-line"></li>
+        </ul><a href="tel:0442544545" class="header__phone">044 254 45 45</a>
+        <ul class="header__lang lang">
+          <li><a href="#" class="is-active"><span>RU</span></a></li>
+          <li><a href="#"><span>EN</span></a></li>
+        </ul>
+      </header>
+      <!--END header-->
+      <!-- BEGIN yacht Wiki-->
+      <ul class="yacht-wiki-menu">
+        <li data-menuanchor="description" class="yacht-wiki-menu__item"><a href="#description">описание события</a></li>
+        <li data-menuanchor="details" class="yacht-wiki-menu__item"><a href="#details">детали и условия</a></li>
+        <li data-menuanchor="price" class="yacht-wiki-menu__item"><a href="#price">стоимость</a></li>
+        <li data-menuanchor="programm" class="yacht-wiki-menu__item"><a href="#programm">программа</a></li>
+        <li data-menuanchor="registration" class="yacht-wiki-menu__item"><a href="#registration">регистрация</a></li>
+      </ul>
+      <div class="yacht-wiki-fp_reg-5">
+        <section class="fp-section">
+          <div class="descr">
+            <div class="bg-video"><video id="bg-v" loop="none" preload="none" autoplay="autoplay"><source src="video/vid.mp4"></video></div>
+            <div class="descr__title"><span>Playboy</span><span>ibiza</span><span>24-30 июня</span><span>2017</span></div>
+            <div class="descr__video-btn"><span>Посмотрите видео</span></div>
+            <div class="mouse-scroll">
+              <div class="mouse-scroll__item"></div>
+              <div class="mouse-scroll__text">или скрольте вниз</div>
+            </div>
+            <div class="descr__btn-container"><a href="#" class="btn descr__btn descr__btn_register js-enroll">Записаться</a><a href="#" class="btn descr__btn descr__btn_calendar">Календарь</a></div>
+          </div>
+          <div class="descr-video">
+            <div class="descr-video__close close close_yellow"></div><iframe width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen></iframe></div>
+        </section>
+        <section class="fp-section">
+          <div class="details">
+            <ul class="carousel">
+              <li><img src="img/carousel-item.png"></li>
+              <li><img src="img/carousel-item.png"></li>
+              <li><img src="img/carousel-item.png"></li>
+              <li><img src="img/carousel-item.png"></li>
+              <li><img src="img/carousel-item.png"></li>
+              <li><img src="img/carousel-item.png"></li>
+              <li><img src="img/carousel-item.png"></li>
+              <li><img src="img/carousel-item.png"></li>
+              <li><img src="img/carousel-item.png"></li>
+              <li><img src="img/carousel-item.png"></li>
+            </ul>
+            <div class="details__controll-btn-container"><button type="button" class="controll__btn controll__btn_left js-details-left"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></button><button type="button" class="controll__btn controll__btn_right js-details-right"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></button></div>
+            <a
+              href="#" class="btn yacht-wiki-btn js-enroll">Записаться</a>
+          </div>
+        </section>
+        <section class="fp-section">
+          <div class="price-wrap">
+            <div class="skew-section skew-section_price">
+              <div class="skew-section__img"></div>
+            </div>
+            <div class="content-section content-section_price">
+              <div class="price">
+                <div class="price__content">
+                  <div class="price__title">1500€<span class="price__title_period">за 7 дней</span></div>
+                  <div class="price__list-wrap price__list-wrap_in">
+                    <div class="price__list-title">В стоимость входит:</div>
+                    <ul class="price__list">
+                      <li>услуги шкипера</li>
+                      <li>аренда яхты</li>
+                      <li>страховой депозит</li>
+                      <li>топливо на яхте</li>
+                      <li>стоянки во всех маринах</li>
+                      <li>услуги видео оператора</li>
+                      <li>медицинское страхование</li>
+                      <li>аренда виллы на 1-ни сутки</li>
+                      <li>вход на закрытые вечерник playboy</li>
+                      <li>аренда машин для островных приключений</li>
+                      <li>аренда виллы на 1-ни сутки</li>
+                      <li>вход на закрытые вечерник playboy</li>
+                      <li>медицинское страхование</li>
+                      <li>страховой депозит</li>
+                      <li>топливо на яхте</li>
+                    </ul>
+                  </div>
+                  <div class="price__list-wrap price__list-wrap_out">
+                    <div class="price__list-title">Дополнительно оплачиваются:</div>
+                    <ul class="price__list">
+                      <li>перелёт</li>
+                      <li>виза</li>
+                      <li>трансфер из/до аэропорта</li>
+                      <li>питание</li>
+                      <li>алкоголь</li>
+                      <li>скоростной интернет</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><a href="#" class="btn yacht-wiki-btn js-enroll">Записаться</a></div>
+          </div>
+        </section>
+        <section class="fp-section">
+          <div class="programm-wrap">
+            <div class="skew-section skew-section_programm">
+              <div class="skew-section__img js-section-bg"></div>
+            </div>
+            <div class="content-section programm js-programm-bg">
+              <div class="programm__slider js-programm-slider">
+                <div data-bg-img="url(img/days/programm-img-1.jpg)" data-bg-img-pic="url(img/days/programm-img-pic-1.jpg)" class="programm__slide">
+                  <div class="programm__title">о. Ибица 24-25.06</div>
+                  <div class="programm__day"><span>24.06 - День 1</span></div>
+                  <div class="programm__descr">Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании</div>
+                </div>
+                <div data-bg-img="url(img/days/programm-img-2.jpg)" data-bg-img-pic="url(img/days/programm-img-pic-2.jpg)" class="programm__slide">
+                  <div class="programm__title">о. Мальорка 25-27.06</div>
+                  <div class="programm__day"><span>25.06 - День 2</span></div>
+                  <div class="programm__descr">Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании</div>
+                </div>
+                <div data-bg-img="url(img/days/programm-img-3.jpg)" data-bg-img-pic="url(img/days/programm-img-pic-3.jpg)" class="programm__slide">
+                  <div class="programm__title">о. Форментера 27-30.06</div>
+                  <div class="programm__day"><span>27.06 - День 3</span></div>
+                  <div class="programm__descr">Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании</div>
+                </div>
+                <div data-bg-img="url(img/days/programm-img-4.jpg)" data-bg-img-pic="url(img/days/programm-img-pic-4.jpg)" class="programm__slide">
+                  <div class="programm__title">о. Форментера 27-30.06</div>
+                  <div class="programm__day"><span>27.06 - День 4</span></div>
+                  <div class="programm__descr">Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании</div>
+                </div>
+                <div data-bg-img="url(img/days/programm-img-5.jpg)" data-bg-img-pic="url(img/days/programm-img-pic-5.jpg)" class="programm__slide">
+                  <div class="programm__title">о. Форментера 27-30.06</div>
+                  <div class="programm__day"><span>27.06 - День 5</span></div>
+                  <div class="programm__descr">Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании</div>
+                </div>
+                <div data-bg-img="url(img/days/programm-img-6.jpg)" data-bg-img-pic="url(img/days/programm-img-pic-6.jpg)" class="programm__slide">
+                  <div class="programm__title">о. Форментера 27-30.06</div>
+                  <div class="programm__day"><span>27.06 - День 6</span></div>
+                  <div class="programm__descr">Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании</div>
+                </div>
+                <div data-bg-img="url(img/days/programm-img-7.jpg)" data-bg-img-pic="url(img/days/programm-img-pic-7.jpg)" class="programm__slide">
+                  <div class="programm__title">о. Форментера 27-30.06</div>
+                  <div class="programm__day"><span>27.06 - День 7</span></div>
+                  <div class="programm__descr">Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании</div>
+                </div>
+                <div data-bg-img="url(img/days/programm-img-8.jpg)" data-bg-img-pic="url(img/days/programm-img-pic-8.jpg)" class="programm__slide">
+                  <div class="programm__title">о. Форментера 27-30.06</div>
+                  <div class="programm__day"><span>27.06 - День 8</span></div>
+                  <div class="programm__descr">Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании</div>
+                </div>
+              </div>
+              <div class="programm__btn-container"><button type="button" class="controll__btn controll__btn_left js-programm-btn js-programm-left"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></button><button type="button" class="controll__btn controll__btn_right js-programm-btn js-programm-right"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></button></div>
+            </div><a href="#" class="btn yacht-wiki-btn js-enroll">Записаться</a></div>
+        </section>
+        <section class="fp-section">
+          <div class="checkin">
+            <div class="checkin__content">
+              <div class="checkin__title">решайтесь, это будет грандиозно!</div>
+              <div class="checkin-social">
+                <a href="#" class="checkin-social__link checkin-social__link_yt"></a>
+                <a href="#" class="checkin-social__link checkin-social__link_fb"></a>
+                <a href="#" class="checkin-social__link checkin-social__link_inst"></a>
+              </div>
+              <div class="checkin-form">
+                <div class="checkin-form__input"><label for="name">Имя и фамилия</label><input type="text" id="name" placeholder="Имя Фамилия"></div>
+                <div class="checkin-form__input"><label for="phone">Телефон</label><input type="text" id="phone" placeholder="(0--) --- -- --"></div>
+                <div class="checkin-form__input"><label for="email">Email</label><input type="text" id="email" placeholder="name@mail.com" class="error"></div>
+                <div class="checkin-form__btn-container"><a href="#" class="btn btn_yellow checkin-form__btn js-enroll">Записаться</a><a href="#" class="btn btn_dark checkin-form__btn">Календарь</a></div>
+              </div>
+            </div>
+            <div class="checkin-partners">
+              <a href="#" class="checkin-partners__item"><img src="img/partner-1.png" alt=""></a>
+              <a href="#" class="checkin-partners__item"><img src="img/partner-2.png" alt=""></a>
+              <a href="#" class="checkin-partners__item"><img src="img/partner-3.png" alt=""></a>
+              <a href="#" class="checkin-partners__item"><img src="img/partner-4.png" alt=""></a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="popup-wrap">
+        <div class="popup-contacts">
+          <div class="input-container"><input type="text" id="name" placeholder="ФИО" require class="input-contacts error"><label for="name">ФИО</label></div>
+          <div class="input-container"><input type="text" id="phone" placeholder="(0--) --- -- --" require class="input-contacts"><label for="phone">Телефон</label></div>
+          <div class="input-container"><input type="text" id="email" placeholder="name@mail.com" require class="input-contacts"><label for="email">Email</label></div>
+          <div class="input-container"><textarea rows="6" cols="" placeholder="При необходимости напишите комментарий..." class="input-contacts input-contacts_textarea"></textarea></div><button type="submit" class="btn btn_popup js-send">Отправить</button><button type="button" class="close close_black js-popup-close"></button></div>
+        <div
+          class="popup-substrate">
+          <div class="popup-substrate__content"><img src="img/popup-logo.png" class="popup-substrate__logo">
+            <div class="popup-substrate__text">
+              <p>Спасибо!</p>
+              <p>Мы обработаем заявку и свяжемся с Вами в ближайшее время.</p>
+            </div><img src="img/popup-icon.png" class="popup-substrate__icon">
+            <div class="popup-substrate__timer">окно закроется через<span id="timer">5</span>сек</div><button type="button" class="close close_white js-popup-substrate-close"></button></div>
+      </div>
+    </div>
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    </div>
+    <!--END out-->
+    <div data-popup="feedback" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="При необходимости напишите комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div data-popup="callme" class="popup js-popup">
+      <div class="popup__in popup__in--center js-popup-in">
+        <div class="popup__body"><button type="button" class="popup__close js-close-popup"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button>
+          <form class="form popup__form">
+            <div class="form-field">
+              <div class="form-control is-filled"><input type="text" placeholder="Имя и фамилия"><label>Имя и фамилия (заполненное)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control has-error"><input type="text" placeholder="(0--) --- -- --"><label>Телефон(ошибка)</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><input type="mail" placeholder="name@gmail.com"><label>Email</label></div>
+            </div>
+            <div class="form-field">
+              <div class="form-control"><textarea placeholder="Пожалуйста, напишите свой комментарий..."></textarea></div>
+            </div>
+            <div class="form-btn"><button type="submit" class="btn btn--send">Отправить заявку</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--LOAD scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKzXeKm-qJO4uqPR39L4lZf109YLmOFo"></script>
+  </body>
+
+</html>

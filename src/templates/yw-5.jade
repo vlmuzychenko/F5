@@ -1,0 +1,228 @@
+---
+title: Yacht Wiki
+---
+extends layouts/_layout
+block content
+    // BEGIN yacht Wiki
+    ul.yacht-wiki-menu
+        li(data-menuanchor="description").yacht-wiki-menu__item
+            a(href="#description") описание события
+        li(data-menuanchor="details").yacht-wiki-menu__item
+            a(href="#details") детали и условия
+        li(data-menuanchor="price").yacht-wiki-menu__item
+            a(href="#price") стоимость
+        li(data-menuanchor="programm").yacht-wiki-menu__item
+            a(href="#programm") программа
+        li(data-menuanchor="registration").yacht-wiki-menu__item
+            a(href="#registration") регистрация
+    .yacht-wiki-fp_reg-5
+        section.fp-section
+            .descr
+                .bg-video
+                  video(id='bg-v' loop="none" preload="none" autoplay="autoplay")
+                    source(src="video/vid.mp4")
+                .descr__title
+                    span Playboy
+                    span ibiza
+                    span 24-30 июня
+                    span 2017
+                .descr__video-btn
+                    span Посмотрите видео
+                .mouse-scroll
+                  .mouse-scroll__item
+                  .mouse-scroll__text или скрольте вниз
+                .descr__btn-container
+                    a.btn.descr__btn.descr__btn_register.js-enroll(href="#") Записаться
+                    a.btn.descr__btn.descr__btn_calendar(href="#") Календарь
+            .descr-video
+              .descr-video__close.close.close_yellow
+              iframe(width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen)
+              
+        section.fp-section
+            .details
+              ul.carousel
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+                li
+                  img(src="img/carousel-item.png")
+              .details__controll-btn-container
+                button(type="button").controll__btn.controll__btn_left.js-details-left
+                  +icon('icon-arrow')
+                button(type="button").controll__btn.controll__btn_right.js-details-right
+                  +icon('icon-arrow')
+              a.btn.yacht-wiki-btn.js-enroll(href="#") Записаться
+
+        section.fp-section
+            .price-wrap
+              .skew-section.skew-section_price
+                .skew-section__img
+              .content-section.content-section_price
+                .price
+                  .price__content
+                    .price__title
+                      | 1500€
+                      span.price__title_period за 7 дней
+                    .price__list-wrap.price__list-wrap_in
+                      .price__list-title В стоимость входит:
+                      ul.price__list
+                        li услуги шкипера
+                        li аренда яхты
+                        li страховой депозит
+                        li топливо на яхте
+                        li стоянки во всех маринах
+                        li услуги видео оператора
+                        li медицинское страхование
+                        li аренда виллы на 1-ни сутки
+                        li вход на закрытые вечерник playboy
+                        li аренда машин для островных приключений
+                        li аренда виллы на 1-ни сутки
+                        li вход на закрытые вечерник playboy
+                        li медицинское страхование
+                        li страховой депозит
+                        li топливо на яхте
+                    .price__list-wrap.price__list-wrap_out
+                      .price__list-title Дополнительно оплачиваются:
+                      ul.price__list
+                        li перелёт
+                        li виза
+                        li трансфер из/до аэропорта
+                        li питание
+                        li алкоголь
+                        li скоростной интернет
+                a.btn.yacht-wiki-btn.js-enroll(href="#") Записаться
+        section.fp-section
+          .programm-wrap
+            .skew-section.skew-section_programm
+              .skew-section__img.js-section-bg
+            .content-section.programm.js-programm-bg
+              .programm__slider.js-programm-slider
+                .programm__slide(data-bg-img='url(img/days/programm-img-1.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-1.jpg)')
+                  .programm__title о. Ибица 24-25.06
+                  .programm__day
+                    span 24.06 - День 1
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-2.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-2.jpg)')
+                  .programm__title о. Мальорка 25-27.06
+                  .programm__day
+                    span 25.06 - День 2
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-3.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-3.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 3
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-4.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-4.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 4
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-5.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-5.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 5
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-6.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-6.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 6
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-7.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-7.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 7
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+                .programm__slide(data-bg-img='url(img/days/programm-img-8.jpg)' data-bg-img-pic='url(img/days/programm-img-pic-8.jpg)')
+                  .programm__title о. Форментера 27-30.06
+                  .programm__day
+                    span 27.06 - День 8
+                  .programm__descr Вечеринка в самом большом клубе о. Форментера под открытым небом с участием лучшего DJ Испании
+              .programm__btn-container
+                button(type="button").controll__btn.controll__btn_left.js-programm-btn.js-programm-left
+                  +icon('icon-arrow')
+                button(type="button").controll__btn.controll__btn_right.js-programm-btn.js-programm-right
+                  +icon('icon-arrow')
+            a.btn.yacht-wiki-btn.js-enroll(href="#") Записаться
+
+        section.fp-section
+          .checkin
+            .checkin__content
+              .checkin__title решайтесь, это будет грандиозно!
+              .checkin-social
+                a(href="#").checkin-social__link.checkin-social__link_yt
+                a(href="#").checkin-social__link.checkin-social__link_fb
+                a(href="#").checkin-social__link.checkin-social__link_inst
+              .checkin-form
+                .checkin-form__input
+                  label(for="name") Имя и фамилия
+                  input(type="text" id="name" placeholder="Имя Фамилия")
+
+                .checkin-form__input
+                  label(for="phone") Телефон
+                  input(type="text" id="phone" placeholder="(0--) --- -- --")
+
+                .checkin-form__input
+                  label(for="email") Email
+                  input(type="text" id="email" placeholder="name@mail.com").error
+
+                .checkin-form__btn-container
+                  a.btn.btn_yellow.checkin-form__btn.js-enroll(href="#") Записаться
+                  a.btn.btn_dark.checkin-form__btn(href="#") Календарь
+
+            .checkin-partners
+              a(href="#").checkin-partners__item
+                img(src="img/partner-1.png", alt="")
+              a(href="#").checkin-partners__item
+                img(src="img/partner-2.png", alt="")
+              a(href="#").checkin-partners__item
+                img(src="img/partner-3.png", alt="")
+              a(href="#").checkin-partners__item
+                img(src="img/partner-4.png", alt="")
+    .popup-wrap
+      .popup-contacts
+        .input-container
+          input.input-contacts.error(type="text" id="name" placeholder="ФИО" require)
+          label(for="name") ФИО
+
+        .input-container
+          input.input-contacts(type="text" id="phone" placeholder="(0--) --- -- --" require)
+          label(for="phone") Телефон
+
+        .input-container
+          input.input-contacts(type="text" id="email" placeholder="name@mail.com" require)
+          label(for="email") Email
+
+        .input-container
+          textarea.input-contacts.input-contacts_textarea(rows="6" cols="" placeholder="При необходимости напишите комментарий...")
+
+        button(type="submit").btn.btn_popup.js-send Отправить
+        button(type="button").close.close_black.js-popup-close
+
+      .popup-substrate
+        .popup-substrate__content
+          img(src="img/popup-logo.png").popup-substrate__logo
+          .popup-substrate__text
+            p Спасибо!
+            p Мы обработаем заявку и свяжемся с Вами в ближайшее время.
+
+          img(src="img/popup-icon.png").popup-substrate__icon
+          .popup-substrate__timer окно закроется через
+              span(id="timer") 5
+              | сек
+          button(type="button").close.close_white.js-popup-substrate-close
+    script(async src="https://www.youtube.com/iframe_api")

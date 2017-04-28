@@ -30,6 +30,68 @@ $(function () {
     }
   });
 
+  $('.yacht-wiki-fp_reg-5').fullpage({
+    verticalCentered: true,
+    anchors: ['description', 'details', 'price', 'programm', 'registration'],
+    menu: '.yacht-wiki-menu',
+    css3: true,
+    onLeave: function onLeave(anchorLink, index) {
+      if (index == 1) {
+        $('.yacht-wiki-menu').addClass('dark');
+        $('.yacht-wiki-menu').removeClass('light');
+      }
+      if (index == 2) {
+        $('.yacht-wiki-menu').addClass('dark');
+        $('.yacht-wiki-menu').removeClass('light');
+      }
+      if (index == 3) {
+        $('.yacht-wiki-menu').addClass('dark');
+        $('.yacht-wiki-menu').removeClass('light');
+      }
+      if (index == 4) {
+        $('.yacht-wiki-menu').addClass('dark');
+        $('.yacht-wiki-menu').removeClass('light');
+      }
+      if (index == 5) {
+        $('.yacht-wiki-menu').addClass('light');
+        $('.yacht-wiki-menu').removeClass('dark');
+      }
+    }
+  });
+
+  $('.yacht-wiki-fp_reg-6').fullpage({
+    verticalCentered: true,
+    anchors: ['description', 'details', 'price', 'flot', 'programm', 'registration'],
+    menu: '.yacht-wiki-menu',
+    css3: true,
+    onLeave: function onLeave(anchorLink, index) {
+      if (index == 1) {
+        $('.yacht-wiki-menu').addClass('dark');
+        $('.yacht-wiki-menu').removeClass('light');
+      }
+      if (index == 2) {
+        $('.yacht-wiki-menu').addClass('dark');
+        $('.yacht-wiki-menu').removeClass('light');
+      }
+      if (index == 3) {
+        $('.yacht-wiki-menu').addClass('dark');
+        $('.yacht-wiki-menu').removeClass('light');
+      }
+      if (index == 4) {
+        $('.yacht-wiki-menu').addClass('dark');
+        $('.yacht-wiki-menu').removeClass('light');
+      }
+      if (index == 5) {
+        $('.yacht-wiki-menu').addClass('dark');
+        $('.yacht-wiki-menu').removeClass('light');
+      }
+      if (index == 6) {
+        $('.yacht-wiki-menu').addClass('light');
+        $('.yacht-wiki-menu').removeClass('dark');
+      }
+    }
+  });
+
   if ($('.js-programm-slider').length > 0) {
     for (var i = 0; i < $('.js-programm-slider').length; i++) {
       var slider = $('.js-programm-slider').eq(i);

@@ -291,6 +291,62 @@
   padding-top: 130px
   +rmin(1600)
     padding-top: 200px
+  &_bg
+    background-image: url(../img/yacht-wiki/details-bg.jpg)
+    +cover
+  &__item-container
+    max-width: 1600px
+    width: 95%
+    margin: 0 auto
+    display: flex
+    justify-content: space-around
+  &__item
+    width: 25%
+    max-width: 200px
+    +rmin(1024)
+      max-width: 250px
+    +rmin(1680)
+      max-width: 300px
+  &__item-img
+    background-size: contain
+    background-position: 0 50%
+    background-repeat: no-repeat
+    &_date
+      background-image: url(../img/yacht-wiki/details-ico-1.png)
+    &_idea
+      background-image: url(../img/yacht-wiki/details-ico-2.png)
+    &_yacht
+      background-image: url(../img/yacht-wiki/details-ico-3.png)
+    &_price
+      background-image: url(../img/yacht-wiki/details-ico-4.png)
+  &__item-title
+    color: #9900cc
+    +futura-bold
+    text-transform: uppercase
+    font-size: 18px
+    margin-top: 5px
+    +rmin(1024)
+      font-size: 32px
+      margin-top: 10px
+    +rmin(1680)
+      font-size: 40px
+  &__item-text
+    color: #000
+    +futura-demi
+    font-size: 12px
+    margin-top: 5px
+    +rmin(1024)
+      margin-top: 15px
+      font-size: 18px
+    +rmin(1680)
+      margin-top: 30px
+      font-size: 22px
+  &__item-img
+    height: 30px
+    +rmin(1024)
+      height: 70px
+    +rmin(1680)
+      height: 120px
   &__controll-btn-container
     position: absolute
     bottom: 40px

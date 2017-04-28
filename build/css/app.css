@@ -4780,6 +4780,71 @@ keyframes spinMaSearch 100% {
   padding-top: 130px;
 }
 
+.details_bg {
+  background-image: url(../img/yacht-wiki/details-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.details__item-container {
+  max-width: 1600px;
+  width: 95%;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.details__item {
+  width: 25%;
+  max-width: 200px;
+}
+
+.details__item-img {
+  background-size: contain;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.details__item-img_date {
+  background-image: url(../img/yacht-wiki/details-ico-1.png);
+}
+
+.details__item-img_idea {
+  background-image: url(../img/yacht-wiki/details-ico-2.png);
+}
+
+.details__item-img_yacht {
+  background-image: url(../img/yacht-wiki/details-ico-3.png);
+}
+
+.details__item-img_price {
+  background-image: url(../img/yacht-wiki/details-ico-4.png);
+}
+
+.details__item-title {
+  color: #9900cc;
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.details__item-text {
+  color: #000;
+  font-family: FuturaPT-Demi, Arial, sans-serif;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.details__item-img {
+  height: 30px;
+}
+
 .details__controll-btn-container {
   position: absolute;
   bottom: 40px;
@@ -9130,6 +9195,24 @@ keyframes spinMaSearch 100% {
     right: 70px;
   }
 
+  .details__item {
+    max-width: 250px;
+  }
+
+  .details__item-title {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+
+  .details__item-text {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .details__item-img {
+    height: 70px;
+  }
+
   .carousel li {
     width: 600px;
     height: 380px;
@@ -10467,6 +10550,23 @@ keyframes spinMaSearch 100% {
 
 @media only screen and (min-width: 1680px) {
 
+  .details__item {
+    max-width: 300px;
+  }
+
+  .details__item-title {
+    font-size: 40px;
+  }
+
+  .details__item-text {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+
+  .details__item-img {
+    height: 120px;
+  }
+
   .academy-menu {
     top: 100px;
     height: 85px;
@@ -11024,13 +11124,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
 @media only screen and (max-width: 1320px) {
 
   .search-adv__wrapper {
@@ -11100,13 +11193,6 @@ keyframes spinMaSearch 100% {
 
   .yacht-map__wrapper:not(.yacht-map__wrapper--card) {
     width: 100%;
-  }
-}
-
-@media only screen and (max-height: 768px) {
-
-  .main-card {
-    max-height: 500px;
   }
 }
 
@@ -11248,13 +11334,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
-  }
-}
-
 @media only screen and (max-width: 1023px) {
 
   .yacht__card {
@@ -11285,6 +11364,27 @@ keyframes spinMaSearch 100% {
 
   .nav {
     margin-right: 15px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+
+  .main-card {
+    max-height: 500px;
   }
 }
 

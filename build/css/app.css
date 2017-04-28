@@ -5037,24 +5037,6 @@ keyframes spinMaSearch 100% {
   font-size: 24px;
 }
 
-.bg-video {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.bg-video__container,
-.bg-video__container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .wiki-main {
   margin-top: 100px;
   width: 100%;
@@ -8334,21 +8316,20 @@ keyframes spinMaSearch 100% {
 }
 
 .bg-video {
+  display: block;
+  width: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  overflow: hidden;
 }
 
-.bg-video__container,
-.bg-video__container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+.bg-video video {
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .btn-container {
@@ -10941,32 +10922,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media (min-aspect-ratio: 16 / 9) {
-
-  .bg-video__container,
-  .bg-video__container iframe {
-    height: 300%;
-    top: -100%;
-  }
-
-  .bg-video__container,
-  .bg-video__container iframe {
-    height: 300%;
-    top: -100%;
-  }
-}
-
-@media only screen and (max-height: 680px) {
-
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
 @media only screen and (max-width: 1599px) {
 
   .search-adv__filter:not(.search-adv__filter--detailed) {
@@ -11046,6 +11001,36 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+
+  .nav {
+    min-width: 0;
+  }
+
+  .nav__item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
+@media only screen and (max-height: 900px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
 @media only screen and (max-width: 1320px) {
 
   .search-adv__wrapper {
@@ -11115,6 +11100,13 @@ keyframes spinMaSearch 100% {
 
   .yacht-map__wrapper:not(.yacht-map__wrapper--card) {
     width: 100%;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
   }
 }
 
@@ -11256,10 +11248,10 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-height: 768px) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 
-  .main-card {
-    max-height: 500px;
+  .ps-container {
+    overflow: auto !important;
   }
 }
 
@@ -11267,18 +11259,6 @@ keyframes spinMaSearch 100% {
 
   .yacht__card {
     width: calc(50% - 30px);
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-
-  .nav {
-    min-width: 0;
-  }
-
-  .nav__item {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -11294,20 +11274,6 @@ keyframes spinMaSearch 100% {
 
   .course-skew {
     width: 45%;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
   }
 }
 

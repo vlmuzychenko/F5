@@ -223,5 +223,11 @@ $(document).keydown(function(e) {
       .to($('.popup-wrap'), 1, {className:'-=js-opened_substrate', opacity:'0', display:'none', ease:Sine.easeOut}, .5)
       .to($('.popup-substrate__content'), 1, {className:'-=show'}, 1.1);
     }
+  };
+  if (e.keyCode == 27) {
+    if ($('body').hasClass('popup-open')) {
+      $('.popup').removeClass('is-open');
+      $('body').removeClass('popup-open');
+    }
   }
 });

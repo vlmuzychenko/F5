@@ -486,40 +486,27 @@
       width: 100%
       +cover
   &__arrow
-    width: 50%
+    width: 40px
     height: 100%
     position: absolute
     top: 0
     cursor: pointer
-    opacity: 0
-    transition: .3s
+    background-position: 50%
+    background-repeat: no-repeat
+    transition: background-color .3s
+    background-color: rgba(#000, .5)
+    +rmin(1366)
+      width: 50px
+    +rmin(1680)
+      width: 85px
     &:hover
-      opacity: 1
-    &:before
-      content: ''
-      position: absolute
-      width: 40px
-      height: 100%
-      display: block
       background-color: rgba(#000, .8)
-      +rmin(1366)
-        width: 50px
-      +rmin(1680)
-        width: 85px
     &_left
       left: 0
-      &:before
-        left: 0
-        background-image: url(../img/academy/gallery-arrow-l.png)
-        background-position: 50%
-        background-repeat: no-repeat
+      background-image: url(../img/academy/gallery-arrow-l.png)
     &_right
       right: 0
-      &:before
-        right: 0
-        background-image: url(../img/academy/gallery-arrow-r.png)
-        background-position: 50%
-        background-repeat: no-repeat
+      background-image: url(../img/academy/gallery-arrow-r.png)
   .slick-dots
     position: absolute
     bottom: 40px

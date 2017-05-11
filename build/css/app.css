@@ -2160,6 +2160,10 @@ html.fp-enabled,
   margin-bottom: 20px;
 }
 
+.more .btn_large {
+  width: 275px;
+}
+
 .form-control input, .form-control textarea {
   transition: background .3s ease;
   background: rgba(255, 255, 255, 0.4);
@@ -11083,6 +11087,10 @@ keyframes spinMaSearch 100% {
     width: 180px;
   }
 
+  .more .btn_large {
+    width: 215px;
+  }
+
   .card__rent {
     font-size: 21px;
   }
@@ -11356,6 +11364,11 @@ keyframes spinMaSearch 100% {
     line-height: 30px;
     font-size: 14px;
     text-transform: uppercase;
+  }
+
+  .more .btn_large {
+    font-size: 12px;
+    width: 190px;
   }
 
   .course-skew {

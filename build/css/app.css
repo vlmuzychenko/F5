@@ -6605,7 +6605,7 @@ keyframes spinMaSearch 100% {
   position: absolute;
   font-size: 1em;
   font-size: 11px;
-  top: 40%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -6633,13 +6633,21 @@ keyframes spinMaSearch 100% {
 }
 
 .license__content {
-  padding-top: 4%;
+  padding-top: 2%;
   padding-left: 30px;
+}
+
+.license__main-title {
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
 }
 
 .license__title {
   font-family: FuturaPT-Bold, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 21px;
   color: #f6cb02;
   text-transform: uppercase;
 }
@@ -6647,8 +6655,8 @@ keyframes spinMaSearch 100% {
 .license__list {
   font-size: 16px;
   color: #fff;
-  max-width: 60%;
-  margin-top: 30px;
+  max-width: 90%;
+  margin-top: 10px;
 }
 
 .license p {
@@ -6657,19 +6665,24 @@ keyframes spinMaSearch 100% {
 }
 
 .license__list-item {
-  text-indent: 20px;
   position: relative;
   font-family: FuturaPT-Book, Arial, sans-serif;
+  padding-left: 60px;
 }
 
-.license__list-item:before {
-  content: '/';
+.license__list-item + .license__list-item {
+  margin-top: 10px;
+}
+
+.license__list-icon {
+  width: 40px;
+  height: 30px;
   position: absolute;
-  left: -20px;
+  left: 0;
   top: 0;
-  font-size: 1em;
-  color: #f6cb02;
-  font-family: FuturaPT-Demi, Arial, sans-serif;
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .course-skew {
@@ -9352,16 +9365,36 @@ keyframes spinMaSearch 100% {
     padding-left: 100px;
   }
 
+  .license__main-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
   .license__title {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .license__list {
     font-size: 21px;
+    max-width: 70%;
+    margin-top: 20px;
   }
 
   .license p {
     font-size: 21px;
+  }
+
+  .license__list-item {
+    padding-left: 70px;
+  }
+
+  .license__list-item + .license__list-item {
+    margin-top: 20px;
+  }
+
+  .license__list-icon {
+    width: 50px;
+    height: 40px;
   }
 
   .course__item {
@@ -10331,6 +10364,8 @@ keyframes spinMaSearch 100% {
 
   .license__list {
     font-size: 30px;
+    max-width: 60%;
+    margin-top: 30px;
   }
 
   .license p {
@@ -10567,6 +10602,19 @@ keyframes spinMaSearch 100% {
   .academy-menu {
     top: 100px;
     height: 85px;
+  }
+
+  .license__main-title {
+    font-size: 30px;
+  }
+
+  .license__list-item {
+    padding-left: 120px;
+  }
+
+  .license__list-icon {
+    width: 90px;
+    height: 80px;
   }
 
   .course {

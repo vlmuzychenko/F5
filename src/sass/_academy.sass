@@ -114,10 +114,12 @@
       font-size: 21px
       max-width: 70%
       margin-top: 20px
-    +rmin(1600)
-      font-size: 30px
+    +rmin(1680)
+      font-size: 25px
       max-width: 60%
       margin-top: 30px
+    +rmin(1920)
+      font-size: 30px
   p
     font-size: 16px
     color: #fff
@@ -153,34 +155,37 @@
       width: 90px
       height: 80px
 
-.course-skew
+.course
+  box-sizing: border-box
+  height: 100%
+  padding-left: 35px
+  padding-top: 3%
   width: 40%
   height: 100%
   position: absolute
-  transform: skewX(-10deg)
+  top: 0
+  left: 0
+  z-index: 100
   +r(960)
     width: 45%
+  +rmin(1366)
+    padding-top: 3%
+    padding-left: 65px
+  &::after
+    content: ''
+    position: absolute
+    height: 100%
+    width: 150%
+    top: 0
+    left: -50%
+    background-color: rgba(0,0,0,.7)
+    transform: skewX(-10deg)
+    z-index: -1
+    +rmin(1680)
+      left: -60%
   &_large
     width: 50%
 
-  &_left
-    left: -5%
-    background-color: rgba(0,0,0,.7)
-  &_right
-    right: -5%
-    background-color: rgba(255,255,255,.9)
-
-.course
-  transform: skewX(10deg)
-  margin-left: 10%
-  box-sizing: border-box
-  height: 100%
-  padding-left: 5%
-  padding-top: 3%
-  +rmin(1366)
-    padding-top: 3%
-  +rmin(1680)
-    padding-left: 10%
   &__video
     width: 100%
     height: 100%
@@ -191,11 +196,12 @@
       .course__video-btn
         left: 75%
   &__item
-    margin-top: 5px
-    +rmin(1024)
-      margin-top: 18px
-    +rmin(1680)
-      margin-top: 30px
+    & + &
+      margin-top: 5px
+      +rmin(1024)
+        margin-top: 18px
+      +rmin(1680)
+        margin-top: 30px
   &__title
     +futura-demi
     color: #fff
@@ -227,28 +233,8 @@
     bottom: 10px
     +rmin(1024)
       bottom: 35px
-  &__btn
-    display: inline-block
-    min-width: 120px
-    +rmin(1024)
-      min-width: 190px
-    +rmin(1600)
-      min-width: 230px
-    &:not(last-child)
-      margin-right: 15px
-    &_register
-      background-color: $accent
-      border-color: $accent
-      &:hover
-        background-color: #fff
-        border-color: #000
-    &_calendar
-      border-color: $accent
-      color: $accent
-      background-color: rgba(#000, .2)
-      &:hover
-        background-color: $accent
-        color: #000
+    a + a
+      margin-left: 15px
   &__icon
     position: relative
     margin-bottom: 5px
@@ -279,12 +265,10 @@
       background-image: url(../img/academy/practic-wind.png)
   &__video-btn
     width: 300px
-    position: absolute
     text-align: center
     cursor: pointer
-    left: 50%
-    transform: translateX(-50%)
-    bottom: 25%
+    z-index: 100
+    +vcenter
     span
       +futura-demi
       color: #fff
@@ -317,34 +301,47 @@
           height: 95px
 
 .course-right
-  transform: skewX(10deg)
   box-sizing: border-box
-  padding: 0% 10% 0
   text-align: right
-  margin-right: 5%
-  +rmin(1200)
-    margin-right: 10%
-  +rmin(1680)
-    margin-right: 20%
-    padding: 15% 10% 0 15%
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 10
+  width: 40%
+  height: 100%
+  padding-right: 30px
+  +rmin(1366)
+    padding-right: 65px
+  &::before
+    content: ''
+    position: absolute
+    z-index: -1
+    top: 0
+    right: -50%
+    width: 150%
+    height: 100%
+    background-color: rgba(255,255,255,.9)
+    transform: skewX(-10deg)
+    +rmin(1680)
+      right: -60%
 
   &__item
     display: inline-block
     text-align: center
     vertical-align: top
-    width: 114px
-    font-size: 16px
-    margin-top: 5%
+    width: 35%
+    font-size: 14px
+    margin: 5% 10px 0
     +futura-demi
     +rmin(1024)
-      width: 150px
       font-size: 21px
+      margin: 8% 35px 0
+      width: 30%
+    +rmin(1366)
+      margin: 0 40px
       margin-top: 20%
-    &:nth-child(2n+1)
-      +rmin(1368)
-        margin-right: 15%
-      +rmin(1920)
-        margin-right: 25%
+      width: 25%
+
   &__icon
     height: 65px
     width: 65px
@@ -468,7 +465,6 @@
   padding-left: 10%
   padding-top: 7%
   height: 100%
-
   &__text
     color: #fff
     width: 95%
@@ -485,14 +481,6 @@
       color: $accent
   &__btn-container
     text-align: center
-  &__btn
-    display: inline-block
-    margin: 0 auto
-    min-width: 120px
-    +rmin(1024)
-      min-width: 190px
-    +rmin(1600)
-      min-width: 230px
 
 .fmk-video
   position: absolute

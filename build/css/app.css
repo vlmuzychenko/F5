@@ -209,6 +209,8 @@ a {
   height: 40px;
   line-height: 40px;
   font-size: 14px;
+  min-width: 160px;
+  display: inline-block;
   font-family: Casper-Bold, Arial, sans-serif;
   transition: all .25s ease-in-out;
 }
@@ -4534,7 +4536,6 @@ keyframes spinMaSearch 100% {
 }
 
 .yacht-wiki-btn {
-  min-width: 230px;
   display: inline-block;
   transition: .3s;
   background-color: #f6cb02;
@@ -4543,6 +4544,7 @@ keyframes spinMaSearch 100% {
   bottom: 40px;
   text-transform: uppercase;
   z-index: 900;
+  right: 20px;
 }
 
 .yacht-wiki-btn:hover {
@@ -4748,11 +4750,14 @@ keyframes spinMaSearch 100% {
   right: 20px;
 }
 
+.descr__btn-container a + a {
+  margin-left: 15px;
+}
+
 .descr__btn {
   display: inline-block;
   transition: .3s;
   text-transform: uppercase;
-  min-width: 160px;
 }
 
 .descr__btn:not(last-child) {
@@ -5624,44 +5629,60 @@ keyframes spinMaSearch 100% {
 }
 
 .contacts-wrap {
-  width: 60%;
+  width: 40%;
   height: 100%;
   background-color: #000;
+  position: absolute;
+  z-index: 200;
+}
+
+.contacts-bg {
   overflow: hidden;
   -webkit-transform: skewX(-16deg) translateX(-20%);
   -ms-transform: skewX(-16deg) translateX(-20%);
   transform: skewX(-16deg) translateX(-20%);
   position: absolute;
-  z-index: 200;
+  width: 150%;
+  height: 100%;
   box-shadow: 10px 0 20px 0px #a2a2a2;
 }
 
-.contacts {
-  width: 100%;
-  height: 100%;
+.contacts-bg__img {
   background-image: url(../img/contacts.jpg);
   background-position: 100% 50%;
   background-size: cover;
   -webkit-transform: skewX(16deg) translateX(20%);
   -ms-transform: skewX(16deg) translateX(20%);
   transform: skewX(16deg) translateX(20%);
+  width: 100%;
+  height: 100%;
+}
+
+.contacts {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  padding-top: 25px;
+  padding-left: 25px;
 }
 
 .contacts__title {
   font-family: FuturaPT-Bold, Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .contacts__btn-popup {
-  min-width: 230px;
   transition: .3s;
   text-transform: uppercase;
   display: inline-block;
   background-color: transparent;
   border-color: #fff;
   color: #fff;
+  min-width: 160px;
+  margin-top: 5%;
 }
 
 .contacts__btn-popup:hover {
@@ -5672,7 +5693,8 @@ keyframes spinMaSearch 100% {
 
 .contacts__items {
   font-family: Casper-Regular, Arial, sans-serif;
-  font-size: 24px;
+  width: 65%;
+  font-size: 18px;
 }
 
 .contacts__item {
@@ -5681,18 +5703,18 @@ keyframes spinMaSearch 100% {
 }
 
 .contacts__item_title {
-  margin-top: 45px;
   color: #fff;
+  margin-top: 15px;
 }
 
 .contacts__social-btn {
   display: inline-block;
-  min-width: 70px;
+  min-width: 70px !important;
   height: 40px;
-  margin-top: 70px;
   background-color: transparent;
   position: relative;
   border-color: #fff;
+  margin-top: 20px;
 }
 
 .contacts__social-btn:hover {
@@ -6685,38 +6707,35 @@ keyframes spinMaSearch 100% {
   background-repeat: no-repeat;
 }
 
-.course-skew {
+.course {
+  box-sizing: border-box;
+  height: 100%;
+  padding-left: 35px;
+  padding-top: 3%;
   width: 40%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.course::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 150%;
+  top: 0;
+  left: -50%;
+  background-color: rgba(0, 0, 0, 0.7);
   -webkit-transform: skewX(-10deg);
   -ms-transform: skewX(-10deg);
   transform: skewX(-10deg);
+  z-index: -1;
 }
 
-.course-skew_large {
+.course_large {
   width: 50%;
-}
-
-.course-skew_left {
-  left: -5%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.course-skew_right {
-  right: -5%;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.course {
-  -webkit-transform: skewX(10deg);
-  -ms-transform: skewX(10deg);
-  transform: skewX(10deg);
-  margin-left: 10%;
-  box-sizing: border-box;
-  height: 100%;
-  padding-left: 5%;
-  padding-top: 3%;
 }
 
 .course__video {
@@ -6736,7 +6755,7 @@ keyframes spinMaSearch 100% {
   left: 75%;
 }
 
-.course__item {
+.course__item + .course__item {
   margin-top: 5px;
 }
 
@@ -6765,34 +6784,8 @@ keyframes spinMaSearch 100% {
   bottom: 10px;
 }
 
-.course__btn {
-  display: inline-block;
-  min-width: 120px;
-}
-
-.course__btn:not(last-child) {
-  margin-right: 15px;
-}
-
-.course__btn_register {
-  background-color: #f6cb02;
-  border-color: #f6cb02;
-}
-
-.course__btn_register:hover {
-  background-color: #fff;
-  border-color: #000;
-}
-
-.course__btn_calendar {
-  border-color: #f6cb02;
-  color: #f6cb02;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.course__btn_calendar:hover {
-  background-color: #f6cb02;
-  color: #000;
+.course__btn-container a + a {
+  margin-left: 15px;
 }
 
 .course__icon {
@@ -6833,14 +6826,15 @@ keyframes spinMaSearch 100% {
 
 .course__video-btn {
   width: 300px;
-  position: absolute;
   text-align: center;
   cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 25%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .course__video-btn span {
@@ -6877,22 +6871,38 @@ keyframes spinMaSearch 100% {
 }
 
 .course-right {
-  -webkit-transform: skewX(10deg);
-  -ms-transform: skewX(10deg);
-  transform: skewX(10deg);
   box-sizing: border-box;
-  padding: 0% 10% 0;
   text-align: right;
-  margin-right: 5%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 40%;
+  height: 100%;
+  padding-right: 30px;
+}
+
+.course-right::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -50%;
+  width: 150%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-transform: skewX(-10deg);
+  -ms-transform: skewX(-10deg);
+  transform: skewX(-10deg);
 }
 
 .course-right__item {
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  width: 114px;
-  font-size: 16px;
-  margin-top: 5%;
+  width: 35%;
+  font-size: 14px;
+  margin: 5% 10px 0;
   font-family: FuturaPT-Demi, Arial, sans-serif;
 }
 
@@ -7032,12 +7042,6 @@ keyframes spinMaSearch 100% {
 
 .fmk__btn-container {
   text-align: center;
-}
-
-.fmk__btn {
-  display: inline-block;
-  margin: 0 auto;
-  min-width: 120px;
 }
 
 .fmk-video {
@@ -7817,6 +7821,7 @@ keyframes spinMaSearch 100% {
 .news-extended__btn {
   display: inline-block;
   text-transform: uppercase;
+  min-width: 160px;
 }
 
 .news-extended__btn_main {
@@ -7876,7 +7881,7 @@ keyframes spinMaSearch 100% {
 
 .news-extended__social-btn {
   display: inline-block;
-  min-width: 70px;
+  min-width: 70px !important;
   height: 40px !important;
   background-color: #fff;
   position: relative;
@@ -7958,6 +7963,7 @@ keyframes spinMaSearch 100% {
 
 .news-extended-slider__title span {
   display: block;
+  font-size: 7px;
 }
 
 .news-extended-slider__nav {
@@ -7969,6 +7975,8 @@ keyframes spinMaSearch 100% {
   transform: translateX(-50%);
   height: 100px;
   z-index: 5;
+  bottom: 0;
+  width: 360px;
 }
 
 .news-extended-slider__nav .slick-slide {
@@ -7982,8 +7990,8 @@ keyframes spinMaSearch 100% {
 
 .news-extended-slider__nav .slick-track div {
   position: relative;
-  width: 99px !important;
-  height: 100px;
+  width: 50px !important;
+  height: 50px;
   background: no-repeat center center;
   background-size: cover;
   cursor: pointer;
@@ -7992,16 +8000,16 @@ keyframes spinMaSearch 100% {
   transition: .3s;
 }
 
-.news-extended-slider__nav .slick-track div:not(:last-child) {
-  margin-right: 10px;
-}
-
 .news-extended-slider__nav .slick-track div:hover {
   opacity: 1;
 }
 
 .news-extended-slider__nav .slick-track div.slick-current {
   opacity: 1;
+}
+
+.news-extended-slider__nav .slick-track div:not(:last-child) {
+  margin-right: 10px;
 }
 
 .news-extended-slider .news-extended-slider {
@@ -8044,14 +8052,14 @@ keyframes spinMaSearch 100% {
 }
 
 .event__btn {
-  min-width: 230px;
   display: inline-block;
   transition: .3s;
   text-transform: uppercase;
+  min-width: 160px;
 }
 
-.event__btn:not(last-child) {
-  margin-right: 15px;
+.event__btn + .event__btn {
+  margin-left: 15px;
 }
 
 .event__btn_register {
@@ -8075,14 +8083,6 @@ keyframes spinMaSearch 100% {
   color: #000;
 }
 
-.map-wrap {
-  width: 60%;
-  margin-left: 40%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 100;
-}
-
 .event-place {
   width: 100%;
   height: 100%;
@@ -8092,16 +8092,21 @@ keyframes spinMaSearch 100% {
   -webkit-transform: skewX(16deg) translateX(20%);
   -ms-transform: skewX(16deg) translateX(20%);
   transform: skewX(16deg) translateX(20%);
+  padding-top: 100px;
+  padding-left: 25px;
 }
 
 .event-place__title {
   font-family: FuturaPT-Bold, Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
+  font-size: 24px;
 }
 
 .event-place__items {
   font-family: Casper-Regular, Arial, sans-serif;
+  font-size: 16px;
+  width: 70%;
 }
 
 .event-place__item {
@@ -8112,23 +8117,30 @@ keyframes spinMaSearch 100% {
 .event-place__item_title-bold {
   color: #f6cb02;
   font-family: FuturaPT-Bold, Arial, sans-serif;
+  margin-top: 15px;
 }
 
 .event-place__item_title {
   color: #fff;
+  margin-top: 15px;
+}
+
+.event-place__item_title:last-child {
+  margin-bottom: 40px;
 }
 
 .e-partners-wrap {
   height: 100%;
   background-image: url(../img/event/partners-bg.jpg);
+  padding-top: 100px;
 }
 
 .e-partners-title {
-  font-size: 48px;
   font-family: FuturaPT-Bold, Arial, sans-serif;
   color: #161616;
   text-transform: uppercase;
   text-align: center;
+  font-size: 24px;
 }
 
 .e-partners-content {
@@ -8176,6 +8188,7 @@ keyframes spinMaSearch 100% {
 .e-partners-item__img {
   position: relative;
   margin-bottom: 20px;
+  height: 80px;
 }
 
 .e-partners-item__img img {
@@ -8199,6 +8212,7 @@ keyframes spinMaSearch 100% {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  bottom: 30px;
 }
 
 .error404 {
@@ -8218,7 +8232,7 @@ keyframes spinMaSearch 100% {
 
 .error404__social-btn {
   display: inline-block;
-  min-width: 70px;
+  min-width: 70px !important;
   height: 40px;
   background-color: transparent;
   position: relative;
@@ -8410,14 +8424,7 @@ keyframes spinMaSearch 100% {
   right: 20px;
 }
 
-.btn-container__btn {
-  display: inline-block;
-  transition: .3s;
-  text-transform: uppercase;
-  min-width: 160px;
-}
-
-.btn-container__btn + .btn-container__btn {
+.btn-container a + a {
   margin-left: 15px;
 }
 
@@ -8660,6 +8667,10 @@ keyframes spinMaSearch 100% {
   margin-top: 20px;
 }
 
+.checkin-form__btn-container a + a {
+  margin-left: 15px;
+}
+
 .checkin-form__btn {
   display: inline-block;
   transition: .3s;
@@ -8740,11 +8751,6 @@ keyframes spinMaSearch 100% {
 
   .search__regions {
     min-height: 240px;
-  }
-
-  .yacht-wiki-btn {
-    min-width: 160px;
-    right: 20px;
   }
 
   .price__title_period {
@@ -8838,33 +8844,6 @@ keyframes spinMaSearch 100% {
   .wiki-extended-slider__nav .slick-track div {
     width: 50px !important;
     height: 50px;
-  }
-
-  .contacts {
-    padding-top: 25px;
-    padding-left: 25px;
-  }
-
-  .contacts__title {
-    font-size: 24px;
-  }
-
-  .contacts__btn-popup {
-    min-width: 160px;
-    margin-top: 5%;
-  }
-
-  .contacts__items {
-    width: 60%;
-    font-size: 18px;
-  }
-
-  .contacts__item_title {
-    margin-top: 15px;
-  }
-
-  .contacts__social-btn {
-    margin-top: 20px;
   }
 
   .popup-contacts {
@@ -9012,72 +8991,8 @@ keyframes spinMaSearch 100% {
     line-height: 16px;
   }
 
-  .news-extended__btn {
-    min-width: 160px;
-  }
-
   .news-extended__actions-btn {
     min-width: 80px;
-  }
-
-  .news-extended-slider__title {
-    font-size: 7px;
-  }
-
-  .news-extended-slider__nav {
-    bottom: 0;
-    width: 360px;
-  }
-
-  .news-extended-slider__nav .slick-track div {
-    width: 50px !important;
-    height: 50px;
-  }
-
-  .event__btn {
-    min-width: 160px;
-  }
-
-  .event-place {
-    padding-top: 100px;
-    padding-left: 25px;
-  }
-
-  .event-place__title {
-    font-size: 24px;
-  }
-
-  .event-place__items {
-    font-size: 16px;
-    width: 70%;
-  }
-
-  .event-place__item_title-bold {
-    margin-top: 15px;
-  }
-
-  .event-place__item_title:last-child {
-    margin-bottom: 40px;
-  }
-
-  .event-place__item_title {
-    margin-top: 15px;
-  }
-
-  .e-partners-wrap {
-    padding-top: 100px;
-  }
-
-  .e-partners-title {
-    font-size: 24px;
-  }
-
-  .e-partners-item__img {
-    height: 80px;
-  }
-
-  .partners-btn-container {
-    bottom: 30px;
   }
 
   .error404__social {
@@ -9141,6 +9056,10 @@ keyframes spinMaSearch 100% {
 
 @media only screen and (min-width: 1024px) {
 
+  .btn {
+    min-width: 190px;
+  }
+
   .calendar__layout {
     padding-top: 50px;
   }
@@ -9173,7 +9092,6 @@ keyframes spinMaSearch 100% {
   }
 
   .yacht-wiki-btn {
-    min-width: 190px;
     right: 70px;
   }
 
@@ -9245,7 +9163,6 @@ keyframes spinMaSearch 100% {
   }
 
   .contacts__items {
-    width: 40%;
     font-size: 21px;
   }
 
@@ -9397,7 +9314,7 @@ keyframes spinMaSearch 100% {
     height: 40px;
   }
 
-  .course__item {
+  .course__item + .course__item {
     margin-top: 18px;
   }
 
@@ -9417,14 +9334,10 @@ keyframes spinMaSearch 100% {
     bottom: 35px;
   }
 
-  .course__btn {
-    min-width: 190px;
-  }
-
   .course-right__item {
-    width: 150px;
     font-size: 21px;
-    margin-top: 20%;
+    margin: 8% 35px 0;
+    width: 30%;
   }
 
   .fmk-top {
@@ -9457,10 +9370,6 @@ keyframes spinMaSearch 100% {
   .fmk__text {
     font-size: 21px;
     margin-bottom: 40px;
-  }
-
-  .fmk__btn {
-    min-width: 190px;
   }
 
   .instructor__name {
@@ -9548,12 +9457,12 @@ keyframes spinMaSearch 100% {
     margin-top: 45px;
   }
 
-  .event-place__item_title:last-child {
-    margin-bottom: 80px;
-  }
-
   .event-place__item_title {
     margin-top: 45px;
+  }
+
+  .event-place__item_title:last-child {
+    margin-bottom: 80px;
   }
 
   .e-partners-wrap {
@@ -9625,13 +9534,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (min-width: 1200px) {
-
-  .course-right {
-    margin-right: 10%;
-  }
-}
-
 @media only screen and (min-width: 1366px) {
 
   .btn {
@@ -9678,10 +9580,6 @@ keyframes spinMaSearch 100% {
   .descr__title-date_year {
     font-size: 90px;
     line-height: 50px;
-  }
-
-  .descr__btn {
-    min-width: 190px;
   }
 
   .carousel li {
@@ -9846,11 +9744,22 @@ keyframes spinMaSearch 100% {
 
   .course {
     padding-top: 3%;
+    padding-left: 65px;
   }
 
   .course__icon {
     width: 50px;
     height: 50px;
+  }
+
+  .course-right {
+    padding-right: 65px;
+  }
+
+  .course-right__item {
+    margin: 0 40px;
+    margin-top: 20%;
+    width: 25%;
   }
 
   .course-right__icon {
@@ -9966,10 +9875,6 @@ keyframes spinMaSearch 100% {
     right: -335px;
   }
 
-  .btn-container__btn {
-    min-width: 190px;
-  }
-
   .checkin {
     padding-top: 140px;
   }
@@ -10003,13 +9908,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (min-width: 1368px) {
-
-  .course-right__item:nth-child(2n+1) {
-    margin-right: 15%;
-  }
-}
-
 @media only screen and (min-width: 1500px) {
 
   .card-open__item {
@@ -10039,6 +9937,7 @@ keyframes spinMaSearch 100% {
     height: 50px;
     line-height: 50px;
     font-size: 18px;
+    min-width: 230px;
   }
 
   .btn-share {
@@ -10064,25 +9963,8 @@ keyframes spinMaSearch 100% {
     top: -55px;
   }
 
-  .calendar__layout {
-    padding-top: 80px;
-  }
-
-  .calendar__chapter {
-    min-height: 160px;
-    height: 33.33%;
-  }
-
-  .calendar__datepicker {
-    height: 80px;
-  }
-
   .search__regions {
     min-height: 350px;
-  }
-
-  .yacht-wiki-btn {
-    min-width: 230px;
   }
 
   .yacht-wiki-menu {
@@ -10133,10 +10015,6 @@ keyframes spinMaSearch 100% {
   .descr__video-btn span:after {
     width: 95px;
     height: 95px;
-  }
-
-  .descr__btn {
-    min-width: 230px;
   }
 
   .details {
@@ -10246,27 +10124,6 @@ keyframes spinMaSearch 100% {
     height: 95px;
   }
 
-  .contacts__title {
-    font-size: 30px;
-  }
-
-  .contacts__btn-popup {
-    min-width: 230px;
-  }
-
-  .contacts__items {
-    width: 30%;
-    font-size: 24px;
-  }
-
-  .contacts__item_title {
-    margin-top: 45px;
-  }
-
-  .contacts__social-btn {
-    margin-top: 70px;
-  }
-
   .popup-contacts {
     padding: 35px 110px 50px;
   }
@@ -10362,18 +10219,8 @@ keyframes spinMaSearch 100% {
     font-size: 60px;
   }
 
-  .license__list {
-    font-size: 30px;
-    max-width: 60%;
-    margin-top: 30px;
-  }
-
   .license p {
     font-size: 30px;
-  }
-
-  .course__btn {
-    min-width: 230px;
   }
 
   .course__icon {
@@ -10394,10 +10241,6 @@ keyframes spinMaSearch 100% {
   .course-right__icon {
     width: 70px;
     height: 70px;
-  }
-
-  .fmk__btn {
-    min-width: 230px;
   }
 
   .instructor__btn {
@@ -10440,37 +10283,6 @@ keyframes spinMaSearch 100% {
     min-width: 230px;
   }
 
-  .news-extended__news {
-    margin-top: 75px;
-    margin-bottom: 35px;
-  }
-
-  .news-extended__date {
-    margin-bottom: 25px;
-  }
-
-  .news-extended__title {
-    font-size: 36px;
-    margin-bottom: 25px;
-  }
-
-  .news-extended__text {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .news-extended__btn-container {
-    bottom: 40px;
-  }
-
-  .news-extended__btn {
-    min-width: 230px;
-  }
-
-  .news-extended-slider__title {
-    font-size: 18px;
-  }
-
   .event__btn {
     min-width: 230px;
   }
@@ -10490,97 +10302,22 @@ keyframes spinMaSearch 100% {
   .e-partners-wrap {
     padding-top: 190px;
   }
-
-  .error404__social {
-    bottom: 160px;
-  }
-
-  .error404__btn-container {
-    bottom: 80px;
-  }
-
-  .error404__btn {
-    min-width: 230px;
-  }
-
-  .error404__text {
-    left: 39%;
-    font-size: 18px;
-  }
-
-  .error404__text:after {
-    width: 485px;
-    height: 220px;
-    right: -500px;
-    bottom: -30px;
-  }
-
-  .btn-container__btn {
-    min-width: 230px;
-  }
-
-  .checkin {
-    padding-top: 200px;
-  }
-
-  .checkin__title {
-    font-size: 48px;
-  }
-
-  .checkin-partners {
-    padding-top: 10px;
-    height: 130px;
-  }
-
-  .checkin-partners__item {
-    width: 260px;
-  }
-
-  .checkin-partners__item:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  .checkin-social {
-    margin: 25px 0;
-  }
-
-  .checkin-form__input {
-    margin-bottom: 20px;
-  }
-
-  .checkin-form__input label {
-    font-size: 18px;
-  }
-
-  .checkin-form__input input {
-    font-size: 26px;
-  }
-
-  .checkin-form__input_dropdown .ms-choice {
-    font-size: 26px;
-    padding: 12px 20px;
-  }
-
-  .checkin-form__input_dropdown .ms-drop ul > li label {
-    font-size: 21px;
-    padding: 12px 20px;
-  }
-
-  .checkin-form__btn-container {
-    margin-top: 50px;
-  }
-
-  .checkin-form__btn {
-    min-width: 230px;
-  }
-
-  .checkin-form__descr {
-    font-size: 18px;
-    margin-top: 20px;
-  }
 }
 
 @media only screen and (min-width: 1680px) {
+
+  .calendar__layout {
+    padding-top: 80px;
+  }
+
+  .calendar__chapter {
+    min-height: 160px;
+    height: 33.33%;
+  }
+
+  .calendar__datepicker {
+    height: 80px;
+  }
 
   .details__item {
     max-width: 300px;
@@ -10599,6 +10336,26 @@ keyframes spinMaSearch 100% {
     height: 120px;
   }
 
+  .contacts__title {
+    font-size: 30px;
+  }
+
+  .contacts__btn-popup {
+    min-width: 230px;
+  }
+
+  .contacts__items {
+    font-size: 24px;
+  }
+
+  .contacts__item_title {
+    margin-top: 45px;
+  }
+
+  .contacts__social-btn {
+    margin-top: 70px;
+  }
+
   .academy-menu {
     top: 100px;
     height: 85px;
@@ -10606,6 +10363,12 @@ keyframes spinMaSearch 100% {
 
   .license__main-title {
     font-size: 30px;
+  }
+
+  .license__list {
+    font-size: 25px;
+    max-width: 60%;
+    margin-top: 30px;
   }
 
   .license__list-item {
@@ -10617,11 +10380,11 @@ keyframes spinMaSearch 100% {
     height: 80px;
   }
 
-  .course {
-    padding-left: 10%;
+  .course::after {
+    left: -60%;
   }
 
-  .course__item {
+  .course__item + .course__item {
     margin-top: 30px;
   }
 
@@ -10637,9 +10400,8 @@ keyframes spinMaSearch 100% {
     font-size: 36px;
   }
 
-  .course-right {
-    margin-right: 20%;
-    padding: 15% 10% 0 15%;
+  .course-right::before {
+    right: -60%;
   }
 
   .fmk-top {
@@ -10723,6 +10485,37 @@ keyframes spinMaSearch 100% {
     padding-right: 7%;
   }
 
+  .news-extended__news {
+    margin-top: 75px;
+    margin-bottom: 35px;
+  }
+
+  .news-extended__date {
+    margin-bottom: 25px;
+  }
+
+  .news-extended__title {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  .news-extended__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .news-extended__btn-container {
+    bottom: 40px;
+  }
+
+  .news-extended__btn {
+    min-width: 230px;
+  }
+
+  .news-extended-slider__title {
+    font-size: 18px;
+  }
+
   .news-extended-slider__nav {
     bottom: 30px;
     width: 660px;
@@ -10740,6 +10533,90 @@ keyframes spinMaSearch 100% {
   .partners-btn-container {
     bottom: 80px;
   }
+
+  .error404__social {
+    bottom: 160px;
+  }
+
+  .error404__btn-container {
+    bottom: 80px;
+  }
+
+  .error404__btn {
+    min-width: 230px;
+  }
+
+  .error404__text {
+    left: 39%;
+    font-size: 18px;
+  }
+
+  .error404__text:after {
+    width: 485px;
+    height: 220px;
+    right: -500px;
+    bottom: -30px;
+  }
+
+  .checkin {
+    padding-top: 200px;
+  }
+
+  .checkin__title {
+    font-size: 48px;
+  }
+
+  .checkin-partners {
+    padding-top: 10px;
+    height: 130px;
+  }
+
+  .checkin-partners__item {
+    width: 260px;
+  }
+
+  .checkin-partners__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .checkin-social {
+    margin: 25px 0;
+  }
+
+  .checkin-form__input {
+    margin-bottom: 20px;
+  }
+
+  .checkin-form__input label {
+    font-size: 18px;
+  }
+
+  .checkin-form__input input {
+    font-size: 26px;
+  }
+
+  .checkin-form__input_dropdown .ms-choice {
+    font-size: 26px;
+    padding: 12px 20px;
+  }
+
+  .checkin-form__input_dropdown .ms-drop ul > li label {
+    font-size: 21px;
+    padding: 12px 20px;
+  }
+
+  .checkin-form__btn-container {
+    margin-top: 50px;
+  }
+
+  .checkin-form__btn {
+    min-width: 230px;
+  }
+
+  .checkin-form__descr {
+    font-size: 18px;
+    margin-top: 20px;
+  }
 }
 
 @media only screen and (min-width: 1700px) {
@@ -10751,8 +10628,8 @@ keyframes spinMaSearch 100% {
 
 @media only screen and (min-width: 1920px) {
 
-  .course-right__item:nth-child(2n+1) {
-    margin-right: 25%;
+  .license__list {
+    font-size: 30px;
   }
 
   .news-post__title {
@@ -11145,29 +11022,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-
-  .nav {
-    min-width: 0;
-  }
-
-  .nav__item {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media only screen and (max-height: 680px) {
-
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
 @media only screen and (max-width: 1320px) {
 
   .search-adv__wrapper {
@@ -11385,6 +11239,25 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .nav {
+    min-width: 0;
+  }
+
+  .nav__item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 @media only screen and (max-width: 960px) {
 
   .more .btn {
@@ -11400,26 +11273,17 @@ keyframes spinMaSearch 100% {
     width: 190px;
   }
 
-  .course-skew {
+  .course {
     width: 45%;
   }
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-height: 750px) {
 
-  .header__lang {
-    margin-left: 15px;
-  }
-
-  .nav {
-    margin-right: 15px;
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
   }
 }
 
@@ -11437,12 +11301,25 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 680px) {
 
   .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
     -webkit-transform: translateY(40%);
     -ms-transform: translateY(40%);
     transform: translateY(40%);
+  }
+}
+
+@media only screen and (max-width: 840px) {
+
+  .header__lang {
+    margin-left: 15px;
+  }
+
+  .nav {
+    margin-right: 15px;
   }
 }
 

@@ -39,7 +39,6 @@
         box-shadow: inset -35px 0px 29px -4px rgba(0, 0, 0, 0.5)
 
 .yacht-wiki-btn
-  min-width: 230px
   display: inline-block
   transition: .3s
   background-color: $accent
@@ -48,14 +47,9 @@
   bottom: 40px
   text-transform: uppercase
   z-index: 900
-  +rmin(768)
-    min-width: 160px
-    right: 20px
+  right: 20px
   +rmin(1024)
-    min-width: 190px
     right: 70px
-  +rmin(1600)
-    min-width: 230px
   &:hover
     background-color: #fff
     border-color: #000
@@ -261,15 +255,12 @@
     right: 20px
     +rmin(1024)
       right: 70px
+    a + a
+      margin-left: 15px
   &__btn
     display: inline-block
     transition: .3s
     text-transform: uppercase
-    min-width: 160px
-    +rmin(1366)
-      min-width: 190px
-    +rmin(1600)
-      min-width: 230px
     &:not(last-child)
       margin-left: 15px
     &_register

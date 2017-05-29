@@ -42,47 +42,45 @@ block content
               .mouse-scroll__item.mouse-scroll__item_black
               .mouse-scroll__text скрольте вниз
             .btn-container
-                a.btn.btn_yellow.btn-container__btn(href="#") Записаться
-                a.btn.btn_dark.btn-container__btn(href="#") Календарь
+                a.btn.btn_yellow(href="#") Записаться
+                a.btn.btn_dark(href="#") Календарь
            
        section.fp-section
          .academy-content-wrap.academy-content-wrap_teoretic
-           .course-skew.course-skew_left
-             .course
-               .course__item
-                 .course__date
-                   | 23.01
-                 .course__title
-                   | Старт курса
-               .course__item
-                 .course__icon.course__icon_count
-                 .course__title
-                   | 15 занятий по 3 часа
-               .course__item
-                 .course__icon.course__icon_price
-                 .course__title
-                   | Курс теории 6900 грн
-               .course__btn-container
-                 a.btn.btn_yellow.course__btn(href="#") Записаться
-                 a.btn.btn_dark.course__btn(href="#") Календарь
-           .course-skew.course-skew_right
-             .course-right
-               .course-right__item
-                 .course-right__icon.course-right__icon_programm
-                 .course-right__title
-                   | Усиленная программа обучения
-               .course-right__item
-                 .course-right__icon.course-right__icon_book
-                 .course-right__title
-                   | Эксклюзивные учебные материалы
-               .course-right__item
-                 .course-right__icon.course-right__icon_radio
-                 .course-right__title
-                   | Радиоупра-вляемая яхта для тренировок
-               .course-right__item
-                 .course-right__icon.course-right__icon_online
-                 .course-right__title
-                   | Доступ к онлайн библиотеке
+           .course
+             .course__item
+               .course__date
+                 | 23.01
+               .course__title
+                 | Старт курса
+             .course__item
+               .course__icon.course__icon_count
+               .course__title
+                 | 15 занятий по 3 часа
+             .course__item
+               .course__icon.course__icon_price
+               .course__title
+                 | Курс теории 6900 грн
+             .course__btn-container
+               a.btn.btn_yellow(href="#") Записаться
+               a.btn.btn_dark(href="#") Календарь
+           .course-right
+             .course-right__item
+               .course-right__icon.course-right__icon_programm
+               .course-right__title
+                 | Усиленная программа обучения
+             .course-right__item
+               .course-right__icon.course-right__icon_book
+               .course-right__title
+                 | Эксклюзивные учебные материалы
+             .course-right__item
+               .course-right__icon.course-right__icon_radio
+               .course-right__title
+                 | Радиоупра-вляемая яхта для тренировок
+             .course-right__item
+               .course-right__icon.course-right__icon_online
+               .course-right__title
+                 | Доступ к онлайн библиотеке
            .course__video.course__video_teoretic
              .course__video-btn
                  span Посмотрите видео
@@ -91,28 +89,27 @@ block content
            iframe(width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen)
        section.fp-section
          .academy-content-wrap
-           .course-skew.course-skew_left.course-skew_large
-             .course
-               .course__item
-                 .course__icon.course__icon_students
-                 .course__title
-                   | 80% учеников
-                   br
-                   | готовы к одиночному плаванию
-                 .course__subtitle Индивидуальный подход к каждому ученику
-               .course__item
-                 .course__icon.course__icon_sea
-                 .course__title
-                   | 2 недели практики в море
-                 .course__subtitle Ближайшая дата отмечена в календаре
-               .course__item
-                 .course__icon.course__icon_wind
-                 .course__title
-                   | Обучение в разных условиях
-                 .course__subtitle На воде и на суше, утром, днем, и вечером
-               .course__btn-container
-                 a.btn.btn_yellow.course__btn(href="#") Записаться
-                 a.btn.btn_dark.course__btn(href="#") Календарь
+           .course.course_large
+             .course__item
+               .course__icon.course__icon_students
+               .course__title
+                 | 80% учеников
+                 br
+                 | готовы к одиночному плаванию
+               .course__subtitle Индивидуальный подход к каждому ученику
+             .course__item
+               .course__icon.course__icon_sea
+               .course__title
+                 | 2 недели практики в море
+               .course__subtitle Ближайшая дата отмечена в календаре
+             .course__item
+               .course__icon.course__icon_wind
+               .course__title
+                 | Обучение в разных условиях
+               .course__subtitle На воде и на суше, утром, днем, и вечером
+             .course__btn-container
+               a.btn.btn_yellow(href="#") Записаться
+               a.btn.btn_dark(href="#") Календарь
            .course__video.course__video_pract
              .course__video-btn
                  span Посмотрите видео
@@ -291,7 +288,7 @@ block content
                   .fmk__text.fmk__text_yellow
                     | ФМК - это полный ассист твоего первого путешествия на яхте в роли капитана!
                   .fmk__btn-container
-                    a.btn.btn_yellow.fmk__btn(href="#") Записаться
+                    a.btn.btn_yellow(href="#") Записаться
              .fmk-video
                .course__video-btn.course__video-btn_fmk
                    span Посмотрите видео
@@ -388,3 +385,4 @@ block content
               span(id="timer") 5
               | сек
           button(type="button").close.close_white.js-popup-substrate-close
+          

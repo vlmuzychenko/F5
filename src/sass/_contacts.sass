@@ -15,25 +15,35 @@
   z-index: 100
 
 .contacts-wrap
-  width: 60%
+  width: 40%
   height: 100%
   background-color: #000
+  position: absolute
+  z-index: 200
+
+.contacts-bg
   overflow: hidden
   transform: skewX(-16deg) translateX(-20%)
   position: absolute
-  z-index: 200
+  width: 150%
+  height: 100%
   box-shadow: 10px 0 20px 0px #a2a2a2
+
+  &__img
+    background-image: url(../img/contacts.jpg)
+    background-position: 100% 50%
+    background-size: cover
+    transform: skewX(16deg) translateX(20%)
+    width: 100%
+    height: 100%
 
 .contacts
   width: 100%
   height: 100%
-  background-image: url(../img/contacts.jpg)
-  background-position: 100% 50%
-  background-size: cover
-  transform: skewX(16deg) translateX(20%)
-  +rmin(768)
-    padding-top: 25px
-    padding-left: 25px
+  position: relative
+  z-index: 10
+  padding-top: 25px
+  padding-left: 25px
   +rmin(1024)
     padding-top: 50px
     padding-left: 50px
@@ -42,29 +52,25 @@
     +futura-bold
     text-transform: uppercase
     color: #fff
-    font-size: 30px
-    +rmin(768)
-      font-size: 24px
+    font-size: 24px
     +rmin(1366)
       font-size: 26px
-    +rmin(1600)
+    +rmin(1680)
       font-size: 30px
 
   &__btn-popup
-    min-width: 230px
     transition: .3s
     text-transform: uppercase
     display: inline-block
     background-color: transparent
     border-color: #fff
     color: #fff
-    +rmin(768)
-      min-width: 160px
-      margin-top: 5%
+    min-width: 160px
+    margin-top: 5%
     +rmin(1366)
       min-width: 190px
       margin-top: 80px
-    +rmin(1600)
+    +rmin(1680)
       min-width: 230px
 
     &:hover
@@ -74,15 +80,11 @@
 
   &__items
     +casp-reg
-    font-size: 24px
-    +rmin(768)
-      width: 60%
-      font-size: 18px
+    width: 65%
+    font-size: 18px
     +rmin(1024)
-      width: 40%
       font-size: 21px
-    +rmin(1600)
-      width: 30%
+    +rmin(1680)
       font-size: 24px
 
   &__item
@@ -90,26 +92,22 @@
     margin-top: 5px
 
     &_title
-      margin-top: 45px
       color: #fff
-      +rmin(768)
-        margin-top: 15px
-      +rmin(1600)
+      margin-top: 15px
+      +rmin(1680)
         margin-top: 45px
 
   &__social-btn
     display: inline-block
-    min-width: 70px
+    min-width: 70px !important
     height: 40px
-    margin-top: 70px
     background-color: transparent
     position: relative
     border-color: #fff
-    +rmin(768)
-      margin-top: 20px
+    margin-top: 20px
     +rmin(1024)
       margin-top: 25px
-    +rmin(1600)
+    +rmin(1680)
       margin-top: 70px
 
     &:hover

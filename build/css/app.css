@@ -2270,7 +2270,6 @@ html.fp-enabled,
 .socials-btn {
   display: inline-block;
   min-width: 70px !important;
-  height: 40px !important;
   background-color: #fff;
   position: relative;
   border: none;
@@ -7828,8 +7827,8 @@ keyframes spinMaSearch 100% {
   background-color: #f6cb02;
   display: inline-block;
   padding: 2px 10px 5px 5%;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .news-extended__date {
@@ -7841,18 +7840,22 @@ keyframes spinMaSearch 100% {
 .news-extended__title {
   font-family: FuturaPT-Demi, Arial, sans-serif;
   margin-left: 5%;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .news-extended__text {
   font-family: Casper-Regular, Arial, sans-serif;
   margin-left: 5%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  line-height: 16px;
 }
 
 .news-extended__btn-container {
   position: absolute;
   left: 5%;
-  bottom: 20px;
+  bottom: 5px;
   width: 100%;
 }
 
@@ -7909,8 +7912,8 @@ keyframes spinMaSearch 100% {
   font-family: FuturaPT-Demi, Arial, sans-serif;
   font-size: 16px;
   margin-left: 5%;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .news-extended__social {
@@ -8931,16 +8934,6 @@ keyframes spinMaSearch 100% {
     margin-bottom: 5px;
   }
 
-  .news-extended__title {
-    font-size: 21px;
-    margin-bottom: 5px;
-  }
-
-  .news-extended__text {
-    font-size: 11px;
-    line-height: 16px;
-  }
-
   .news-extended__actions-btn {
     min-width: 80px;
   }
@@ -9369,6 +9362,11 @@ keyframes spinMaSearch 100% {
     height: 40px;
   }
 
+  .news-extended__news {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
   .news-extended__title {
     font-size: 30px;
     margin-bottom: 15px;
@@ -9377,10 +9375,20 @@ keyframes spinMaSearch 100% {
   .news-extended__text {
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .news-extended__btn-container {
+    bottom: 20px;
   }
 
   .news-extended__btn {
     min-width: 190px;
+  }
+
+  .news-extended__social-title {
+    margin-bottom: 15px;
+    margin-top: 15px;
   }
 
   .news-extended-slider__nav {

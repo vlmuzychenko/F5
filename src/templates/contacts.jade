@@ -21,9 +21,10 @@ block content
 
         a(href="#").btn.contacts__btn-popup Написать нам
         .contacts__social
-          a(href="#").btn.contacts__social-btn.contacts__social-btn_yt
-          a(href="#").btn.contacts__social-btn.contacts__social-btn_fb
-          a(href="#").btn.contacts__social-btn.contacts__social-btn_inst
+          +socials-btn('socials-btn_white socials-btn_yt socials-btn_bordered socials-btn_hover')
+          +socials-btn('socials-btn_white socials-btn_fb socials-btn_bordered socials-btn_hover')
+          +socials-btn('socials-btn_white socials-btn_inst socials-btn_bordered socials-btn_hover')
+          
 
     #map.map-wrap
 

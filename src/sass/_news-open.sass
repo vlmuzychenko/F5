@@ -14,6 +14,7 @@
      height: 100%
      transition: background-color .5s
 
+
   &__descr
     width: 50%
     height: 100%
@@ -68,7 +69,7 @@
     margin-left: 5%
     margin-bottom: 20px
     +rmin(768)
-      font-size: 14px
+      font-size: 11px
       line-height: 16px
     +rmin(1024)
       font-size: 16px
@@ -133,41 +134,6 @@
 
   &__social
     margin-left: 5%
-
-  &__social-btn
-    display: inline-block
-    min-width: 70px !important
-    height: 40px !important
-    background-color: #fff
-    position: relative
-    border-color: #000
-
-    &:before
-      content: ''
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -50%)
-      background-repeat: no-repeat
-
-    &:hover
-      background-color: $accent
-
-    &_fb:before
-      background-image: url('../img/news/fb_black.png')
-      width: 16px
-      height: 31px
-    &_inst:before
-      background-image: url('../img/news/inst_black.png')
-      width: 32px
-      height: 32px
-    &_yt:before
-      background-image: url('../img/news/yt_black.png')
-      width: 26px
-      height: 30px
-
-    &:not(:last-child)
-      margin-right: 10px
 
 .news-extended-slider
   position: relative

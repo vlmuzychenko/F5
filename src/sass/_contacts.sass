@@ -58,6 +58,13 @@
     +rmin(1680)
       font-size: 30px
 
+  &__social
+    padding-top: 20px
+    +rmin(1024)
+      padding-top: 25px
+    +rmin(1680)
+      padding-top: 70px
+
   &__btn-popup
     transition: .3s
     text-transform: uppercase
@@ -96,43 +103,3 @@
       margin-top: 15px
       +rmin(1680)
         margin-top: 45px
-
-  &__social-btn
-    display: inline-block
-    min-width: 70px !important
-    height: 40px
-    background-color: transparent
-    position: relative
-    border-color: #fff
-    margin-top: 20px
-    +rmin(1024)
-      margin-top: 25px
-    +rmin(1680)
-      margin-top: 70px
-
-    &:hover
-      background-color: rgba(0,0,0,.5)
-
-    &:before
-      content: ''
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -50%)
-      background-repeat: no-repeat
-
-    &_fb:before
-      background-image: url(../img/fb.png)
-      width: 16px
-      height: 31px
-    &_inst:before
-      background-image: url(../img/inst.png)
-      width: 32px
-      height: 32px
-    &_yt:before
-      background-image: url(../img/yt.png)
-      width: 26px
-      height: 30px
-
-    &:not(:last-child)
-      margin-right: 10px

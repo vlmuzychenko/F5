@@ -7,3 +7,7 @@ mixin icon(name, modClass)
     - var modClass = ' ' + modClass
   svg(class=name + modClass)
     use(xlink:href= svgSprite + '#' + name)
+      
+      
+mixin socials-btn(mod)
+  a(href="#").btn.socials-btn(class=mod)

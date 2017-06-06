@@ -21,8 +21,7 @@
       background-image: url('../img/calendar_bg.jpg')
       +cover
       +clr
-      +rmin(768)
-        padding-top: 40px
+      padding-top: 40px
       +rmin(1024)
          padding-top: 50px
       +rmin(1366)
@@ -91,6 +90,7 @@
          color: #fff
          z-index: 3
          transform: translateY(55%)
+         font-size: 11px
          +trs
          +rh(750)
            transform: translateY(40%)
@@ -98,15 +98,12 @@
            padding-top: 10px
            padding-bottom: 10px
            transform: translateY(40%)
-         +rmin(768)
-           font-size: 11px
          +rmin(1024)
            font-size: 16px
       &-text
         white-space: normal
         &:first-child
-          +rmin(768)
-            height: 40px
+          height: 40px
           +rmin(1024)
             height: 60px
         & + &
@@ -125,8 +122,7 @@
          border-radius: 25px
          color: $accent
          background-color: rgba(#000, .2)
-         +rmin(768)
-           margin-top: 15px
+         margin-top: 15px
          +rmin(1024)
            margin-top: 30px
          &:hover
@@ -141,11 +137,9 @@
       &:hover &-descr
          transform: translateY(0)
    &__chapter
-      max-height: 300px
+      min-height: 119px
+      height: 32%
       +clr
-      +rmin(768)
-        min-height: 119px
-        height: 32%
       +rmin(1024)
         height: 33.1%
         min-height: 130px
@@ -182,10 +176,9 @@
       text-align: center
       z-index: 5
       background-color: #fff
-      +rmin(768)
-        height: 35px
-        padding-top: 2px
-        padding-bottom: 0px
+      height: 35px
+      padding-top: 2px
+      padding-bottom: 0px
       +rmin(1024)
         height: 50px
         padding-top: 10px

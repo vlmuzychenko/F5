@@ -1,7 +1,7 @@
 .btn
    padding: 0 15px
    border: 1px solid #000
-   border-radius: 25px
+   border-radius: 20px
    text-align: center
    outline: none
    background-color: #fff
@@ -17,28 +17,29 @@
      min-width: 190px
    +rmin(1366)
       font-size: 16px
-   +rmin(1600)
+   +rmin(1680)
       height: 50px
       line-height: 50px
       font-size: 18px
       min-width: 230px
-   &--bg
-      background-color: $accent
-      border-color: transparent
-      &:hover
-         background-color: lighten($accent, 10)
-   &--transp
-      background-color: #fff
-      border-color: #000
-      &:hover
-         background-color: $accent
-         border-color: transparent
+      border-radius: 25px
+   &:hover
+     background-color: $accent
+     border-color: $accent
    &_yellow
      background-color: $accent
      border-color: $accent
      &:hover
        background-color: #fff
        border-color: #000
+   &_dark-white
+     background-color: rgba(#060b0c, .6)
+     border-color: #fff
+     color: #fff
+     &:hover
+       background-color: #fff
+       border-color: #000
+       color: #000
    &_text-small
      text-transform: none
    &_dark
@@ -51,10 +52,11 @@
 
 .socials-btn
   display: inline-block
-  min-width: 70px !important
+  min-width: 70px
   background-color: #fff
   position: relative
   border: none
+  height: 40px
 
   &:before
     content: ''
@@ -91,10 +93,11 @@
 
   &_bordered
     border: 1px solid #000
+    border-radius: 20px
 
   &_hover
     &:hover
-      background-color: $accent
+      background-color: #fff
       border-color: #000 !important
       &.socials-btn
         &_fb:before
@@ -144,7 +147,7 @@
        i
          path
            fill: #475993
-   +rmin(1600)
+   +rmin(1680)
       height: 50px
       line-height: 50px
       font-size: 18px
@@ -160,7 +163,7 @@
      width: 34px
      height: 34px
      +trs
-     +rmin(1600)
+     +rmin(1680)
        width: 40px
        height: 40px
      &:before,
@@ -175,14 +178,14 @@
        color: #475993
        left: -65px
        top: -4px
-       +rmin(1600)
+       +rmin(1680)
          left: -69px
          top: -5px
      &:after
        color: #fff
        left: 40px
        top: -44px
-       +rmin(1600)
+       +rmin(1680)
          left: 45px
          top: -55px
      i

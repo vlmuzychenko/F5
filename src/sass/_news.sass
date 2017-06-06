@@ -29,15 +29,13 @@
         color: #000
 
 .news-top
-  height: 130px
   display: flex
   justify-content: space-between
   align-items: center
-  +rmin(768)
-    height: 60px
+  height: 60px
   +rmin(1366)
     height: 95px
-  +rmin(1600)
+  +rmin(1680)
     height: 130px
   &__title
     font-size: 30px
@@ -51,11 +49,10 @@
   &__btn
     margin-right: 7%
     transition: .3s
-    +rmin(768)
-      min-width: 120px
+    min-width: 120px
     +rmin(1366)
       min-width: 190px
-    +rmin(1600)
+    +rmin(1680)
       min-width: 230px
     &:hover
       background-color: #000
@@ -96,15 +93,14 @@
 
 .news-content-wrap
   +clr
+  height: calc(100% - 60px)
+  +rmin(1366)
+    height: calc(100% - 95px)
+  +rmin(1680)
+    height: calc(100% - 130px)
   .slick-list,
   .slick-track
     height: 100%
-  +rmin(768)
-    height: calc(100% - 60px)
-  +rmin(1366)
-    height: calc(100% - 95px)
-  +rmin(1600)
-    height: calc(100% - 130px)
 
 .news-content
   height: 100%
@@ -116,34 +112,32 @@
   box-sizing: border-box
   position: relative
   overflow: hidden
+  width: calc(25% - 10px)
+  height: calc(50% - 5px)
+  margin-right: 10px
+  +rmin(1366)
+    width: calc(25% - 20px)
+    height: calc(50% - 10px)
+    margin-right: 20px
   &__label
     display: inline-block
     margin-bottom: 10px
     +futura-demi
+    margin-bottom: 5px
+    font-size: 14px
+    padding: 1px 5px 3px
+    +rmin(1366)
+      font-size: 16px
+      margin-bottom: 10px
+    +rmin(1680)
+      margin-bottom: 15px
+      padding: 2px 5px 5px
     &_news
       background-color: $accent
       color: #000
     &_event
       background-color: #ee5004
       color: #fff
-    +rmin(768)
-      margin-bottom: 5px
-      font-size: 14px
-      padding: 1px 5px 3px
-    +rmin(1366)
-      font-size: 16px
-      margin-bottom: 10px
-    +rmin(1600)
-      margin-bottom: 15px
-      padding: 2px 5px 5px
-  +rmin(768)
-    width: calc(25% - 10px)
-    height: calc(50% - 5px)
-    margin-right: 10px
-  +rmin(1366)
-    width: calc(25% - 20px)
-    height: calc(50% - 10px)
-    margin-right: 20px
 
   &:hover
     .news-post__desc
@@ -161,12 +155,11 @@
     height: 100%
     background-color: transparent
     transition: bottom .3s ease-out, background-color .3s ease-out
-    +rmin(1600)
+    +rmin(1680)
       padding-top: 60px
 
   &__text
-    +rmin(768)
-      padding-left: 10px
+    padding-left: 10px
     +rmin(1024)
       padding-left: 30px
     +rmin(1680)
@@ -186,66 +179,42 @@
   &__title
     color: #fff
     +futura-demi
-    span
-      display: block
-    +rmin(768)
-      font-size: 14px
-      margin-bottom: 5px
-      width: 90%
+    font-size: 14px
+    margin-bottom: 5px
+    width: 90%
     +rmin(1024)
       font-size: 18px
       margin-bottom: 5px
     +rmin(1366)
       font-size: 21px
       margin-bottom: 10px
-    +rmin(1600)
+    +rmin(1680)
       font-size: 20px
       margin-bottom: 15px
       width: 75%
     +rmin(1920)
       font-size: 24px
+    span
+      display: block
 
   &__date
     display: block
     color: #fff
     +casp-reg
-    +rmin(768)
-      font-size: 12px
+    font-size: 12px
     +rmin(1366)
       font-size: 16px
 
   &__btn
-    background-color: rgba(0, 0, 0, .7)
-    color: #fff
-    border-color: $accent
     margin: 0 auto
     display: block
     opacity: 0
-    +rmin(768)
-      min-width: 120px
-      margin-top: 10px
-      line-height: 30px
-      height: 30px
+    margin-top: 10px
+    line-height: 30px
+    height: 30px
     +rmin(1024)
-      min-width: 120px
       margin-top: 15px
       line-height: 40px
       height: 40px
     +rmin(1366)
-      min-width: 190px
       margin-top: 20px
-    +rmin(1600)
-      min-width: 230px
-
-    &:hover
-      color: #000
-      background-color: #fff
-      border-color: #000
-
-    &_archive
-      border-color: rgba(0, 0, 0, .7)
-
-      &:hover
-        background-color: $accent
-        color: #000
-        border-color: $accent

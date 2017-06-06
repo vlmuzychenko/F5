@@ -2209,7 +2209,7 @@ html.fp-enabled,
 .btn {
   padding: 0 15px;
   border: 1px solid #000;
-  border-radius: 25px;
+  border-radius: 20px;
   text-align: center;
   outline: none;
   background-color: #fff;
@@ -2223,23 +2223,9 @@ html.fp-enabled,
   transition: all .25s ease-in-out;
 }
 
-.btn--bg {
+.btn:hover {
   background-color: #f6cb02;
-  border-color: transparent;
-}
-
-.btn--bg:hover {
-  background-color: #fdd92e;
-}
-
-.btn--transp {
-  background-color: #fff;
-  border-color: #000;
-}
-
-.btn--transp:hover {
-  background-color: #f6cb02;
-  border-color: transparent;
+  border-color: #f6cb02;
 }
 
 .btn_yellow {
@@ -2250,6 +2236,18 @@ html.fp-enabled,
 .btn_yellow:hover {
   background-color: #fff;
   border-color: #000;
+}
+
+.btn_dark-white {
+  background-color: rgba(6, 11, 12, 0.6);
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn_dark-white:hover {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
 }
 
 .btn_text-small {
@@ -2269,10 +2267,11 @@ html.fp-enabled,
 
 .socials-btn {
   display: inline-block;
-  min-width: 70px !important;
+  min-width: 70px;
   background-color: #fff;
   position: relative;
   border: none;
+  height: 40px;
 }
 
 .socials-btn:before {
@@ -2324,10 +2323,11 @@ html.fp-enabled,
 
 .socials-btn_bordered {
   border: 1px solid #000;
+  border-radius: 20px;
 }
 
 .socials-btn_hover:hover {
-  background-color: #f6cb02;
+  background-color: #fff;
   border-color: #000 !important;
 }
 
@@ -2463,6 +2463,7 @@ html.fp-enabled,
   background-size: cover;
   background-position: 50% 50%;
   *zoom: 1;
+  padding-top: 40px;
 }
 
 .calendar__layout:after {
@@ -2538,11 +2539,16 @@ html.fp-enabled,
   -webkit-transform: translateY(55%);
   -ms-transform: translateY(55%);
   transform: translateY(55%);
+  font-size: 11px;
   transition: all .25s ease-in-out;
 }
 
 .calendar__event-text {
   white-space: normal;
+}
+
+.calendar__event-text:first-child {
+  height: 40px;
 }
 
 .calendar__event-text + .calendar__event-text {
@@ -2563,6 +2569,7 @@ html.fp-enabled,
   border-radius: 25px;
   color: #f6cb02;
   background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
 }
 
 .calendar__event-more:hover {
@@ -2577,7 +2584,8 @@ html.fp-enabled,
 }
 
 .calendar__chapter {
-  max-height: 300px;
+  min-height: 119px;
+  height: 32%;
   *zoom: 1;
 }
 
@@ -2618,6 +2626,9 @@ html.fp-enabled,
   text-align: center;
   z-index: 5;
   background-color: #fff;
+  height: 35px;
+  padding-top: 2px;
+  padding-bottom: 0px;
 }
 
 .calendar__datepicker .datepicker {
@@ -3178,7 +3189,7 @@ html.fp-enabled,
   position: relative;
   margin-right: 30px;
   margin-bottom: 20px;
-  min-width: 100px;
+  min-width: 80px;
   transition: background 0.3s;
 }
 
@@ -3228,7 +3239,6 @@ html.fp-enabled,
 
 .card__order-btn {
   display: block;
-  vertical-align: top;
   margin: 0 auto;
   width: 230px;
 }
@@ -3357,8 +3367,8 @@ html.fp-enabled,
 
 .card-slider__nav .slick-track div {
   position: relative;
-  width: 99px !important;
-  height: 100px;
+  width: 50px !important;
+  height: 50px;
   background: no-repeat center center;
   background-size: cover;
   cursor: pointer;
@@ -4555,6 +4565,16 @@ keyframes spinMaSearch 100% {
   transform: rotate(360deg);
 }
 
+.fp-btn-container {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+}
+
+.fp-btn-container a + a {
+  margin-left: 15px;
+}
+
 .skew-section {
   width: 55%;
   height: 100%;
@@ -4613,23 +4633,6 @@ keyframes spinMaSearch 100% {
   -ms-transform: skewX(-16deg) translateX(-20%);
   transform: skewX(-16deg) translateX(-20%);
   box-shadow: inset -35px 0px 29px -4px rgba(0, 0, 0, 0.5);
-}
-
-.yacht-wiki-btn {
-  display: inline-block;
-  transition: .3s;
-  background-color: #f6cb02;
-  border-color: #f6cb02;
-  position: absolute;
-  bottom: 40px;
-  text-transform: uppercase;
-  z-index: 900;
-  right: 20px;
-}
-
-.yacht-wiki-btn:hover {
-  background-color: #fff;
-  border-color: #000;
 }
 
 .content-section {
@@ -4824,47 +4827,6 @@ keyframes spinMaSearch 100% {
   height: 70px;
 }
 
-.descr__btn-container {
-  position: absolute;
-  bottom: 40px;
-  right: 20px;
-}
-
-.descr__btn-container a + a {
-  margin-left: 15px;
-}
-
-.descr__btn {
-  display: inline-block;
-  transition: .3s;
-  text-transform: uppercase;
-}
-
-.descr__btn:not(last-child) {
-  margin-left: 15px;
-}
-
-.descr__btn_register {
-  background-color: #f6cb02;
-  border-color: #f6cb02;
-}
-
-.descr__btn_register:hover {
-  background-color: #fff;
-  border-color: #000;
-}
-
-.descr__btn_calendar {
-  border-color: #f6cb02;
-  color: #f6cb02;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.descr__btn_calendar:hover {
-  background-color: #f6cb02;
-  color: #000;
-}
-
 .details {
   width: 100%;
   height: 100vh;
@@ -4881,7 +4843,7 @@ keyframes spinMaSearch 100% {
 }
 
 .details__item-container {
-  max-width: 1600px;
+  max-width: 1680px;
   width: 95%;
   margin: 0 auto;
   display: -webkit-flex;
@@ -4996,9 +4958,9 @@ keyframes spinMaSearch 100% {
 }
 
 .price__title_period {
-  font-size: 48px;
   display: block;
   line-height: 0;
+  font-size: 30px;
 }
 
 .price__list-wrap {
@@ -5225,20 +5187,7 @@ keyframes spinMaSearch 100% {
   color: #000;
 }
 
-.wiki-main_archive .wiki__btn {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-}
-
-.wiki-main_archive .wiki__btn:hover {
-  background-color: #f6cb02;
-  border-color: #f6cb02;
-  color: #000;
-}
-
 .wiki-top {
-  height: 130px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -5248,13 +5197,14 @@ keyframes spinMaSearch 100% {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 60px;
 }
 
 .wiki-top__title {
-  font-size: 30px;
   color: #585858;
   text-transform: uppercase;
   font-family: FuturaPT-Bold, Arial, sans-serif;
+  font-size: 18px;
 }
 
 .wiki-top__btn {
@@ -5272,7 +5222,7 @@ keyframes spinMaSearch 100% {
 }
 
 .wiki-content-wrap {
-  height: calc(100% - 130px);
+  height: calc(100% - 60px);
 }
 
 .wiki-content-wrap .slick-track,
@@ -5300,18 +5250,38 @@ keyframes spinMaSearch 100% {
   background-size: cover;
   background-position: 50% 30%;
   box-sizing: border-box;
-  padding: 50px 35px;
   position: relative;
+  padding: 15px 10px;
+}
+
+.wiki.grid_1-2 {
+  padding: 15px 10px;
+}
+
+.wiki.grid_1-3 {
+  padding: 15px 10px;
+}
+
+.wiki.grid_1-3 .wiki__title {
+  font-size: 4px;
+}
+
+.wiki.grid_1-1 {
+  padding: 15px 10px;
+}
+
+.wiki.grid_1-1 .wiki__title {
+  font-size: 4px;
 }
 
 .wiki_comming-soon {
   background-image: url(../img/wiki-main/wiki-main-comming-soon.jpg);
   background-size: cover;
   background-position: 50% 50%;
-  font-size: 24px;
   color: #f6cb02;
   text-transform: uppercase;
   text-align: center;
+  font-size: 14px;
 }
 
 .wiki_comming-soon span {
@@ -5326,7 +5296,7 @@ keyframes spinMaSearch 100% {
   color: #fff;
   font-family: FuturaPT-Bold, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 7px;
 }
 
 .wiki__title span {
@@ -5350,19 +5320,10 @@ keyframes spinMaSearch 100% {
 }
 
 .wiki__btn {
-  border-color: #f6cb02;
-  text-transform: uppercase;
-  background-color: #f6cb02;
-  display: block;
   position: absolute;
   right: 7%;
-  transition: .3s;
+  bottom: 10px;
   font-family: Casper-Bold, Arial, sans-serif;
-}
-
-.wiki__btn:hover {
-  border-color: #000;
-  background-color: #fff;
 }
 
 .grid_1-1 {
@@ -5455,25 +5416,8 @@ keyframes spinMaSearch 100% {
   width: 100%;
 }
 
-.wiki-extended__btn {
-  display: inline-block;
-  text-transform: uppercase;
-}
-
-.wiki-extended__btn_main {
-  margin-right: 30px;
-  background-color: #f6cb02;
-  border-color: #f6cb02;
-}
-
-.wiki-extended__btn_main:hover {
-  background-color: #fff;
-  border-color: #000;
-}
-
-.wiki-extended__btn_calendar:hover {
-  background-color: #f6cb02;
-  border-color: #f6cb02;
+.wiki-extended__btn-container a + a {
+  margin-left: 15px;
 }
 
 .wiki-extended-slider {
@@ -5759,20 +5703,7 @@ keyframes spinMaSearch 100% {
 }
 
 .contacts__btn-popup {
-  transition: .3s;
-  text-transform: uppercase;
-  display: inline-block;
-  background-color: transparent;
-  border-color: #fff;
-  color: #fff;
-  min-width: 160px;
   margin-top: 5%;
-}
-
-.contacts__btn-popup:hover {
-  background-color: #f6cb02;
-  border-color: #f6cb02;
-  color: #000;
 }
 
 .contacts__items {
@@ -5813,6 +5744,9 @@ keyframes spinMaSearch 100% {
   box-sizing: border-box;
   background-color: #f6cb02;
   z-index: 200;
+  width: 60%;
+  padding: 20px 50px;
+  max-height: 90%;
 }
 
 .popup-contacts.active {
@@ -5827,21 +5761,25 @@ keyframes spinMaSearch 100% {
   transform: translate(0%, -50%);
 }
 
+.input-container {
+  margin-bottom: 5px;
+}
+
 .input-container label {
-  font-size: 18px;
   padding-left: 20px;
   font-family: Casper-Regular, Arial, sans-serif;
+  font-size: 13px;
 }
 
 .input-contacts {
   background-color: #fae067;
-  font-size: 36px;
-  padding: 12px 20px;
   box-sizing: border-box;
   font-family: Casper-Regular, Arial, sans-serif;
   width: 100%;
   border: 3px solid transparent;
   -webkit-appearance: none;
+  font-size: 17px;
+  padding: 9px 12px;
 }
 
 .input-contacts::-webkit-input-placeholder {
@@ -5874,7 +5812,7 @@ keyframes spinMaSearch 100% {
 
 .input-contacts_textarea {
   resize: none;
-  font-size: 24px;
+  font-size: 14px;
 }
 
 .input-contacts__descr {
@@ -5897,6 +5835,8 @@ keyframes spinMaSearch 100% {
   background-color: #fae067;
   height: auto;
   line-height: 1em;
+  font-size: 17px;
+  padding: 9px 12px;
 }
 
 .input-contacts_dropdown .ms-choice span {
@@ -5914,7 +5854,8 @@ keyframes spinMaSearch 100% {
 }
 
 .input-contacts_dropdown .ms-drop ul > li label {
-  font-size: 30px;
+  font-size: 14px;
+  padding: 9px 12px;
 }
 
 .input-contacts_dropdown .ms-drop ul > li label:hover {
@@ -5930,6 +5871,7 @@ keyframes spinMaSearch 100% {
   text-transform: uppercase;
   transition: .3s;
   background-color: transparent;
+  margin-top: 15px;
 }
 
 .btn_popup:hover {
@@ -5948,6 +5890,8 @@ keyframes spinMaSearch 100% {
   opacity: 0;
   z-index: 100;
   text-align: center;
+  width: 70%;
+  padding: 30px 40px;
 }
 
 .popup-substrate.active {
@@ -5971,26 +5915,26 @@ keyframes spinMaSearch 100% {
 }
 
 .popup-substrate__logo {
-  width: 55%;
   max-width: 400px;
+  width: 25%;
 }
 
 .popup-substrate__text {
   font-family: Casper-Regular, Arial, sans-serif;
-  font-size: 36px;
   color: #f6cb02;
-  margin-top: 35px;
+  font-size: 24px;
+  margin-top: 10px;
 }
 
 .popup-substrate__icon {
-  max-width: 190px;
-  margin-top: 50px;
+  max-width: 160px;
+  margin-top: 30px;
   margin-bottom: 25px;
 }
 
 .popup-substrate__timer {
   color: #262626;
-  font-size: 36px;
+  font-size: 21px;
   font-family: Casper-Regular, Arial, sans-serif;
 }
 
@@ -6181,8 +6125,8 @@ keyframes spinMaSearch 100% {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   cursor: pointer;
-  -webkit-perspective: 300px;
-  perspective: 300px;
+  -webkit-perspective: 100px;
+  perspective: 100px;
 }
 
 .card-front__frame-face {
@@ -6193,7 +6137,7 @@ keyframes spinMaSearch 100% {
   overflow: hidden;
   z-index: 1000;
   transition: background-color .5s;
-  border: 10px solid #f6cb02;
+  border: 5px solid #f6cb02;
   opacity: 0;
 }
 
@@ -6204,7 +6148,7 @@ keyframes spinMaSearch 100% {
   position: absolute;
   top: 0;
   left: 0;
-  border: 10px solid #f6cb02;
+  border: 5px solid #f6cb02;
   z-index: -2000;
   opacity: 0;
 }
@@ -6320,7 +6264,7 @@ keyframes spinMaSearch 100% {
 
 .hover:hover + .main-card .card-front__frame-face {
   background-color: rgba(0, 0, 0, 0.8);
-  border-right-width: 15px;
+  border-right-width: 7px;
   opacity: 1;
 }
 
@@ -6373,7 +6317,7 @@ keyframes spinMaSearch 100% {
   float: left;
   position: relative;
   z-index: 100;
-  box-shadow: 35px 0 34px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 20px 0 34px -1px rgba(0, 0, 0, 0.8);
 }
 
 .card-open__img-wrap {
@@ -6451,11 +6395,15 @@ keyframes spinMaSearch 100% {
   font-weight: 800;
   opacity: 0;
   font-family: FuturaPT-Bold, Arial, sans-serif;
+  font-size: 75px;
+  line-height: 50px;
+  letter-spacing: 0;
 }
 
 .card-open__items {
   margin-top: 15%;
   opacity: 0;
+  padding-left: 5%;
 }
 
 .card-open__items.active {
@@ -6470,6 +6418,7 @@ keyframes spinMaSearch 100% {
 
 .card-open__item {
   position: relative;
+  margin-top: 2%;
 }
 
 .card-open__item:nth-child(2) .card-open__link span {
@@ -6585,7 +6534,6 @@ keyframes spinMaSearch 100% {
   font-family: FuturaPT-Bold, Arial, sans-serif;
   display: inline-block;
   padding-right: 20px;
-  font-size: 30px;
   text-transform: uppercase;
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
@@ -6593,6 +6541,7 @@ keyframes spinMaSearch 100% {
   transition: 0.8s -webkit-transform cubic-bezier(0.19, 1, 0.22, 1);
   transition: 0.8s transform cubic-bezier(0.19, 1, 0.22, 1);
   transition: 0.8s transform cubic-bezier(0.19, 1, 0.22, 1), 0.8s -webkit-transform cubic-bezier(0.19, 1, 0.22, 1);
+  font-size: 16px;
 }
 
 .card-open__descr {
@@ -6600,10 +6549,11 @@ keyframes spinMaSearch 100% {
   left: 110%;
   width: 30%;
   font-family: FuturaPT-Demi, Arial, sans-serif;
-  line-height: 18px;
   letter-spacing: 1px;
   color: #fff;
   overflow: hidden;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .card-open__descr > span {
@@ -7608,7 +7558,6 @@ keyframes spinMaSearch 100% {
 }
 
 .news-top {
-  height: 130px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -7618,6 +7567,7 @@ keyframes spinMaSearch 100% {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 60px;
 }
 
 .news-top__title {
@@ -7630,6 +7580,7 @@ keyframes spinMaSearch 100% {
 .news-top__btn {
   margin-right: 7%;
   transition: .3s;
+  min-width: 120px;
 }
 
 .news-top__btn:hover {
@@ -7674,6 +7625,7 @@ keyframes spinMaSearch 100% {
 
 .news-content-wrap {
   *zoom: 1;
+  height: calc(100% - 60px);
 }
 
 .news-content-wrap:after {
@@ -7704,12 +7656,18 @@ keyframes spinMaSearch 100% {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  width: calc(25% - 10px);
+  height: calc(50% - 5px);
+  margin-right: 10px;
 }
 
 .news-post__label {
   display: inline-block;
   margin-bottom: 10px;
   font-family: FuturaPT-Demi, Arial, sans-serif;
+  margin-bottom: 5px;
+  font-size: 14px;
+  padding: 1px 5px 3px;
 }
 
 .news-post__label_news {
@@ -7741,6 +7699,10 @@ keyframes spinMaSearch 100% {
   transition: bottom .3s ease-out, background-color .3s ease-out;
 }
 
+.news-post__text {
+  padding-left: 10px;
+}
+
 .news-post__img {
   background-repeat: no-repeat;
   background-size: cover;
@@ -7761,6 +7723,9 @@ keyframes spinMaSearch 100% {
 .news-post__title {
   color: #fff;
   font-family: FuturaPT-Demi, Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+  width: 90%;
 }
 
 .news-post__title span {
@@ -7771,31 +7736,16 @@ keyframes spinMaSearch 100% {
   display: block;
   color: #fff;
   font-family: Casper-Regular, Arial, sans-serif;
+  font-size: 12px;
 }
 
 .news-post__btn {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  border-color: #f6cb02;
   margin: 0 auto;
   display: block;
   opacity: 0;
-}
-
-.news-post__btn:hover {
-  color: #000;
-  background-color: #fff;
-  border-color: #000;
-}
-
-.news-post__btn_archive {
-  border-color: rgba(0, 0, 0, 0.7);
-}
-
-.news-post__btn_archive:hover {
-  background-color: #f6cb02;
-  color: #000;
-  border-color: #f6cb02;
+  margin-top: 10px;
+  line-height: 30px;
+  height: 30px;
 }
 
 .news-extended {
@@ -7819,6 +7769,7 @@ keyframes spinMaSearch 100% {
   float: right;
   position: relative;
   box-sizing: border-box;
+  padding-right: 3%;
 }
 
 .news-extended__news {
@@ -7835,6 +7786,8 @@ keyframes spinMaSearch 100% {
   font-family: Casper-Regular, Arial, sans-serif;
   color: #676767;
   margin-left: 5%;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .news-extended__title {
@@ -7859,26 +7812,8 @@ keyframes spinMaSearch 100% {
   width: 100%;
 }
 
-.news-extended__btn {
-  display: inline-block;
-  text-transform: uppercase;
-  min-width: 160px;
-}
-
-.news-extended__btn_main {
-  margin-right: 30px;
-  background-color: #f6cb02;
-  border-color: #f6cb02;
-}
-
-.news-extended__btn_main:hover {
-  background-color: #fff;
-  border-color: #000;
-}
-
-.news-extended__btn_calendar:hover {
-  background-color: #f6cb02;
-  border-color: #f6cb02;
+.news-extended__btn-container a + a {
+  margin-left: 15px;
 }
 
 .news-extended__actions-btn {
@@ -7888,6 +7823,7 @@ keyframes spinMaSearch 100% {
   margin-left: 5%;
   margin-bottom: 10px;
   transition: background 0.3s;
+  min-width: 80px;
 }
 
 .news-extended__actions-btn:hover {
@@ -8223,6 +8159,8 @@ keyframes spinMaSearch 100% {
 
 .error404__social {
   position: absolute;
+  bottom: 85px;
+  right: 11%;
 }
 
 .error404__social-btn {
@@ -8274,10 +8212,10 @@ keyframes spinMaSearch 100% {
 }
 
 .error404__btn {
-  min-width: 230px;
   display: inline-block;
   transition: .3s;
   text-transform: uppercase;
+  min-width: 160px;
 }
 
 .error404__btn:not(last-child) {
@@ -8312,6 +8250,8 @@ keyframes spinMaSearch 100% {
   text-transform: uppercase;
   color: #336699;
   font-family: Casper-Bold, Arial, sans-serif;
+  font-size: 11px;
+  left: 36%;
 }
 
 .error404__text:after {
@@ -8323,6 +8263,9 @@ keyframes spinMaSearch 100% {
   background-repeat: no-repeat;
   position: absolute;
   bottom: -20px;
+  width: 185px;
+  height: 104px;
+  right: -195px;
 }
 
 .mouse-scroll {
@@ -8478,6 +8421,10 @@ keyframes spinMaSearch 100% {
   padding-bottom: 10px;
   transition: .3s;
   width: 100px;
+}
+
+.checkin-partners__item:not(:last-child) {
+  margin-right: 100px;
 }
 
 .checkin-partners__item:hover {
@@ -8670,94 +8617,8 @@ keyframes spinMaSearch 100% {
 
 @media only screen and (min-width: 768px) {
 
-  .calendar__layout {
-    padding-top: 40px;
-  }
-
-  .calendar__event-descr {
-    font-size: 11px;
-  }
-
-  .calendar__event-text:first-child {
-    height: 40px;
-  }
-
-  .calendar__event-more {
-    margin-top: 15px;
-  }
-
-  .calendar__chapter {
-    min-height: 119px;
-    height: 32%;
-  }
-
-  .calendar__datepicker {
-    height: 35px;
-    padding-top: 2px;
-    padding-bottom: 0px;
-  }
-
-  .card-slider__nav .slick-track div {
-    width: 50px !important;
-    height: 50px;
-  }
-
   .search__regions {
     min-height: 240px;
-  }
-
-  .price__title_period {
-    font-size: 30px;
-  }
-
-  .wiki-top {
-    height: 60px;
-  }
-
-  .wiki-top__title {
-    font-size: 18px;
-  }
-
-  .wiki-content-wrap {
-    height: calc(100% - 60px);
-  }
-
-  .wiki {
-    padding: 15px 10px;
-  }
-
-  .wiki.grid_1-2 {
-    padding: 15px 10px;
-  }
-
-  .wiki.grid_1-3 {
-    padding: 15px 10px;
-  }
-
-  .wiki.grid_1-3 .wiki__title {
-    font-size: 4px;
-  }
-
-  .wiki.grid_1-1 {
-    padding: 15px 10px;
-  }
-
-  .wiki.grid_1-1 .wiki__title {
-    font-size: 4px;
-  }
-
-  .wiki_comming-soon {
-    font-size: 14px;
-  }
-
-  .wiki__title {
-    font-size: 7px;
-  }
-
-  .wiki__btn {
-    min-width: 160px;
-    font-size: 14px;
-    bottom: 10px;
   }
 
   .wiki-extended__date {
@@ -8773,10 +8634,6 @@ keyframes spinMaSearch 100% {
   .wiki-extended__text {
     font-size: 14px;
     line-height: 16px;
-  }
-
-  .wiki-extended__btn {
-    min-width: 160px;
   }
 
   .wiki-extended-slider__video-btn span {
@@ -8799,201 +8656,12 @@ keyframes spinMaSearch 100% {
     height: 50px;
   }
 
-  .popup-contacts {
-    width: 60%;
-    padding: 20px 50px;
-    max-height: 90%;
-  }
-
-  .input-container {
-    margin-bottom: 5px;
-  }
-
-  .input-container label {
-    font-size: 13px;
-  }
-
-  .input-contacts {
-    font-size: 17px;
-    padding: 9px 12px;
-  }
-
-  .input-contacts_dropdown .ms-choice {
-    font-size: 17px;
-    padding: 9px 12px;
-  }
-
-  .input-contacts_dropdown .ms-drop ul > li label {
-    font-size: 14px;
-    padding: 9px 12px;
-  }
-
-  .card-front__frame {
-    -webkit-perspective: 100px;
-    perspective: 100px;
-  }
-
-  .card-front__frame-face {
-    border-width: 5px;
-  }
-
-  .card-front__frame-under {
-    border-width: 5px;
-  }
-
-  .hover:hover + .main-card .card-front__frame-face {
-    border-right-width: 7px;
-  }
-
-  .card-open__content-container {
-    box-shadow: 20px 0 34px -1px rgba(0, 0, 0, 0.8);
-  }
-
-  .card-open__title {
-    font-size: 75px;
-    line-height: 50px;
-    letter-spacing: 0;
-  }
-
-  .card-open__items {
-    padding-left: 5%;
-  }
-
-  .card-open__item {
-    margin-top: 2%;
-  }
-
-  .card-open__link > span {
-    font-size: 16px;
-  }
-
-  .card-open__descr {
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  .news-top {
-    height: 60px;
-  }
-
   .news-top__title {
     font-size: 18px;
   }
 
-  .news-top__btn {
-    min-width: 120px;
-  }
-
   .checkbox-wrap {
     margin-left: 0;
-  }
-
-  .news-content-wrap {
-    height: calc(100% - 60px);
-  }
-
-  .news-post__label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    padding: 1px 5px 3px;
-  }
-
-  .news-post {
-    width: calc(25% - 10px);
-    height: calc(50% - 5px);
-    margin-right: 10px;
-  }
-
-  .news-post__text {
-    padding-left: 10px;
-  }
-
-  .news-post__title {
-    font-size: 14px;
-    margin-bottom: 5px;
-    width: 90%;
-  }
-
-  .news-post__date {
-    font-size: 12px;
-  }
-
-  .news-post__btn {
-    min-width: 120px;
-    margin-top: 10px;
-    line-height: 30px;
-    height: 30px;
-  }
-
-  .news-extended__descr {
-    padding-right: 3%;
-  }
-
-  .news-extended__date {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  .news-extended__actions-btn {
-    min-width: 80px;
-  }
-
-  .error404__social {
-    bottom: 85px;
-    right: 11%;
-  }
-
-  .error404__btn {
-    min-width: 160px;
-  }
-
-  .error404__text {
-    font-size: 11px;
-    left: 36%;
-  }
-
-  .error404__text:after {
-    width: 185px;
-    height: 104px;
-    right: -195px;
-  }
-
-  .checkin-partners__item:not(:last-child) {
-    margin-right: 100px;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-
-  .input-contacts_textarea {
-    font-size: 14px;
-  }
-
-  .btn_popup {
-    margin-top: 15px;
-  }
-
-  .popup-substrate {
-    width: 70%;
-    padding: 30px 40px;
-  }
-
-  .popup-substrate__logo {
-    width: 25%;
-  }
-
-  .popup-substrate__text {
-    font-size: 24px;
-    margin-top: 10px;
-  }
-
-  .popup-substrate__icon {
-    max-width: 160px;
-    margin-top: 30px;
-  }
-
-  .popup-substrate__timer {
-    font-size: 21px;
   }
 }
 
@@ -9030,11 +8698,15 @@ keyframes spinMaSearch 100% {
     padding-bottom: 10px;
   }
 
+  .card__actions-btn {
+    min-width: 80px;
+  }
+
   .search__row {
     min-height: 310px;
   }
 
-  .yacht-wiki-btn {
+  .fp-btn-container {
     right: 70px;
   }
 
@@ -9057,10 +8729,6 @@ keyframes spinMaSearch 100% {
 
   .yacht-wiki-menu__item a {
     font-size: 14px;
-  }
-
-  .descr__btn-container {
-    right: 70px;
   }
 
   .details__item {
@@ -9356,7 +9024,6 @@ keyframes spinMaSearch 100% {
   }
 
   .news-post__btn {
-    min-width: 120px;
     margin-top: 15px;
     line-height: 40px;
     height: 40px;
@@ -9380,10 +9047,6 @@ keyframes spinMaSearch 100% {
 
   .news-extended__btn-container {
     bottom: 20px;
-  }
-
-  .news-extended__btn {
-    min-width: 190px;
   }
 
   .news-extended__social-title {
@@ -9627,8 +9290,6 @@ keyframes spinMaSearch 100% {
   }
 
   .wiki__btn {
-    min-width: 190px;
-    font-size: 16px;
     bottom: 40px;
   }
 
@@ -9645,10 +9306,6 @@ keyframes spinMaSearch 100% {
   .wiki-extended__text {
     font-size: 18px;
     line-height: 24px;
-  }
-
-  .wiki-extended__btn {
-    min-width: 190px;
   }
 
   .wiki-extended-slider__video-btn span {
@@ -9676,7 +9333,6 @@ keyframes spinMaSearch 100% {
   }
 
   .contacts__btn-popup {
-    min-width: 190px;
     margin-top: 80px;
   }
 
@@ -9771,15 +9427,15 @@ keyframes spinMaSearch 100% {
     height: calc(100% - 95px);
   }
 
-  .news-post__label {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
   .news-post {
     width: calc(25% - 20px);
     height: calc(50% - 10px);
     margin-right: 20px;
+  }
+
+  .news-post__label {
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 
   .news-post__title {
@@ -9792,7 +9448,6 @@ keyframes spinMaSearch 100% {
   }
 
   .news-post__btn {
-    min-width: 190px;
     margin-top: 20px;
   }
 
@@ -9877,13 +9532,14 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1680px) {
 
   .btn {
     height: 50px;
     line-height: 50px;
     font-size: 18px;
     min-width: 230px;
+    border-radius: 25px;
   }
 
   .btn-share {
@@ -9907,6 +9563,23 @@ keyframes spinMaSearch 100% {
   .btn-share__icon:after {
     left: 45px;
     top: -55px;
+  }
+
+  .calendar__layout {
+    padding-top: 80px;
+  }
+
+  .calendar__chapter {
+    min-height: 160px;
+    height: 33.33%;
+  }
+
+  .calendar__datepicker {
+    height: 80px;
+  }
+
+  .card__actions-btn {
+    min-width: 100px;
   }
 
   .search__regions {
@@ -9965,6 +9638,23 @@ keyframes spinMaSearch 100% {
 
   .details {
     padding-top: 200px;
+  }
+
+  .details__item {
+    max-width: 300px;
+  }
+
+  .details__item-title {
+    font-size: 40px;
+  }
+
+  .details__item-text {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+
+  .details__item-img {
+    height: 120px;
   }
 
   .carousel li {
@@ -10051,15 +9741,6 @@ keyframes spinMaSearch 100% {
     font-size: 18px;
   }
 
-  .wiki__btn {
-    min-width: 230px;
-    font-size: 16px;
-  }
-
-  .wiki-extended__btn {
-    min-width: 230px;
-  }
-
   .wiki-extended-slider__video-btn span {
     font-size: 30px;
     padding-top: 100px;
@@ -10068,6 +9749,22 @@ keyframes spinMaSearch 100% {
   .wiki-extended-slider__video-btn span:after {
     width: 95px;
     height: 95px;
+  }
+
+  .contacts__title {
+    font-size: 30px;
+  }
+
+  .contacts__social {
+    padding-top: 70px;
+  }
+
+  .contacts__items {
+    font-size: 24px;
+  }
+
+  .contacts__item_title {
+    margin-top: 45px;
   }
 
   .popup-contacts {
@@ -10144,6 +9841,11 @@ keyframes spinMaSearch 100% {
     line-height: 99px;
   }
 
+  .academy-menu {
+    top: 100px;
+    height: 85px;
+  }
+
   .academy-menu__item.active a {
     font-size: 20px;
   }
@@ -10161,160 +9863,22 @@ keyframes spinMaSearch 100% {
     font-size: 16px;
   }
 
-  .license__title {
-    font-size: 60px;
-  }
-
-  .license p {
-    font-size: 30px;
-  }
-
-  .course__icon {
-    width: 80px;
-    height: 80px;
-  }
-
-  .course__video-btn span {
-    font-size: 30px;
-    padding-top: 100px;
-  }
-
-  .course__video-btn span:after {
-    width: 95px;
-    height: 95px;
-  }
-
-  .course-right__icon {
-    width: 70px;
-    height: 70px;
-  }
-
-  .instructor__btn {
-    min-width: 230px;
-  }
-
-  .controll-btn_yellow {
-    width: 100px;
-    height: 50px;
-  }
-
-  .news-top {
-    height: 130px;
-  }
-
-  .news-top__btn {
-    min-width: 230px;
-  }
-
-  .news-content-wrap {
-    height: calc(100% - 130px);
-  }
-
-  .news-post__label {
-    margin-bottom: 15px;
-    padding: 2px 5px 5px;
-  }
-
-  .news-post__desc {
-    padding-top: 60px;
-  }
-
-  .news-post__title {
-    font-size: 20px;
-    margin-bottom: 15px;
-    width: 75%;
-  }
-
-  .news-post__btn {
-    min-width: 230px;
-  }
-
-  .event__btn {
-    min-width: 230px;
-  }
-
-  .event-place {
-    padding-top: 190px;
-  }
-
-  .event-place__title {
-    font-size: 30px;
-  }
-
-  .event-place__items {
-    font-size: 24px;
-  }
-
-  .e-partners-wrap {
-    padding-top: 190px;
-  }
-}
-
-@media only screen and (min-width: 1680px) {
-
-  .calendar__layout {
-    padding-top: 80px;
-  }
-
-  .calendar__chapter {
-    min-height: 160px;
-    height: 33.33%;
-  }
-
-  .calendar__datepicker {
-    height: 80px;
-  }
-
-  .details__item {
-    max-width: 300px;
-  }
-
-  .details__item-title {
-    font-size: 40px;
-  }
-
-  .details__item-text {
-    margin-top: 30px;
-    font-size: 22px;
-  }
-
-  .details__item-img {
-    height: 120px;
-  }
-
-  .contacts__title {
-    font-size: 30px;
-  }
-
-  .contacts__social {
-    padding-top: 70px;
-  }
-
-  .contacts__btn-popup {
-    min-width: 230px;
-  }
-
-  .contacts__items {
-    font-size: 24px;
-  }
-
-  .contacts__item_title {
-    margin-top: 45px;
-  }
-
-  .academy-menu {
-    top: 100px;
-    height: 85px;
-  }
-
   .license__main-title {
     font-size: 30px;
+  }
+
+  .license__title {
+    font-size: 60px;
   }
 
   .license__list {
     font-size: 25px;
     max-width: 60%;
     margin-top: 30px;
+  }
+
+  .license p {
+    font-size: 30px;
   }
 
   .license__list-item {
@@ -10346,8 +9910,28 @@ keyframes spinMaSearch 100% {
     font-size: 36px;
   }
 
+  .course__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .course__video-btn span {
+    font-size: 30px;
+    padding-top: 100px;
+  }
+
+  .course__video-btn span:after {
+    width: 95px;
+    height: 95px;
+  }
+
   .course-right::before {
     right: -60%;
+  }
+
+  .course-right__icon {
+    width: 70px;
+    height: 70px;
   }
 
   .fmk-top {
@@ -10396,6 +9980,10 @@ keyframes spinMaSearch 100% {
     height: calc(100% - 90px);
   }
 
+  .instructor__btn {
+    min-width: 230px;
+  }
+
   .instructor-card__bg-title {
     font-size: 200px;
     top: 60%;
@@ -10419,12 +10007,44 @@ keyframes spinMaSearch 100% {
     margin-bottom: 60px;
   }
 
+  .controll-btn_yellow {
+    width: 100px;
+    height: 50px;
+  }
+
   .instructor-card__btn-name {
     font-size: 18px;
   }
 
+  .news-top {
+    height: 130px;
+  }
+
+  .news-top__btn {
+    min-width: 230px;
+  }
+
+  .news-content-wrap {
+    height: calc(100% - 130px);
+  }
+
+  .news-post__label {
+    margin-bottom: 15px;
+    padding: 2px 5px 5px;
+  }
+
+  .news-post__desc {
+    padding-top: 60px;
+  }
+
   .news-post__text {
     padding-left: 40px;
+  }
+
+  .news-post__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    width: 75%;
   }
 
   .news-extended__descr {
@@ -10454,10 +10074,6 @@ keyframes spinMaSearch 100% {
     bottom: 40px;
   }
 
-  .news-extended__btn {
-    min-width: 230px;
-  }
-
   .news-extended-slider__title {
     font-size: 18px;
   }
@@ -10470,6 +10086,26 @@ keyframes spinMaSearch 100% {
   .news-extended-slider__nav .slick-track div {
     width: 100px !important;
     height: 100px;
+  }
+
+  .event__btn {
+    min-width: 230px;
+  }
+
+  .event-place {
+    padding-top: 190px;
+  }
+
+  .event-place__title {
+    font-size: 30px;
+  }
+
+  .event-place__items {
+    font-size: 24px;
+  }
+
+  .e-partners-wrap {
+    padding-top: 190px;
   }
 
   .e-partners-title {
@@ -10878,7 +10514,7 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1680px) {
 
   .card__info-item:nth-child(7), .card__info-item:nth-child(8) {
     width: 50%;
@@ -11185,27 +10821,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
-  }
-}
-
-@media only screen and (max-height: 768px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
 @media only screen and (max-width: 1000px) {
 
   .nav {
@@ -11238,17 +10853,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 840px) {
-
-  .header__lang {
-    margin-left: 15px;
-  }
-
-  .nav {
-    margin-right: 15px;
-  }
-}
-
 @media only screen and (max-height: 680px) {
 
   .calendar__event-descr {
@@ -11260,12 +10864,44 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
 @media only screen and (max-height: 750px) {
 
   .calendar__event-descr {
     -webkit-transform: translateY(40%);
     -ms-transform: translateY(40%);
     transform: translateY(40%);
+  }
+}
+
+@media only screen and (max-width: 840px) {
+
+  .header__lang {
+    margin-left: 15px;
+  }
+
+  .nav {
+    margin-right: 15px;
   }
 }
 

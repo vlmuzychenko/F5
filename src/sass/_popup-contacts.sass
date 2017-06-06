@@ -17,15 +17,14 @@
   box-sizing: border-box
   background-color: $accent
   z-index: 200
-  +rmin(768)
-    width: 60%
-    padding: 20px 50px
-    max-height: 90%
+  width: 60%
+  padding: 20px 50px
+  max-height: 90%
   +rmin(1024)
     width: 45%
     padding: 20px 90px
     max-height: 85%
-  +rmin(1600)
+  +rmin(1680)
     padding: 35px 110px 50px
 
   &.active
@@ -34,40 +33,34 @@
     transform: translate(0%, -50%)
 
 .input-container
-  +rmin(768)
-    margin-bottom: 5px
+  margin-bottom: 5px
   +rmin(1024)
     margin-bottom: 10px
-  +rmin(1600)
+  +rmin(1680)
     margin-bottom: 20px
 
   label
-    font-size: 18px
     padding-left: 20px
     +casp-reg
-    +rmin(768)
-      font-size: 13px
+    font-size: 13px
     +rmin(1024)
       font-size: 16px
-    +rmin(1600)
+    +rmin(1680)
       font-size: 18px
 
 .input-contacts
   background-color: #fae067
-  font-size: 36px
-  padding: 12px 20px
   box-sizing: border-box
   +casp-reg
   width: 100%
   border: 3px solid transparent
   -webkit-appearance: none
-  +rmin(768)
-    font-size: 17px
-    padding: 9px 12px
+  font-size: 17px
+  padding: 9px 12px
   +rmin(1024)
     font-size: 21px
     padding: 10px 20px
-  +rmin(1600)
+  +rmin(1680)
     font-size: 36px
     padding: 12px 20px
 
@@ -89,12 +82,10 @@
 
   &_textarea
     resize: none
-    font-size: 24px
-    +rmin(800)
-      font-size: 14px
+    font-size: 14px
     +rmin(1024)
       font-size: 18px
-    +rmin(1600)
+    +rmin(1680)
       font-size: 24px
   &__descr
     margin-top: 20px
@@ -110,13 +101,12 @@
       background-color: #fae067
       height: auto
       line-height: 1em
-      +rmin(768)
-        font-size: 17px
-        padding: 9px 12px
+      font-size: 17px
+      padding: 9px 12px
       +rmin(1024)
         font-size: 21px
         padding: 10px 20px
-      +rmin(1600)
+      +rmin(1680)
         font-size: 36px
         padding: 12px 20px
       span
@@ -128,14 +118,12 @@
     .ms-drop.bottom
       box-shadow: none
     .ms-drop ul > li label
-      font-size: 30px
-      +rmin(768)
-        font-size: 14px
-        padding: 9px 12px
+      font-size: 14px
+      padding: 9px 12px
       +rmin(1024)
         font-size: 18px
         padding: 10px 20px
-      +rmin(1600)
+      +rmin(1680)
         font-size: 30px
         padding: 12px 20px
     .ms-drop ul > li label:hover
@@ -150,11 +138,10 @@
   text-transform: uppercase
   transition: .3s
   background-color: transparent
-  +rmin(800)
-    margin-top: 15px
+  margin-top: 15px
   +rmin(1024)
     margin-top: 20px
-  +rmin(1600)
+  +rmin(1680)
     margin-top: 40px
 
   &:hover
@@ -170,9 +157,8 @@
   opacity: 0
   z-index: 100
   text-align: center
-  +rmin(800)
-    width: 70%
-    padding: 30px 40px
+  width: 70%
+  padding: 30px 40px
   +rmin(1024)
     width: 52%
     padding: 45px 100px
@@ -188,10 +174,8 @@
       opacity: 1
 
   &__logo
-    width: 55%
     max-width: 400px
-    +rmin(800)
-      width: 25%
+    width: 25%
     +rmin(1024)
       width: 40%
     +rmin(1700)
@@ -199,36 +183,28 @@
 
   &__text
     +casp-reg
-    font-size: 36px
     color: $accent
-    margin-top: 35px
-    +rmin(800)
-      font-size: 24px
-      margin-top: 10px
-    +rmin(1600)
+    font-size: 24px
+    margin-top: 10px
+    +rmin(1680)
       font-size: 36px
       margin-top: 35px
 
   &__icon
-    max-width: 190px
-    margin-top: 50px
+    max-width: 160px
+    margin-top: 30px
     margin-bottom: 25px
-    +rmin(800)
-      max-width: 160px
-      margin-top: 30px
-    +rmin(1600)
+    +rmin(1680)
       max-width: 190px
       margin-top: 50px
 
   &__timer
     color: #262626
-    font-size: 36px
+    font-size: 21px
     +casp-reg
-    +rmin(800)
-      font-size: 21px
     +rmin(1024)
       font-size: 24px
-    +rmin(1600)
+    +rmin(1680)
       font-size: 36px
 
 #timer

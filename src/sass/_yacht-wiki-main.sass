@@ -19,33 +19,21 @@
         background-color: #fff
         border-color: #000
         color: #000
-    .wiki__btn
-      background-color: rgba(0,0,0,.8)
-      border-color: rgba(0,0,0,.8)
-      color: #fff
-      &:hover
-        background-color: $accent
-        border-color: $accent
-        color: #000
 
 .wiki-top
-  height: 130px
   display: flex
   justify-content: space-between
   align-items: center
-  +rmin(768)
-    height: 60px
+  height: 60px
   +rmin(1366)
     height: 95px
-  +rmin(1600)
+  +rmin(1680)
     height: 130px
   &__title
-    font-size: 30px
     color: #585858
     text-transform: uppercase
     +futura-bold
-    +rmin(768)
-      font-size: 18px
+    font-size: 18px
     +rmin(1366)
       font-size: 30px
   &__btn
@@ -58,12 +46,10 @@
     margin-left: 10px
 
 .wiki-content-wrap
-  height: calc(100% - 130px)
-  +rmin(768)
-    height: calc(100% - 60px)
+  height: calc(100% - 60px)
   +rmin(1366)
     height: calc(100% - 95px)
-  +rmin(1600)
+  +rmin(1680)
     height: calc(100% - 130px)
   .slick-track,
   .slick-list
@@ -80,65 +66,56 @@
   background-size: cover
   background-position: 50% 30%
   box-sizing: border-box
-  padding: 50px 35px
   position: relative
-  +rmin(768)
-    padding: 15px 10px
+  padding: 15px 10px
   +rmin(1366)
     padding: 50px 35px
   &.grid_2-3 .wiki__title
     +rmin(1366)
       font-size: 10px
-    +rmin(1600)
+    +rmin(1680)
       font-size: 12px
   &.grid_1-2
-    +rmin(768)
-      padding: 15px 10px
+    padding: 15px 10px
     +rmin(1366)
       padding: 20px 15px
     .wiki__title
       +rmin(1366)
         font-size: 9px
-      +rmin(1600)
+      +rmin(1680)
         font-size: 12px
   &.grid_1-3
-    +rmin(768)
-      padding: 15px 10px
+    padding: 15px 10px
     +rmin(1366)
       padding: 20px 15px
     .wiki__title
-      +rmin(768)
-        font-size: 4px
+      font-size: 4px
       +rmin(1366)
         font-size: 8px
-      +rmin(1600)
+      +rmin(1680)
         font-size: 11px
   &.grid_1-1
-    +rmin(768)
-      padding: 15px 10px
+    padding: 15px 10px
     +rmin(1366)
       padding: 20px 15px
     .wiki__title
-      +rmin(768)
-        font-size: 4px
+      font-size: 4px
       +rmin(1366)
         font-size: 6px
-      +rmin(1600)
+      +rmin(1680)
         font-size: 8px
 
   &_comming-soon
     background-image: url(../img/wiki-main/wiki-main-comming-soon.jpg)
     background-size: cover
     background-position: 50% 50%
-    font-size: 24px
     color: $accent
     text-transform: uppercase
     text-align: center
-    +rmin(768)
-      font-size: 14px
+    font-size: 14px
     +rmin(1366)
       font-size: 18px
-    +rmin(1600)
+    +rmin(1680)
       font-size: 24px
     span
       padding-top: 30%
@@ -151,14 +128,12 @@
     color: #fff
     +futura-bold
     text-transform: uppercase
-    font-size: 18px
+    font-size: 7px
     span
       display: block
-    +rmin(768)
-      font-size: 7px
     +rmin(1366)
       font-size: 12px
-    +rmin(1600)
+    +rmin(1680)
       font-size: 18px
     &_name
       font-size: 6.6666em
@@ -172,28 +147,12 @@
       line-height: .5em
 
   &__btn
-    border-color: $accent
-    text-transform: uppercase
-    background-color: $accent
-    display: block
     position: absolute
     right: 7%
-    transition: .3s
+    bottom: 10px
     +casp-bold
-    &:hover
-      border-color: #000
-      background-color: #fff
-    +rmin(768)
-      min-width: 160px
-      font-size: 14px
-      bottom: 10px
     +rmin(1366)
-      min-width: 190px
-      font-size: 16px
       bottom: 40px
-    +rmin(1600)
-      min-width: 230px
-      font-size: 16px
 
 .grid_1-1
   width: calc(25% - 5px)

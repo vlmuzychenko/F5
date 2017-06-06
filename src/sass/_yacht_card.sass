@@ -107,7 +107,7 @@
       &:nth-child(7),
       &:nth-child(8)
          width: 40%
-         +r(1600)
+         +r(1680)
             width: 50%
    &__info-pic
       position: relative
@@ -172,7 +172,11 @@
       position: relative
       margin-right: 30px
       margin-bottom: 20px
-      min-width: 100px
+      min-width: 80px
+      +rmin(1024)
+        min-width: 80px
+      +rmin(1680)
+        min-width: 100px
       +tr(background .3s)
       &:hover
          background: $accent
@@ -195,7 +199,6 @@
       font-size: 0
    &__order-btn
       display: block
-      vertical-align: top
       margin: 0 auto
       width: 230px
       +r(1400)
@@ -294,8 +297,8 @@
         margin: 0 auto
         div
            position: relative
-           width: 99px !important
-           height: 100px
+           width: 50px !important
+           height: 50px
            background: no-repeat center center
            background-size: cover
            cursor: pointer
@@ -304,9 +307,6 @@
            transition: .3s
            &:not(:last-child)
              margin-right: 10px
-           +rmin(768)
-             width: 50px !important
-             height: 50px
            +rmin(1366)
              width: 100px !important
              height: 100px

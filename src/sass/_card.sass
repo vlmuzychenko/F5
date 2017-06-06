@@ -58,7 +58,7 @@ $black: #161616
       height: 60vh !important
     +rmin(1024)
         height: 70vh
-    +rmin(1600)
+    +rmin(1680)
         height: 60vh
     &:after
         content: ''
@@ -70,7 +70,7 @@ $black: #161616
         bottom: 0
         +rmin(1024)
             box-shadow: 0 30px 20px 5px #171717
-        +rmin(1600)
+        +rmin(1680)
             box-shadow: 0 65px 20px 5px #171717
 
 .card-front
@@ -119,9 +119,7 @@ $black: #161616
         left: 50%
         transform: translateX(-50%)
         cursor: pointer
-        perspective: 300px
-        +rmin(768)
-          perspective: 100px
+        perspective: 100px
         +rmin(1024)
           perspective: 300px
     &__frame-face
@@ -132,13 +130,11 @@ $black: #161616
         overflow: hidden
         z-index: 1000
         transition: background-color .5s
-        border: 10px solid $accent
+        border: 5px solid $accent
         opacity: 0
-        +rmin(768)
-            border-width: 5px
         +rmin(1024)
             border-width: 7px
-        +rmin(1600)
+        +rmin(1680)
             border-width: 10px
     &__frame-under
         height: 100%
@@ -147,14 +143,12 @@ $black: #161616
         position: absolute
         top: 0
         left: 0
-        border: 10px solid $accent
+        border: 5px solid $accent
         z-index: -2000
         opacity: 0
-        +rmin(768)
-            border-width: 5px
         +rmin(1024)
             border-width: 7px
-        +rmin(1600)
+        +rmin(1680)
             border-width: 10px
 
 .card-small
@@ -221,13 +215,11 @@ $black: #161616
             opacity: 1
         & + .main-card .card-front__frame-face
             background-color: rgba(0,0,0,.8)
-            border-right-width: 15px
+            border-right-width: 7px
             opacity: 1
-            +rmin(768)
-                border-right-width: 7px
             +rmin(1024)
                 border-right-width: 9px
-            +rmin(1600)
+            +rmin(1680)
                 border-right-width: 15px
         & + .main-card .card-front__title_top
             bottom: 104%
@@ -261,9 +253,7 @@ $black: #161616
         float: left
         position: relative
         z-index: 100
-        box-shadow: 35px 0 34px -1px rgba(0,0,0,.8)
-        +rmin(768)
-          box-shadow: 20px 0 34px -1px rgba(0,0,0,.8)
+        box-shadow: 20px 0 34px -1px rgba(0,0,0,.8)
         +rmin(1366)
           box-shadow: 35px 0 34px -1px rgba(0,0,0,.8)
     &__img-wrap
@@ -319,22 +309,20 @@ $black: #161616
         font-weight: 800
         opacity: 0
         +futura-bold
-        +rmin(768)
-            font-size: 75px
-            line-height: 50px
-            letter-spacing: 0
+        font-size: 75px
+        line-height: 50px
+        letter-spacing: 0
         +rmin(1366)
             font-size: 120px
             line-height: 80px
             letter-spacing: 8px
-        +rmin(1600)
+        +rmin(1680)
             font-size: 150px
             line-height: 99px
     &__items
         margin-top: 15%
         opacity: 0
-        +rmin(768)
-            padding-left: 5%
+        padding-left: 5%
         +rmin(1024)
             padding-left: 15%
         &.active
@@ -343,8 +331,7 @@ $black: #161616
                 transform: translateY(0%)
     &__item
         position: relative
-        +rmin(768)
-            margin-top: 2%
+        margin-top: 2%
         +rmin(1500)
           margin-top: 4%
         &:nth-child(2) .card-open__link span
@@ -428,12 +415,10 @@ $black: #161616
             +futura-bold
             display: inline-block
             padding-right: 20px
-            font-size: 30px
             text-transform: uppercase
             transform: translateY(100%)
             transition: .8s transform cubic-bezier(.19,1,.22,1)
-            +rmin(768)
-                font-size: 16px
+            font-size: 16px
             +rmin(1366)
                 font-size: 21px
             +rmin(1500)
@@ -443,13 +428,11 @@ $black: #161616
         left: 110%
         width: 30%
         +futura-demi
-        line-height: 18px
         letter-spacing: 1px
         color: #fff
         overflow: hidden
-        +rmin(768)
-          font-size: 14px
-          line-height: 16px
+        font-size: 14px
+        line-height: 16px
         +rmin(1366)
             font-size: 18px
             line-height: 18px

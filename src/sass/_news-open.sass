@@ -21,8 +21,7 @@
     float: right
     position: relative
     box-sizing: border-box
-    +rmin(768)
-      padding-right: 3%
+    padding-right: 3%
     +rmin(1680)
       padding-right: 7%
 
@@ -45,9 +44,8 @@
     +casp-reg
     color: #676767
     margin-left: 5%
-    +rmin(768)
-      font-size: 14px
-      margin-bottom: 5px
+    font-size: 14px
+    margin-bottom: 5px
     +rmin(1366)
       font-size: 18px
       margin-bottom: 15px
@@ -89,27 +87,9 @@
       bottom: 20px
     +rmin(1680)
       bottom: 40px
+    a + a
+      margin-left: 15px
 
-  &__btn
-    display: inline-block
-    text-transform: uppercase
-    min-width: 160px
-    +rmin(1024)
-      min-width: 190px
-    +rmin(1680)
-      min-width: 230px
-
-    &_main
-      margin-right: 30px
-      background-color: $accent
-      border-color: $accent
-      &:hover
-        background-color: #fff
-        border-color: #000
-    &_calendar
-      &:hover
-        background-color: $accent
-        border-color: $accent
 
   &__actions-btn
     display: inline-block
@@ -118,8 +98,7 @@
     margin-left: 5%
     margin-bottom: 10px
     +tr(background .3s)
-    +rmin(768)
-      min-width: 80px
+    min-width: 80px
     +rmin(1366)
       min-width: 100px
     &:hover

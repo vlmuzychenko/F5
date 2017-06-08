@@ -72,7 +72,7 @@
     margin: 25px 0
 
 .checkin-form
-  width: 500px
+  width: 545px
   margin: 0 auto
   &__input
     margin-bottom: 5px
@@ -104,6 +104,8 @@
       +casp-reg
       +rmin(1024)
         font-size: 16px
+        padding: 8px 20px
+      +rmin(1366)
         padding: 10px 20px
       +rmin(1680)
         font-size: 26px
@@ -154,8 +156,8 @@
       .ms-drop ul > li label
         color: #000
         font-size: 14px
-        padding: 9px 12px
-        +rmin(1024)
+        padding: 8px 12px
+        +rmin(1366)
           font-size: 18px
           padding: 10px 20px
         +rmin(1680)
@@ -165,7 +167,9 @@
         background-color: #ffefa3
   &__btn-container
     text-align: center
-    margin-top: 20px
+    margin-top: 10px
+    +rmin(1366)
+      margin-top: 20px
     +rmin(1680)
       margin-top: 50px
     a + a

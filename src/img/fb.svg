@@ -1,5 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="30" viewBox="0 0 15 30">
-  <image x="1" width="14" height="29" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAdCAMAAACt1K3WAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAV1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////8AAACO+Cj6AAAAG3RSTlMAavtRBOBAc5ssFRCI79Gg0NS0lHRUcMrogB5pWVBhAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFZJREFUGNPNzskWQDAQRNFGEGIe2tD//590cE5qx85b1d0VkRbFcuWViAQ0KTATYO6XLUrnlJWqNnRnlc0japXdG0pYjxyQI3JCzsTMi651O9u/3fglDyHqFtYrRemVAAAAAElFTkSuQmCC"/>
-  <image x="4" y="29" width="6" height="1" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAABAgMAAACApzdjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEX///////////8AAAD1GyhhAAAAAnRSTlOg0F5HowUAAAABYktHRAMRDEzyAAAACXBIWXMAAAsSAAALEgHS3X78AAAAC0lEQVQI12PQmgAAAOcAu7NyBRkAAAAASUVORK5CYII="/>
-  <image y="10" width="1" height="6" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAGAgMAAAB/fhyiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX///////8AAACO9MPsAAAAAXRSTlNwEOOpWgAAAAFiS0dEAmYLfGQAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAANSURBVAjXY3BggEEGAAjMAUFxE6p3AAAAAElFTkSuQmCC"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="11px" height="21.07px" viewBox="0 0 11 21.07" enable-background="new 0 0 11 21.07" xml:space="preserve">
+<g>
+	<path fill="#FFFFFF" d="M8.77,3.556c0.654-0.022,2.231-0.005,2.231-0.005V0.156c-0.348-0.035-0.713-0.086-1.078-0.104
+		C9.252,0.024,8.583-0.011,7.91,0.004C6.888,0.027,5.921,0.275,5.074,0.881C4.105,1.579,3.573,2.56,3.371,3.716
+		c-0.085,0.478-0.106,0.972-0.12,1.457C3.232,5.935,3.249,7.746,3.249,7.746H0v3.791h3.23v9.534h3.947v-9.518h3.221
+		c0.163-1.261,0.325-2.509,0.495-3.81c-0.259,0-3.74,0-3.74,0s0.006-1.88,0.031-2.696C7.215,3.93,7.876,3.588,8.77,3.556"/>
+</g>
 </svg>

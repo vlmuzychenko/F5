@@ -2272,6 +2272,7 @@ html.fp-enabled,
   position: relative;
   border: none;
   height: 40px;
+  transition: background-color .3s ease;
 }
 
 .socials-btn:before {
@@ -2283,23 +2284,24 @@ html.fp-enabled,
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-repeat: no-repeat;
-  transition: background .3s ease, border-color .3s ease;
+  background-size: contain;
+  transition: border-color .3s ease;
 }
 
 .socials-btn_fb:before {
-  background-image: url("../img/fb_black.png");
+  background-image: url("../img/fb_black.svg");
   width: 16px;
   height: 31px;
 }
 
 .socials-btn_inst:before {
-  background-image: url("../img/inst_black.png");
+  background-image: url("../img/insta_black.svg");
   width: 32px;
   height: 32px;
 }
 
 .socials-btn_yt:before {
-  background-image: url("../img/yt_black.png");
+  background-image: url("../img/yt_black.svg");
   width: 26px;
   height: 30px;
 }
@@ -2310,15 +2312,15 @@ html.fp-enabled,
 }
 
 .socials-btn_white.socials-btn_fb:before {
-  background-image: url("../img/fb.png");
+  background-image: url("../img/fb.svg");
 }
 
 .socials-btn_white.socials-btn_inst:before {
-  background-image: url("../img/inst.png");
+  background-image: url("../img/insta.svg");
 }
 
 .socials-btn_white.socials-btn_yt:before {
-  background-image: url("../img/yt.png");
+  background-image: url("../img/yt.svg");
 }
 
 .socials-btn_bordered {
@@ -2332,15 +2334,15 @@ html.fp-enabled,
 }
 
 .socials-btn_hover:hover.socials-btn_fb:before {
-  background-image: url("../img/fb_black.png");
+  background-image: url("../img/fb_black.svg");
 }
 
 .socials-btn_hover:hover.socials-btn_inst:before {
-  background-image: url("../img/inst_black.png");
+  background-image: url("../img/insta_black.svg");
 }
 
 .socials-btn_hover:hover.socials-btn_yt:before {
-  background-image: url("../img/yt_black.png");
+  background-image: url("../img/yt_black.svg");
 }
 
 .socials-btn:not(:last-child) {
@@ -2569,7 +2571,8 @@ html.fp-enabled,
   border-radius: 25px;
   color: #f6cb02;
   background-color: rgba(0, 0, 0, 0.2);
-  margin-top: 15px;
+  position: relative;
+  bottom: -10%;
 }
 
 .calendar__event-more:hover {
@@ -5655,7 +5658,6 @@ keyframes spinMaSearch 100% {
 .contacts-wrap {
   width: 40%;
   height: 100%;
-  background-color: #000;
   position: absolute;
   z-index: 200;
 }
@@ -8436,7 +8438,7 @@ keyframes spinMaSearch 100% {
 }
 
 .checkin-form {
-  width: 500px;
+  width: 545px;
   margin: 0 auto;
 }
 
@@ -8555,7 +8557,7 @@ keyframes spinMaSearch 100% {
 .checkin-form__input_dropdown .ms-drop ul > li label {
   color: #000;
   font-size: 14px;
-  padding: 9px 12px;
+  padding: 8px 12px;
 }
 
 .checkin-form__input_dropdown .ms-drop ul > li label:hover {
@@ -8564,7 +8566,7 @@ keyframes spinMaSearch 100% {
 
 .checkin-form__btn-container {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .checkin-form__btn-container a + a {
@@ -8681,10 +8683,6 @@ keyframes spinMaSearch 100% {
 
   .calendar__event-text:first-child {
     height: 60px;
-  }
-
-  .calendar__event-more {
-    margin-top: 30px;
   }
 
   .calendar__chapter {
@@ -9137,17 +9135,12 @@ keyframes spinMaSearch 100% {
 
   .checkin-form__input input {
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 8px 20px;
   }
 
   .checkin-form__input_dropdown .ms-choice {
     font-size: 16px;
     padding: 8px 20px;
-  }
-
-  .checkin-form__input_dropdown .ms-drop ul > li label {
-    font-size: 18px;
-    padding: 10px 20px;
   }
 
   .checkin-form__descr {
@@ -9502,6 +9495,19 @@ keyframes spinMaSearch 100% {
 
   .checkin-form__input label {
     font-size: 14px;
+  }
+
+  .checkin-form__input input {
+    padding: 10px 20px;
+  }
+
+  .checkin-form__input_dropdown .ms-drop ul > li label {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .checkin-form__btn-container {
+    margin-top: 20px;
   }
 
   .checkin-form__btn {

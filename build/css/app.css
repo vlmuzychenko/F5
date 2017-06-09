@@ -923,7 +923,7 @@ input[type='checkbox'], select, input[type='radio'] {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  font-family: 'Casper-Regular', Arial, sans-serif;
+  font-family: 'FuturaPT-Book', Arial, sans-serif;
   font-size: 16px;
   color: #000;
 }
@@ -968,12 +968,12 @@ input[type='checkbox'], select, input[type='radio'] {
   text-overflow: ellipsis;
   display: block;
   padding: 0 0 0 10px;
-  font-family: 'Casper-Regular', Arial, sans-serif;
+  font-family: 'FuturaPT-Book', Arial, sans-serif;
 }
 
 .ms-choice > span.placeholder {
   font-size: 16px;
-  font-family: 'Casper-Regular', Arial, sans-serif;
+  font-family: 'FuturaPT-Book', Arial, sans-serif;
   color: #000;
 }
 
@@ -2571,8 +2571,12 @@ html.fp-enabled,
   border-radius: 25px;
   color: #f6cb02;
   background-color: rgba(0, 0, 0, 0.2);
-  position: relative;
-  bottom: -10%;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .calendar__event-more:hover {
@@ -2792,6 +2796,7 @@ html.fp-enabled,
 
 .logo {
   margin-right: auto;
+  width: 105px;
 }
 
 .nav {
@@ -8459,7 +8464,7 @@ keyframes spinMaSearch 100% {
   width: 100%;
   font-size: 14px;
   padding: 5px 20px;
-  font-family: Casper-Regular, Arial, sans-serif;
+  font-family: FuturaPT-Book, Arial, sans-serif;
 }
 
 .checkin-form__input input::-webkit-input-placeholder {
@@ -9573,6 +9578,10 @@ keyframes spinMaSearch 100% {
 
   .calendar__layout {
     padding-top: 80px;
+  }
+
+  .calendar__event-more {
+    bottom: 20%;
   }
 
   .calendar__chapter {

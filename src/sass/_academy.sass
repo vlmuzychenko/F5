@@ -29,13 +29,6 @@
         border-bottom: 3px solid transparent
       &.active
         border-bottom-color: #000
-        a
-          display: block
-          font-size: 15px
-          +rmin(1024)
-            font-size: 18px
-          +rmin(1680)
-            font-size: 20px
       & + &
         margin-left: 9px
         +rmin(1024)
@@ -60,6 +53,7 @@
         font-size: 11px
         padding: 0 2px 5px
         transition: font-size .5s
+        display: block
         +rmin(1024)
           font-size: 14px
         +rmin(1680)

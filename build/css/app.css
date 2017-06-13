@@ -4686,10 +4686,6 @@ keyframes spinMaSearch 100% {
   border-bottom-color: #000;
 }
 
-.yacht-wiki-menu__item.active a {
-  font-size: 15px;
-}
-
 .yacht-wiki-menu__item + .yacht-wiki-menu__item {
   margin-left: 20px;
 }
@@ -6603,11 +6599,6 @@ keyframes spinMaSearch 100% {
   border-bottom-color: #000;
 }
 
-.academy-menu__item.active a {
-  display: block;
-  font-size: 15px;
-}
-
 .academy-menu__item + .academy-menu__item {
   margin-left: 9px;
 }
@@ -6628,6 +6619,7 @@ keyframes spinMaSearch 100% {
   font-size: 11px;
   padding: 0 2px 5px;
   transition: font-size .5s;
+  display: block;
 }
 
 .license {
@@ -8709,10 +8701,6 @@ keyframes spinMaSearch 100% {
     right: 70px;
   }
 
-  .yacht-wiki-menu__item.active a {
-    font-size: 18px;
-  }
-
   .yacht-wiki-menu__item {
     border-bottom: 3px solid transparent;
   }
@@ -8869,10 +8857,6 @@ keyframes spinMaSearch 100% {
 
   .academy-menu__item {
     border-bottom: 3px solid transparent;
-  }
-
-  .academy-menu__item.active a {
-    font-size: 18px;
   }
 
   .academy-menu__item + .academy-menu__item {
@@ -9601,10 +9585,6 @@ keyframes spinMaSearch 100% {
     top: 130px;
   }
 
-  .yacht-wiki-menu__item.active a {
-    font-size: 20px;
-  }
-
   .yacht-wiki-menu__item + .yacht-wiki-menu__item {
     margin-left: 40px;
   }
@@ -9855,10 +9835,6 @@ keyframes spinMaSearch 100% {
   .academy-menu {
     top: 100px;
     height: 85px;
-  }
-
-  .academy-menu__item.active a {
-    font-size: 20px;
   }
 
   .academy-menu__item + .academy-menu__item {

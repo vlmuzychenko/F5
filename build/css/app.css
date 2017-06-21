@@ -2362,7 +2362,6 @@ html.fp-enabled,
   outline: none;
   background-color: #fff;
   display: inline-block;
-  margin-left: 5%;
   overflow: hidden;
   text-transform: capitalize;
   cursor: pointer;
@@ -5371,6 +5370,10 @@ keyframes spinMaSearch 100% {
   transition: background-color .5s;
 }
 
+.wiki-extended__view_l {
+  width: 60%;
+}
+
 .wiki-extended__view .close {
   display: none;
   width: 70px;
@@ -5393,20 +5396,43 @@ keyframes spinMaSearch 100% {
   float: right;
   position: relative;
   box-sizing: border-box;
-  padding: 5% 3%;
+  padding: 2% 3%;
+}
+
+.wiki-extended__descr_s {
+  width: 40%;
+  padding-left: 15px;
+}
+
+.wiki-extended__label {
+  font-family: FuturaPT-Demi, Arial, sans-serif;
+  font-size: 18px;
+  background-color: #ccc;
+  display: inline-block;
+  padding: 2px 10px 5px 5%;
+  margin-bottom: 5px;
+  margin-left: -15px;
+  padding-left: 15px;
 }
 
 .wiki-extended__date {
   font-family: FuturaPT-Demi, Arial, sans-serif;
   color: #676767;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .wiki-extended__title {
   font-family: FuturaPT-Demi, Arial, sans-serif;
+  font-size: 21px;
+  margin-bottom: 5px;
 }
 
 .wiki-extended__text {
-  font-family: FuturaPT-Demi, Arial, sans-serif;
+  font-family: Casper-Regular, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 10px;
 }
 
 .wiki-extended__btn-container {
@@ -5447,20 +5473,18 @@ keyframes spinMaSearch 100% {
 }
 
 .wiki-extended-slider__video-btn span {
-  font-size: 30px;
   font-family: Casper-Bold, Arial, sans-serif;
   color: #fff;
   display: block;
-  padding-top: 100px;
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+  font-size: 21px;
+  padding-top: 55px;
 }
 
 .wiki-extended-slider__video-btn span:after {
   content: '';
   display: block;
   position: absolute;
-  width: 95px;
-  height: 95px;
   background-image: url(../img/video-btn.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -5470,6 +5494,8 @@ keyframes spinMaSearch 100% {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
 }
 
 .wiki-extended-slider__body {
@@ -5542,6 +5568,8 @@ keyframes spinMaSearch 100% {
   transform: translateX(-50%);
   height: 100px;
   z-index: 5;
+  bottom: 0;
+  width: 360px;
 }
 
 .wiki-extended-slider__nav .slick-slide {
@@ -5555,14 +5583,14 @@ keyframes spinMaSearch 100% {
 
 .wiki-extended-slider__nav .slick-track div {
   position: relative;
-  width: 99px !important;
-  height: 100px;
   background: no-repeat center center;
   background-size: cover;
   cursor: pointer;
   z-index: 6;
   opacity: .3;
   transition: .3s;
+  width: 50px !important;
+  height: 50px;
 }
 
 .wiki-extended-slider__nav .slick-track div:not(:last-child) {
@@ -7748,11 +7776,13 @@ keyframes spinMaSearch 100% {
   overflow: hidden;
   height: calc(100vh - 100px);
   margin-top: 100px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .news-extended__view {
   position: relative;
-  float: left;
   width: 45%;
   height: 100%;
   transition: background-color .5s;
@@ -7761,10 +7791,9 @@ keyframes spinMaSearch 100% {
 .news-extended__descr {
   width: 50%;
   height: 100%;
-  float: right;
   position: relative;
-  box-sizing: border-box;
   padding-right: 3%;
+  padding-left: 15px;
 }
 
 .news-extended__news {
@@ -7775,26 +7804,25 @@ keyframes spinMaSearch 100% {
   padding: 2px 10px 5px 5%;
   margin-top: 10px;
   margin-bottom: 5px;
+  margin-left: -15px;
+  padding-left: 15px;
 }
 
 .news-extended__date {
   font-family: Casper-Regular, Arial, sans-serif;
   color: #676767;
-  margin-left: 5%;
   font-size: 14px;
   margin-bottom: 5px;
 }
 
 .news-extended__title {
   font-family: FuturaPT-Demi, Arial, sans-serif;
-  margin-left: 5%;
   font-size: 16px;
   margin-bottom: 5px;
 }
 
 .news-extended__text {
   font-family: Casper-Regular, Arial, sans-serif;
-  margin-left: 5%;
   margin-bottom: 10px;
   font-size: 11px;
   line-height: 16px;
@@ -7802,9 +7830,9 @@ keyframes spinMaSearch 100% {
 
 .news-extended__btn-container {
   position: absolute;
-  left: 5%;
-  bottom: 5px;
   width: 100%;
+  bottom: 5px;
+  left: 15px;
 }
 
 .news-extended__btn-container a + a {
@@ -7815,7 +7843,6 @@ keyframes spinMaSearch 100% {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  margin-left: 5%;
   margin-bottom: 10px;
   transition: background 0.3s;
   min-width: 80px;
@@ -7842,13 +7869,8 @@ keyframes spinMaSearch 100% {
 .news-extended__social-title {
   font-family: FuturaPT-Demi, Arial, sans-serif;
   font-size: 16px;
-  margin-left: 5%;
   margin-bottom: 5px;
   margin-top: 5px;
-}
-
-.news-extended__social {
-  margin-left: 5%;
 }
 
 .news-extended-slider {
@@ -8616,41 +8638,6 @@ keyframes spinMaSearch 100% {
     min-height: 240px;
   }
 
-  .wiki-extended__date {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  .wiki-extended__title {
-    font-size: 21px;
-    margin-bottom: 5px;
-  }
-
-  .wiki-extended__text {
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  .wiki-extended-slider__video-btn span {
-    font-size: 21px;
-    padding-top: 55px;
-  }
-
-  .wiki-extended-slider__video-btn span:after {
-    width: 50px;
-    height: 50px;
-  }
-
-  .wiki-extended-slider__nav {
-    bottom: 0;
-    width: 360px;
-  }
-
-  .wiki-extended-slider__nav .slick-track div {
-    width: 50px !important;
-    height: 50px;
-  }
-
   .news-top__title {
     font-size: 18px;
   }
@@ -8753,6 +8740,16 @@ keyframes spinMaSearch 100% {
 
   .programm__btn-container {
     margin-right: 70px;
+  }
+
+  .wiki-extended__descr_s {
+    padding-left: 30px;
+  }
+
+  .wiki-extended__label {
+    margin-bottom: 15px;
+    margin-left: -30px;
+    padding-left: 30px;
   }
 
   .contacts {
@@ -9012,9 +9009,15 @@ keyframes spinMaSearch 100% {
     height: 40px;
   }
 
+  .news-extended__descr {
+    padding-left: 30px;
+  }
+
   .news-extended__news {
     margin-top: 30px;
     margin-bottom: 15px;
+    margin-left: -30px;
+    padding-left: 30px;
   }
 
   .news-extended__title {
@@ -9030,6 +9033,7 @@ keyframes spinMaSearch 100% {
 
   .news-extended__btn-container {
     bottom: 20px;
+    left: 30px;
   }
 
   .news-extended__social-title {
@@ -9284,6 +9288,7 @@ keyframes spinMaSearch 100% {
   .wiki-extended__text {
     font-size: 18px;
     line-height: 24px;
+    margin-bottom: 20px;
   }
 
   .wiki-extended-slider__video-btn span {
@@ -9732,6 +9737,16 @@ keyframes spinMaSearch 100% {
     font-size: 18px;
   }
 
+  .wiki-extended__descr_s {
+    padding-left: 50px;
+  }
+
+  .wiki-extended__label {
+    margin-bottom: 35px;
+    margin-left: -50px;
+    padding-left: 50px;
+  }
+
   .wiki-extended-slider__video-btn span {
     font-size: 30px;
     padding-top: 100px;
@@ -10036,11 +10051,14 @@ keyframes spinMaSearch 100% {
 
   .news-extended__descr {
     padding-right: 7%;
+    padding-left: 50px;
   }
 
   .news-extended__news {
     margin-top: 75px;
     margin-bottom: 35px;
+    margin-left: -50px;
+    padding-left: 50px;
   }
 
   .news-extended__date {
@@ -10059,6 +10077,7 @@ keyframes spinMaSearch 100% {
 
   .news-extended__btn-container {
     bottom: 40px;
+    left: 50px;
   }
 
   .news-extended-slider__title {

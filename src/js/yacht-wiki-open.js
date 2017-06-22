@@ -23,8 +23,9 @@ $(function() {
      slidesToShow: 1,
      slidesToScroll: 1,
      draggable: false,
-     arrows: false,
      fade: true,
+     prevArrow: $('.wiki-extended-slider__arrow_left'),
+     nextArrow: $('.wiki-extended-slider__arrow_right'),
      asNavFor: '.js-wiki-extended-slider-nav',
      cssEase: 'linear'
   });

@@ -2219,6 +2219,10 @@ html.fp-enabled,
   transition: all .25s ease-in-out;
 }
 
+.btn_xl {
+  min-width: 190px;
+}
+
 .btn:hover {
   background-color: #f6cb02;
   border-color: #f6cb02;
@@ -2264,81 +2268,85 @@ html.fp-enabled,
 .socials-btn {
   display: inline-block;
   min-width: 70px;
-  background-color: #fff;
   position: relative;
   border: none;
   height: 40px;
   transition: background-color .3s ease;
 }
 
-.socials-btn:before {
+.socials-btn:before, .socials-btn:after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
+  height: 100%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-repeat: no-repeat;
   background-size: contain;
-  transition: border-color .3s ease;
+  transition: .5s;
+}
+
+.socials-btn:after {
+  opacity: 0;
 }
 
 .socials-btn_fb:before {
-  background-image: url("../img/fb_black.svg");
-  width: 16px;
-  height: 31px;
+  background-image: url("../img/ico/fb_no-b.svg");
 }
 
 .socials-btn_inst:before {
-  background-image: url("../img/insta_black.svg");
-  width: 32px;
-  height: 32px;
+  background-image: url("../img/ico/insta_no-b.svg");
 }
 
 .socials-btn_yt:before {
-  background-image: url("../img/yt_black.svg");
-  width: 26px;
-  height: 30px;
+  background-image: url("../img/ico/yt_no-b.svg");
 }
 
-.socials-btn_white {
-  background-color: transparent;
-  border-color: #fff !important;
+.socials-btn_fb:after {
+  background-image: url("../img/ico/fb_no-b_h.svg");
 }
 
-.socials-btn_white.socials-btn_fb:before {
-  background-image: url("../img/fb.svg");
+.socials-btn_inst:after {
+  background-image: url("../img/ico/insta_no-b_h.svg");
 }
 
-.socials-btn_white.socials-btn_inst:before {
-  background-image: url("../img/insta.svg");
+.socials-btn_yt:after {
+  background-image: url("../img/ico/yt_no-b_h.svg");
 }
 
-.socials-btn_white.socials-btn_yt:before {
-  background-image: url("../img/yt.svg");
+.socials-btn_bordered.socials-btn_fb:before {
+  background-image: url("../img/ico/fb.svg");
 }
 
-.socials-btn_bordered {
-  border: 1px solid #000;
-  border-radius: 20px;
+.socials-btn_bordered.socials-btn_inst:before {
+  background-image: url("../img/ico/insta.svg");
 }
 
-.socials-btn_hover:hover {
-  background-color: #fff;
-  border-color: #000 !important;
+.socials-btn_bordered.socials-btn_yt:before {
+  background-image: url("../img/ico/yt.svg");
 }
 
-.socials-btn_hover:hover.socials-btn_fb:before {
-  background-image: url("../img/fb_black.svg");
+.socials-btn_bordered.socials-btn_fb:after {
+  background-image: url("../img/ico/fb_h.svg");
 }
 
-.socials-btn_hover:hover.socials-btn_inst:before {
-  background-image: url("../img/insta_black.svg");
+.socials-btn_bordered.socials-btn_inst:after {
+  background-image: url("../img/ico/insta_h.svg");
 }
 
-.socials-btn_hover:hover.socials-btn_yt:before {
-  background-image: url("../img/yt_black.svg");
+.socials-btn_bordered.socials-btn_yt:after {
+  background-image: url("../img/ico/yt_h.svg");
+}
+
+.socials-btn:hover:after {
+  opacity: 1;
+}
+
+.socials-btn:hover:before {
+  opacity: 0;
 }
 
 .socials-btn:not(:last-child) {
@@ -5370,17 +5378,13 @@ keyframes spinMaSearch 100% {
   transition: background-color .5s;
 }
 
-.wiki-extended__view_l {
-  width: 60%;
-}
-
 .wiki-extended__view .close {
   display: none;
   width: 70px;
   height: 70px;
   background-color: rgba(0, 0, 0, 0.7);
   right: 0;
-  top: 50%;
+  top: 35px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -5400,7 +5404,6 @@ keyframes spinMaSearch 100% {
 }
 
 .wiki-extended__descr_s {
-  width: 40%;
   padding-left: 15px;
 }
 
@@ -5426,6 +5429,7 @@ keyframes spinMaSearch 100% {
   font-family: FuturaPT-Demi, Arial, sans-serif;
   font-size: 21px;
   margin-bottom: 5px;
+  line-height: .8;
 }
 
 .wiki-extended__text {
@@ -5446,10 +5450,44 @@ keyframes spinMaSearch 100% {
   margin-left: 15px;
 }
 
+.wiki-extended__view.opened .wiki-extended-slider__arrow {
+  display: block !important;
+}
+
 .wiki-extended-slider {
   position: relative;
   z-index: 3;
   height: 100%;
+}
+
+.wiki-extended-slider__arrow {
+  width: 90px;
+  height: 130px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color .3s;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: none !important;
+  cursor: pointer;
+}
+
+.wiki-extended-slider__arrow_left {
+  left: 0;
+  background-image: url(../img/academy/gallery-arrow-l.png);
+}
+
+.wiki-extended-slider__arrow_right {
+  right: 0;
+  background-image: url(../img/academy/gallery-arrow-r.png);
+}
+
+.wiki-extended-slider__arrow:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .wiki-extended-slider__video {
@@ -8632,6 +8670,42 @@ keyframes spinMaSearch 100% {
   display: block;
 }
 
+.prise {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.prise__item {
+  text-align: center;
+  position: relative;
+  padding: 20px 0;
+}
+
+.prise__item:after {
+  content: '';
+  display: block;
+  height: 90%;
+  width: 12px;
+  background-color: #f6cb02;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) skewX(-20deg);
+  -ms-transform: translateX(-50%) translateY(-50%) skewX(-20deg);
+  transform: translateX(-50%) translateY(-50%) skewX(-20deg);
+  z-index: -1;
+}
+
+.prise__title {
+  text-transform: uppercase;
+  font-family: Casper-Bold, Arial, sans-serif;
+  font-size: 18px;
+}
+
 @media only screen and (min-width: 768px) {
 
   .search__regions {
@@ -8651,6 +8725,10 @@ keyframes spinMaSearch 100% {
 
   .btn {
     min-width: 190px;
+  }
+
+  .btn_xl {
+    min-width: 230px;
   }
 
   .calendar__layout {
@@ -8742,8 +8820,13 @@ keyframes spinMaSearch 100% {
     margin-right: 70px;
   }
 
+  .wiki-extended__view_l {
+    width: 60%;
+  }
+
   .wiki-extended__descr_s {
     padding-left: 30px;
+    width: 40%;
   }
 
   .wiki-extended__label {
@@ -9135,6 +9218,10 @@ keyframes spinMaSearch 100% {
   .checkin-form__descr {
     display: block;
   }
+
+  .prise__title {
+    font-size: 21px;
+  }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -9281,8 +9368,8 @@ keyframes spinMaSearch 100% {
   }
 
   .wiki-extended__title {
-    font-size: 36px;
-    margin-bottom: 25px;
+    font-size: 31px;
+    margin-bottom: 15px;
   }
 
   .wiki-extended__text {
@@ -9538,6 +9625,10 @@ keyframes spinMaSearch 100% {
     border-radius: 25px;
   }
 
+  .btn_xl {
+    min-width: 300px;
+  }
+
   .btn-share {
     height: 50px;
     line-height: 50px;
@@ -9745,6 +9836,11 @@ keyframes spinMaSearch 100% {
     margin-bottom: 35px;
     margin-left: -50px;
     padding-left: 50px;
+  }
+
+  .wiki-extended__title {
+    font-size: 36px;
+    margin-bottom: 25px;
   }
 
   .wiki-extended-slider__video-btn span {
@@ -10204,6 +10300,10 @@ keyframes spinMaSearch 100% {
   .checkin-form__descr {
     font-size: 18px;
     margin-top: 20px;
+  }
+
+  .prise__title {
+    font-size: 24px;
   }
 }
 

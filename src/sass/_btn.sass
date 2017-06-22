@@ -23,6 +23,13 @@
       font-size: 18px
       min-width: 230px
       border-radius: 25px
+
+   &_xl
+     min-width: 190px
+     +rmin(1024)
+       min-width: 230px
+     +rmin(1680)
+       min-width: 300px
    &:hover
      background-color: $accent
      border-color: $accent
@@ -53,61 +60,56 @@
 .socials-btn
   display: inline-block
   min-width: 70px
-  background-color: #fff
   position: relative
   border: none
   height: 40px
   transition: background-color .3s ease
 
-  &:before
+  &:before,
+  &:after
     content: ''
     position: absolute
     top: 50%
     left: 50%
+    width: 100%
+    height: 100%
     transform: translate(-50%, -50%)
     background-repeat: no-repeat
     background-size: contain
-    transition: border-color .3s ease
-
+    transition: .5s
+  &:after
+    opacity: 0
   &_fb:before
-    background-image: url('../img/fb_black.svg')
-    width: 16px
-    height: 31px
+    background-image: url('../img/ico/fb_no-b.svg')
   &_inst:before
-    background-image: url('../img/insta_black.svg')
-    width: 32px
-    height: 32px
+    background-image: url('../img/ico/insta_no-b.svg')
   &_yt:before
-    background-image: url('../img/yt_black.svg')
-    width: 26px
-    height: 30px
-
-  &_white
-    background-color: transparent
-    border-color: #fff !important
-    &.socials-btn
-      &_fb:before
-        background-image: url('../img/fb.svg')
-      &_inst:before
-        background-image: url('../img/insta.svg')
-      &_yt:before
-        background-image: url('../img/yt.svg')
-
+    background-image: url('../img/ico/yt_no-b.svg')
+  &_fb:after
+    background-image: url('../img/ico/fb_no-b_h.svg')
+  &_inst:after
+    background-image: url('../img/ico/insta_no-b_h.svg')
+  &_yt:after
+    background-image: url('../img/ico/yt_no-b_h.svg')
   &_bordered
-    border: 1px solid #000
-    border-radius: 20px
+    &.socials-btn_fb:before
+      background-image: url('../img/ico/fb.svg')
+    &.socials-btn_inst:before
+      background-image: url('../img/ico/insta.svg')
+    &.socials-btn_yt:before
+      background-image: url('../img/ico/yt.svg')
+    &.socials-btn_fb:after
+      background-image: url('../img/ico/fb_h.svg')
+    &.socials-btn_inst:after
+      background-image: url('../img/ico/insta_h.svg')
+    &.socials-btn_yt:after
+      background-image: url('../img/ico/yt_h.svg')
 
-  &_hover
-    &:hover
-      background-color: #fff
-      border-color: #000 !important
-      &.socials-btn
-        &_fb:before
-          background-image: url('../img/fb_black.svg')
-        &_inst:before
-          background-image: url('../img/insta_black.svg')
-        &_yt:before
-          background-image: url('../img/yt_black.svg')
+  &:hover
+    &:after
+      opacity: 1
+    &:before
+      opacity: 0
 
   &:not(:last-child)
     margin-right: 10px

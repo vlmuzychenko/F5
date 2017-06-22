@@ -14,7 +14,8 @@
      height: 100%
      transition: background-color .5s
      &_l
-       width: 60%
+       +rmin(1024)
+         width: 60%
 
      .close
        display: none
@@ -22,7 +23,7 @@
        height: 70px
        background-color: rgba(0,0,0,.7)
        right: 0
-       top: 50%
+       top: 35px
        transform: translateY(-50%)
      &.opened
        .close
@@ -36,10 +37,10 @@
     box-sizing: border-box
     padding: 2% 3%
     &_s
-      width: 40%
       padding-left: 15px
       +rmin(1024)
         padding-left: 30px
+        width: 40%
       +rmin(1680)
         padding-left: 50px
   &__label
@@ -71,7 +72,11 @@
     +futura-demi
     font-size: 21px
     margin-bottom: 5px
+    line-height: .8
     +rmin(1366)
+      font-size: 31px
+      margin-bottom: 15px
+    +rmin(1680)
       font-size: 36px
       margin-bottom: 25px
   &__text
@@ -90,11 +95,33 @@
     width: 100%
     a + a
       margin-left: 15px
-
+.wiki-extended__view.opened
+  .wiki-extended-slider__arrow
+    display: block !important
 .wiki-extended-slider
   position: relative
   z-index: 3
   height: 100%
+  &__arrow
+    width: 90px
+    height: 130px
+    background-color: rgba(0,0,0,.5)
+    transition: background-color .3s
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    background-repeat: no-repeat
+    background-position: 50%
+    display: none !important
+    cursor: pointer
+    &_left
+      left: 0
+      background-image: url(../img/academy/gallery-arrow-l.png)
+    &_right
+      right: 0
+      background-image: url(../img/academy/gallery-arrow-r.png)
+    &:hover
+      background-color: rgba(0,0,0,.9)
   &__video
     display: none
     width: 100%

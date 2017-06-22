@@ -21,7 +21,7 @@ block content
                   .mouse-scroll__item
                   .mouse-scroll__text или скрольте вниз
                 .fp-btn-container
-                    a.btn.btn_yellow.js-enroll(href="#") Записаться
+                    a.btn.btn_yellow.btn_xl Актуальные яхт-вики
                     a.btn.btn_dark(href="#") Календарь
             .descr-video
               .descr-video__close.close.close_yellow
@@ -32,25 +32,21 @@ block content
               .wiki-extended-slider
                 .wiki-extended-slider__controll 
                   .wiki-extended-slider__body.js-wiki-extended-slider
+                    div(style='background-image: url(img/archive-extend/main-pic-1.jpg)')
                     div(style='background-image: url(img/archive-extend/preview-2.jpg)')
                       .wiki-extended-slider__video-btn
                           span Посмотрите видео
                       .wiki-extended-slider__video
                         iframe(width="100%" height="100%" src="https://www.youtube.com/embed/EqWaGt2tYOU" frameborder="0" allowfullscreen)
-                    div
-                      img(src='img/archive-extend/main-pic-1.jpg')
-                    div
-                      img(src='img/archive-extend/preview-2.jpg')
-                    div
-                      img(src='img/archive-extend/main-pic-1.jpg')
-                    div
-                      img(src='img/archive-extend/preview-2.jpg')
-                    div
-                      img(src='img/archive-extend/main-pic-1.jpg')
-                    div
-                      img(src='img/img/archive-extend/preview-2.jpg')
+                    div(style='background-image: url(img/archive-extend/main-pic-1.jpg)')
+                    div(style='background-image: url(img/archive-extend/preview-2.jpg)')
+                    div(style='background-image: url(img/archive-extend/preview-2.jpg)')
+                    div(style='background-image: url(img/archive-extend/main-pic-1.jpg)')
+                    div(style='background-image: url(img/archive-extend/preview-2.jpg)')
+                  .wiki-extended-slider__arrow.wiki-extended-slider__arrow_left
+                  .wiki-extended-slider__arrow.wiki-extended-slider__arrow_right
        
-                  .close.close_yellow
+                  .close.close_white
                   
                 .wiki-extended-slider__nav.js-wiki-extended-slider-nav
                   div(style='background-image: url(img/archive-extend/preview-1.jpg)')
@@ -65,15 +61,20 @@ block content
               .wiki-extended__label архив
               .wiki-extended__date Даты: 24-30 июня 2017
               h1.wiki-extended__title Playboy Ibiza 2017
-              p.wiki-extended__text Закрытые вечернки плейбой на вилле, вечеринки в самых больших клубах Ибицы, пляж Плайя-Ильетес, лучшие пляжи острова Форментейра. Мы посетили 3 острова за неделю: о. Мальорка, о. Ивиса (больше известна как Ибица) и о. Форментера. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+              p.wiki-extended__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
               a(hred='#').btn-share
                 .btn-share__icon
                   i
               p.news-extended__social-title Следите за нами в соц сетях
               .news-extended__social
-                +socials-btn('socials-btn_bordered socials-btn_hover socials-btn_yt')
-                +socials-btn('socials-btn_bordered socials-btn_hover socials-btn_fb')
-                +socials-btn('socials-btn_bordered socials-btn_hover socials-btn_inst')
+                +socials-btn('socials-btn_bordered socials-btn_yt')
+                +socials-btn('socials-btn_bordered socials-btn_fb')
+                +socials-btn('socials-btn_bordered socials-btn_inst')
+              h1.wiki-extended__title(style="display:none;") Награды Fleet5 на Регате Эллада 2016
+              .prise(style="display:none;")
+                .prise__item
+                  .prise__title SETUR MARINAS CUP
+                  .prise__place 1 Place
               .wiki-extended__btn-container
-                 a(href='#').btn.btn_yellow Актуальные Яхт-вики
+                 a(href='#').btn.btn_yellow.btn_xl Актуальные Яхт-вики
                  a(href='#').btn Календарь

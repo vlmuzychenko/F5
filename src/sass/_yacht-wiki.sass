@@ -59,24 +59,26 @@
 .yacht-wiki-menu
   color: #000
   position: fixed
-  top: 130px
+  top: 100px
   width: 100%
   z-index: 900
   text-align: center
   transition: color .2s
   font-size: 16px
-  &.light
-    color: #fff
-    .yacht-wiki-menu__item.active
-      border-bottom-color: #fff
-  &.dark
-    color: #000
-    .yacht-wiki-menu__item.active
-      border-bottom-color: #000
+  height: 60px
+  background-color: #fff
+  display: flex
+  align-items: center
+  justify-content: center
+  box-shadow: 0 1px 5px 0px #b2b2b2
   +resp
-    top: 80px
+    top: 70px
+    height: 30px
+  +rmin(1024)
+    height: 50px !important
   +rmin(1680)
-    top: 130px
+    top: 100px
+    height: 60px !important
 
   &__item
     display: inline-block
@@ -114,6 +116,8 @@
       padding: 0 2px 5px
       transition: font-size .5s
       font-size: 11px
+      +resp
+        padding: 0 2px 1px
       +rmin(1024)
         font-size: 14px
       +rmin(1680)
@@ -376,8 +380,10 @@
   &__list-wrap
     font-size: 12px
     +futura-demi
+    +rmin(1024)
+      font-size: 16px
     +rmin(1366)
-      font-size: 15px
+      font-size: 18px
     +rmin(1680)
       font-size: 21px
     &_in
@@ -519,3 +525,81 @@
   .icon-arrow
     fill: #000
     font-size: 24px
+
+.price-block
+  width: 100%
+  height: 100%
+  transform: skewX(16deg) translateX(20%)
+  background-size: cover
+  background-image: url(../img/price-bg-new.jpg)
+  padding-top: 160px
+  padding-left: 7%
+  +futura-bold
+  &__item
+    opacity: .5
+    margin-top: 8%
+    &.is-active
+      opacity: 1
+      .price-block__title
+        color: $accent
+    &:nth-child(2)
+      .price-block__title,
+      .price-block__value
+        font-size: 14px
+        +rmin(1024)
+          font-size: 24px
+        +rmin(1366)
+          font-size: 28px
+        +rmin(1680)
+          font-size: 38px
+        span
+          font-size: 28px
+          +rmin(1366)
+            font-size: 80px
+          +rmin(1680)
+            font-size: 100px
+    &:nth-child(3)
+      .price-block__title,
+      .price-block__value
+        font-size: 14px
+        +rmin(1024)
+          font-size: 21px
+        +rmin(1366)
+          font-size: 24px
+        +rmin(1680)
+          font-size: 28px
+      .price-block__value
+        span
+          font-size: 28px
+          +rmin(1024)
+            font-size: 50px
+          +rmin(1366)
+            font-size: 60px
+          +rmin(1680)
+            font-size: 90px
+  &__title
+    font-size: 14px
+    color: #fff
+    +rmin(1366)
+      font-size: 38px
+    +rmin(1680)
+      font-size: 48px
+  &__value
+    color: #fff
+    font-size: 14px
+    line-height: 2em
+    display: flex
+    align-items: center
+    +rmin(1366)
+      font-size: 38px
+    +rmin(1680)
+      font-size: 48px
+    span
+      font-size: 28px
+      padding-right: 5px
+      +rmin(1024)
+        font-size: 80px
+      +rmin(1366)
+        font-size: 100px
+      +rmin(1680)
+        font-size: 110px

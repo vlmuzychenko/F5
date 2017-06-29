@@ -5183,7 +5183,7 @@ keyframes spinMaSearch 100% {
 
 .price-block__item {
   opacity: .5;
-  margin-top: 8%;
+  margin-top: 10%;
 }
 
 .price-block__item.is-active {
@@ -8903,6 +8903,14 @@ keyframes spinMaSearch 100% {
 
   .price-block__item:nth-child(3) .price-block__value span {
     font-size: 50px;
+  }
+
+  .price-block__title {
+    font-size: 28px;
+  }
+
+  .price-block__value {
+    font-size: 28px;
   }
 
   .price-block__value span {

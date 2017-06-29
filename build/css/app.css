@@ -7903,7 +7903,7 @@ keyframes spinMaSearch 100% {
   background-color: #f6cb02;
   display: inline-block;
   padding: 2px 10px 5px 5%;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 5px;
   margin-left: -15px;
   padding-left: 15px;
@@ -9194,21 +9194,20 @@ keyframes spinMaSearch 100% {
   }
 
   .news-extended__news {
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 15px;
     margin-left: -30px;
     padding-left: 30px;
   }
 
   .news-extended__title {
-    font-size: 30px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .news-extended__text {
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 20px;
   }
 
   .news-extended__btn-container {
@@ -9217,8 +9216,8 @@ keyframes spinMaSearch 100% {
   }
 
   .news-extended__social-title {
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .news-extended-slider__nav {
@@ -9654,8 +9653,22 @@ keyframes spinMaSearch 100% {
     margin-bottom: 15px;
   }
 
+  .news-extended__title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .news-extended__text {
+    margin-bottom: 20px;
+  }
+
   .news-extended__actions-btn {
     min-width: 100px;
+  }
+
+  .news-extended__social-title {
+    margin-bottom: 15px;
+    margin-top: 15px;
   }
 
   .news-extended-slider__title {

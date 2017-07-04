@@ -4967,7 +4967,7 @@ keyframes spinMaSearch 100% {
 }
 
 .price__list-wrap {
-  font-size: 12px;
+  font-size: 14px;
   font-family: FuturaPT-Demi, Arial, sans-serif;
 }
 
@@ -6763,11 +6763,11 @@ keyframes spinMaSearch 100% {
   background-image: url(../img/academy/license-bg.png);
   background-size: cover;
   background-position: 50% 50%;
+  padding-left: 35px;
 }
 
 .license__content {
   padding-top: 2%;
-  padding-left: 30px;
 }
 
 .license__main-title {
@@ -6887,16 +6887,6 @@ keyframes spinMaSearch 100% {
   font-size: 36px;
   font-size: 18px;
   font-family: Casper-Regular, Arial, sans-serif;
-}
-
-.course__btn-container {
-  position: absolute;
-  bottom: 35px;
-  bottom: 10px;
-}
-
-.course__btn-container a + a {
-  margin-left: 15px;
 }
 
 .course__icon {
@@ -7634,6 +7624,7 @@ keyframes spinMaSearch 100% {
   height: calc(100vh - 185px);
   margin-top: 185px;
   display: none;
+  z-index: 999;
 }
 
 .academy-video__close.close {
@@ -7645,6 +7636,16 @@ keyframes spinMaSearch 100% {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.btn-container_ac {
+  position: absolute;
+  bottom: 35px;
+  bottom: 10px;
+}
+
+.btn-container_ac a + a {
+  margin-left: 15px;
 }
 
 .news-main {
@@ -8880,7 +8881,7 @@ keyframes spinMaSearch 100% {
   }
 
   .price__list-wrap {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .programm__descr {
@@ -9049,8 +9050,8 @@ keyframes spinMaSearch 100% {
     font-size: 14px;
   }
 
-  .license__content {
-    padding-left: 100px;
+  .license {
+    padding-left: 65px;
   }
 
   .license__main-title {
@@ -9099,10 +9100,6 @@ keyframes spinMaSearch 100% {
 
   .course__date {
     font-size: 24px;
-  }
-
-  .course__btn-container {
-    bottom: 35px;
   }
 
   .course-right__item {
@@ -9172,6 +9169,10 @@ keyframes spinMaSearch 100% {
   .instructor-card__descr-icon {
     width: 130px;
     height: 130px;
+  }
+
+  .btn-container_ac {
+    bottom: 35px;
   }
 
   .news-post__text {
@@ -9383,7 +9384,7 @@ keyframes spinMaSearch 100% {
   }
 
   .price__list-wrap {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   .price__list-title {
@@ -10498,6 +10499,13 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (min-width: 2000px) {
+
+  .cards-container {
+    max-width: 2100px;
+  }
+}
+
 @media only screen and (max-width: 1330px) and (min-width: 1200px) {
 
   .yacht__card {
@@ -10907,6 +10915,15 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (max-height: 750px) {
+
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
 @media only screen and (max-width: 1240px) {
 
   .header {
@@ -11137,14 +11154,14 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-height: 680px) {
+@media only screen and (max-width: 840px) {
 
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
+  .header__lang {
+    margin-left: 15px;
+  }
+
+  .nav {
+    margin-right: 15px;
   }
 }
 
@@ -11169,23 +11186,14 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 680px) {
 
   .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
     -webkit-transform: translateY(40%);
     -ms-transform: translateY(40%);
     transform: translateY(40%);
-  }
-}
-
-@media only screen and (max-width: 840px) {
-
-  .header__lang {
-    margin-left: 15px;
-  }
-
-  .nav {
-    margin-right: 15px;
   }
 }
 

@@ -71,14 +71,15 @@
   background-image: url(../img/academy/license-bg.png)
   background-size: cover
   background-position: 50% 50%
+  padding-left: 35px
+  +rmin(1024)
+    padding-left: 65px
   +resp
      height: calc(100vh - 130px)
      margin-top: 130px
   &__content
     padding-top: 2%
-    padding-left: 30px
-    +rmin(1024)
-      padding-left: 100px
+
   &__main-title
     +futura-bold
     font-size: 18px
@@ -221,14 +222,6 @@
     +rmin(1680)
       font-size: 36px
     +casp-reg
-  &__btn-container
-    position: absolute
-    bottom: 35px
-    bottom: 10px
-    +rmin(1024)
-      bottom: 35px
-    a + a
-      margin-left: 15px
   &__icon
     position: relative
     margin-bottom: 5px
@@ -860,6 +853,7 @@
   height: calc(100vh - 185px)
   margin-top: 185px
   display: none
+  z-index: 999
   +resp
      height: calc(100vh - 130px)
      margin-top: 130px
@@ -870,3 +864,12 @@
     right: 0
     top: 50%
     transform: translateY(-50%)
+
+.btn-container_ac
+  position: absolute
+  bottom: 35px
+  bottom: 10px
+  +rmin(1024)
+    bottom: 35px
+  a + a
+    margin-left: 15px

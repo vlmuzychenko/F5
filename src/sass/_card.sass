@@ -13,14 +13,6 @@ $black: #161616
   +resp
      height: calc(100vh - 70px)
      margin-top: 70px
-  //background-image: url(../img/main-bg.png), radial-gradient(ellipse at 30% top, #494949, #2f2f2f 96%), radial-gradient(ellipse at 90% top, #464646, #2a2a2a 115%), radial-gradient(ellipse at top, #656565, #3b3b3b 80%), radial-gradient(circle at bottom, #6e6e6e, #161616 88%), radial-gradient(circle at center, #6e6e6e, #161616 80%)
-  //background-size: 65%, 15% 5%, 18% 5%, 21% 5%, 100% 70%, 100% 115%
-  //background-repeat: no-repeat
-  //background-position: 50% 0, 71% 77%, 27% 77%, 50% 77%, 50% 244%, 50% 0
-  //background-image: url(../img/main-bg.png), radial-gradient(circle at bottom, #6e6e6e, #161616 95%), radial-gradient(circle at center, #6e6e6e, #161616 80%)
-  //background-size: 65%, 100% 70%, 100% 115%
-  //background-repeat: no-repeat
-  //background-position: 50% 0, 50% 244%, 50% 0
 
 .cards-container
   width: 90%
@@ -30,7 +22,8 @@ $black: #161616
   display: flex
   justify-content: space-between
   align-items: center
-
+  +rmin(2000)
+    max-width: 2100px
 
 .card-container
     width: 21.3%

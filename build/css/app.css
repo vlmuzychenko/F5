@@ -2087,6 +2087,22 @@ html.fp-enabled,
   margin-bottom: 20px;
 }
 
+#phone:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+#phone:focus::-moz-placeholder {
+  color: transparent;
+}
+
+#phone:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+#phone:focus::placeholder {
+  color: transparent;
+}
+
 .popup {
   position: fixed;
   top: 0;
@@ -2341,6 +2357,30 @@ html.fp-enabled,
   background-image: url("../img/ico/yt_h.svg");
 }
 
+.socials-btn_dark.socials-btn_fb:before {
+  background-image: url("../img/fb_dark.svg");
+}
+
+.socials-btn_dark.socials-btn_inst:before {
+  background-image: url("../img/insta_dark.svg");
+}
+
+.socials-btn_dark.socials-btn_yt:before {
+  background-image: url("../img/yt_dark.svg");
+}
+
+.socials-btn_dark.socials-btn_fb:after {
+  background-image: url("../img/fb_dark_hover.svg");
+}
+
+.socials-btn_dark.socials-btn_inst:after {
+  background-image: url("../img/insta_dark_hover.svg");
+}
+
+.socials-btn_dark.socials-btn_yt:after {
+  background-image: url("../img/yt_dark_hover.svg");
+}
+
 .socials-btn:hover:after {
   opacity: 1;
 }
@@ -2529,6 +2569,7 @@ html.fp-enabled,
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 2;
+  background-color: #fff;
 }
 
 .calendar__event-descr {

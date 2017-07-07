@@ -5233,7 +5233,7 @@ keyframes spinMaSearch 100% {
   transform: skewX(16deg) translateX(20%);
   background-size: cover;
   background-image: url(../img/price-bg-new.jpg);
-  padding-top: 160px;
+  padding-top: 120px;
   padding-left: 7%;
   font-family: FuturaPT-Bold, Arial, sans-serif;
 }
@@ -9999,6 +9999,10 @@ keyframes spinMaSearch 100% {
   .controll__btn {
     width: 100px;
     height: 50px;
+  }
+
+  .price-block {
+    padding-top: 160px;
   }
 
   .price-block__item {

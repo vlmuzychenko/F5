@@ -537,7 +537,9 @@
   +futura-bold
   &__item
     opacity: .5
-    margin-top: 10%
+    margin-top: 7vh
+    +rmin(1680)
+      margin-top: 10vh
     &.is-active
       opacity: 1
       .price-block__title
@@ -554,6 +556,8 @@
           font-size: 38px
         span
           font-size: 28px
+          +rmin(1024)
+            font-size: 60px
           +rmin(1366)
             font-size: 80px
           +rmin(1680)

@@ -5240,7 +5240,7 @@ keyframes spinMaSearch 100% {
 
 .price-block__item {
   opacity: .5;
-  margin-top: 10%;
+  margin-top: 7vh;
 }
 
 .price-block__item.is-active {
@@ -8954,6 +8954,11 @@ keyframes spinMaSearch 100% {
     font-size: 24px;
   }
 
+  .price-block__item:nth-child(2) .price-block__title span,
+  .price-block__item:nth-child(2) .price-block__value span {
+    font-size: 60px;
+  }
+
   .price-block__item:nth-child(3) .price-block__title,
   .price-block__item:nth-child(3) .price-block__value {
     font-size: 21px;
@@ -9994,6 +9999,10 @@ keyframes spinMaSearch 100% {
   .controll__btn {
     width: 100px;
     height: 50px;
+  }
+
+  .price-block__item {
+    margin-top: 10vh;
   }
 
   .price-block__item:nth-child(2) .price-block__title,

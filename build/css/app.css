@@ -2103,6 +2103,22 @@ html.fp-enabled,
   color: transparent;
 }
 
+input[name="phone"]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input[name="phone"]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input[name="phone"]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input[name="phone"]:focus::placeholder {
+  color: transparent;
+}
+
 .popup {
   position: fixed;
   top: 0;

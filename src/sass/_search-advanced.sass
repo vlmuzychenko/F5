@@ -78,10 +78,10 @@
       &:not(&--detailed)
          height: 100%
          padding-bottom: 90px
-         +r(1900)
-            padding-bottom: 155px
          +r(1599)
             padding-bottom: 135px
+         +rmin(1900)
+             padding-bottom: 155px
 
       &--detailed
          position: absolute
@@ -149,6 +149,8 @@
         width: 560px
       select
          display: none
+      .ms-drop ul > li label
+         white-space: normal !important
       input
          padding: 0 10px
          height: 40px
@@ -249,11 +251,21 @@
          height: 25px
          margin-top: -12px
          +rotate(180)
+         +rmin(1367)
+           width: 17px
+           left: 85%
+         +rmin(1680)
+           width: 25px
+           left: 82%
       &.is-active
          text-align: right
          .icon-arrow
             transform: none
             left: 8%
+            +rmin(1367)
+              left: 4%
+            +rmin(1680)
+              left: 8%
 
    &__view
       position: relative

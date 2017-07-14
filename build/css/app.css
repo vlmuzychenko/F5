@@ -3224,7 +3224,6 @@ input[name="phone"]:focus::placeholder {
 .card__info-title {
   font-size: 24px;
   font-family: FuturaPT-Demi, Arial, sans-serif;
-  word-break: break-all;
   color: #161616;
 }
 
@@ -4014,6 +4013,10 @@ input[name="phone"]:focus::placeholder {
 
 .search-adv__field select {
   display: none;
+}
+
+.search-adv__field .ms-drop ul > li label {
+  white-space: normal !important;
 }
 
 .search-adv__field input {
@@ -9814,6 +9817,18 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (min-width: 1367px) {
+
+  .search-adv__btn-filter .icon-arrow {
+    width: 17px;
+    left: 85%;
+  }
+
+  .search-adv__btn-filter.is-active .icon-arrow {
+    left: 4%;
+  }
+}
+
 @media only screen and (min-width: 1500px) {
 
   .card-open__item {
@@ -9897,6 +9912,15 @@ keyframes spinMaSearch 100% {
 
   .search__regions {
     min-height: 350px;
+  }
+
+  .search-adv__btn-filter .icon-arrow {
+    width: 25px;
+    left: 82%;
+  }
+
+  .search-adv__btn-filter.is-active .icon-arrow {
+    left: 8%;
   }
 
   .yacht-wiki-menu {
@@ -10576,6 +10600,13 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (min-width: 1900px) {
+
+  .search-adv__filter:not(.search-adv__filter--detailed) {
+    padding-bottom: 155px;
+  }
+}
+
 @media only screen and (min-width: 1920px) {
 
   .license__list {
@@ -10741,7 +10772,7 @@ keyframes spinMaSearch 100% {
 
   .card__more {
     height: calc(100vh - 70px);
-    margin-top: 10px;
+    margin-top: 70px;
   }
 
   .card__view {
@@ -10838,10 +10869,6 @@ keyframes spinMaSearch 100% {
 }
 
 @media only screen and (max-width: 1900px) {
-
-  .search-adv__filter:not(.search-adv__filter--detailed) {
-    padding-bottom: 155px;
-  }
 
   .search-adv__filter--detailed {
     bottom: 155px;
@@ -11000,15 +11027,6 @@ keyframes spinMaSearch 100% {
 
   .yacht-map__wrapper--card {
     width: 100%;
-  }
-}
-
-@media only screen and (max-height: 750px) {
-
-  .calendar__event-descr {
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
   }
 }
 
@@ -11279,6 +11297,15 @@ keyframes spinMaSearch 100% {
   .calendar__event-descr {
     padding-top: 10px;
     padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
+@media only screen and (max-height: 750px) {
+
+  .calendar__event-descr {
     -webkit-transform: translateY(40%);
     -ms-transform: translateY(40%);
     transform: translateY(40%);

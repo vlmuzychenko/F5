@@ -1,0 +1,25 @@
+---
+title: Popup Email
+---
+extends layouts/_layout 
+block content
+   // BEGIN popup
+   .popup.popup_email.js-popup-email
+     .popup__in
+       .popup__body
+         .email
+           h2.email__title будем на связи?
+           .email__body
+             .email__text 
+              | Оставь свой email и мы сообщим
+              br
+              | о ближайших событиях FLEET5
+             .email-interests
+               h3.email-interests__title Меня интересует:
+               fieldset.email-checkboxes
+                 
+             form.email-input
+               input(type='email' name='email' placeholder='Укажите здесь свой email')
+               input(type='submit' value='на связи!')
+       button(type="button").popup__close.js-close-popup-email
+         +icon('icon-close-bold')

@@ -9910,6 +9910,10 @@ $(function () {
             info.toggleClass('is-active');
         });
     })();
+
+    $('.js-close-popup-email').click(function () {
+        $('.js-popup-email').removeClass('is-open');
+    });
 });
 
 $(function () {

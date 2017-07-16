@@ -76,5 +76,40 @@
 		width: 100%
 
 .popup_email
-	opacity: 1
-	visibility: visible
+	.popup
+		&__in
+			position: absolute
+			padding: 0
+			padding-right: 77px
+			+vcenter
+			background-image: url(../img/email-bg.png)
+			background-repeat: no-repeat
+			background-position: 102% 0
+			width: 90%
+			max-width: 910px
+		&__body
+			padding: 0
+			background-color: transparent
+		&__close
+			position: absolute
+			bottom: 15px
+			top: auto
+			left: 50%
+			transform: translateX(-50%)
+			display: flex
+			align-items: flex-end
+		&__close-text
+			font-size: 24px
+			color: #fff
+			+futura-book
+			border-bottom: 2px solid #fff
+			padding-right: 5px
+		&__close-icon
+			border: 2px solid #fff
+			position: relative
+			width: 25px
+			height: 25px
+			.icon-close
+				font-size: 18px
+				fill: #fff
+				+vcenter

@@ -4,7 +4,7 @@ title: Popup Email
 extends layouts/_layout 
 block content
    // BEGIN popup
-   .popup.popup_email.js-popup-email
+   .popup.popup_email.js-popup-email.is-open
      .popup__in
        .popup__body
          .email
@@ -16,34 +16,36 @@ block content
               | о ближайших событиях FLEET5
              .email-interests
                h3.email-interests__title Меня интересует:
-               fieldset.email-checkboxes
-                 .checkbox.checkbox_mod
+               .email-checkboxes
+                 .checkbox.checkbox_l.email-checkboxes__item
                     input(type='checkbox' id='yacht-week' name='yacht-week')
                     label(for='yacht-week')
-                       .checkbox__check
-                       .checkbox__name яхт-вики
-                 .checkbox.checkbox_mod
+                       .checkbox__check.checkbox__check_yellow.checkbox__check_l
+                       .checkbox__name.checkbox__name_l.checkbox__name_white яхт-вики
+                 .checkbox.checkbox_l.email-checkboxes__item
                     input(type='checkbox' id='studying' name='studying')
                     label(for='studying')
-                       .checkbox__check
-                       .checkbox__name обучение
-                 .checkbox.checkbox_mod
+                       .checkbox__check.checkbox__check_yellow.checkbox__check_l
+                       .checkbox__name.checkbox__name_l.checkbox__name_white обучение
+                 .checkbox.checkbox_l.email-checkboxes__item
                     input(type='checkbox' id='regatta' name='regatta')
                     label(for='regatta')
-                       .checkbox__check
-                       .checkbox__name регаты
-                 .checkbox.checkbox_mod
+                       .checkbox__check.checkbox__check_yellow.checkbox__check_l
+                       .checkbox__name.checkbox__name_l.checkbox__name_white регаты
+                 .checkbox.checkbox_l.email-checkboxes__item
                     input(type='checkbox' id='lease' name='lease')
                     label(for='lease')
-                       .checkbox__check
-                       .checkbox__name аренда яхт
-                 .checkbox.checkbox_mod
+                       .checkbox__check.checkbox__check_yellow.checkbox__check_l
+                       .checkbox__name.checkbox__name_l.checkbox__name_white аренда яхт
+                 .checkbox.checkbox_l.email-checkboxes__item
                     input(type='checkbox' id='buy' name='buy')
                     label(for='buy')
-                       .checkbox__check
-                       .checkbox__name покупка яхт
+                       .checkbox__check.checkbox__check_yellow.checkbox__check_l
+                       .checkbox__name.checkbox__name_l.checkbox__name_white покупка яхт
              form.email-input
-               input(type='email' name='email' placeholder='Укажите здесь свой email')
-               input(type='submit' value='на связи!')
-       button(type="button").popup__close.js-close-popup-email
-         +icon('icon-close-bold')
+               input(type='email' name='email' placeholder='Укажите здесь свой email' class='email-input__input')
+               input(type='submit' value='на связи!' class='btn btn_xxl btn_noborder email-input__btn')
+             button(type="button").popup__close.js-close-popup-email
+               p.popup__close-text Закрыть форму?
+               .popup__close-icon
+                 +icon('icon-close')

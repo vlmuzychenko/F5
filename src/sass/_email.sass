@@ -1,0 +1,76 @@
+.email
+  position: relative
+  &__title
+    font-size: 45px
+    text-transform: uppercase
+    +futura-bold
+    color: $accent
+    position: absolute
+    top: 53px
+    +rmin(1366)
+      font-size: 70px
+      top: 30px
+  &__body
+    padding: 35px
+    padding-top: 125px
+    padding-bottom: 70px
+  &__text
+    font-size: 24px
+    color: #fff
+    +futura-demi
+    margin-bottom: 25px
+    +rmin(1366)
+      margin-bottom: 50px
+      font-size: 36px
+
+.email-interests
+  &__title
+    color: $accent
+    font-size: 36px
+    +futura-book
+
+.email-checkboxes
+  margin-top: 30px
+  width: 92%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  flex-direction: row-reverse
+  &__item
+    width: 25%
+    margin-bottom: 15px
+    +rmin(1366)
+      width: 20%
+      min-width: 175px
+      margin-bottom: 35px
+
+.email-input
+  margin-top: 25px
+  width: 100%
+  height: 50px
+  padding: 5px
+  padding-left: 15px
+  background-color: rgba(#fff, .5)
+  border-top-right-radius: 35px
+  border-bottom-right-radius: 35px
+  display: flex
+  +rmin(1366)
+    margin-top: 45px
+    height: 70px
+
+  &__btn
+    margin-left: auto
+  &__input
+    flex: 1 1 auto
+    background-color: transparent
+    font-size: 21px
+    color: #fff
+    +casp-reg
+    +rmin(1366)
+      font-size: 30px
+    &::placeholder
+      font-size: 21px
+      color: rgba(#fff, .5)
+      +casp-reg
+      +rmin(1366)
+        font-size: 30px

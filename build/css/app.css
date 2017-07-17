@@ -102,6 +102,12 @@ html {
   fill: initial;
 }
 
+.icon-close-m {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-close {
   width: 1em;
   height: 1em;
@@ -2369,8 +2375,8 @@ input[name="phone"]:focus::placeholder {
   height: 25px;
 }
 
-.popup_email .popup__close-icon .icon-close {
-  font-size: 18px;
+.popup_email .popup__close-icon .icon-close-m {
+  font-size: 15px;
   fill: #fff;
   position: absolute;
   top: 50%;

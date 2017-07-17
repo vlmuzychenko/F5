@@ -14,6 +14,10 @@
     padding: 35px
     padding-top: 125px
     padding-bottom: 70px
+    &_thnk
+      text-align: center
+      +rmin(1366)
+        min-height: 595px
   &__text
     font-size: 24px
     color: #fff
@@ -22,6 +26,22 @@
     +rmin(1366)
       margin-bottom: 50px
       font-size: 36px
+    &_l
+      font-size: 42px
+      text-transform: uppercase
+      +futura-bold
+      +rmin(1366)
+        font-size: 54px
+  &__pic
+    width: 200px
+    height: 100px
+    margin: 0 auto
+    margin-bottom: 50px
+    +rmin(1366)
+      width: 240px
+      height: 160px
+    img
+      object-fit: contain
 
 .email-interests
   &__title

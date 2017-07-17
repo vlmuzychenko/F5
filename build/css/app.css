@@ -9101,6 +9101,22 @@ keyframes spinMaSearch 100% {
   font-family: Casper-Regular, Arial, sans-serif;
 }
 
+.email-input.error {
+  background-color: #ff6e6e;
+}
+
+.email-input.error .email-input__input::-webkit-input-placeholder {
+  color: #cc3333;
+}
+
+.email-input.error .email-input__input::-moz-input-placeholder {
+  color: #cc3333;
+}
+
+.email-input.error .email-input__input::-ms-input-placeholder {
+  color: #cc3333;
+}
+
 @media only screen and (min-width: 768px) {
 
   .search__regions {

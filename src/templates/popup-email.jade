@@ -42,10 +42,10 @@ block content
                     label(for='buy')
                        .checkbox__check.checkbox__check_yellow.checkbox__check_l
                        .checkbox__name.checkbox__name_l.checkbox__name_white покупка яхт
-             form.email-input
+             form.email-input <!-- добавить класс error сюда -->
                input(type='email' name='email' placeholder='Укажите здесь свой email' class='email-input__input')
                input(type='submit' value='на связи!' class='btn btn_xxl btn_noborder email-input__btn')
              button(type="button").popup__close.js-close-popup-email
-               p.popup__close-text Закрыть форму?
+               p.popup__close-text Закрыть форму
                .popup__close-icon
                  +icon('icon-close-m')

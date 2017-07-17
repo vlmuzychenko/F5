@@ -77,7 +77,6 @@
   +rmin(1366)
     margin-top: 45px
     height: 70px
-
   &__btn
     margin-left: auto
   &__input
@@ -94,3 +93,12 @@
       +casp-reg
       +rmin(1366)
         font-size: 30px
+  &.error
+    background-color: #ff6e6e
+    .email-input__input
+      &::-webkit-input-placeholder
+        color: #cc3333
+      &::-moz-input-placeholder
+        color: #cc3333
+      &::-ms-input-placeholder
+        color: #cc3333

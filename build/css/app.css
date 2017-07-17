@@ -390,6 +390,7 @@ a {
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
   transform: scale(1.5);
+  transition: none;
 }
 
 .checkbox_l .checkbox__name {
@@ -2329,7 +2330,7 @@ input[name="phone"]:focus::placeholder {
   background-repeat: no-repeat;
   background-position: 102% 0;
   width: 90%;
-  max-width: 910px;
+  max-width: 740px;
 }
 
 .popup_email .popup__body {
@@ -9674,6 +9675,11 @@ keyframes spinMaSearch 100% {
   .checkbox_l .checkbox__check:after {
     top: 3px;
     left: 3px;
+    transition: none;
+  }
+
+  .popup_email .popup__in {
+    max-width: 930px;
   }
 
   .btn {

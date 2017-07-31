@@ -21,6 +21,8 @@ $('.js-search-adv-date').datepicker($.extend(datepickerDefaultOptions, {
    }
 }));
 
+$( "#ui-datepicker-div" ).datepicker( $.datepicker.regional[ "ru" ] );
+
 // $('.js-calendar').datepicker($.extend(datepickerDefaultOptions, {
 //    inline: true,
 //    beforeShow: function () {

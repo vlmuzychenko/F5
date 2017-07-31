@@ -7,7 +7,8 @@ class Datepicker {
 			yearInput: '.js-datepicker-year',
 			monthInput: '.js-datepicker-month',
 			selectText: '.js-datepicker-text',
-			dropdown: '.js-datepicker-dropdown'
+			dropdown: '.js-datepicker-dropdown',
+			firstDay: 1
 		};
 
 		this.openBtn = $(this.config.openBtn);

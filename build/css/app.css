@@ -3531,6 +3531,7 @@ input[name="phone"]:focus::placeholder {
   margin-bottom: 10px;
   color: #161616;
   font-family: FuturaPT-Demi, Arial, sans-serif;
+  white-space: nowrap;
 }
 
 .card__rent-text {
@@ -4206,6 +4207,10 @@ input[name="phone"]:focus::placeholder {
 
 .search-adv__field input::placeholder {
   color: #000;
+}
+
+.search-adv__field .js-select-multiple li::before {
+  top: 15px;
 }
 
 .search-adv__price-field {

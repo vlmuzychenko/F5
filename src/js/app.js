@@ -11,6 +11,7 @@
 //=include lib/Carousel.js
 //=include lib/owl.carousel.min.js
 //=include map.js
+//=include datepicker-localization.js
 //=include datepickers.js
 //=include Datepicker.js
 //=include _PopupMore.js

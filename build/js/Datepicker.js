@@ -16,7 +16,7 @@ var Datepicker = function () {
 						monthInput: '.js-datepicker-month',
 						selectText: '.js-datepicker-text',
 						dropdown: '.js-datepicker-dropdown',
-						firstDay: 1
+						firstDay: 0
 				};
 
 				this.openBtn = $(this.config.openBtn);

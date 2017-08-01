@@ -314,7 +314,7 @@ a {
   background-image: url("../img/sprite.png");
   width: 24px;
   height: 20px;
-  background-position: -294px -150px;
+  background-position: -134px -76px;
 }
 
 .checkbox__check_yellow {
@@ -491,7 +491,7 @@ a {
   background-image: url("../img/sprite.png");
   width: 24px;
   height: 20px;
-  background-position: -294px -150px;
+  background-position: -134px -76px;
 }
 
 .img-check__pic {
@@ -3309,62 +3309,40 @@ input[name="phone"]:focus::placeholder {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  width: 65px;
+  height: 65px;
 }
 
 .card__info-pic--type::before {
-  background-image: url("../img/sprite.png");
-  width: 60px;
-  height: 78px;
-  background-position: -99px -115px;
+  background-image: url(../img/yacht.svg);
 }
 
 .card__info-pic--length::before {
-  background-image: url("../img/sprite.png");
-  width: 64px;
-  height: 64px;
-  background-position: -74px -215px;
+  background-image: url(../img/length.svg);
 }
 
 .card__info-pic--speed::before {
-  background-image: url("../img/sprite.png");
-  width: 64px;
-  height: 50px;
-  background-position: -220px -148px;
+  background-image: url(../img/speed.svg);
 }
 
 .card__info-pic--cabin:before {
-  background-image: url("../img/sprite.png");
-  width: 64px;
-  height: 64px;
-  background-position: -220px 0px;
+  background-image: url(../img/cabin.svg);
 }
 
 .card__info-pic--sleeps:before {
-  background-image: url("../img/sprite.png");
-  width: 64px;
-  height: 34px;
-  background-position: -294px 0px;
+  background-image: url(../img/sleeps.svg);
 }
 
 .card__info-pic--shower:before {
-  background-image: url("../img/sprite.png");
-  width: 60px;
-  height: 64px;
-  background-position: -148px -215px;
+  background-image: url(../img/shower.svg);
 }
 
 .card__info-pic--location:before {
-  background-image: url("../img/sprite.png");
-  width: 64px;
-  height: 64px;
-  background-position: 0px -215px;
+  background-image: url(../img/location.svg);
 }
 
 .card__info-pic--engine:before {
-  background-image: url("../img/sprite.png");
-  width: 64px;
-  height: 64px;
-  background-position: -220px -74px;
+  background-image: url(../img/engine.svg);
 }
 
 .card__info-title {
@@ -3446,21 +3424,21 @@ input[name="phone"]:focus::placeholder {
   background-image: url("../img/sprite.png");
   width: 35px;
   height: 24px;
-  background-position: -294px -44px;
+  background-position: -89px -76px;
 }
 
 .card__actions-btn--video::before {
   background-image: url("../img/sprite.png");
   width: 32px;
   height: 26px;
-  background-position: -294px -114px;
+  background-position: -169px -151px;
 }
 
 .card__actions-btn--photo::before {
   background-image: url("../img/sprite.png");
   width: 32px;
   height: 26px;
-  background-position: -294px -78px;
+  background-position: -169px -115px;
 }
 
 .card__order {
@@ -3494,32 +3472,20 @@ input[name="phone"]:focus::placeholder {
 }
 
 .card__rent-row {
-  *zoom: 1;
-}
-
-.card__rent-row:after {
-  content: " ";
-  display: table;
-  clear: both;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .card__rent-table {
   color: #6c6c6c;
-  *zoom: 1;
-}
-
-.card__rent-table:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-.card__rent-col {
-  float: left;
 }
 
 .card__rent-col:nth-child(1) {
-  width: 60%;
+  width: 96%;
 }
 
 .card__rent-col:nth-child(2) {
@@ -3540,6 +3506,26 @@ input[name="phone"]:focus::placeholder {
 
 .card__rent-text:last-child {
   margin-bottom: 0;
+}
+
+.card__rent-text p {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card__rent-text p:last-of-type {
+  text-align: right;
+  width: 41%;
+}
+
+.card__rent-text span {
+  text-align: center;
+  display: inline-block;
+}
+
+.card__rent-text_s {
+  font-size: 16px;
 }
 
 .card__view {
@@ -3745,7 +3731,7 @@ input[name="phone"]:focus::placeholder {
   background-image: url("../img/sprite.png");
   width: 24px;
   height: 20px;
-  background-position: -294px -150px;
+  background-position: -134px -76px;
   transition: opacity .3s, -webkit-transform .3s;
   transition: opacity .3s, transform .3s;
   transition: opacity .3s, transform .3s, -webkit-transform .3s;
@@ -3932,7 +3918,7 @@ input[name="phone"]:focus::placeholder {
   background-image: url("../img/sprite.png");
   width: 49px;
   height: 47px;
-  background-position: -218px -215px;
+  background-position: -144px -215px;
 }
 
 .search__rent-help:hover {
@@ -4053,7 +4039,7 @@ input[name="phone"]:focus::placeholder {
 
 .search-adv__filter:not(.search-adv__filter--detailed) {
   height: 100%;
-  padding-bottom: 90px;
+  padding-bottom: 135px;
 }
 
 .search-adv__filter--detailed {
@@ -4537,14 +4523,14 @@ input[name="phone"]:focus::placeholder {
   background-image: url("../img/sprite.png");
   width: 16px;
   height: 16px;
-  background-position: -339px -44px;
+  background-position: -194px -76px;
 }
 
 .yacht__card-info--cabin::before {
   background-image: url("../img/sprite.png");
   width: 16px;
   height: 16px;
-  background-position: -336px -78px;
+  background-position: -168px -76px;
 }
 
 .yacht__card-info--sleeps::before {
@@ -4552,7 +4538,7 @@ input[name="phone"]:focus::placeholder {
   background-image: url("../img/sprite.png");
   width: 16px;
   height: 8px;
-  background-position: -336px -114px;
+  background-position: -294px 0px;
 }
 
 .yacht__card-info span {
@@ -8174,7 +8160,7 @@ keyframes spinMaSearch 100% {
   background-image: url("../img/sprite.png");
   width: 32px;
   height: 26px;
-  background-position: -294px -114px;
+  background-position: -169px -151px;
 }
 
 .news-extended__social-title {
@@ -10278,6 +10264,14 @@ keyframes spinMaSearch 100% {
     min-width: 100px;
   }
 
+  .card__rent-col:nth-child(1) {
+    width: 85%;
+  }
+
+  .card__rent-text_s {
+    font-size: 22px;
+  }
+
   .search__regions {
     min-height: 350px;
   }
@@ -11296,11 +11290,28 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 1599px) {
+@media only screen and (max-width: 1000px) {
 
-  .search-adv__filter:not(.search-adv__filter--detailed) {
-    padding-bottom: 135px;
+  .nav {
+    min-width: 0;
   }
+
+  .nav__item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
+@media only screen and (max-width: 1599px) {
 
   .search-adv__filter--detailed {
     bottom: 135px;
@@ -11363,23 +11374,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 1240px) {
-
-  .header {
-    padding-right: 20px;
-    padding-left: 80px;
-  }
-}
-
-@media only screen and (max-height: 750px) {
-
-  .calendar__event-descr {
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
 @media only screen and (max-width: 1365px) {
 
   .search-adv__btn-filter {
@@ -11412,6 +11406,14 @@ keyframes spinMaSearch 100% {
 
   .yacht-map__wrapper--card {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+
+  .header {
+    padding-right: 20px;
+    padding-left: 80px;
   }
 }
 
@@ -11605,18 +11607,6 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-
-  .nav {
-    min-width: 0;
-  }
-
-  .nav__item {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
 @media only screen and (max-width: 960px) {
 
   .more .btn {
@@ -11637,6 +11627,28 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (max-width: 840px) {
+
+  .header__lang {
+    margin-left: 15px;
+  }
+
+  .nav {
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
 @media only screen and (max-height: 768px) {
 
   .main-card {
@@ -11651,32 +11663,10 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 840px) {
-
-  .header__lang {
-    margin-left: 15px;
-  }
-
-  .nav {
-    margin-right: 15px;
-  }
-}
-
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 
   .ps-container {
     overflow: auto !important;
-  }
-}
-
-@media only screen and (max-height: 680px) {
-
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
   }
 }
 

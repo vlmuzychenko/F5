@@ -116,22 +116,24 @@
       &::before
          content: ''
          +vcenter
+         width: 65px
+         height: 65px
       &--type::before
-         +s('yacht')
+         background-image: url(../img/yacht.svg)
       &--length::before
-         +s('ruler')
+         background-image: url(../img/length.svg)
       &--speed::before
-         +s('speed')
+         background-image: url(../img/speed.svg)
       &--cabin:before
-         +s('cabin')
+         background-image: url(../img/cabin.svg)
       &--sleeps:before
-         +s('sleeps')
+         background-image: url(../img/sleeps.svg)
       &--shower:before
-         +s('shower')
+         background-image: url(../img/shower.svg)
       &--location:before
-         +s('location')
+         background-image: url(../img/location.svg)
       &--engine:before
-         +s('engine')
+         background-image: url(../img/engine.svg)
    &__info-title
       font-size: 24px
       +futura-demi
@@ -222,14 +224,15 @@
             left: 0
             width: 100%
    &__rent-row
-      +clr
+     display: flex
+     align-items: center
    &__rent-table
       color: #6c6c6c
-      +clr
    &__rent-col
-      float: left
       &:nth-child(1)
-         width: 60%
+        width: 96%
+        +rmin(1680)
+           width: 85%
       &:nth-child(2)
          width: 38%
          margin-left: 2%
@@ -242,6 +245,20 @@
       margin-bottom: 5px
       &:last-child
          margin-bottom: 0
+      p
+        width: 45%
+        display: inline-block
+        vertical-align: top
+        &:last-of-type
+          text-align: right
+          width: 41%
+      span
+        text-align: center
+        display: inline-block
+      &_s
+        font-size: 16px
+        +rmin(1680)
+          font-size: 22px
    &__view
       position: relative
       float: left

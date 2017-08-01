@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 // datepicker search
 var datepickerDefaultOptions = {
-   dayNames: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+   dayNames: ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-   dayNamesMin: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+   dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
    prevText: '',
    nextText: ''
 };
@@ -20,8 +20,6 @@ $('.js-search-adv-date').datepicker($.extend(datepickerDefaultOptions, {
       $('#ui-datepicker-div').addClass('datepicker-adv-search');
    }
 }));
-
-$( "#ui-datepicker-div" ).datepicker( $.datepicker.regional[ "ru" ] );
 
 // $('.js-calendar').datepicker($.extend(datepickerDefaultOptions, {
 //    inline: true,

@@ -125,11 +125,8 @@
   &__list-item
     position: relative
     +futura-book
-    padding-left: 60px
-    +rmin(1024)
-      padding-left: 70px
-    +rmin(1680)
-      padding-left: 120px
+    display: flex
+    align-items: center
     & + &
       margin-top: 10px
       +rmin(1024)
@@ -137,18 +134,18 @@
   &__list-icon
     width: 40px
     height: 30px
-    position: absolute
-    left: 0
-    top: 0
     background-size: contain
-    background-position: 0 0
+    background-position: 50% 50%
     background-repeat: no-repeat
+    flex: 0 0 auto
     +rmin(1024)
       width: 50px
       height: 40px
     +rmin(1680)
       width: 90px
       height: 80px
+  &__list-text
+    margin-left: 30px
 
 .course
   box-sizing: border-box

@@ -3232,7 +3232,7 @@ input[name="phone"]:focus::placeholder {
 .card__info {
   height: 100%;
   position: relative;
-  padding: 55px 50px 80px 50px;
+  padding: 55px 50px 30px 50px;
 }
 
 .card__label {
@@ -3286,7 +3286,7 @@ input[name="phone"]:focus::placeholder {
   display: inline-block;
   vertical-align: top;
   width: 33.33333%;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
   color: #6c6c6c;
   text-align: center;
 }
@@ -3297,7 +3297,7 @@ input[name="phone"]:focus::placeholder {
 
 .card__info-pic {
   position: relative;
-  margin: 0 auto 10px;
+  margin: 0 auto;
   height: 85px;
 }
 
@@ -3442,7 +3442,7 @@ input[name="phone"]:focus::placeholder {
 }
 
 .card__order {
-  margin-top: 70px;
+  margin-top: 40px;
   font-size: 0;
 }
 
@@ -3485,7 +3485,7 @@ input[name="phone"]:focus::placeholder {
 }
 
 .card__rent-col:nth-child(1) {
-  width: 96%;
+  width: 65%;
 }
 
 .card__rent-col:nth-child(2) {
@@ -3509,14 +3509,13 @@ input[name="phone"]:focus::placeholder {
 }
 
 .card__rent-text p {
-  width: 45%;
+  width: 35%;
   display: inline-block;
   vertical-align: top;
 }
 
 .card__rent-text p:last-of-type {
   text-align: right;
-  width: 41%;
 }
 
 .card__rent-text span {
@@ -7015,7 +7014,12 @@ keyframes spinMaSearch 100% {
 .license__list-item {
   position: relative;
   font-family: FuturaPT-Book, Arial, sans-serif;
-  padding-left: 60px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .license__list-item + .license__list-item {
@@ -7025,12 +7029,16 @@ keyframes spinMaSearch 100% {
 .license__list-icon {
   width: 40px;
   height: 30px;
-  position: absolute;
-  left: 0;
-  top: 0;
   background-size: contain;
-  background-position: 0 0;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.license__list-text {
+  margin-left: 30px;
 }
 
 .course {
@@ -9416,10 +9424,6 @@ keyframes spinMaSearch 100% {
     font-size: 21px;
   }
 
-  .license__list-item {
-    padding-left: 70px;
-  }
-
   .license__list-item + .license__list-item {
     margin-top: 30px;
   }
@@ -10260,8 +10264,24 @@ keyframes spinMaSearch 100% {
     height: 80px;
   }
 
+  .card__info {
+    padding: 55px 50px 80px 50px;
+  }
+
+  .card__info-item {
+    margin-bottom: 45px;
+  }
+
+  .card__info-pic {
+    margin: 0 auto 10px;
+  }
+
   .card__actions-btn {
     min-width: 100px;
+  }
+
+  .card__order {
+    margin-top: 70px;
   }
 
   .card__rent-col:nth-child(1) {
@@ -10625,10 +10645,6 @@ keyframes spinMaSearch 100% {
 
   .license p {
     font-size: 30px;
-  }
-
-  .license__list-item {
-    padding-left: 120px;
   }
 
   .license__list-icon {

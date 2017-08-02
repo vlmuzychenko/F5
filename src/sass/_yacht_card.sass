@@ -52,12 +52,14 @@
    &__info
       height: 100%
       position: relative
-      padding: 55px 50px 80px 50px
+      padding: 55px 50px 30px 50px
       +r(1400)
          padding-right: 30px
       +r($tab)
          padding-left: 30px
          padding: 20px 30px 20px 20px
+      +rmin(1680)
+        padding: 55px 50px 80px 50px
 
    &__label
       z-index: -1
@@ -99,11 +101,13 @@
       display: inline-block
       vertical-align: top
       width: 33.33333%
-      margin-bottom: 45px
+      margin-bottom: 20px
       color: #6c6c6c
       text-align: center
       +r(1400)
          width: 50%
+      +rmin(1680)
+        margin-bottom: 45px
       &:nth-child(7),
       &:nth-child(8)
          width: 40%
@@ -111,8 +115,10 @@
             width: 50%
    &__info-pic
       position: relative
-      margin: 0 auto 10px
+      margin: 0 auto
       height: 85px
+      +rmin(1680)
+        margin: 0 auto 10px
       &::before
          content: ''
          +vcenter
@@ -196,8 +202,10 @@
          margin-right: 9px
 
    &__order
-      margin-top: 70px
+      margin-top: 40px
       font-size: 0
+      +rmin(1680)
+        margin-top: 70px
    &__order-btn
       display: block
       margin: 0 auto
@@ -230,7 +238,7 @@
       color: #6c6c6c
    &__rent-col
       &:nth-child(1)
-        width: 96%
+        width: 65%
         +rmin(1680)
            width: 85%
       &:nth-child(2)
@@ -246,12 +254,11 @@
       &:last-child
          margin-bottom: 0
       p
-        width: 45%
+        width: 35%
         display: inline-block
         vertical-align: top
         &:last-of-type
           text-align: right
-          width: 41%
       span
         text-align: center
         display: inline-block

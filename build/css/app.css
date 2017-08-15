@@ -3820,12 +3820,6 @@ input[name="phone"]:focus::placeholder {
   height: calc(100vh - 540px);
 }
 
-.search__yacht-type-wrap {
-  width: 33.33333%;
-  height: inherit;
-  overflow-x: hidden;
-}
-
 .search__yacht-type {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3834,11 +3828,7 @@ input[name="phone"]:focus::placeholder {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background-color: #dbdbdb;
-  width: 100%;
-  height: inherit;
-  overflow-y: scroll;
-  padding-right: 17px;
-  box-sizing: content-box;
+  width: 33.33333%;
 }
 
 .search__yacht-type .img-check {
@@ -9133,6 +9123,12 @@ keyframes spinMaSearch 100% {
   color: #cc3333;
 }
 
+.email-delay-text {
+  font-size: 18px;
+  font-family: Casper-Regular, Arial, sans-serif;
+  color: #fff;
+}
+
 @media only screen and (min-width: 768px) {
 
   .search__regions {
@@ -11587,7 +11583,7 @@ keyframes spinMaSearch 100% {
     flex-wrap: wrap;
   }
 
-  .search__yacht-type-wrap {
+  .search__yacht-type {
     width: 50%;
   }
 

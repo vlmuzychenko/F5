@@ -3258,10 +3258,6 @@ input[name="phone"]:focus::placeholder {
   font-family: FuturaPT-Bold, Arial, sans-serif;
 }
 
-.card__text {
-  margin-bottom: 40px;
-}
-
 .card__title {
   margin-bottom: 20px;
   font-size: 30px;
@@ -4147,8 +4143,23 @@ input[name="phone"]:focus::placeholder {
   display: none;
 }
 
+.search-adv__field .ms-drop ul li {
+  margin-right: 13px;
+}
+
 .search-adv__field .ms-drop ul > li label {
   white-space: normal !important;
+  z-index: 1;
+  position: relative;
+  margin-right: 0;
+}
+
+.search-adv__field .ms-drop ul > li:hover {
+  background-color: rgba(188, 188, 188, 0.5);
+}
+
+.search-adv__field .ms-drop ul > li label:hover {
+  background-color: transparent;
 }
 
 .search-adv__field input {

@@ -147,8 +147,17 @@
         width: 560px
       select
          display: none
+      .ms-drop ul li
+        margin-right: 13px
       .ms-drop ul > li label
          white-space: normal !important
+         z-index: 1
+         position: relative
+         margin-right: 0
+      .ms-drop ul > li:hover
+           background-color: rgba(#bcbcbc, .5)
+      .ms-drop ul > li label:hover
+        background-color: transparent
       input
          padding: 0 10px
          height: 40px

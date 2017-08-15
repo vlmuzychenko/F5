@@ -9915,6 +9915,12 @@ $(function () {
     $('.js-close-popup-email').click(function () {
         $('.js-popup-email').removeClass('is-open');
     });
+
+    $(document).keydown(function (e) {
+        if (e.keyCode == 27) {
+            $('.js-popup-email').removeClass('is-open');
+        }
+    });
 });
 
 $(function () {

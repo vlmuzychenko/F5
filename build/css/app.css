@@ -3259,7 +3259,7 @@ input[name="phone"]:focus::placeholder {
 }
 
 .card__title {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-size: 30px;
   font-family: FuturaPT-Bold, Arial, sans-serif;
   color: rgba(1, 1, 1, 0.8);
@@ -3455,7 +3455,7 @@ input[name="phone"]:focus::placeholder {
 .card__rent {
   position: relative;
   margin-top: 85px;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 .card__rent::before {
@@ -3517,10 +3517,6 @@ input[name="phone"]:focus::placeholder {
 .card__rent-text span {
   text-align: center;
   display: inline-block;
-}
-
-.card__rent-text_s {
-  font-size: 16px;
 }
 
 .card__view {
@@ -3824,15 +3820,25 @@ input[name="phone"]:focus::placeholder {
   height: calc(100vh - 540px);
 }
 
+.search__yacht-type-wrap {
+  width: 33.33333%;
+  height: inherit;
+  overflow-x: hidden;
+}
+
 .search__yacht-type {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 33.33333%;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background-color: #dbdbdb;
+  width: 100%;
+  height: inherit;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box;
 }
 
 .search__yacht-type .img-check {
@@ -10299,10 +10305,6 @@ keyframes spinMaSearch 100% {
     width: 85%;
   }
 
-  .card__rent-text_s {
-    font-size: 22px;
-  }
-
   .search__regions {
     min-height: 350px;
   }
@@ -11393,7 +11395,7 @@ keyframes spinMaSearch 100% {
   }
 
   .card__rent {
-    font-size: 21px;
+    font-size: 16px;
   }
 
   .search__region-name {
@@ -11585,7 +11587,7 @@ keyframes spinMaSearch 100% {
     flex-wrap: wrap;
   }
 
-  .search__yacht-type {
+  .search__yacht-type-wrap {
     width: 50%;
   }
 

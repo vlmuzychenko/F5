@@ -27,7 +27,8 @@ $(function () {
           priceFromInput = $('.js-price-from'),
           priceToInput = $('.js-price-to'),
           peopleCountRange = $('.js-people-count-range'),
-          peopleCountInput = $('.js-people-count'),
+          peopleFromInput = $('.js-people-from'),
+          peopleToInput = $('.js-people-to'),
           toiletsCountRange = $('.js-toilets-count-range'),
           toiletsCountInput = $('.js-toilets-count'),
           cabinCountRange = $('.js-cabin-count-range'),
@@ -70,24 +71,54 @@ $(function () {
       // people count
       peopleCountRange.slider({
          animate: true,
+         range: true,
+         min: 1,
+         max: 50,
+         step: 1,
+         values: [1, 25],
+         slide: function slide(event, ui) {
+            peopleFromInput.val(ui.values[0]);
+            peopleToInput.val(ui.values[1]);
+         }
+      });
+
+      peopleFromInput.val(peopleCountRange.slider('values', 0));
+
+      peopleFromInput.on('change', function () {
+         var _value = peopleFromInput.val();
+
+         peopleFromInput.val(_value);
+
+         peopleCountRange.slider('values', 0, _value);
+      });
+
+      peopleToInput.val(peopleCountRange.slider('values', 1));
+
+      peopleToInput.on('change', function () {
+         var _value = peopleToInput.val();
+
+         peopleToInput.val(_value);
+
+         peopleCountRange.slider('values', 1, _value);
+      });
+
+      // people count
+      /*peopleCountRange.slider({
+         animate: true,
          range: 'min',
          min: 1,
          max: 50,
          value: [15],
-         slide: function slide(event, ui) {
+         slide: function (event, ui) {
             peopleCountInput.val(ui.value);
          }
       });
-
-      peopleCountInput.val(peopleCountRange.slider('value'));
-
-      peopleCountInput.on('change', function () {
+        peopleCountInput.val(peopleCountRange.slider('value'));
+        peopleCountInput.on('change', function () {
          var _value = peopleCountInput.val();
-
-         peopleCountInput.val(_value);
-
-         peopleCountRange.slider('value', _value);
-      });
+           peopleCountInput.val(_value);
+           peopleCountRange.slider('value', _value);
+      });*/
 
       // toilets count
       toiletsCountRange.slider({

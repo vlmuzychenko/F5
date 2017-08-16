@@ -79,6 +79,11 @@
     height: 70px
   &__btn
     margin-left: auto
+    position: relative
+    &:hover
+      .loader
+        border-color: #fff
+        border-top-color: #f6cb02
   &__input
     flex: 1 1 auto
     background-color: transparent
@@ -104,6 +109,11 @@
         color: #cc3333
 
 .email-delay-text
-  font-size: 18px
+  font-size: 14px
   +casp-reg
   color: #fff
+  position: absolute
+  transform: translateY(-10px)
+  +rmin(1366)
+    font-size: 18px
+    transform: translateY(-20px)

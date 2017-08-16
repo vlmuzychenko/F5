@@ -145,6 +145,25 @@
       &_full-w
         max-width: 100%
         width: 560px
+      &_bold
+        +casp-bold
+        margin-bottom: 5px
+      &_s
+        padding-left: 55px
+        margin-top: 5px
+        .checkbox
+          &__name
+            font-size: 16px
+            padding-left: 20px
+          &__check
+            width: 15px
+            height: 15px
+            top: 50%
+            transform: translateY(-50%)
+            &:after
+              width: 18px
+              top: -4px
+              left: -3px
       select
          display: none
       .ms-drop ul li
@@ -169,6 +188,11 @@
          +placeholder-color(#000)
       .js-select-multiple li::before
         top: 15px
+
+   &__group
+      max-width: 50%
+      display: inline-block
+      vertical-align: top
 
    &__price-field
       width: 130px

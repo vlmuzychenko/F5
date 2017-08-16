@@ -375,6 +375,21 @@ a {
   color: #fff;
 }
 
+.checkbox_mod {
+  position: relative;
+}
+
+.checkbox_mod .checkbox__name {
+  margin-left: 0;
+  padding-left: 30px;
+}
+
+.checkbox_mod .checkbox__check {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .checkbox_l label {
   display: inline-block;
   padding-left: 33px;
@@ -3943,16 +3958,19 @@ input[name="phone"]:focus::placeholder {
   line-height: 50px;
   color: #000;
   background: #fff;
-  border-color: transparent;
 }
 
 .search__find-btn--bg {
-  background-color: transparent;
   border: 1px solid #000;
+  background-color: #f6cb02;
 }
 
 .search__find-btn + .search__find-btn {
   margin-top: 20px;
+}
+
+.search__find-btn:hover {
+  border-color: #000;
 }
 
 .search-adv {
@@ -4135,6 +4153,36 @@ input[name="phone"]:focus::placeholder {
   width: 560px;
 }
 
+.search-adv__field_bold {
+  font-family: Casper-Bold, Arial, sans-serif;
+  margin-bottom: 5px;
+}
+
+.search-adv__field_s {
+  padding-left: 55px;
+  margin-top: 5px;
+}
+
+.search-adv__field_s .checkbox__name {
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.search-adv__field_s .checkbox__check {
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.search-adv__field_s .checkbox__check:after {
+  width: 18px;
+  top: -4px;
+  left: -3px;
+}
+
 .search-adv__field select {
   display: none;
 }
@@ -4203,6 +4251,12 @@ input[name="phone"]:focus::placeholder {
 
 .search-adv__field .js-select-multiple li::before {
   top: 15px;
+}
+
+.search-adv__group {
+  max-width: 50%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .search-adv__price-field {
@@ -9071,6 +9125,12 @@ keyframes spinMaSearch 100% {
 
 .email-input__btn {
   margin-left: auto;
+  position: relative;
+}
+
+.email-input__btn:hover .loader {
+  border-color: #fff;
+  border-top-color: #f6cb02;
 }
 
 .email-input__input {
@@ -9124,9 +9184,57 @@ keyframes spinMaSearch 100% {
 }
 
 .email-delay-text {
-  font-size: 18px;
+  font-size: 14px;
   font-family: Casper-Regular, Arial, sans-serif;
   color: #fff;
+  position: absolute;
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.loader-wrap {
+  width: 30px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.loader {
+  border: 6px solid #f6cb02;
+  border-top: 6px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  transition: .3s ease;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -10181,6 +10289,24 @@ keyframes spinMaSearch 100% {
 
   .email-input__input::placeholder {
     font-size: 30px;
+  }
+
+  .email-delay-text {
+    font-size: 18px;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  .loader-wrap {
+    width: 50px;
+  }
+
+  .loader {
+    border: 12px solid #f6cb02;
+    border-top: 12px solid #fff;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -11286,53 +11412,10 @@ keyframes spinMaSearch 100% {
   }
 }
 
-@media only screen and (max-width: 1777px) {
-
-  .checkbox_mod {
-    position: relative;
-  }
-
-  .checkbox_mod .checkbox__name {
-    margin-left: 0;
-    padding-left: 30px;
-  }
-
-  .checkbox_mod .checkbox__pic {
-    display: none;
-  }
-
-  .checkbox_mod .checkbox__check {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
 @media only screen and (max-width: 1680px) {
 
   .card__info-item:nth-child(7), .card__info-item:nth-child(8) {
     width: 50%;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-
-  .nav {
-    min-width: 0;
-  }
-
-  .nav__item {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media only screen and (max-height: 750px) {
-
-  .calendar__event-descr {
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
   }
 }
 
@@ -11494,6 +11577,15 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (max-height: 750px) {
+
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
 @media only screen and (max-width: 1124px) {
 
   .img-check::before {
@@ -11610,6 +11702,38 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
 @media only screen and (max-width: 1024px) {
 
   .calendar__event-more {
@@ -11629,6 +11753,18 @@ keyframes spinMaSearch 100% {
 
   .yacht__card {
     width: calc(50% - 30px);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .nav {
+    min-width: 0;
+  }
+
+  .nav__item {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -11660,38 +11796,6 @@ keyframes spinMaSearch 100% {
 
   .nav {
     margin-right: 15px;
-  }
-}
-
-@media only screen and (max-height: 680px) {
-
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
-@media only screen and (max-height: 768px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
   }
 }
 

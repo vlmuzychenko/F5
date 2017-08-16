@@ -235,14 +235,15 @@
          line-height: 50px
          color: #000
          background: #fff
-         border-color: transparent
          +r(1124)
             display: inline-block
             margin: 0 10px
          &--bg
-            background-color: transparent
             border: 1px solid #000
+            background-color: $accent
          & + &
             margin-top: 20px
             +r(1124)
                margin-top: 0
+         &:hover
+            border-color: #000

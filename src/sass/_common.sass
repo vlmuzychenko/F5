@@ -157,7 +157,7 @@ a
    &__name
       display: inline-block
       vertical-align: middle
-      margin: 0 10px 0 7px
+      margin-bottom: 7px
       text-align: left
       font-size: 18px
       &_l
@@ -256,20 +256,29 @@ a
          top: 20px
          right: 20px
          border: 2px solid #000
-         height: 40px
-         width: 40px
+         height: 30px
+         width: 30px
          background-color: #dbdbdb
+         +rmin(1366)
+           height: 40px
+           width: 40px
       &::after
          opacity: 0
          top: 30px
          right: 27px
          transform: scale(.25)
          +s('checked')
+         +rmin(1366)
+           top: 25px
+           right: 23px
+
    &__pic
       +vcenter
-      top: 85px
+      top: 55px
       width: 60px
       height: 80px
+      +rmin(1366)
+        top: 85px
       span
         display: block
         width: 100%
@@ -285,11 +294,13 @@ a
           opacity: 0
    &__name
       position: absolute
-      top: 128px
+      top: 105px
       left: 20px
       right: 20px
       text-align: center
       +trs-search
+      +rmin(1366)
+        top: 128px
 
 // hide
 input[type='checkbox'], select, input[type='radio']

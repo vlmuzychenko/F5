@@ -9294,7 +9294,8 @@ var datepickerDefaultOptions = {
     dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
     prevText: '',
     firstDay: 1,
-    nextText: ''
+    nextText: '',
+    dateFormat: 'dd.mm.yy'
 };
 
 $('.js-pick-date').datepicker($.extend(datepickerDefaultOptions, {

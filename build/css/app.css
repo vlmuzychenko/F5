@@ -361,7 +361,7 @@ a {
 .checkbox__name {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 10px 0 7px;
+  margin-bottom: 7px;
   text-align: left;
   font-size: 18px;
 }
@@ -491,8 +491,8 @@ a {
   top: 20px;
   right: 20px;
   border: 2px solid #000;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   background-color: #dbdbdb;
 }
 
@@ -516,7 +516,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  top: 85px;
+  top: 55px;
   width: 60px;
   height: 80px;
 }
@@ -540,7 +540,7 @@ a {
 
 .img-check__name {
   position: absolute;
-  top: 128px;
+  top: 105px;
   left: 20px;
   right: 20px;
   text-align: center;
@@ -3274,11 +3274,17 @@ input[name="phone"]:focus::placeholder {
 }
 
 .card__title {
-  margin-bottom: 5px;
   font-size: 30px;
   font-family: FuturaPT-Bold, Arial, sans-serif;
   color: rgba(1, 1, 1, 0.8);
   text-transform: uppercase;
+}
+
+.card__subtitle {
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-family: FuturaPT-Demi, Arial, sans-serif;
+  color: #6c6c70;
 }
 
 .card__price {
@@ -3392,7 +3398,7 @@ input[name="phone"]:focus::placeholder {
   font-family: FuturaPT-Demi, Arial, sans-serif;
 }
 
-.card__feautre-text {
+.card__feature-text {
   margin-bottom: 3px;
   color: #6c6c6c;
   font-family: FuturaPT-Book, Arial, sans-serif;
@@ -3620,7 +3626,7 @@ input[name="phone"]:focus::placeholder {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow: auto;
+  overflow: hidden;
   height: calc(100vh - 100px);
   margin-top: 100px;
 }
@@ -4171,10 +4177,7 @@ input[name="phone"]:focus::placeholder {
 .search-adv__field_s .checkbox__check {
   width: 15px;
   height: 15px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 0;
 }
 
 .search-adv__field_s .checkbox__check:after {
@@ -9237,6 +9240,45 @@ keyframes spinMaSearch 100% {
   }
 }
 
+.ui-datepicker {
+  background-color: #fff;
+  box-shadow: 4px 4px 34px -4px rgba(0, 0, 0, 0.75);
+}
+
+.ui-datepicker .ui-state-default {
+  background: #fff;
+  border: none;
+  text-align: center;
+  width: 25px;
+}
+
+.ui-datepicker .ui-state-highlight {
+  background-color: #c6c6c6;
+}
+
+.ui-datepicker .ui-state-active {
+  background-color: #f6cb02;
+}
+
+.ui-datepicker th {
+  padding: 15px 3px;
+}
+
+.ui-datepicker .ui-widget-header {
+  background: #fff;
+  border: none;
+  border-bottom: 2px solid #c6c6c6;
+  padding-bottom: 20px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+  border-color: transparent transparent transparent #f6cb02;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  border-color: transparent #f6cb02 transparent transparent;
+}
+
 @media only screen and (min-width: 768px) {
 
   .search__regions {
@@ -9816,6 +9858,24 @@ keyframes spinMaSearch 100% {
     transition: none;
   }
 
+  .img-check label::before {
+    height: 40px;
+    width: 40px;
+  }
+
+  .img-check label::after {
+    top: 25px;
+    right: 23px;
+  }
+
+  .img-check__pic {
+    top: 85px;
+  }
+
+  .img-check__name {
+    top: 128px;
+  }
+
   .popup_email .popup__in {
     max-width: 930px;
   }
@@ -9849,6 +9909,10 @@ keyframes spinMaSearch 100% {
   .card-slider__nav .slick-track div {
     width: 100px !important;
     height: 100px;
+  }
+
+  .search__inner {
+    overflow: auto;
   }
 
   .search__row {
@@ -10420,7 +10484,7 @@ keyframes spinMaSearch 100% {
   }
 
   .card__order {
-    margin-top: 70px;
+    margin-top: 50px;
   }
 
   .card__rent-col:nth-child(1) {

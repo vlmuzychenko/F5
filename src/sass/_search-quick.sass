@@ -2,12 +2,14 @@
    &__inner
       display: flex
       flex-direction: column
-      overflow: auto
+      overflow: hidden
       height: calc(100vh - 100px)
       margin-top: 100px
       +resp
          height: calc(100vh - 70px)
          margin-top: 70px
+      +rmin(1366)
+        overflow: auto
    &__regions
       //height: 440px
       //overflow-y: auto

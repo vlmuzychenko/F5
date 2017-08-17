@@ -498,8 +498,8 @@ a {
 
 .img-check label::after {
   opacity: 0;
-  top: 30px;
-  right: 27px;
+  top: 25px;
+  right: 23px;
   -webkit-transform: scale(0.25);
   -ms-transform: scale(0.25);
   transform: scale(0.25);
@@ -3626,7 +3626,7 @@ input[name="phone"]:focus::placeholder {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow: hidden;
+  overflow: auto;
   height: calc(100vh - 100px);
   margin-top: 100px;
 }
@@ -3870,6 +3870,7 @@ input[name="phone"]:focus::placeholder {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
 }
 
 .search__rent-date {
@@ -3919,6 +3920,10 @@ input[name="phone"]:focus::placeholder {
   background-color: #000;
   color: #fff;
   text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
   transition: all .25s ease-in-out;
 }
 
@@ -9858,24 +9863,6 @@ keyframes spinMaSearch 100% {
     transition: none;
   }
 
-  .img-check label::before {
-    height: 40px;
-    width: 40px;
-  }
-
-  .img-check label::after {
-    top: 25px;
-    right: 23px;
-  }
-
-  .img-check__pic {
-    top: 85px;
-  }
-
-  .img-check__name {
-    top: 128px;
-  }
-
   .popup_email .popup__in {
     max-width: 930px;
   }
@@ -9909,14 +9896,6 @@ keyframes spinMaSearch 100% {
   .card-slider__nav .slick-track div {
     width: 100px !important;
     height: 100px;
-  }
-
-  .search__inner {
-    overflow: auto;
-  }
-
-  .search__row {
-    min-height: 420px;
   }
 
   .descr__title {
@@ -10383,6 +10362,31 @@ keyframes spinMaSearch 100% {
 
   .search-adv__btn-filter.is-active .icon-arrow {
     left: 4%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+
+  .img-check label::before {
+    height: 40px;
+    width: 40px;
+  }
+
+  .img-check label::after {
+    top: 30px;
+    right: 27px;
+  }
+
+  .img-check__pic {
+    top: 85px;
+  }
+
+  .img-check__name {
+    top: 128px;
+  }
+
+  .search__row {
+    min-height: 420px;
   }
 }
 
@@ -11483,6 +11487,36 @@ keyframes spinMaSearch 100% {
   }
 }
 
+@media only screen and (max-width: 1366px) {
+
+  .more .btn {
+    width: 180px;
+  }
+
+  .more .btn_large {
+    width: 240px;
+  }
+
+  .card__rent {
+    font-size: 16px;
+  }
+
+  .search__region-name {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
 @media only screen and (max-width: 1599px) {
 
   .search-adv__filter--detailed {
@@ -11524,25 +11558,7 @@ keyframes spinMaSearch 100% {
 
   .search__rent-date {
     padding: 0 20px;
-  }
-}
-
-@media only screen and (max-width: 1366px) {
-
-  .more .btn {
-    width: 180px;
-  }
-
-  .more .btn_large {
-    width: 240px;
-  }
-
-  .card__rent {
-    font-size: 16px;
-  }
-
-  .search__region-name {
-    font-size: 22px;
+    margin-top: 30px;
   }
 }
 
@@ -11647,6 +11663,27 @@ keyframes spinMaSearch 100% {
     -webkit-transform: translateY(40%);
     -ms-transform: translateY(40%);
     transform: translateY(40%);
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+
+  .main-card {
+    max-height: 500px;
   }
 }
 
@@ -11763,38 +11800,6 @@ keyframes spinMaSearch 100% {
 
   .search__find-btn + .search__find-btn {
     margin-top: 0;
-  }
-}
-
-@media only screen and (max-height: 768px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
-  }
-}
-
-@media only screen and (max-height: 680px) {
-
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
   }
 }
 

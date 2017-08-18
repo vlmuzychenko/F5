@@ -3274,17 +3274,17 @@ input[name="phone"]:focus::placeholder {
 }
 
 .card__title {
-  font-size: 30px;
-  font-family: FuturaPT-Bold, Arial, sans-serif;
-  color: rgba(1, 1, 1, 0.8);
-  text-transform: uppercase;
-}
-
-.card__subtitle {
   margin-bottom: 5px;
   font-size: 30px;
   font-family: FuturaPT-Demi, Arial, sans-serif;
   color: #6c6c70;
+}
+
+.card__subtitle {
+  font-size: 30px;
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+  color: rgba(1, 1, 1, 0.8);
+  text-transform: uppercase;
 }
 
 .card__price {

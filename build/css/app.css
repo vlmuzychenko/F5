@@ -3874,7 +3874,7 @@ input[name="phone"]:focus::placeholder {
 }
 
 .search__rent-date {
-  margin-top: auto;
+  margin-top: 70px;
   background: #fff;
   font-size: 0;
 }

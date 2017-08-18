@@ -475,10 +475,12 @@
 
       &-price
          margin-top: 35px
-         font-size: 18px
+         font-size: 14px
          color: #010101
          text-align: right
          +futura-demi
+         +rmin(1366)
+           font-size: 18px
       &-favourite
          display: none
          float: right
@@ -613,6 +615,9 @@
       .checkbox__check
          width: 14px
          height: 14px
+         vertical-align: baseline
+         margin-bottom: 2px
+         margin-right: 5px
       .checkbox__check::after
          top: -4px
          left: -6px

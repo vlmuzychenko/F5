@@ -4615,7 +4615,7 @@ input[name="phone"]:focus::placeholder {
 
 .yacht__card-price {
   margin-top: 35px;
-  font-size: 18px;
+  font-size: 14px;
   color: #010101;
   text-align: right;
   font-family: FuturaPT-Demi, Arial, sans-serif;
@@ -4807,6 +4807,9 @@ input[name="phone"]:focus::placeholder {
 .yacht-map__search-move .checkbox__check {
   width: 14px;
   height: 14px;
+  vertical-align: baseline;
+  margin-bottom: 2px;
+  margin-right: 5px;
 }
 
 .yacht-map__search-move .checkbox__check::after {
@@ -9896,6 +9899,10 @@ keyframes spinMaSearch 100% {
   .card-slider__nav .slick-track div {
     width: 100px !important;
     height: 100px;
+  }
+
+  .yacht__card-price {
+    font-size: 18px;
   }
 
   .descr__title {

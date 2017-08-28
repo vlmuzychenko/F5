@@ -1,4 +1,4 @@
-.ui-datepicker
+/*.ui-datepicker
   background-color: #fff
   box-shadow: 4px 4px 34px -4px rgba(0,0,0,0.75)
   .ui-state-default
@@ -20,4 +20,165 @@
   .ui-datepicker-next
     border-color: transparent transparent transparent $accent
   .ui-datepicker-prev
-    border-color: transparent $accent transparent transparent
+    border-color: transparent $accent transparent transparent*/
+
+.calendar
+	width: 100%
+	&__years
+		white-space: nowrap
+		margin: 10px 10px 40px
+		padding: 0 0 10px
+		border-bottom: 1px solid #ccc
+		font-size: 0
+		overflow: auto
+		li
+			display: inline-block
+			width: 33.33%
+			text-align: center
+			font-size: 30px
+			a
+				display: block
+				color: $black
+				opacity: .4
+				&.is-active, &:active
+					opacity: 1
+					color: $accent
+	&__button
+		text-align: center
+	&__main
+		overflow: hidden
+	.ui-datepicker
+		width: 100%
+		padding: 0
+		color: $black
+		font-size: 30px
+		border: 0
+		background-color: #fff
+		.ui-state-default
+			border: 0
+			background: transparent
+		.ui-widget-header
+			background: none
+			border: 0
+		.ui-datepicker-header
+			margin-bottom: 10px
+			padding: 0
+		.ui-datepicker-calendar
+			thead
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					left: 30px
+					right: 30px
+					height: 1px
+					background: #ccc
+				tr
+					height: 60px
+				th
+					padding-top: 10px
+					padding-bottom: 10px
+			tbody
+				border-top: 15px solid transparent
+				tr
+					height: 50px
+					td
+						vertical-align: middle
+
+		.ui-datepicker-title
+			margin: 0 20px
+			line-height: 1
+		.ui-datepicker-other-month
+			opacity: .4
+		.ui-state-default
+			text-align: center
+			color: $black
+			position: relative
+			z-index: 1
+		.ui-state-active
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 40px
+				height: 40px
+				margin-top: -21px
+				margin-left: -20px
+				border-radius: 50%
+				background: $accent
+				z-index: -1
+		.ui-datepicker-year
+			position: absolute
+			opacity: 0
+			visibility: hidden
+		.ui-datepicker-month
+			display: block
+			max-width: 130px
+			height: 50px
+			line-height: 50px
+			margin: 0 auto
+			border: 1px solid $black
+			border-radius: 30px
+			font-size: 18px
+			text-transform: lowercase
+		.ui-datepicker-next, .ui-datepicker-prev
+			top: 0
+			width: 100px
+			height: 50px
+			border: 1px solid $black
+			border-radius: 30px
+			transition: transform .4s ease
+		.ui-datepicker-next
+			right: 30px
+			.ui-icon
+				background-image: url(../img/arrow-right.svg)
+				background-size: contain
+				background-repeat: no-repeat
+				background-position: 50% 50%
+			&:active
+				transform: translate3d(3px, 0, 0)
+
+
+		.ui-datepicker-prev
+			left: 30px
+			.ui-icon
+				background-image: url(../img/arrow-left.svg)
+				background-size: contain
+				background-repeat: no-repeat
+				background-position: 50% 50%
+			&:active
+				transform: translate3d(-3px, 0, 0)
+		.ui-state-highlight
+			&.ui-state-active
+				&:after
+					display: none
+			&:after
+				content: ''
+				position: absolute
+				bottom: 3px
+				left: 50%
+				width: 6px
+				height: 6px
+				margin-left: -3px
+				border-radius: 50%
+				background: $accent
+				z-index: -1
+
+.calendar-wrap
+	display: none
+	position: absolute
+	width: 400px
+	top: -600px
+	left: 50%
+	transform: translateX(-50%)
+	z-index: 100
+	background-color: #fff
+	box-shadow: 4px 4px 34px -4px rgba(0,0,0,0.75)
+	.calendar
+		height: auto
+		&__title
+			float: none
+			color: $black
+	&.is-open
+		display: block

@@ -138,10 +138,29 @@ block content
                      .search__rent-row
                         .search__rent-field
                            label.input__text(for='sailing') Отплытие
-                           input.input.js-pick-date(id='sailing' type='text' name='' required)
+                           input.input.js-pick-date.js-open-popup(id='sailing' type='text' name='' required data-calendar-from data-title="Отплытие")
                         .search__rent-field
                            label.input__text(for='arrival') Прибытие
-                           input.input.js-pick-date(id='arrival' type='text' name='' required)
+                           input.input.js-pick-date.js-open-popup(id='arrival' type='text' name='' required data-calendar-to data-title="Прибытие")
+                        .calendar-wrap(data-calendar-popup)
+                          .calendar__title(data-calendar-title) Отплытие
+                          .calendar
+                            ul.calendar__years
+                              li
+                                a(href="#" data-calendar-year data-value="2016") 2016
+                              li
+                                a(href="#" data-calendar-year class="is-active" data-value="2017") 2017
+                              li
+                                a(href="#" data-calendar-year data-value="2018") 2018
+                              li
+                                a(href="#" data-calendar-year data-value="2019") 2019
+                              li
+                                a(href="#" data-calendar-year data-value="2020") 2020
+                              li
+                                a(href="#" data-calendar-year data-value="2021") 2021
+                            .calendar__main(data-calendar)
+                            .popup__button.calendar__button
+                              button.button.button_lg(type="button" data-calendar-save) Сохранить
                   a.search__rent-help.js-open-popup(href='#' data-open="callme") Не знаете что подобрать?
 
                .search__find

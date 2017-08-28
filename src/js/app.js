@@ -14,6 +14,7 @@
 //=include datepickers.js
 //=include Datepicker.js
 //=include _PopupMore.js
+//=include _PopupCalendar.js
 //=include filters.js
 //=include _rows.js
 //=include _movingLine.js

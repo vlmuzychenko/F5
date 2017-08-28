@@ -11,9 +11,19 @@ block content
             .search-adv__wrapper.js-info
                button.search-adv__btn.js-open-info(type="button")
                   +icon('icon-arrow')
+               ul.bradcrumbs
+                 li.bradcrumbs__item
+                   a(href='#') Главная
+                 li.bradcrumbs__item
+                   a(href='#') Поиск
+                 li.bradcrumbs__item.active
+                   a(href='#') Расширенный поиск
+                 
                .search-adv__filters
                   .search-adv__filters-inner
+                    
                      .search-adv__filter
+                       
                         .search-adv__filter-inner.js-scroll.styled-scroll
                            .search-adv__item
                               .search-adv__inner

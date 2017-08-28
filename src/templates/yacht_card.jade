@@ -8,8 +8,17 @@ block content
       .card__more.js-info
          button.card__btn.js-open-info
             +icon('icon-arrow')
+         
          .card__info.js-scroll
-
+            ul.bradcrumbs.bradcrumbs_no-pr
+              li.bradcrumbs__item
+                a(href='#') Главная
+              li.bradcrumbs__item
+                a(href='#') Поиск
+              li.bradcrumbs__item
+                a(href='#') Расширенный поиск
+              li.bradcrumbs__item.active
+                a(href='#') Карточка яхты
             .card__label Riva Duchessa
             .card__data
                .card__text

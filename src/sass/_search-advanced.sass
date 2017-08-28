@@ -57,12 +57,12 @@
       z-index: 1
       overflow: hidden
       &-inner
-         height: calc(100vh - 100px)
+         height: calc(100vh - 165px)
          padding: 10px 0 0
          +r(1200)
-            height: calc(100vh - 100px)
+            height: calc(100vh - 160px)
          +resp
-            height: calc(100vh - 70px)
+            height: calc(100vh - 135px)
    &__filter-inner
       height: 100%
       overflow: hidden
@@ -87,7 +87,7 @@
          top: 0
          left: 0
          right: 0
-         bottom: 100px
+         bottom: 155px
          z-index: 10
          padding-top: 10px
          //padding-bottom: 10px
@@ -105,7 +105,7 @@
          &.is-active
             transform: translateX(0)
          +r(1900)
-            bottom: 155px
+            bottom: 135px
          +r(1599)
             bottom: 135px
    &__item
@@ -615,9 +615,6 @@
       .checkbox__check
          width: 14px
          height: 14px
-         vertical-align: baseline
-         margin-bottom: 2px
-         margin-right: 5px
       .checkbox__check::after
          top: -4px
          left: -6px

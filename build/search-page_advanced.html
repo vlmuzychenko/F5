@@ -134,8 +134,25 @@
                       <div class="search-adv__inner">
                         <div class="search-adv__title title">Даты</div>
                         <div class="search-adv__row">
-                          <div class="search-adv__field"><input type="text" name="" placeholder="Отплытие" required class="input js-search-adv-date"></div>
-                          <div class="search-adv__field"><input type="text" name="" placeholder="Прибытие" required class="input js-search-adv-date"></div>
+                          <div class="search-adv__field">
+                            <!--input.input.js-search-adv-date(type='text' name='' placeholder='Отплытие' required)--><input placeholder="Отплытие" id="arrival" type="text" name="" required data-calendar-from data-title="Отплытие" class="input js-pick-date js-open-popup"></div>
+                          <div class="search-adv__field">
+                            <!--input.input.js-search-adv-date(type='text' name='' placeholder='Прибытие' required)--><input placeholder="Прибытие" id="arrival" type="text" name="" required data-calendar-to data-title="Прибытие" class="input js-pick-date js-open-popup"></div>
+                          <div data-calendar-popup class="calendar-wrap">
+                            <div data-calendar-title class="calendar__title">Отплытие</div>
+                            <div class="calendar">
+                              <ul class="calendar__years">
+                                <li><a href="#" data-calendar-year data-value="2016">2016</a></li>
+                                <li><a href="#" data-calendar-year data-value="2017" class="is-active">2017</a></li>
+                                <li><a href="#" data-calendar-year data-value="2018">2018</a></li>
+                                <li><a href="#" data-calendar-year data-value="2019">2019</a></li>
+                                <li><a href="#" data-calendar-year data-value="2020">2020</a></li>
+                                <li><a href="#" data-calendar-year data-value="2021">2021</a></li>
+                              </ul>
+                              <div data-calendar class="calendar__main"></div>
+                              <div class="popup__button calendar__button"><button type="button" data-calendar-save class="btn btn_lg">Сохранить</button></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

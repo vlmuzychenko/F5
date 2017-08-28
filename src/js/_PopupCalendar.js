@@ -141,3 +141,22 @@ class Calendar {
 }
 
 new Calendar();
+
+$(window).click(function() {
+	$('.calendar-wrap').hide();
+});
+
+$('.calendar-wrap').click(function(event){
+    event.stopPropagation();
+});
+$('.js-pick-date').click(function(event){
+    event.stopPropagation();
+});
+
+$('.js-pick-date').click(function(){
+	$(this).parent().append($('.calendar-wrap'));
+});
+
+/*$('.search__rent-field').click(function(){
+	$(this).append($('.calendar-wrap'));
+})*/

@@ -180,9 +180,30 @@ block content
                                  .search-adv__title.title Даты
                                  .search-adv__row
                                     .search-adv__field
-                                       input.input.js-search-adv-date(type='text' name='' placeholder='Отплытие' required)
+                                       //input.input.js-search-adv-date(type='text' name='' placeholder='Отплытие' required)
+                                       input.input.js-pick-date.js-open-popup(placeholder='Отплытие' id='arrival' type='text' name='' required data-calendar-from data-title="Отплытие")
                                     .search-adv__field
-                                       input.input.js-search-adv-date(type='text' name='' placeholder='Прибытие' required)
+                                       //input.input.js-search-adv-date(type='text' name='' placeholder='Прибытие' required)
+                                       input.input.js-pick-date.js-open-popup(placeholder='Прибытие' id='arrival' type='text' name='' required data-calendar-to data-title="Прибытие")
+                                    .calendar-wrap(data-calendar-popup)
+                                      .calendar__title(data-calendar-title) Отплытие
+                                      .calendar
+                                        ul.calendar__years
+                                          li
+                                            a(href="#" data-calendar-year data-value="2016") 2016
+                                          li
+                                            a(href="#" data-calendar-year class="is-active" data-value="2017") 2017
+                                          li
+                                            a(href="#" data-calendar-year data-value="2018") 2018
+                                          li
+                                            a(href="#" data-calendar-year data-value="2019") 2019
+                                          li
+                                            a(href="#" data-calendar-year data-value="2020") 2020
+                                          li
+                                            a(href="#" data-calendar-year data-value="2021") 2021
+                                        .calendar__main(data-calendar)
+                                        .popup__button.calendar__button
+                                          button.btn.btn_lg(type="button" data-calendar-save) Сохранить
                            .search-adv__item
                               .search-adv__inner.search-adv__inner--price
                                  .search-adv__title.title Цена

@@ -4327,14 +4327,10 @@ input[name="phone"]:focus::placeholder {
   margin-right: 20px;
 }
 
-.search-adv__btn-find span {
-  margin-left: 18px;
-}
-
 .search-adv__btn-find .icon-search {
   position: absolute;
   top: 50%;
-  left: 27px;
+  left: 20%;
   width: 28px;
   height: 28px;
   margin-top: -14px;
@@ -9275,15 +9271,34 @@ keyframes spinMaSearch 100% {
     border-color: transparent $accent transparent transparent*/
 .calendar-wrap {
   display: none;
-  position: absolute;
-  width: 250px;
-  padding: 15px 20px;
-  top: -400px;
-  left: -20%;
-  z-index: 100;
+  position: fixed;
+  width: 200px;
+  padding: 10px 15px;
+  top: 10%;
+  z-index: 999;
   background-color: #fff;
   box-shadow: 4px 4px 34px -4px rgba(0, 0, 0, 0.75);
   font-family: FuturaPT-Book, Arial, sans-serif;
+}
+
+.calendar-wrap.left {
+  left: 30vw;
+}
+
+.calendar-wrap.right {
+  right: 5vw;
+}
+
+.calendar-wrap_adv {
+  top: 5%;
+}
+
+.calendar-wrap_adv.left {
+  left: 1vw;
+}
+
+.calendar-wrap_adv.right {
+  left: 29vw;
 }
 
 .calendar-wrap .calendar {
@@ -9298,8 +9313,9 @@ keyframes spinMaSearch 100% {
 }
 
 .calendar-wrap .calendar__button .btn {
-  height: 35px;
-  line-height: 35px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
 }
 
 .calendar-wrap .calendar__title {
@@ -9312,7 +9328,7 @@ keyframes spinMaSearch 100% {
 }
 
 .calendar-wrap .calendar__years {
-  margin: 10px 10px 20px;
+  margin: 5px 5px 10px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   white-space: nowrap;
@@ -9324,7 +9340,7 @@ keyframes spinMaSearch 100% {
   display: inline-block;
   width: 33.33%;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .calendar-wrap .calendar__years li a {
@@ -9340,6 +9356,12 @@ keyframes spinMaSearch 100% {
 
 .calendar-wrap .calendar__button {
   text-align: center;
+}
+
+.calendar-wrap .calendar__button .btn {
+  min-width: 100px;
+  width: 70%;
+  font-size: 12px;
 }
 
 .calendar-wrap .calendar__main {
@@ -9359,7 +9381,8 @@ keyframes spinMaSearch 100% {
   background: #fff;
   border: none;
   text-align: center;
-  width: 25px;
+  width: 21px;
+  font-size: 12px;
 }
 
 .calendar-wrap .calendar .ui-datepicker .ui-state-highlight {
@@ -9393,7 +9416,7 @@ keyframes spinMaSearch 100% {
 }
 
 .calendar-wrap .calendar .ui-datepicker .ui-datepicker-calendar thead tr {
-  height: 40px;
+  height: 30px;
 }
 
 .calendar-wrap .calendar .ui-datepicker .ui-datepicker-calendar thead t {
@@ -9406,7 +9429,7 @@ keyframes spinMaSearch 100% {
 }
 
 .calendar-wrap .calendar .ui-datepicker .ui-datepicker-calendar tbody tr {
-  height: 30px;
+  height: 25px;
 }
 
 .calendar-wrap .calendar .ui-datepicker .ui-datepicker-calendar tbody tr td {
@@ -9416,6 +9439,7 @@ keyframes spinMaSearch 100% {
 .calendar-wrap .calendar .ui-datepicker .ui-datepicker-title {
   margin: 0 20px;
   line-height: 1;
+  font-size: 10px;
 }
 
 .calendar-wrap .calendar .ui-datepicker .ui-datepicker-other-month {
@@ -9431,19 +9455,19 @@ keyframes spinMaSearch 100% {
 .calendar-wrap .calendar .ui-datepicker .ui-datepicker-month {
   display: block;
   width: 50%;
-  height: 35px;
-  line-height: 32px;
+  height: 30px;
+  line-height: 28px;
   margin: 0 auto;
   border: 1px solid #161616;
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: lowercase;
 }
 
 .calendar-wrap .calendar .ui-datepicker .ui-datepicker-next, .calendar-wrap .calendar .ui-datepicker .ui-datepicker-prev {
   top: 0;
   width: 20%;
-  height: 35px;
+  height: 30px;
   border: 1px solid #161616;
   border-radius: 30px;
   background-size: 35%;
@@ -9470,7 +9494,7 @@ keyframes spinMaSearch 100% {
 }
 
 .bradcrumbs {
-  padding: 15px 0;
+  padding: 20px 0;
   padding-left: 50px;
   position: relative;
   display: -webkit-flex;
@@ -9500,8 +9524,6 @@ keyframes spinMaSearch 100% {
 }
 
 .bradcrumbs__item {
-  padding-top: 5px;
-  padding-bottom: 5px;
   margin-right: 10px;
   position: relative;
   font-size: 18px;
@@ -9595,6 +9617,10 @@ keyframes spinMaSearch 100% {
 
   .search__row {
     min-height: 310px;
+  }
+
+  .search-adv__btn-find .icon-search {
+    left: 25%;
   }
 
   .fp-btn-container {
@@ -10090,6 +10116,60 @@ keyframes spinMaSearch 100% {
 
   .prise__title {
     font-size: 21px;
+  }
+
+  .calendar-wrap {
+    width: 250px;
+    top: 15%;
+  }
+
+  .calendar-wrap.left {
+    left: 34vw;
+  }
+
+  .calendar-wrap.right {
+    right: 25vw;
+  }
+
+  .calendar-wrap_adv {
+    top: 10%;
+  }
+
+  .calendar-wrap_adv.left {
+    left: 1vw;
+  }
+
+  .calendar-wrap_adv.right {
+    left: 17vw;
+  }
+
+  .calendar-wrap .calendar__button .btn {
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+  }
+
+  .calendar-wrap .calendar__years li {
+    font-size: 24px;
+  }
+
+  .calendar-wrap .calendar__button .btn {
+    font-size: 14px;
+  }
+
+  .calendar-wrap .calendar .ui-datepicker .ui-state-default {
+    width: 25px;
+    font-size: 15px;
+  }
+
+  .calendar-wrap .calendar .ui-datepicker .ui-datepicker-month {
+    height: 35px;
+    line-height: 32px;
+    font-size: 18px;
+  }
+
+  .calendar-wrap .calendar .ui-datepicker .ui-datepicker-next, .calendar-wrap .calendar .ui-datepicker .ui-datepicker-prev {
+    height: 35px;
   }
 }
 
@@ -11432,6 +11512,14 @@ keyframes spinMaSearch 100% {
 
   .prise__title {
     font-size: 24px;
+  }
+
+  .calendar-wrap {
+    top: 32%;
+  }
+
+  .calendar-wrap_adv {
+    top: 20%;
   }
 
   .bradcrumbs__item {

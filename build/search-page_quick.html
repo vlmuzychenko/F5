@@ -147,21 +147,6 @@
                   <div class="search__rent-row">
                     <div class="search__rent-field"><label for="sailing" class="input__text">Отплытие</label><input id="sailing" type="text" name="" required data-calendar-from data-title="Отплытие" class="input js-pick-date js-open-popup"></div>
                     <div class="search__rent-field"><label for="arrival" class="input__text">Прибытие</label><input id="arrival" type="text" name="" required data-calendar-to data-title="Прибытие" class="input js-pick-date js-open-popup"></div>
-                    <div data-calendar-popup class="calendar-wrap">
-                      <div data-calendar-title class="calendar__title">Отплытие</div>
-                      <div class="calendar">
-                        <ul class="calendar__years">
-                          <li><a href="#" data-calendar-year data-value="2016">2016</a></li>
-                          <li><a href="#" data-calendar-year data-value="2017" class="is-active">2017</a></li>
-                          <li><a href="#" data-calendar-year data-value="2018">2018</a></li>
-                          <li><a href="#" data-calendar-year data-value="2019">2019</a></li>
-                          <li><a href="#" data-calendar-year data-value="2020">2020</a></li>
-                          <li><a href="#" data-calendar-year data-value="2021">2021</a></li>
-                        </ul>
-                        <div data-calendar class="calendar__main"></div>
-                        <div class="popup__button calendar__button"><button type="button" data-calendar-save class="btn btn_lg">Сохранить</button></div>
-                      </div>
-                    </div>
                   </div>
                 </div><a href="#" data-open="callme" class="search__rent-help js-open-popup">Не знаете что подобрать?</a></div>
               <div class="search__find">
@@ -173,6 +158,22 @@
         </form>
       </div>
       <!--END search-->
+      <!--BEGIN calendar-->
+      <div data-calendar-popup class="calendar-wrap">
+        <div data-calendar-title class="calendar__title">Отплытие</div>
+        <div class="calendar">
+          <ul class="calendar__years">
+            <li><a href="#" data-calendar-year data-value="2016">2016</a></li>
+            <li><a href="#" data-calendar-year data-value="2017" class="is-active">2017</a></li>
+            <li><a href="#" data-calendar-year data-value="2018">2018</a></li>
+            <li><a href="#" data-calendar-year data-value="2019">2019</a></li>
+            <li><a href="#" data-calendar-year data-value="2020">2020</a></li>
+            <li><a href="#" data-calendar-year data-value="2021">2021</a></li>
+          </ul>
+          <div data-calendar class="calendar__main"></div>
+          <div class="popup__button calendar__button"><button type="button" data-calendar-save class="btn btn_lg">Сохранить</button></div>
+        </div>
+      </div>
     </div>
     <!--END out-->
     <div data-popup="feedback" class="popup js-popup">

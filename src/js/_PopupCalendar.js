@@ -154,9 +154,18 @@ $('.js-pick-date').click(function(event){
 });
 
 $('.js-pick-date').click(function(){
-	$(this).parent().append($('.calendar-wrap'));
+	$('.calendar-wrap').removeClass('left');
+	$('.calendar-wrap').removeClass('right');
+	if($(this).is('#sailing')){
+		$('.calendar-wrap').addClass('left');
+	}
+	if($(this).is('#arrival')){
+		$('.calendar-wrap').addClass('right');
+	}
+	if($(this).is('#sailing-adv')){
+		$('.calendar-wrap').addClass('left');
+	}
+	if($(this).is('#arrival-adv')){
+		$('.calendar-wrap').addClass('right');
+	}
 });
-
-/*$('.search__rent-field').click(function(){
-	$(this).append($('.calendar-wrap'));
-})*/

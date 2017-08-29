@@ -181,29 +181,11 @@ block content
                                  .search-adv__row
                                     .search-adv__field
                                        //input.input.js-search-adv-date(type='text' name='' placeholder='Отплытие' required)
-                                       input.input.js-pick-date.js-open-popup(placeholder='Отплытие' id='arrival' type='text' name='' required data-calendar-from data-title="Отплытие")
+                                       input.input.js-pick-date.js-open-popup(placeholder='Отплытие' id='sailing-adv' type='text' name='' required data-calendar-from data-title="Отплытие")
                                     .search-adv__field
                                        //input.input.js-search-adv-date(type='text' name='' placeholder='Прибытие' required)
-                                       input.input.js-pick-date.js-open-popup(placeholder='Прибытие' id='arrival' type='text' name='' required data-calendar-to data-title="Прибытие")
-                                    .calendar-wrap(data-calendar-popup)
-                                      .calendar__title(data-calendar-title) Отплытие
-                                      .calendar
-                                        ul.calendar__years
-                                          li
-                                            a(href="#" data-calendar-year data-value="2016") 2016
-                                          li
-                                            a(href="#" data-calendar-year class="is-active" data-value="2017") 2017
-                                          li
-                                            a(href="#" data-calendar-year data-value="2018") 2018
-                                          li
-                                            a(href="#" data-calendar-year data-value="2019") 2019
-                                          li
-                                            a(href="#" data-calendar-year data-value="2020") 2020
-                                          li
-                                            a(href="#" data-calendar-year data-value="2021") 2021
-                                        .calendar__main(data-calendar)
-                                        .popup__button.calendar__button
-                                          button.btn.btn_lg(type="button" data-calendar-save) Сохранить
+                                       input.input.js-pick-date.js-open-popup(placeholder='Прибытие' id='arrival-adv' type='text' name='' required data-calendar-to data-title="Прибытие")
+                           
                            .search-adv__item
                               .search-adv__inner.search-adv__inner--price
                                  .search-adv__title.title Цена
@@ -230,7 +212,7 @@ block content
                                  .search-adv__row.search-adv__row--range
                                     .js-people-count-range
                         .search-adv__actions
-                           button.search-adv__btn-find.btn.btn--bg.btn_text-small(type='submit')
+                           button.search-adv__btn-find.btn.btn--bg.btn_text-small.btn_yellow(type='submit')
                               +icon('icon-search')
                               span Найти
                            button.search-adv__btn-reset.js-search-adv-reset.btn.btn--transp.btn_text-small(type='reset')
@@ -513,3 +495,23 @@ block content
                                     .yacht__card-price 15 000 грн/день
 
    // END search-advanced
+   //BEGIN calendar
+   .calendar-wrap.calendar-wrap_adv(data-calendar-popup)
+     .calendar__title(data-calendar-title) Отплытие
+     .calendar
+       ul.calendar__years
+         li
+           a(href="#" data-calendar-year data-value="2016") 2016
+         li
+           a(href="#" data-calendar-year class="is-active" data-value="2017") 2017
+         li
+           a(href="#" data-calendar-year data-value="2018") 2018
+         li
+           a(href="#" data-calendar-year data-value="2019") 2019
+         li
+           a(href="#" data-calendar-year data-value="2020") 2020
+         li
+           a(href="#" data-calendar-year data-value="2021") 2021
+       .calendar__main(data-calendar)
+       .popup__button.calendar__button
+         button.btn.btn_lg(type="button" data-calendar-save) Сохранить

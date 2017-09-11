@@ -10,6 +10,7 @@
 //=include lib/jquery.fullPage.js
 //=include lib/Carousel.js
 //=include lib/owl.carousel.min.js
+//=include spinner.js
 //=include map.js
 //=include datepickers.js
 //=include Datepicker.js

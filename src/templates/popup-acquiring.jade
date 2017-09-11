@@ -1,0 +1,58 @@
+---
+title: Popup Acquiring
+---
+extends layouts/_layout 
+block content
+   // BEGIN popup
+   .popup.popup_acquiring.js-popup-acquiring.is-open
+     .popup__in
+       .popup__body
+         .acquiring
+           .acquiring__header
+             h2.acquiring__title регаты
+             button(type="button").popup__close.js-close-popup-acquiring
+               +icon('icon-close-bold')
+           .acquiring__body
+             formfield.acquiring__field.acquiring__field_yellow
+               h3.acquiring__subtitle
+                 Для оплаты онлайн заполните обязательные поля 
+                 span *
+               .acquiring__input-wrap
+                 .acquiring__input-col
+                   label(for='name').acquiring__label Как Вас зовут?
+                    span *
+                   input(type='text' id='name' placeholder='Имя Фамилия').acquiring__input
+                 .acquiring__input-col
+                   label(for='email').acquiring__label Как Вас зовут?
+                    span *
+                   input(type='text' id='email' placeholder='name@mail.com').acquiring__input
+             formfield.acquiring__field.acquiring__field_pic-bg
+               .acquiring__input-wrap
+                 .acquiring__input-col
+                   label(for='name').acquiring__label Выберите регату:
+                    span *
+                   .search-adv__field.js-select-field
+                      select.js-select-multiple(multiple='multiple' placeholder='Rolex Middle Sea Race')
+                         option Rolex Middle Sea Race
+                         option Rolex Middle Sea Race
+                         option Rolex Middle Sea Race
+                         option Rolex Middle Sea Race
+                         option Rolex Middle Sea Race
+                         option Rolex Middle Sea Race
+                         option Rolex Middle Sea Race
+                         option Rolex Middle Sea Race
+                         option Rolex Middle Sea Race
+                         option Rolex Middle Sea Race
+                   label(for='spinner').acquiring__label Укажите количество людей:
+                    span *
+                    .quantity.js-spinner
+                      input(type="number" min="1" max="40" step="1" value="1").acquiring__input.acquiring__input_number
+                 .acquiring__input-col
+                   label(for='email').acquiring__label Комментарий:
+                   textarea(placeholder='Не обязательное поле').acquiring__input.acquiring__input_textarea
+               .acquiring__bottom-wrap
+                 .acquiring__amount
+                   p.acquiring__amount-text Сумма к оплате:
+                   .acquiring__amount-value
+                     span 100.000
+                     грн

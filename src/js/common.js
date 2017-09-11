@@ -69,5 +69,4 @@ $(function () {
         $('.js-popup-email').removeClass('is-open');
       }
     });
-
 });

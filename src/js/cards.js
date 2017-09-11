@@ -234,7 +234,12 @@ $(document).keydown(function(e) {
 
 $(document).click(function(e){
   if(!$('.popup__in').is(e.target) && $('.popup__in').has(e.target).length === 0) {
-    console.log('cnqwp');
     $('.popup').removeClass('is-open');
-    }
+  }
+  if(!$('.popup-contacts').is(e.target) && $('.popup-contacts').has(e.target).length === 0) {
+    console.log('cnqwp');
+    $('.popup-wrap').removeClass('js-opened');
+    $('.popup-contacts').hide();
+    $('.popup-substrate').hide();
+  }
 });

@@ -231,3 +231,10 @@ $(document).keydown(function(e) {
     }
   }
 });
+
+$(document).click(function(e){
+  if(!$('.popup__in').is(e.target) && $('.popup__in').has(e.target).length === 0) {
+    console.log('cnqwp');
+    $('.popup').removeClass('is-open');
+    }
+});

@@ -115,3 +115,22 @@
 				font-size: 15px
 				fill: #fff
 				+vcenter
+
+.popup_acquiring
+	.popup
+		&__in
+			position: absolute
+			padding: 0
+			+vcenter
+			width: 90%
+			max-width: 740px
+			+rmin(1366)
+				max-width: 930px
+		&__body
+			background-color: rgba(0,0,0,0)
+			padding: 0
+			.popup__close
+				position: static
+				margin-left: auto
+				.icon-close-bold
+					fill: $accent

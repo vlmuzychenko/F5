@@ -52,31 +52,27 @@
               <div class="acquiring__header">
                 <h2 class="acquiring__title">регаты</h2><button type="button" class="popup__close js-close-popup-acquiring"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button></div>
               <div class="acquiring__body">
-                <formfield class="acquiring__field acquiring__field_yellow">
-                  <h3 class="acquiring__subtitle">Для оплаты онлайн заполните обязательные поля <span>*</span></h3>
+                <div class="acquiring__field acquiring__field_yellow">
+                  <h3 class="acquiring__title acquiring__title_s acquiring__title_black">Для оплаты онлайн заполните обязательные поля <span>*</span></h3>
                   <div class="acquiring__input-wrap">
                     <div class="acquiring__input-col"><label for="name" class="acquiring__label">Как Вас зовут?<span>*</span></label><input type="text" id="name" placeholder="Имя Фамилия" class="acquiring__input"></div>
-                    <div class="acquiring__input-col"><label for="email" class="acquiring__label">Как Вас зовут?<span>*</span></label><input type="text" id="email" placeholder="name@mail.com" class="acquiring__input"></div>
+                    <div class="acquiring__input-col"><label for="email" class="acquiring__label">Email<span>*</span></label><input type="text" id="email" placeholder="name@mail.com" class="acquiring__input"></div>
                   </div>
-                </formfield>
-                <formfield class="acquiring__field acquiring__field_pic-bg">
+                </div>
+                <div class="acquiring__field acquiring__field_pic-bg">
                   <div class="acquiring__input-wrap">
-                    <div class="acquiring__input-col"><label for="name" class="acquiring__label">Выберите регату:<span>*</span></label>
-                      <div class="search-adv__field js-select-field"><select multiple="multiple" placeholder="Rolex Middle Sea Race" class="js-select-multiple"><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option></select></div>
+                    <div class="acquiring__input-col"><label for="name" class="acquiring__label acquiring__label_white">Выберите регату:<span>*</span></label>
+                      <div class="acquiring__select js-select-field"><select placeholder="Rolex Middle Sea Race" class="js-select-single"><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option><option>Rolex Middle Sea Race</option></select></div>
                       <label
-                        for="spinner" class="acquiring__label">Укажите количество людей:<span>*</span>
-                        <div class="quantity js-spinner"><input type="number" min="1" max="40" step="1" value="1" class="acquiring__input acquiring__input_number"></div>
-                        </label>
+                        for="spinner" class="acquiring__label acquiring__label_white">Укажите количество людей:<span>*</span></label>
+                        <div class="quantity js-spinner"><input type="number" min="1" max="40" step="1" value="1"></div>
                     </div>
-                    <div class="acquiring__input-col"><label for="email" class="acquiring__label">Комментарий:</label><textarea placeholder="Не обязательное поле" class="acquiring__input acquiring__input_textarea"></textarea></div>
+                    <div class="acquiring__input-col"><label for="email" class="acquiring__label acquiring__label_white">Комментарий:</label><textarea placeholder="Не обязательное поле" rows="4" class="acquiring__input acquiring__input_textarea"></textarea></div>
                   </div>
                   <div class="acquiring__bottom-wrap">
-                    <div class="acquiring__amount">
-                      <p class="acquiring__amount-text">Сумма к оплате:</p>
-                      <div class="acquiring__amount-value"><span>100.000</span>грн</div>
-                    </div>
-                  </div>
-                </formfield>
+                    <h3 class="acquiring__title acquiring__title_s acquiring__title_yellow">Сумма к оплате:</h3>
+                    <div class="acquiring__title acquiring__title_m acquiring__title_yellow"><span class="empty"></span><span style="display: none;" class="filled">100.000</span><span> грн</span></div><a href="#" class="btn btn_xl acquire__btn">оплатить на Fondy.ua</a></div>
+                </div>
               </div>
             </div>
           </div>

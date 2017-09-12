@@ -2403,6 +2403,33 @@ input[name="phone"]:focus::placeholder {
   transform: translate(-50%, -50%);
 }
 
+.popup_acquiring .popup__in {
+  position: absolute;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 740px;
+}
+
+.popup_acquiring .popup__body {
+  background-color: transparent;
+  padding: 0;
+}
+
+.popup_acquiring .popup__body .popup__close {
+  position: static;
+  margin-left: auto;
+}
+
+.popup_acquiring .popup__body .popup__close .icon-close-bold {
+  fill: #f6cb02;
+}
+
 .btn {
   padding: 0 15px;
   border: 1px solid #000;
@@ -9565,6 +9592,8 @@ keyframes spinMaSearch 100% {
 
 .quantity {
   position: relative;
+  display: inline-block;
+  width: 46.25%;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -9578,54 +9607,207 @@ input[type=number] {
 }
 
 .quantity input {
-  width: 45px;
-  height: 42px;
-  line-height: 1.65;
-  float: left;
-  display: block;
-  padding: 0;
-  margin: 0;
-  padding-left: 20px;
-  border: 1px solid #eee;
-}
-
-.quantity-nav {
-  float: left;
-  position: relative;
-  height: 42px;
+  width: 100%;
+  padding: 10px 40px;
+  font-family: Casper-Bold, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
 }
 
 .quantity-button {
-  position: relative;
+  position: absolute;
+  top: 0;
   cursor: pointer;
-  border-left: 1px solid #eee;
-  width: 20px;
-  text-align: center;
-  color: #333;
-  font-size: 13px;
-  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
-  line-height: 1.7;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
+  width: 40px;
+  height: 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
+  font-family: Casper-Bold, Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+  background-color: #dcdcdc;
 }
 
 .quantity-button.quantity-up {
-  position: absolute;
-  height: 50%;
-  top: 0;
-  border-bottom: 1px solid #eee;
+  right: 0;
 }
 
 .quantity-button.quantity-down {
-  position: absolute;
-  bottom: -1px;
-  height: 50%;
+  left: 0;
+}
+
+.acquiring span {
+  color: #ff3333;
+}
+
+.acquiring__header {
+  background-color: transparent;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: -4px;
+}
+
+.acquiring__body {
+  margin-top: -14px;
+}
+
+.acquiring__bottom-wrap {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.acquiring__bottom-wrap > * + * {
+  margin-top: 10px;
+}
+
+.acquiring__title {
+  text-transform: uppercase;
+  font-size: 54px;
+  color: #fff;
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+}
+
+.acquiring__title span.empty {
+  display: inline-block;
+  width: 70px;
+  height: 5px;
+  background-color: #f6cb02;
+  margin-bottom: -5px;
+}
+
+.acquiring__title_s {
+  font-size: 16px;
+}
+
+.acquiring__title_m {
+  font-size: 21px;
+}
+
+.acquiring__title_black {
+  color: #000;
+}
+
+.acquiring__title_yellow {
+  color: #f6cb02;
+}
+
+.acquiring__title_yellow span {
+  color: #f6cb02;
+}
+
+.acquiring__field {
+  padding: 10px 30px 25px;
+}
+
+.acquiring__field_yellow {
+  background-color: #f6cb02;
+}
+
+.acquiring__field_pic-bg {
+  background-image: url(../img/acquire-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.acquiring__input-wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: Casper-Bold, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.acquiring__input-col {
+  width: 47.5%;
+}
+
+.acquiring__input-col .acquiring__label:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.acquiring__label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.acquiring__label_white {
+  color: #fff;
+}
+
+.acquiring__label span {
+  margin-left: 10px;
+}
+
+.acquiring__input {
+  width: 100%;
+  padding: 10px 13px;
+  font-family: Casper-Bold, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.acquiring__input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.acquiring__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.acquiring__input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.acquiring__input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.acquiring__input_textarea {
+  padding-bottom: 25px;
+  resize: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.acquiring__select .ms-drop {
+  padding: 0;
+}
+
+.acquiring__select .ms-drop ul {
+  max-height: 110px !important;
+}
+
+.acquiring__select .ms-drop ul > li:before, .acquiring__select .ms-drop ul > li:after {
+  content: none;
+}
+
+.acquiring__select .ms-drop ul > li label {
+  padding: 10px 13px !important;
+}
+
+.acquiring__select .ms-drop ul > li label:hover {
+  background-color: rgba(246, 203, 2, 0.5);
+}
+
+.acquiring__select .ms-drop ul > li label span {
+  color: #000;
+}
+
+.acquiring__select .ms-choice > span {
+  padding: 0 0 0 13px;
+  color: #000;
 }
 
 @media only screen and (min-width: 768px) {
@@ -10236,6 +10418,47 @@ input[type=number] {
   .calendar-wrap .calendar .ui-datepicker .ui-datepicker-next, .calendar-wrap .calendar .ui-datepicker .ui-datepicker-prev {
     height: 35px;
   }
+
+  .quantity input {
+    font-size: 20px;
+  }
+
+  .acquiring__header {
+    margin-left: -5px;
+  }
+
+  .acquiring__body {
+    margin-top: -19px;
+  }
+
+  .acquiring__bottom-wrap {
+    margin-top: 30px;
+  }
+
+  .acquiring__title {
+    font-size: 74px;
+  }
+
+  .acquiring__title_s {
+    font-size: 20px;
+  }
+
+  .acquiring__title_m {
+    font-size: 36px;
+  }
+
+  .acquiring__field {
+    padding: 20px 50px 35px;
+  }
+
+  .acquiring__input-wrap {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .acquiring__input {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -10266,6 +10489,10 @@ input[type=number] {
   }
 
   .popup_email .popup__in {
+    max-width: 930px;
+  }
+
+  .popup_acquiring .popup__in {
     max-width: 930px;
   }
 

@@ -2505,6 +2505,17 @@ input[name="phone"]:focus::placeholder {
   color: #000;
 }
 
+.btn_purple {
+  border-color: #f6cb02;
+  color: #f6cb02;
+  background-color: rgba(54, 0, 142, 0.8);
+}
+
+.btn_purple:hover {
+  background-color: #f6cb02;
+  color: #642ff6;
+}
+
 .socials-btn {
   display: inline-block;
   min-width: 70px;
@@ -4895,6 +4906,15 @@ keyframes spinMaSearch 100% {
 
 .fp-btn-container a + a {
   margin-left: 15px;
+}
+
+.fp-btn-container_vertical .btn {
+  display: block;
+}
+
+.fp-btn-container_vertical a + a {
+  margin-left: 0;
+  margin-top: 15px;
 }
 
 .skew-section {

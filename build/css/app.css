@@ -335,6 +335,9 @@ a {
   width: 23px;
   height: 23px;
   border-width: 3px;
+  /*+rmin(1366)
+            width: 33px
+            height: 33px*/
 }
 
 .checkbox__pic {
@@ -371,6 +374,8 @@ a {
 .checkbox__name_l {
   font-size: 16px;
   font-family: FuturaPT-Book, Arial, sans-serif;
+  /*+rmin(1366)
+          font-size: 26px*/
 }
 
 .checkbox__name_white {
@@ -394,13 +399,15 @@ a {
 
 .checkbox_l label {
   display: inline-block;
-  padding-left: 33px;
+  padding-left: 28px;
 }
 
 .checkbox_l input:checked + label .checkbox__check::after {
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);
+  /*+rmin(1366)
+       transform: scale(1)*/
 }
 
 .checkbox_l .checkbox__check {
@@ -414,6 +421,10 @@ a {
   -ms-transform: scale(1.5);
   transform: scale(1.5);
   transition: none;
+  /*+rmin(1366)
+          top: 3px
+          left: 3px
+          transition: none*/
 }
 
 .checkbox_l .checkbox__name {
@@ -2342,7 +2353,7 @@ input[name="phone"]:focus::placeholder {
 .popup_email .popup__in {
   position: absolute;
   padding: 0;
-  padding-right: 77px;
+  padding-right: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2351,9 +2362,9 @@ input[name="phone"]:focus::placeholder {
   transform: translate(-50%, -50%);
   background-image: url(../img/email-bg.png);
   background-repeat: no-repeat;
-  background-position: 102% 0;
+  background-size: contain;
   width: 90%;
-  max-width: 740px;
+  max-width: 600px;
 }
 
 .popup_email .popup__body {
@@ -2363,7 +2374,7 @@ input[name="phone"]:focus::placeholder {
 
 .popup_email .popup__close {
   position: absolute;
-  bottom: 15px;
+  bottom: 0;
   top: auto;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -2375,10 +2386,11 @@ input[name="phone"]:focus::placeholder {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+  z-index: 10;
 }
 
 .popup_email .popup__close-text {
-  font-size: 24px;
+  font-size: 18px;
   color: #fff;
   font-family: FuturaPT-Book, Arial, sans-serif;
   border-bottom: 2px solid #fff;
@@ -2452,11 +2464,16 @@ input[name="phone"]:focus::placeholder {
 }
 
 .btn_xxl {
-  font-size: 18px;
-  height: 40px;
-  line-height: 39px;
-  padding: 0 50px;
+  font-size: 14px;
+  height: 30px;
+  line-height: 29px;
+  padding: 0 20px;
   border-radius: 30px !important;
+  /*+rmin(1366)
+       font-size: 24px
+       height: 60px !important
+       line-height: 60px
+       padding: 0 90px*/
 }
 
 .btn_noborder {
@@ -9095,33 +9112,36 @@ keyframes spinMaSearch 100% {
 }
 
 .email__title {
-  font-size: 45px;
+  font-size: 38px;
   text-transform: uppercase;
   font-family: FuturaPT-Bold, Arial, sans-serif;
   color: #f6cb02;
   position: absolute;
-  top: 53px;
+  top: 25px;
 }
 
 .email__body {
-  padding: 35px;
-  padding-top: 125px;
-  padding-bottom: 70px;
+  padding-left: 20px;
+  padding-right: 60px;
+  padding-top: 80px;
+  padding-bottom: 50px;
 }
 
 .email__body_thnk {
   text-align: center;
+  padding-top: 95px;
+  padding-bottom: 65px;
 }
 
 .email__text {
-  font-size: 24px;
+  font-size: 21px;
   color: #fff;
   font-family: FuturaPT-Demi, Arial, sans-serif;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .email__text_l {
-  font-size: 42px;
+  font-size: 26px;
   text-transform: uppercase;
   font-family: FuturaPT-Bold, Arial, sans-serif;
 }
@@ -9131,6 +9151,9 @@ keyframes spinMaSearch 100% {
   height: 100px;
   margin: 0 auto;
   margin-bottom: 50px;
+  /*+rmin(1366)
+      width: 240px
+      height: 160px*/
 }
 
 .email__pic img {
@@ -9139,12 +9162,12 @@ keyframes spinMaSearch 100% {
 
 .email-interests__title {
   color: #f6cb02;
-  font-size: 36px;
+  font-size: 21px;
   font-family: FuturaPT-Book, Arial, sans-serif;
 }
 
 .email-checkboxes {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 92%;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9163,12 +9186,16 @@ keyframes spinMaSearch 100% {
 .email-checkboxes__item {
   width: 25%;
   margin-bottom: 15px;
+  /*+rmin(1366)
+      width: 20%
+      min-width: 175px
+      margin-bottom: 35px*/
 }
 
 .email-input {
-  margin-top: 25px;
+  margin-top: 40px;
   width: 100%;
-  height: 50px;
+  height: 40px;
   padding: 5px;
   padding-left: 15px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -9194,31 +9221,31 @@ keyframes spinMaSearch 100% {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   background-color: transparent;
-  font-size: 21px;
+  font-size: 18px;
   color: #fff;
   font-family: Casper-Regular, Arial, sans-serif;
 }
 
 .email-input__input::-webkit-input-placeholder {
-  font-size: 21px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
   font-family: Casper-Regular, Arial, sans-serif;
 }
 
 .email-input__input::-moz-placeholder {
-  font-size: 21px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
   font-family: Casper-Regular, Arial, sans-serif;
 }
 
 .email-input__input:-ms-input-placeholder {
-  font-size: 21px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
   font-family: Casper-Regular, Arial, sans-serif;
 }
 
 .email-input__input::placeholder {
-  font-size: 21px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
   font-family: Casper-Regular, Arial, sans-serif;
 }
@@ -9243,14 +9270,15 @@ keyframes spinMaSearch 100% {
   font-size: 14px;
   font-family: Casper-Regular, Arial, sans-serif;
   color: #fff;
+  margin-bottom: 10px;
   position: absolute;
-  -webkit-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  transform: translateY(-10px);
+  /*+rmin(1366)
+    font-size: 18px
+    transform: translateY(-20px)*/
 }
 
 .loader-wrap {
-  width: 30px;
+  width: 25px;
   margin: 0 auto;
   position: absolute;
   top: 50%;
@@ -9264,8 +9292,8 @@ keyframes spinMaSearch 100% {
   border: 6px solid #f6cb02;
   border-top: 6px solid #fff;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   transition: .3s ease;
@@ -9853,6 +9881,10 @@ input[type=number] {
 
   .btn_xl {
     min-width: 230px;
+  }
+
+  .btn_xxl {
+    min-width: 160px;
   }
 
   .calendar__layout {
@@ -10483,48 +10515,12 @@ input[type=number] {
 
 @media only screen and (min-width: 1366px) {
 
-  .checkbox__check_l {
-    width: 33px;
-    height: 33px;
-  }
-
-  .checkbox__name_l {
-    font-size: 26px;
-  }
-
-  .checkbox_l label {
-    padding-left: 43px;
-  }
-
-  .checkbox_l input:checked + label .checkbox__check::after {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  .checkbox_l .checkbox__check:after {
-    top: 3px;
-    left: 3px;
-    transition: none;
-  }
-
-  .popup_email .popup__in {
-    max-width: 930px;
-  }
-
   .popup_acquiring .popup__in {
     max-width: 930px;
   }
 
   .btn {
     font-size: 16px;
-  }
-
-  .btn_xxl {
-    font-size: 24px;
-    height: 60px !important;
-    line-height: 60px;
-    padding: 0 90px;
   }
 
   .calendar__layout {
@@ -10932,78 +10928,6 @@ input[type=number] {
   .checkin-form__btn {
     min-width: 190px;
   }
-
-  .email__title {
-    font-size: 70px;
-    top: 30px;
-  }
-
-  .email__body_thnk {
-    min-height: 595px;
-  }
-
-  .email__text {
-    margin-bottom: 50px;
-    font-size: 36px;
-  }
-
-  .email__text_l {
-    font-size: 54px;
-  }
-
-  .email__pic {
-    width: 240px;
-    height: 160px;
-  }
-
-  .email-checkboxes__item {
-    width: 20%;
-    min-width: 175px;
-    margin-bottom: 35px;
-  }
-
-  .email-input {
-    margin-top: 45px;
-    height: 70px;
-  }
-
-  .email-input__input {
-    font-size: 30px;
-  }
-
-  .email-input__input::-webkit-input-placeholder {
-    font-size: 30px;
-  }
-
-  .email-input__input::-moz-placeholder {
-    font-size: 30px;
-  }
-
-  .email-input__input:-ms-input-placeholder {
-    font-size: 30px;
-  }
-
-  .email-input__input::placeholder {
-    font-size: 30px;
-  }
-
-  .email-delay-text {
-    font-size: 18px;
-    -webkit-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  .loader-wrap {
-    width: 50px;
-  }
-
-  .loader {
-    border: 12px solid #f6cb02;
-    border-top: 12px solid #fff;
-    width: 50px;
-    height: 50px;
-  }
 }
 
 @media only screen and (min-width: 1367px) {
@@ -11068,6 +10992,14 @@ input[type=number] {
 
 @media only screen and (min-width: 1680px) {
 
+  .checkbox_l label {
+    padding-left: 33px;
+  }
+
+  .popup_email .popup__in {
+    max-width: 700px;
+  }
+
   .btn {
     height: 50px;
     line-height: 50px;
@@ -11081,7 +11013,11 @@ input[type=number] {
   }
 
   .btn_xxl {
-    font-size: 24px;
+    height: 40px;
+    line-height: 39px;
+    min-width: 0;
+    font-size: 18px;
+    padding: 0 50px;
   }
 
   .btn-share {
@@ -11227,6 +11163,10 @@ input[type=number] {
 
   .details__item-img {
     height: 120px;
+  }
+
+  .carousel {
+    height: calc(100% - 150px);
   }
 
   .carousel li {
@@ -11824,6 +11764,73 @@ input[type=number] {
 
   .prise__title {
     font-size: 24px;
+  }
+
+  .email__title {
+    font-size: 45px;
+    top: 27px;
+  }
+
+  .email__body {
+    padding-left: 25px;
+    padding-right: 75px;
+    padding-top: 90px;
+  }
+
+  .email__body_thnk {
+    padding-top: 105px;
+    padding-bottom: 85px;
+  }
+
+  .email__text {
+    margin-bottom: 50px;
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .email__text_l {
+    font-size: 38px;
+  }
+
+  .email-interests__title {
+    font-size: 26px;
+  }
+
+  .email-checkboxes {
+    margin-top: 30px;
+  }
+
+  .email-input {
+    height: 50px;
+  }
+
+  .email-input__input {
+    font-size: 21px;
+  }
+
+  .email-input__input::-webkit-input-placeholder {
+    font-size: 21px;
+  }
+
+  .email-input__input::-moz-placeholder {
+    font-size: 21px;
+  }
+
+  .email-input__input:-ms-input-placeholder {
+    font-size: 21px;
+  }
+
+  .email-input__input::placeholder {
+    font-size: 21px;
+  }
+
+  .loader-wrap {
+    width: 30px;
+  }
+
+  .loader {
+    width: 30px;
+    height: 30px;
   }
 
   .calendar-wrap {

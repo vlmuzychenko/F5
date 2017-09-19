@@ -136,9 +136,9 @@ a
          width: 23px
          height: 23px
          border-width: 3px
-         +rmin(1366)
+         /*+rmin(1366)
             width: 33px
-            height: 33px
+            height: 33px*/
    &__pic
       position: relative
       display: inline-block
@@ -165,8 +165,8 @@ a
       &_l
         font-size: 16px
         +futura-book
-        +rmin(1366)
-          font-size: 26px
+        /*+rmin(1366)
+          font-size: 26px*/
       &_white
         color: #fff
 
@@ -184,13 +184,13 @@ a
 .checkbox_l
   label
     display: inline-block
-    padding-left: 33px
-    +rmin(1366)
-      padding-left: 43px
+    padding-left: 28px
+    +rmin(1680)
+      padding-left: 33px
   input:checked + label .checkbox__check::after
      transform: scale(.8)
-     +rmin(1366)
-       transform: scale(1)
+     /*+rmin(1366)
+       transform: scale(1)*/
   .checkbox
     &__check
       left: 0
@@ -199,10 +199,10 @@ a
         left: -3px
         transform: scale(1.5)
         transition: none
-        +rmin(1366)
+        /*+rmin(1366)
           top: 3px
           left: 3px
-          transition: none
+          transition: none*/
     &__name
       margin: 0
       padding-left: 0

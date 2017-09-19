@@ -3,9 +3,11 @@ title: Popup Acquiring
 ---
 extends layouts/_layout 
 block content
+  
    // BEGIN popup
-   .popup.popup_acquiring.js-popup-acquiring.is-open
-     .popup__in
+   a.btn.btn_purple.js-open-popup(href="#" data-open="acquiring") Оплатить онлайн
+   .popup.popup_acquiring.js-popup-acquiring.js-popup.is-open(data-popup="acquiring")
+     .popup__in.js-popup-in
        .popup__body
          .acquiring
            .acquiring__header

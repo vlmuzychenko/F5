@@ -35,12 +35,14 @@ block content
                     span *
                    .acquiring__select.js-select-field.error
                      select.js-select-single
-                       option Цена вниз
-                       option Цена вверх
-                       option Год выпуска вниз
-                       option Год выпуска вверх
-                       option Год выпуска вверх1
-                       option Год выпуска вверх2
+                       optgroup(label="Group 1")
+                         option Цена вниз
+                         option Цена вверх
+                       optgroup(label="Group 1")
+                         option Год выпуска вниз
+                         option Год выпуска вверх
+                         option Год выпуска вверх1
+                         option Год выпуска вверх2
                    label(for='spinner').acquiring__label.acquiring__label_white Укажите количество людей:
                     span *
                    .quantity.js-spinner.error

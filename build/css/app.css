@@ -9879,6 +9879,13 @@ input[type=number] {
   max-height: 110px !important;
 }
 
+.acquiring__select .ms-drop ul > li.group {
+  font-family: Casper-Bold, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
 .acquiring__select .ms-drop ul > li:before, .acquiring__select .ms-drop ul > li:after {
   content: none;
 }

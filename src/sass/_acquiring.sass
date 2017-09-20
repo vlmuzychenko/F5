@@ -1,4 +1,5 @@
 .acquiring
+
   span
     color: #ff3333
   &__header
@@ -90,7 +91,18 @@
       resize: none
       background-color: rgba(#fff, .5)
       border: none
+    &.error
+      background: #ff6e6e
+      &::placeholder
+        color: #cc3333
   &__select
+    &.error
+      .ms-choice
+        background: #ff6e6e
+        & > span
+          color: #cc3333
+        & > div
+          border-color: #cc3333 transparent transparent transparent
     .ms-drop
       padding: 0
       ul

@@ -9644,6 +9644,16 @@ keyframes spinMaSearch 100% {
   width: 46.25%;
 }
 
+.quantity.error input {
+  background: #ff6e6e;
+  color: #cc3333;
+}
+
+.quantity.error .quantity-button {
+  background: #ce5959;
+  color: #cc3333;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -9827,6 +9837,38 @@ input[type=number] {
   resize: none;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
+}
+
+.acquiring__input.error {
+  background: #ff6e6e;
+}
+
+.acquiring__input.error::-webkit-input-placeholder {
+  color: #cc3333;
+}
+
+.acquiring__input.error::-moz-placeholder {
+  color: #cc3333;
+}
+
+.acquiring__input.error:-ms-input-placeholder {
+  color: #cc3333;
+}
+
+.acquiring__input.error::placeholder {
+  color: #cc3333;
+}
+
+.acquiring__select.error .ms-choice {
+  background: #ff6e6e;
+}
+
+.acquiring__select.error .ms-choice > span {
+  color: #cc3333;
+}
+
+.acquiring__select.error .ms-choice > div {
+  border-color: #cc3333 transparent transparent transparent;
 }
 
 .acquiring__select .ms-drop {

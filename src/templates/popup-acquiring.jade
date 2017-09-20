@@ -23,7 +23,7 @@ block content
                  .acquiring__input-col
                    label(for='name').acquiring__label Как Вас зовут?
                     span *
-                   input(type='text' id='name' placeholder='Имя Фамилия').acquiring__input
+                   input(type='text' id='name' placeholder='Имя Фамилия').acquiring__input.error
                  .acquiring__input-col
                    label(for='email').acquiring__label Email
                     span *
@@ -33,7 +33,7 @@ block content
                  .acquiring__input-col
                    label(for='name').acquiring__label.acquiring__label_white Выберите регату:
                     span *
-                   .acquiring__select.js-select-field
+                   .acquiring__select.js-select-field.error
                      select.js-select-single
                        option Цена вниз
                        option Цена вверх
@@ -43,7 +43,7 @@ block content
                        option Год выпуска вверх2
                    label(for='spinner').acquiring__label.acquiring__label_white Укажите количество людей:
                     span *
-                   .quantity.js-spinner
+                   .quantity.js-spinner.error
                      input(type="number" min="1" max="40" step="1" value="1")
                  .acquiring__input-col
                    label(for='email').acquiring__label.acquiring__label_white Комментарий:

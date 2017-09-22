@@ -1,5 +1,4 @@
 .acquiring
-
   span
     color: #ff3333
   &__header
@@ -56,6 +55,20 @@
     &_pic-bg
       background-image: url(../img/acquire-bg.jpg)
       +cover
+    &_center
+      text-align: center
+      padding: 30px
+      +rmin(1024)
+        padding: 60px
+    &_center-s
+      text-align: center
+      padding: 30px
+      +rmin(1024)
+        padding: 20px
+      & > * + *
+        margin-top: 15px
+        +rmin(1024)
+          margin-top: 25px
   &__input-wrap
     display: flex
     margin-top: 10px
@@ -66,7 +79,9 @@
       font-size: 20px
       margin-top: 15px
   &__input-col
-    width: 47.5%
+    width: calc(50% - 15px)
+    & + &
+      margin-left: 30px
     .acquiring__label
       &:not(:first-of-type)
         margin-top: 15px
@@ -91,28 +106,12 @@
       resize: none
       background-color: rgba(#fff, .5)
       border: none
-    &.error
-      background: #ff6e6e
-      &::placeholder
-        color: #cc3333
   &__select
-    &.error
-      .ms-choice
-        background: #ff6e6e
-        & > span
-          color: #cc3333
-        & > div
-          border-color: #cc3333 transparent transparent transparent
     .ms-drop
       padding: 0
       ul
         max-height: 110px !important
         & > li
-          &.group
-            +casp-bold
-            text-transform: uppercase
-            text-decoration: underline
-            font-weight: normal
           &:before,
           &:after
             content: none
@@ -126,3 +125,15 @@
       & > span
         padding: 0 0 0 13px
         color: #000
+  &__error-logo
+    background-image: url(../img/help.svg)
+    background-size: contain
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    width: 100px
+    height: 100px
+    margin-left: auto
+    margin-right: auto
+    +rmin(1024)
+      width: 135px
+      height: 135px

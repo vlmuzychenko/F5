@@ -9776,6 +9776,20 @@ input[type=number] {
   background-position: 50% 50%;
 }
 
+.acquiring__field_center {
+  text-align: center;
+  padding: 30px;
+}
+
+.acquiring__field_center-s {
+  text-align: center;
+  padding: 30px;
+}
+
+.acquiring__field_center-s > * + * {
+  margin-top: 15px;
+}
+
 .acquiring__input-wrap {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9789,7 +9803,11 @@ input[type=number] {
 }
 
 .acquiring__input-col {
-  width: 47.5%;
+  width: calc(50% - 15px);
+}
+
+.acquiring__input-col + .acquiring__input-col {
+  margin-left: 30px;
 }
 
 .acquiring__input-col .acquiring__label:not(:first-of-type) {
@@ -9839,51 +9857,12 @@ input[type=number] {
   border: none;
 }
 
-.acquiring__input.error {
-  background: #ff6e6e;
-}
-
-.acquiring__input.error::-webkit-input-placeholder {
-  color: #cc3333;
-}
-
-.acquiring__input.error::-moz-placeholder {
-  color: #cc3333;
-}
-
-.acquiring__input.error:-ms-input-placeholder {
-  color: #cc3333;
-}
-
-.acquiring__input.error::placeholder {
-  color: #cc3333;
-}
-
-.acquiring__select.error .ms-choice {
-  background: #ff6e6e;
-}
-
-.acquiring__select.error .ms-choice > span {
-  color: #cc3333;
-}
-
-.acquiring__select.error .ms-choice > div {
-  border-color: #cc3333 transparent transparent transparent;
-}
-
 .acquiring__select .ms-drop {
   padding: 0;
 }
 
 .acquiring__select .ms-drop ul {
   max-height: 110px !important;
-}
-
-.acquiring__select .ms-drop ul > li.group {
-  font-family: Casper-Bold, Arial, sans-serif;
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-weight: normal;
 }
 
 .acquiring__select .ms-drop ul > li:before, .acquiring__select .ms-drop ul > li:after {
@@ -9905,6 +9884,17 @@ input[type=number] {
 .acquiring__select .ms-choice > span {
   padding: 0 0 0 13px;
   color: #000;
+}
+
+.acquiring__error-logo {
+  background-image: url(../img/help.svg);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -10552,6 +10542,18 @@ input[type=number] {
     padding: 20px 50px 35px;
   }
 
+  .acquiring__field_center {
+    padding: 60px;
+  }
+
+  .acquiring__field_center-s {
+    padding: 20px;
+  }
+
+  .acquiring__field_center-s > * + * {
+    margin-top: 25px;
+  }
+
   .acquiring__input-wrap {
     font-size: 20px;
     margin-top: 15px;
@@ -10559,6 +10561,11 @@ input[type=number] {
 
   .acquiring__input {
     font-size: 20px;
+  }
+
+  .acquiring__error-logo {
+    width: 135px;
+    height: 135px;
   }
 }
 

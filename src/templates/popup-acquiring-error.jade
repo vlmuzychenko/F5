@@ -1,0 +1,26 @@
+---
+title: Popup Acquiring Error
+---
+extends layouts/_layout 
+block content
+  
+   // BEGIN popup
+   a.btn.btn_purple.js-open-popup(href="#" data-open="acquiring") Оплатить онлайн
+   .popup.popup_acquiring.js-popup-acquiring.js-popup.is-open(data-popup="acquiring")
+     .popup__in.js-popup-in
+       .popup__body
+         .acquiring
+           .acquiring__header
+             h2.acquiring__title регаты
+             button(type="button").popup__close.js-close-popup-acquiring
+               +icon('icon-close-bold')
+           .acquiring__body
+             .acquiring__field.acquiring__field_yellow.acquiring__field_center
+               p.acquiring__title.acquiring__title_m извините, что-то пошло не так
+             .acquiring__field.acquiring__field_pic-bg.acquiring__field_center-s
+               p.acquiring__title.acquiring__title_m 
+                | пожалуйста,
+                br
+                | обратитесь к администрации fleet5
+               p.acquiring__title.acquiring__title_m.acquiring__title_yellow (044) 337 15 35
+               .acquiring__error-logo

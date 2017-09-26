@@ -437,6 +437,7 @@ a {
   z-index: 1;
   width: 50%;
   background-color: #dbdbdb;
+  padding-bottom: 65px;
   transition: all .3s ease-in-out;
 }
 
@@ -478,9 +479,9 @@ a {
 }
 
 .img-check input:checked + label::after {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
   opacity: 1;
 }
 
@@ -501,18 +502,18 @@ a {
 }
 
 .img-check label::before {
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 5px;
   border: 2px solid #000;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   background-color: #dbdbdb;
 }
 
 .img-check label::after {
   opacity: 0;
-  top: 25px;
-  right: 23px;
+  top: 10px;
+  right: 3px;
   -webkit-transform: scale(0.25);
   -ms-transform: scale(0.25);
   transform: scale(0.25);
@@ -524,14 +525,13 @@ a {
 
 .img-check__pic {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 55px;
-  width: 60px;
-  height: 80px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 50px;
+  height: 100px;
 }
 
 .img-check__pic span {
@@ -553,10 +553,11 @@ a {
 
 .img-check__name {
   position: absolute;
-  top: 105px;
+  top: 100px;
   left: 20px;
   right: 20px;
   text-align: center;
+  font-size: 14px;
   transition: all .3s ease-in-out;
 }
 
@@ -3689,8 +3690,7 @@ input[name="phone"]:focus::placeholder {
 }
 
 .search__regions {
-  overflow: auto;
-  height: calc(100vh - 420px - 100px);
+  height: auto;
   *zoom: 1;
 }
 
@@ -3735,7 +3735,8 @@ input[name="phone"]:focus::placeholder {
   display: none;
 }
 
-.search__region input:checked + label {
+.search__region input:checked + label,
+.search__region input:checked ~ .search__region-season {
   opacity: 1;
 }
 
@@ -3780,8 +3781,8 @@ input[name="phone"]:focus::placeholder {
   top: 20px;
   right: 20px;
   content: '';
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 2px solid #f6cb02;
   transition: background-color 0.3s;
 }
@@ -3792,10 +3793,8 @@ input[name="phone"]:focus::placeholder {
   transform: scale(0.25);
   opacity: 0;
   position: absolute;
-  top: 29px;
-  right: 27px;
-  width: 40px;
-  height: 40px;
+  top: 26px;
+  right: 23px;
   content: '';
   background-image: url("../img/sprite.png");
   width: 24px;
@@ -3816,8 +3815,25 @@ input[name="phone"]:focus::placeholder {
 }
 
 .search__region:hover .search__region-img,
-.search__region:hover label {
+.search__region:hover label,
+.search__region:hover .search__region-season {
   opacity: 1;
+}
+
+.search__region-season {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  z-index: 10;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.search__region-season span {
+  text-transform: uppercase;
+  display: block;
 }
 
 .search__region-images {
@@ -3895,18 +3911,16 @@ input[name="phone"]:focus::placeholder {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: calc(100vh - 540px);
+  height: auto;
 }
 
 .search__yacht-type {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   background-color: #dbdbdb;
-  width: 33.33333%;
+  width: 38%;
+  padding-top: 15px;
 }
 
 .search__yacht-type .img-check {
@@ -3931,13 +3945,13 @@ input[name="phone"]:focus::placeholder {
 }
 
 .search__rent-date {
-  margin-top: 70px;
+  margin-top: 15px;
   background: #fff;
   font-size: 0;
 }
 
 .search__rent-title {
-  margin-bottom: 55px;
+  margin-bottom: 10px;
   font-size: 24px;
   color: #818181;
   text-transform: uppercase;
@@ -3960,8 +3974,8 @@ input[name="phone"]:focus::placeholder {
 
 .search__rent-field input {
   padding: 0 10px;
-  height: 50px;
-  line-height: 50px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .search__rent-help {
@@ -3974,8 +3988,8 @@ input[name="phone"]:focus::placeholder {
   z-index: 1;
   display: block;
   padding: 0;
-  line-height: 80px;
-  height: 80px;
+  line-height: 40px;
+  height: 40px;
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -3991,10 +4005,12 @@ input[name="phone"]:focus::placeholder {
   display: inline-block;
   vertical-align: middle;
   margin-right: 20px;
-  background-image: url("../img/sprite.png");
-  width: 49px;
-  height: 47px;
-  background-position: -144px -215px;
+  background-image: url(../img/phone.png);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 25px;
 }
 
 .search__rent-help:hover {
@@ -4017,17 +4033,18 @@ input[name="phone"]:focus::placeholder {
 }
 
 .search__find-title {
-  margin-bottom: 55px;
+  margin-bottom: 15px;
 }
 
 .search__find-btn {
   display: block;
   margin: 0 auto;
-  width: 230px;
-  height: 50px;
-  line-height: 50px;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
   color: #000;
   background: #fff;
+  font-size: 14px;
 }
 
 .search__find-btn--bg {
@@ -9356,14 +9373,6 @@ keyframes spinMaSearch 100% {
   font-family: FuturaPT-Book, Arial, sans-serif;
 }
 
-.calendar-wrap.left {
-  left: 30vw;
-}
-
-.calendar-wrap.right {
-  right: 5vw;
-}
-
 .calendar-wrap_adv {
   top: 5%;
 }
@@ -9914,6 +9923,35 @@ input[type=number] {
 
 @media only screen and (min-width: 1024px) {
 
+  .img-check {
+    padding-bottom: 0;
+  }
+
+  .img-check input:checked + label::after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .img-check label::before {
+    height: 30px;
+    width: 30px;
+  }
+
+  .img-check label::after {
+    top: 15px;
+    right: 13px;
+  }
+
+  .img-check__pic {
+    width: 60px;
+    height: 80px;
+  }
+
+  .img-check__name {
+    font-size: 18px;
+  }
+
   .btn {
     min-width: 190px;
   }
@@ -9953,8 +9991,12 @@ input[type=number] {
     min-width: 80px;
   }
 
-  .search__row {
-    min-height: 310px;
+  .search__region::before {
+    padding-top: 75%;
+  }
+
+  .search__region-season span {
+    display: inline;
   }
 
   .search-adv__btn-find .icon-search {
@@ -10458,15 +10500,7 @@ input[type=number] {
 
   .calendar-wrap {
     width: 250px;
-    top: 15%;
-  }
-
-  .calendar-wrap.left {
-    left: 34vw;
-  }
-
-  .calendar-wrap.right {
-    right: 25vw;
+    top: 30%;
   }
 
   .calendar-wrap_adv {
@@ -10571,6 +10605,10 @@ input[type=number] {
 
 @media only screen and (min-width: 1366px) {
 
+  .img-check label::before {
+    right: 10px;
+  }
+
   .popup_acquiring .popup__in {
     max-width: 930px;
   }
@@ -10597,6 +10635,14 @@ input[type=number] {
   .card-slider__nav .slick-track div {
     width: 100px !important;
     height: 100px;
+  }
+
+  .search__region::before {
+    padding-top: 95%;
+  }
+
+  .search__find-btn {
+    font-size: 14px;
   }
 
   .yacht__card-price {
@@ -11006,20 +11052,8 @@ input[type=number] {
   }
 
   .img-check label::after {
-    top: 30px;
-    right: 27px;
-  }
-
-  .img-check__pic {
-    top: 85px;
-  }
-
-  .img-check__name {
-    top: 128px;
-  }
-
-  .search__row {
-    min-height: 420px;
+    top: 20px;
+    right: 18px;
   }
 }
 
@@ -11050,6 +11084,15 @@ input[type=number] {
 
   .checkbox_l label {
     padding-left: 33px;
+  }
+
+  .img-check__pic {
+    width: 80px;
+    height: 110px;
+  }
+
+  .img-check__name {
+    top: 128px;
   }
 
   .popup_email .popup__in {
@@ -11142,6 +11185,53 @@ input[type=number] {
 
   .search__regions {
     min-height: 350px;
+  }
+
+  .search__region::before {
+    padding-top: 100%;
+  }
+
+  .search__region label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search__region label::after {
+    top: 29px;
+    right: 27px;
+  }
+
+  .search__region-season {
+    font-size: 24px;
+    left: 20px;
+  }
+
+  .search__yacht-type {
+    padding-top: 30px;
+  }
+
+  .search__rent-date {
+    margin-top: 30px;
+  }
+
+  .search__rent-title {
+    margin-bottom: 25px;
+  }
+
+  .search__rent-field input {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .search__find-title {
+    margin-bottom: 25px;
+  }
+
+  .search__find-btn {
+    width: 230px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
   }
 
   .search-adv__btn-filter .icon-arrow {
@@ -11890,7 +11980,7 @@ input[type=number] {
   }
 
   .calendar-wrap {
-    top: 32%;
+    top: 45%;
   }
 
   .calendar-wrap_adv {
@@ -12220,22 +12310,10 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1140px) {
 
-  .more .btn {
-    width: 180px;
-  }
-
-  .more .btn_large {
-    width: 240px;
-  }
-
-  .card__rent {
-    font-size: 16px;
-  }
-
-  .search__region-name {
-    font-size: 22px;
+  .nav {
+    margin-right: 30px;
   }
 }
 
@@ -12291,7 +12369,25 @@ input[type=number] {
 
   .search__rent-date {
     padding: 0 20px;
-    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+
+  .more .btn {
+    width: 180px;
+  }
+
+  .more .btn_large {
+    width: 240px;
+  }
+
+  .card__rent {
+    font-size: 16px;
+  }
+
+  .search__region-name {
+    font-size: 22px;
   }
 }
 
@@ -12380,43 +12476,6 @@ input[type=number] {
 
   .yacht-map__wrapper:not(.yacht-map__wrapper--card) {
     width: 100%;
-  }
-}
-
-@media only screen and (max-width: 1140px) {
-
-  .nav {
-    margin-right: 30px;
-  }
-}
-
-@media only screen and (max-height: 750px) {
-
-  .calendar__event-descr {
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
-  }
-}
-
-@media only screen and (max-height: 768px) {
-
-  .main-card {
-    max-height: 500px;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-
-  .main-card {
-    max-height: 500px;
   }
 }
 
@@ -12590,6 +12649,29 @@ input[type=number] {
   }
 }
 
+@media only screen and (max-height: 750px) {
+
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+
+  .main-card {
+    max-height: 500px;
+  }
+}
+
 @media only screen and (max-width: 840px) {
 
   .header__lang {
@@ -12598,6 +12680,13 @@ input[type=number] {
 
   .nav {
     margin-right: 15px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
   }
 }
 

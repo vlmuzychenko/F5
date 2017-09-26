@@ -23,9 +23,7 @@ class CalendarModal {
 
 		this.el.fadeOut();
 	}
-
 }
-
 
 class Calendar {
 	constructor() {
@@ -37,14 +35,14 @@ class Calendar {
 			closeCalendar	: '[data-close-calendar]',
 			inputFrom		: '[data-calendar-from]',
 			inputTo			: '[data-calendar-to]',
-			saveBtn			: '[data-calendar-save]',
+			//saveBtn			: '[data-calendar-save]',
 			calendarYearSelect: '.ui-datepicker-year'
 		};
 
 		this.calendar 		= $(this._data.calendar);
 		this.calendarYear 	= $(this._data.calendarYear);
 		this.inputs 		= $(this._data.inputFrom + ', ' + this._data.inputTo);
-		this.saveBtn 		= $(this._data.saveBtn);
+		//this.saveBtn 		= $(this._data.saveBtn);
 
 		//initialisations
 		this.initCalendar();
@@ -58,8 +56,8 @@ class Calendar {
 		this.calendarYear
 			.on('click', this.changeYear.bind(this));
 
-		this.saveBtn
-			.on('click', this.saveDate.bind(this));
+		 //this.saveBtn
+		 	//.on('click', this.saveDate.bind(this));
 	}
 
 	initCalendar() {
@@ -75,11 +73,11 @@ class Calendar {
 			showOtherMonths: true,
 			selectOtherMonths: false,
 			dateFormat: 'dd.mm.yy',
-			onChangeMonthYear: year => setActiveYear.call(this, year)
+			onChangeMonthYear: year => setActiveYear.call(this, year),
+			onSelect: () => saveDate.call(this)
 		});
 
 		function setActiveYear(year) {
-
 			this.calendarYear.removeClass('is-active');
 
 			return (
@@ -87,8 +85,16 @@ class Calendar {
 					.filter(`[data-value="${year}"]`)
 					.addClass('is-active')
 			)
-
 		}
+
+		function saveDate() {
+	 	 	let date = this.calendar.datepicker().val();
+	 	 	this.currentInput.val(date);
+	 	 	this.modal.hide();
+			// if(this.inputs[0]){
+			// 	this.inputs[1].focus();
+			// }
+ 	 	}
 
 	}
 
@@ -131,13 +137,6 @@ class Calendar {
 		e.preventDefault();
 	}
 
-	saveDate(e) {
-		let date = this.calendar.datepicker().val();
-		this.currentInput.val(date);
-
-		this.modal.hide();
-	}
-
 }
 
 new Calendar();
@@ -147,8 +146,9 @@ $(window).click(function() {
 });
 
 $('.calendar-wrap').click(function(event){
-    event.stopPropagation();
-});
+     event.stopPropagation();
+ });
+
 $('.js-pick-date').click(function(event){
     event.stopPropagation();
 });
@@ -156,16 +156,18 @@ $('.js-pick-date').click(function(event){
 $('.js-pick-date').click(function(){
 	$('.calendar-wrap').removeClass('left');
 	$('.calendar-wrap').removeClass('right');
-	if($(this).is('#sailing')){
-		$('.calendar-wrap').addClass('left');
-	}
-	if($(this).is('#arrival')){
-		$('.calendar-wrap').addClass('right');
-	}
-	if($(this).is('#sailing-adv')){
-		$('.calendar-wrap').addClass('left');
-	}
-	if($(this).is('#arrival-adv')){
-		$('.calendar-wrap').addClass('right');
-	}
+	$(this).parent().append($('.calendar-wrap'));
+
+	// if($(this).is('#sailing')){
+	// 	$('.calendar-wrap').addClass('left');
+	// }
+	// if($(this).is('#arrival')){
+	// 	$('.calendar-wrap').addClass('right');
+	// }
+	// if($(this).is('#sailing-adv')){
+	// 	$('.calendar-wrap').addClass('left');
+	// }
+	// if($(this).is('#arrival-adv')){
+	// 	$('.calendar-wrap').addClass('right');
+	// }
 });

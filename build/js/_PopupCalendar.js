@@ -51,14 +51,14 @@ var Calendar = function () {
 			closeCalendar: '[data-close-calendar]',
 			inputFrom: '[data-calendar-from]',
 			inputTo: '[data-calendar-to]',
-			saveBtn: '[data-calendar-save]',
+			//saveBtn			: '[data-calendar-save]',
 			calendarYearSelect: '.ui-datepicker-year'
 		};
 
 		this.calendar = $(this._data.calendar);
 		this.calendarYear = $(this._data.calendarYear);
 		this.inputs = $(this._data.inputFrom + ', ' + this._data.inputTo);
-		this.saveBtn = $(this._data.saveBtn);
+		//this.saveBtn 		= $(this._data.saveBtn);
 
 		//initialisations
 		this.initCalendar();
@@ -69,7 +69,8 @@ var Calendar = function () {
 
 		this.calendarYear.on('click', this.changeYear.bind(this));
 
-		this.saveBtn.on('click', this.saveDate.bind(this));
+		//this.saveBtn
+		//.on('click', this.saveDate.bind(this));
 	}
 
 	_createClass(Calendar, [{
@@ -90,14 +91,25 @@ var Calendar = function () {
 				dateFormat: 'dd.mm.yy',
 				onChangeMonthYear: function onChangeMonthYear(year) {
 					return setActiveYear.call(_this, year);
+				},
+				onSelect: function onSelect() {
+					return saveDate.call(_this);
 				}
 			});
 
 			function setActiveYear(year) {
-
 				this.calendarYear.removeClass('is-active');
 
 				return this.calendarYear.filter('[data-value="' + year + '"]').addClass('is-active');
+			}
+
+			function saveDate() {
+				var date = this.calendar.datepicker().val();
+				this.currentInput.val(date);
+				this.modal.hide();
+				// if(this.inputs[0]){
+				// 	this.inputs[1].focus();
+				// }
 			}
 		}
 	}, {
@@ -140,14 +152,6 @@ var Calendar = function () {
 
 			e.preventDefault();
 		}
-	}, {
-		key: 'saveDate',
-		value: function saveDate(e) {
-			var date = this.calendar.datepicker().val();
-			this.currentInput.val(date);
-
-			this.modal.hide();
-		}
 	}]);
 
 	return Calendar;
@@ -162,6 +166,7 @@ $(window).click(function () {
 $('.calendar-wrap').click(function (event) {
 	event.stopPropagation();
 });
+
 $('.js-pick-date').click(function (event) {
 	event.stopPropagation();
 });
@@ -169,16 +174,18 @@ $('.js-pick-date').click(function (event) {
 $('.js-pick-date').click(function () {
 	$('.calendar-wrap').removeClass('left');
 	$('.calendar-wrap').removeClass('right');
-	if ($(this).is('#sailing')) {
-		$('.calendar-wrap').addClass('left');
-	}
-	if ($(this).is('#arrival')) {
-		$('.calendar-wrap').addClass('right');
-	}
-	if ($(this).is('#sailing-adv')) {
-		$('.calendar-wrap').addClass('left');
-	}
-	if ($(this).is('#arrival-adv')) {
-		$('.calendar-wrap').addClass('right');
-	}
+	$(this).parent().append($('.calendar-wrap'));
+
+	// if($(this).is('#sailing')){
+	// 	$('.calendar-wrap').addClass('left');
+	// }
+	// if($(this).is('#arrival')){
+	// 	$('.calendar-wrap').addClass('right');
+	// }
+	// if($(this).is('#sailing-adv')){
+	// 	$('.calendar-wrap').addClass('left');
+	// }
+	// if($(this).is('#arrival-adv')){
+	// 	$('.calendar-wrap').addClass('right');
+	// }
 });

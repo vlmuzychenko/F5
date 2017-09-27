@@ -65,6 +65,9 @@ $(function () {
    $('.js-close-popup-acquiring').click(function () {
       $('.js-popup-acquiring').removeClass('is-open');
    });
+   $('.js-close-popup-acquiring-error').click(function () {
+      $('.js-popup-acquiring-error').removeClass('is-open');
+   });
 
    $(document).keydown(function (e) {
       if (e.keyCode == 27) {

@@ -10567,7 +10567,7 @@ input[type=number] {
   }
 
   .acquiring__title_m {
-    font-size: 36px;
+    font-size: 24px;
   }
 
   .acquiring__field {
@@ -10575,7 +10575,7 @@ input[type=number] {
   }
 
   .acquiring__field_center {
-    padding: 60px;
+    padding: 30px;
   }
 
   .acquiring__field_center-s {
@@ -10596,8 +10596,8 @@ input[type=number] {
   }
 
   .acquiring__error-logo {
-    width: 135px;
-    height: 135px;
+    width: 115px;
+    height: 115px;
   }
 }
 
@@ -10614,6 +10614,10 @@ input[type=number] {
 
   .popup_acquiring .popup__in {
     max-width: 930px;
+  }
+
+  .popup_acquiring-s .popup__in {
+    max-width: 740px;
   }
 
   .btn {

@@ -5,14 +5,13 @@ extends layouts/_layout
 block content
   
    // BEGIN popup
-   a.btn.btn_purple.js-open-popup(href="#" data-open="acquiring") Оплатить онлайн
-   .popup.popup_acquiring.js-popup-acquiring.js-popup.is-open(data-popup="acquiring")
+   .popup.popup_acquiring.popup_acquiring-s.js-popup-acquiring-error.js-popup.is-open
      .popup__in.js-popup-in
        .popup__body
          .acquiring
            .acquiring__header
              h2.acquiring__title регаты
-             button(type="button").popup__close.js-close-popup-acquiring
+             button(type="button").popup__close.js-close-popup-acquiring-error
                +icon('icon-close-bold')
            .acquiring__body
              .acquiring__field.acquiring__field_yellow.acquiring__field_center

@@ -54,7 +54,7 @@
          width: 100%
          padding-top: 100%
          +rmin(1024)
-           padding-top: 75%
+           padding-top: 83%
          +rmin(1366)
            padding-top: 90%
          +rmin(1680)
@@ -138,8 +138,8 @@
       overflow: hidden
    &__region-pic
          +vcenter
-   &__region-pic
-         top: 135px
+   //&__region-pic
+         //top: 135px
    &__region-img
       +coverdiv
       z-index: 1
@@ -196,6 +196,15 @@
         padding-top: 30px
       .img-check
          width: 50%
+         label
+           +r(1365)
+             &::before
+               width: 25px
+               height: 25px
+             &::after
+               top: 12px
+               right: 6px
+
    &__rent
       display: flex
       flex-direction: column
@@ -234,8 +243,8 @@
          padding: 0 6px
          input
             padding: 0 10px
-            height: 30px
-            line-height: 30px
+            height: 40px
+            line-height: 40px
             +rmin(1680)
               height: 50px
               line-height: 50px
@@ -256,6 +265,9 @@
          bottom: 0
          left: 0
          +trs
+         +rmin(1680)
+            line-height: 60px
+            height: 60px
          &::before
             content: ''
             display: inline-block
@@ -293,8 +305,8 @@
          display: block
          margin: 0 auto
          width: 200px
-         height: 30px
-         line-height: 30px
+         height: 40px
+         line-height: 40px
          color: #000
          background: #fff
          font-size: 14px

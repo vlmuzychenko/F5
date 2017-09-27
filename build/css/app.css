@@ -3854,10 +3854,6 @@ input[name="phone"]:focus::placeholder {
   transform: translate(-50%, -50%);
 }
 
-.search__region-pic {
-  top: 135px;
-}
-
 .search__region-img {
   position: absolute;
   top: 0;
@@ -3974,8 +3970,8 @@ input[name="phone"]:focus::placeholder {
 
 .search__rent-field input {
   padding: 0 10px;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
 }
 
 .search__rent-help {
@@ -4038,8 +4034,8 @@ input[name="phone"]:focus::placeholder {
   display: block;
   margin: 0 auto;
   width: 200px;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   color: #000;
   background: #fff;
   font-size: 14px;
@@ -9990,7 +9986,7 @@ input[type=number] {
   }
 
   .search__region::before {
-    padding-top: 75%;
+    padding-top: 83%;
   }
 
   .search__region-season span {
@@ -11230,6 +11226,11 @@ input[type=number] {
     line-height: 50px;
   }
 
+  .search__rent-help {
+    line-height: 60px;
+    height: 60px;
+  }
+
   .search__find {
     padding-top: 30px;
   }
@@ -12321,24 +12322,6 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-width: 1140px) {
-
-  .nav {
-    margin-right: 30px;
-  }
-}
-
-@media only screen and (max-height: 680px) {
-
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
 @media only screen and (max-width: 1599px) {
 
   .search-adv__filter--detailed {
@@ -12402,7 +12385,39 @@ input[type=number] {
   }
 }
 
+@media only screen and (max-width: 840px) {
+
+  .header__lang {
+    margin-left: 15px;
+  }
+
+  .nav {
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
 @media only screen and (max-width: 1365px) {
+
+  .search__yacht-type .img-check label::before {
+    width: 25px;
+    height: 25px;
+  }
+
+  .search__yacht-type .img-check label::after {
+    top: 12px;
+    right: 6px;
+  }
 
   .search-adv__btn-filter {
     min-width: 200px;
@@ -12487,6 +12502,13 @@ input[type=number] {
 
   .yacht-map__wrapper:not(.yacht-map__wrapper--card) {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+
+  .nav {
+    margin-right: 30px;
   }
 }
 
@@ -12621,6 +12643,13 @@ input[type=number] {
   }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
 
   .yacht__card {
@@ -12660,15 +12689,6 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-height: 750px) {
-
-  .calendar__event-descr {
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-  }
-}
-
 @media only screen and (max-height: 768px) {
 
   .main-card {
@@ -12683,21 +12703,12 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-height: 750px) {
 
-  .header__lang {
-    margin-left: 15px;
-  }
-
-  .nav {
-    margin-right: 15px;
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-  .ps-container {
-    overflow: auto !important;
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
   }
 }
 

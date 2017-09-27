@@ -4005,7 +4005,7 @@ input[name="phone"]:focus::placeholder {
   display: inline-block;
   vertical-align: middle;
   margin-right: 20px;
-  background-image: url(../img/phone.png);
+  background-image: url(../img/phone.svg);
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -4021,15 +4021,13 @@ input[name="phone"]:focus::placeholder {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   width: 24.47916%;
   background-color: #f6cb02;
   text-align: center;
+  padding-top: 15px;
 }
 
 .search__find-title {
@@ -4618,7 +4616,7 @@ input[name="phone"]:focus::placeholder {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
   background: center center no-repeat;
   background-size: cover;
 }
@@ -9940,7 +9938,7 @@ input[type=number] {
 
   .img-check label::after {
     top: 15px;
-    right: 13px;
+    right: 8px;
   }
 
   .img-check__pic {
@@ -10609,6 +10607,11 @@ input[type=number] {
     right: 10px;
   }
 
+  .img-check label::after {
+    top: 15px;
+    right: 13px;
+  }
+
   .popup_acquiring .popup__in {
     max-width: 930px;
   }
@@ -10638,7 +10641,7 @@ input[type=number] {
   }
 
   .search__region::before {
-    padding-top: 95%;
+    padding-top: 90%;
   }
 
   .search__find-btn {
@@ -11221,6 +11224,10 @@ input[type=number] {
   .search__rent-field input {
     height: 50px;
     line-height: 50px;
+  }
+
+  .search__find {
+    padding-top: 30px;
   }
 
   .search__find-title {

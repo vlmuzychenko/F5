@@ -56,7 +56,7 @@
          +rmin(1024)
            padding-top: 75%
          +rmin(1366)
-           padding-top: 95%
+           padding-top: 90%
          +rmin(1680)
            padding-top: 100%
       input
@@ -262,7 +262,7 @@
             vertical-align: middle
             margin-right: 20px
             //+s('phone')
-            background-image: url(../img/phone.png)
+            background-image: url(../img/phone.svg)
             background-size: contain
             background-position: 50% 50%
             background-repeat: no-repeat
@@ -272,14 +272,17 @@
             color: $accent
    &__find
       display: flex
-      justify-content: center
+      //justify-content: center
       flex-direction: column
       width: 24.47916%
       background-color: $accent
       text-align: center
+      padding-top: 15px
       +r(1124)
          width: 100%
          padding: 20px
+      +rmin(1680)
+        padding-top: 30px
       &-title
          margin-bottom: 15px
          +r(1124)

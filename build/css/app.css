@@ -2244,7 +2244,7 @@ input[name="phone"]:focus::placeholder {
   left: 0;
   height: 100vh;
   padding-top: 100px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   overflow: auto;
   opacity: 0;
   visibility: hidden;

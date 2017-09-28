@@ -61,8 +61,7 @@
            padding-top: 100%
       input
          display: none
-      input:checked + label,
-      input:checked ~ .search__region-season
+      input:checked + label
          opacity: 1
       input:checked + label::after
          opacity: 1
@@ -112,8 +111,7 @@
    &__region:hover &__region-images::before
       opacity: 0
    &__region:hover &__region-img,
-   &__region:hover label,
-   &__region:hover .search__region-season
+   &__region:hover label
       opacity: 1
 
    &__region-season
@@ -123,8 +121,6 @@
       z-index: 10
       font-size: 16px
       color: #fff
-      opacity: 0
-      +tr(opacity .3s)
       +rmin(1680)
         font-size: 24px
         left: 20px

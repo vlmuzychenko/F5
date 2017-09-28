@@ -3735,8 +3735,7 @@ input[name="phone"]:focus::placeholder {
   display: none;
 }
 
-.search__region input:checked + label,
-.search__region input:checked ~ .search__region-season {
+.search__region input:checked + label {
   opacity: 1;
 }
 
@@ -3815,8 +3814,7 @@ input[name="phone"]:focus::placeholder {
 }
 
 .search__region:hover .search__region-img,
-.search__region:hover label,
-.search__region:hover .search__region-season {
+.search__region:hover label {
   opacity: 1;
 }
 
@@ -3827,8 +3825,6 @@ input[name="phone"]:focus::placeholder {
   z-index: 10;
   font-size: 16px;
   color: #fff;
-  opacity: 0;
-  transition: opacity 0.3s;
 }
 
 .search__region-season span {

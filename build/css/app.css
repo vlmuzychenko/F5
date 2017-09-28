@@ -11187,7 +11187,7 @@ input[type=number] {
   }
 
   .search__region::before {
-    padding-top: 100%;
+    padding-top: 97%;
   }
 
   .search__region label::before {

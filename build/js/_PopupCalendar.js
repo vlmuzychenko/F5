@@ -107,9 +107,17 @@ var Calendar = function () {
 				var date = this.calendar.datepicker().val();
 				this.currentInput.val(date);
 				this.modal.hide();
-				// if(this.inputs[0]){
-				// 	this.inputs[1].focus();
-				// }
+				if (this.currentInput.is('#sailing')) {
+					var self = this;
+					var parent = this.parentElement;
+					var calendar = $('.calendar-wrap');
+					//parent.appendChild(self.modal);
+					console.log(parent);
+					//$(this).parent().append($('.calendar-wrap'));
+					setTimeout(function () {
+						self.inputs[1].focus();
+					}, 1000);
+				}
 			}
 		}
 	}, {
@@ -134,6 +142,9 @@ var Calendar = function () {
 		key: 'showModal',
 		value: function showModal(e) {
 			this.currentInput = $(e.target);
+			// var parent = e.target.parentElement;
+			// var calendar = $('.calendar-wrap');
+			// parent.append($('.calendar-wrap'));
 			this.modal.show(e);
 		}
 	}, {
@@ -172,8 +183,6 @@ $('.js-pick-date').click(function (event) {
 });
 
 $('.js-pick-date').click(function () {
-	$('.calendar-wrap').removeClass('left');
-	$('.calendar-wrap').removeClass('right');
 	$(this).parent().append($('.calendar-wrap'));
 
 	// if($(this).is('#sailing')){

@@ -107,16 +107,11 @@ var Calendar = function () {
 				var date = this.calendar.datepicker().val();
 				this.currentInput.val(date);
 				this.modal.hide();
-				if (this.currentInput.is('#sailing')) {
+				if (this.currentInput.is('#sailing') || this.currentInput.is('#sailing-adv')) {
 					var self = this;
-					var parent = this.parentElement;
-					var calendar = $('.calendar-wrap');
-					//parent.appendChild(self.modal);
-					console.log(parent);
-					//$(this).parent().append($('.calendar-wrap'));
 					setTimeout(function () {
 						self.inputs[1].focus();
-					}, 1000);
+					}, 600);
 				}
 			}
 		}
@@ -142,9 +137,6 @@ var Calendar = function () {
 		key: 'showModal',
 		value: function showModal(e) {
 			this.currentInput = $(e.target);
-			// var parent = e.target.parentElement;
-			// var calendar = $('.calendar-wrap');
-			// parent.append($('.calendar-wrap'));
 			this.modal.show(e);
 		}
 	}, {
@@ -182,19 +174,6 @@ $('.js-pick-date').click(function (event) {
 	event.stopPropagation();
 });
 
-$('.js-pick-date').click(function () {
+$('.js-pick-date').focus(function () {
 	$(this).parent().append($('.calendar-wrap'));
-
-	// if($(this).is('#sailing')){
-	// 	$('.calendar-wrap').addClass('left');
-	// }
-	// if($(this).is('#arrival')){
-	// 	$('.calendar-wrap').addClass('right');
-	// }
-	// if($(this).is('#sailing-adv')){
-	// 	$('.calendar-wrap').addClass('left');
-	// }
-	// if($(this).is('#arrival-adv')){
-	// 	$('.calendar-wrap').addClass('right');
-	// }
 });

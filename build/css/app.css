@@ -321,13 +321,13 @@ a {
 
 .checkbox__check_yellow {
   border-color: #f6cb02;
-  left: -20px;
+  left: -25px;
   position: absolute;
 }
 
 .checkbox__check_red {
   border-color: #ee5004;
-  left: -20px;
+  left: -25px;
   position: absolute;
 }
 
@@ -8089,7 +8089,7 @@ keyframes spinMaSearch 100% {
 
 .news-top__checkbox {
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 35px;
 }
 
 .news-content-wrap {
@@ -8817,6 +8817,7 @@ keyframes spinMaSearch 100% {
 .bg-video video {
   min-height: 100%;
   min-width: 100%;
+  object-fit: cover;
 }
 
 .btn-container {
@@ -9918,9 +9919,9 @@ input[type=number] {
   }
 
   .img-check input:checked + label::after {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
   }
 
   .img-check label::before {
@@ -10594,6 +10595,12 @@ input[type=number] {
 }
 
 @media only screen and (min-width: 1366px) {
+
+  .img-check input:checked + label::after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
   .img-check label::before {
     right: 10px;

@@ -110,7 +110,7 @@ let popupMore = new Popup({
 	hideFromParent: true,
 	beforeOpen(popup,e) {
 		let target = $(e.currentTarget);
-		
+
 		let more = target.parents('.js-infromation-more');
 		const {title, img, text, link} = more.data('information-for-popup');
 
@@ -125,6 +125,3 @@ let popupMore = new Popup({
 		moreLink.attr('href', link);
 	}
 });
-
-
-

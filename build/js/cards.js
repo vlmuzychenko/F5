@@ -177,7 +177,7 @@ $(document).keydown(function (e) {
 });
 
 $(document).click(function (e) {
-  if (!$('.popup__in').is(e.target) && !$('.btn_purple').is(e.target) && $('.popup__in').has(e.target).length === 0) {
+  if (!$('.popup__in').is(e.target) && !$('.js-open-popup-more').is(e.target) && !$('.btn_purple').is(e.target) && $('.popup__in').has(e.target).length === 0) {
     $('.popup').removeClass('is-open');
   }
   if (!$('.popup-contacts').is(e.target) && !$('.contacts__btn-popup').is(e.target) && $('.popup-contacts').has(e.target).length === 0) {

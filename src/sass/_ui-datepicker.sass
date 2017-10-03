@@ -22,15 +22,13 @@
   .ui-datepicker-prev
     border-color: transparent $accent transparent transparent*/
 
-
-
 .calendar-wrap
 	display: none
 	position: fixed
 	width: 200px
 	padding: 10px 15px
 	top: 10%
-	z-index: 999
+	z-index: 1000
 	background-color: #fff
 	box-shadow: 4px 4px 34px -4px rgba(0,0,0,0.75)
 	+futura-book
@@ -39,14 +37,6 @@
 		top: 30%
 	+rmin(1680)
 		top: 45%
-	// &.left
-	// 	left: 30vw
-	// 	+rmin(1024)
-	// 		left: 34vw
-	// &.right
-	// 	right: 5vw
-	// 	+rmin(1024)
-	// 		right: 25vw
 
 	&_adv
 		top: 5%
@@ -166,8 +156,6 @@
 				margin: 0 20px
 				line-height: 1
 				font-size: 10px
-			.ui-datepicker-other-month
-				opacity: .4
 			.ui-datepicker-year
 				position: absolute
 				opacity: 0
@@ -186,6 +174,8 @@
 					height: 35px
 					line-height: 32px
 					font-size: 18px
+			.ui-datepicker-other-month
+				opacity: .4
 			.ui-datepicker-next, .ui-datepicker-prev
 				top: 0
 				width: 20%

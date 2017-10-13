@@ -120,6 +120,7 @@ class Calendar {
 
 	showModal(e) {
 		this.currentInput = $(e.target);
+		this.calendar.datepicker('setDate', this.currentInput.val());
 		this.modal.show(e);
 	}
 

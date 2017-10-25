@@ -74,4 +74,12 @@ $(function () {
          $('.js-popup-email').removeClass('is-open');
       }
    });
+
+   $(".click-img-static label").on('click', function (e) {
+      $(this).parent('li').toggleClass('active-1');
+   });
+   $(".click-img-2 li").on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('active-2');
+   });
 });

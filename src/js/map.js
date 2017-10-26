@@ -2,7 +2,7 @@ $(function () {
    //sort items in select
    var select = $('select.js-select-multiple');
    select.each(function(){
-     var options = $(this).find("option");
+     var options = $(this).find("option").not('.dont_sort');
      var arr = options.map(function(_, o) { return { t: $(o).text(), v: o.value }; });
      arr.sort(function(o1, o2) {
        var t1 = o1.t.toLowerCase();

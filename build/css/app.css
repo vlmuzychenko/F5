@@ -817,6 +817,7 @@ input[type='checkbox'], select, input[type='radio'] {
 .ui-state-disabled {
   cursor: default !important;
   pointer-events: none;
+  opacity: .4;
 }
 
 /* Overlays */
@@ -9364,6 +9365,12 @@ keyframes spinMaSearch 100% {
   font-family: FuturaPT-Book, Arial, sans-serif;
 }
 
+.calendar-wrap_search-new {
+  position: absolute;
+  bottom: 100%;
+  top: auto !important;
+}
+
 .calendar-wrap_adv {
   top: 5%;
 }
@@ -9895,6 +9902,573 @@ input[type=number] {
   height: 100px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.background-blocks,
+.background-block {
+  padding-top: 70px;
+}
+
+.center-content {
+  max-width: 1760px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.margin-left {
+  max-width: 1257px;
+  width: 100%;
+}
+
+.content-two-block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.left-block img {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.left-block li {
+  font-size: 18px;
+  color: #fff;
+  height: 51px;
+  max-height: 51px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+  transition: all 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+  transition: height .2s linear;
+}
+
+.left-block > :nth-child(1) {
+  margin-bottom: 17px;
+}
+
+.right-block {
+  max-width: 750px;
+  width: 100%;
+  padding-top: 60px;
+}
+
+.yacht-image {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.block-yacht {
+  position: relative;
+  max-width: 145px;
+  width: 100%;
+  border: 2px solid #FFCC00;
+  cursor: pointer;
+}
+
+.block-yacht__ico {
+  width: 80px;
+  height: 90px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.block-yacht input:checked + label {
+  background-color: #FFCC00;
+}
+
+.block-yacht input:checked + label .text-center {
+  color: #000;
+}
+
+.block-yacht input:checked + label .img-1 {
+  opacity: 0;
+}
+
+.block-yacht input:checked + label .img-1_hover {
+  opacity: 1;
+}
+
+.block-yacht input:checked + label .mini {
+  border-color: #000;
+  background-color: #000;
+}
+
+.block-yacht input:checked + label .mini img {
+  display: block;
+}
+
+.block-yacht label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.block-yacht label:hover {
+  background-color: #FFCC00;
+}
+
+.block-yacht label:hover .img-1 {
+  opacity: 0;
+}
+
+.block-yacht label:hover .img-1_hover {
+  opacity: 1;
+}
+
+.block-yacht label:hover .mini {
+  border-color: #000;
+}
+
+.block-yacht label:hover .text-center {
+  color: #000;
+}
+
+.block-yacht .img-1 {
+  display: block;
+  opacity: 1;
+  transition: opacity .3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.block-yacht .img-1_hover {
+  opacity: 0;
+}
+
+.block-yacht .mini {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FFCC00;
+  top: 11px;
+  right: 10px;
+}
+
+.block-yacht .mini img {
+  display: none;
+}
+
+.text-center {
+  color: #fff;
+  text-align: center;
+  width: 95px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  transition: color .3s;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+}
+
+.two-par-input {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rental-dates {
+  margin-top: 70px;
+}
+
+.text-date {
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+}
+
+.two-par-input {
+  max-width: 750px;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.position {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  height: 35px;
+}
+
+.position input {
+  max-width: 320px;
+  width: 100%;
+  height: 41px;
+  border: 2px solid #AEAEAE;
+  padding-left: 40px;
+  outline: none;
+}
+
+.position p {
+  color: #fff;
+  position: absolute;
+  top: 44px;
+  right: 8px;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+}
+
+.position img {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  width: auto;
+  height: 70%;
+}
+
+.button-one {
+  background: #FFCC00;
+  border: none;
+  outline: none;
+  padding: 15px 90px 15px 90px;
+  border-radius: 60px;
+  font-size: 28px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 40px;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+
+.button-one:hover {
+  background: #fff;
+}
+
+.bottom-border {
+  max-width: 1760px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid #FFCC00;
+}
+
+.button-flex {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+.buton-flex-two {
+  max-width: 508px;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.click-1 {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+  cursor: pointer;
+}
+
+.click-2 {
+  background: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 10px 39px 10px 39px;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+
+.click-2:hover {
+  background: #fff;
+  color: #000;
+}
+
+.click-3 {
+  margin-right: 180px;
+  background: #FFCC00;
+  outline: none;
+  font-size: 18px;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 40px 10px 40px;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+
+.click-3:hover {
+  background: #fff;
+}
+
+.yacht-image-two {
+  display: none;
+}
+
+.top-top {
+  margin-top: -7px;
+}
+
+.wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.tab_content {
+  width: 5000px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.tab_item {
+  position: relative;
+  width: 100vw;
+}
+
+.tab {
+  color: #000;
+  cursor: pointer;
+  font-family: FuturaPT-Bold, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.tab-last {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tab-midle {
+  padding-bottom: 77px;
+  padding-top: 15px;
+}
+
+.tab-right {
+  border-bottom: 3px solid #FFCC00;
+  padding-bottom: 77px;
+  padding-top: 80px;
+}
+
+.disp-flex {
+  border-bottom: 3px solid #FFCC00;
+  margin: 15px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.top-img {
+  margin-top: -12px;
+  margin-bottom: 47px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hover-menu {
+  position: absolute;
+  top: 302%;
+  left: 0;
+  z-index: 10;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+  transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  transition: 350ms;
+  background-color: #f6cb02;
+  box-shadow: 0 5px 29px rgba(0, 0, 0, 0.84);
+}
+
+.hover-menu a {
+  font-size: 18px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: .1s;
+  padding: 15px 20px;
+  display: block;
+  color: #000 !important;
+}
+
+.hover-menu li:hover {
+  background: #C3A102;
+}
+
+.hover-li {
+  position: relative;
+}
+
+.hover-li:hover .hover-menu {
+  max-height: 1000px;
+  -webkit-transform: perspective(400px) rotate3d(0, 0, 0, 0);
+  transform: perspective(400px) rotate3d(0, 0, 0, 0);
+}
+
+.animate {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 75px;
+  right: -100vw;
+  background: #3D3D3D;
+  z-index: 999999;
+}
+
+.animate a {
+  position: relative;
+  display: block;
+  margin: 0 35px;
+  padding: 26px 23px 22px 0;
+  border-bottom: 2px solid #4b4b4b;
+  color: #a8a8a8;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+}
+
+.top-link {
+  display: none;
+  max-width: 640px;
+  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding: 20px 0px 0 35px;
+}
+
+.top-link a {
+  text-decoration: none;
+  display: none;
+}
+
+.top-link img {
+  position: relative;
+  top: 3px;
+  margin-right: 15px;
+  width: 12px;
+  height: 22px;
+}
+
+.top-link span {
+  color: #a8a8a8;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+}
+
+.left-block li.active-1 {
+  font-weight: bold;
+  transition: all 0.5s;
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+
+.left-block li.active-1:before {
+  content: url("../img/sep.png");
+  position: relative;
+  bottom: 5px;
+  right: 4px;
+}
+
+.click-img li:first-child {
+  margin-top: 0;
+}
+
+.left-block li label {
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+}
+
+.left-block li input:checked + label {
+  color: #FFCC00;
+}
+
+.click-img {
+  height: 700px;
+  overflow: hidden;
+  padding-left: 40px;
+  margin-left: -40px;
+}
+
+.left-block {
+  max-width: 440px;
+  width: 100%;
+}
+
+.background-blocks {
+  background-image: url(/img/image-yh-4-min.png);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0;
+  transition: all .5s linear;
+}
+
+.background-blocks.active {
+  opacity: 1;
+  transition: all .5s linear;
+}
+
+.background-blocks#background-block13 {
+  background-image: url(../img/bg.png);
 }
 
 @media only screen and (min-width: 768px) {
@@ -12010,6 +12584,16 @@ input[type=number] {
     width: 12px;
     height: 12px;
   }
+
+  .background-blocks,
+  .background-block {
+    padding-top: 100px;
+  }
+
+  .block-yacht__ico {
+    width: 103px;
+    height: 135px;
+  }
 }
 
 @media only screen and (min-width: 1700px) {
@@ -12287,6 +12871,43 @@ input[type=number] {
   }
 }
 
+@media only screen and (max-width: 1920px) {
+
+  .center-content {
+    padding-top: 25px;
+  }
+
+  .left-block li {
+    height: 48px;
+    max-height: 48px;
+  }
+
+  .left-block > :nth-child(1) {
+    margin-bottom: 0px;
+  }
+
+  .mar-bottom {
+    margin-bottom: 30px;
+  }
+
+  .button-flex {
+    padding-top: 12px;
+    padding-bottom: 0;
+  }
+
+  .top-img {
+    margin-bottom: 15px;
+  }
+
+  .click-img {
+    height: 635px;
+  }
+
+  .background-block {
+    min-height: calc(100vh - 110px);
+  }
+}
+
 @media only screen and (max-width: 1900px) {
 
   .search-adv__filter--detailed {
@@ -12296,6 +12917,14 @@ input[type=number] {
   .search-adv__btn-find {
     display: table;
     width: 150px;
+  }
+}
+
+@media only screen and (max-width: 1885px) {
+
+  .background-block {
+    padding-right: 50px;
+    padding-left: 70px;
   }
 }
 
@@ -12315,6 +12944,13 @@ input[type=number] {
 
   .yacht__inner.is-active {
     height: calc(50vh - 100px);
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+
+  .click-3 {
+    margin-right: 0px;
   }
 }
 
@@ -12386,27 +13022,161 @@ input[type=number] {
   .search__region-name {
     font-size: 22px;
   }
-}
 
-@media only screen and (max-width: 840px) {
-
-  .header__lang {
-    margin-left: 15px;
+  .center-content {
+    padding-top: 25px;
   }
 
-  .nav {
-    margin-right: 15px;
+  .margin-left {
+    max-width: 920px;
   }
-}
 
-@media only screen and (max-height: 680px) {
+  .left-block img {
+    height: 28px;
+    margin-left: 0px;
+  }
 
-  .calendar__event-descr {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
+  .left-block li {
+    font-size: 14px;
+    height: 32px;
+  }
+
+  .left-block li.active-2 {
+    font-size: 14px;
+  }
+
+  .left-block {
+    max-width: 250px;
+  }
+
+  .left-block > :nth-child(1) {
+    margin-bottom: 5px;
+  }
+
+  .left-block > :nth-child(3) {
+    margin-top: 5px;
+  }
+
+  .right-block {
+    padding-top: 14px;
+    max-width: 625px;
+  }
+
+  .yacht-image {
+    max-width: 604px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .block-yacht {
+    max-width: 120px;
+  }
+
+  .block-yacht .img-1 {
+    width: 80px;
+  }
+
+  .block-yacht .mini {
+    width: 15px;
+    height: 15px;
+    top: 9px;
+  }
+
+  .text-center {
+    font-size: 13px;
+    width: 75px;
+  }
+
+  .two-par-input {
+    max-width: 600px;
+    margin: 0 auto;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .rental-dates {
+    margin-top: 105px;
+  }
+
+  .text-date {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .position {
+    max-width: 260px;
+    height: 30px;
+  }
+
+  .position input {
+    max-width: 260px;
+    height: 30px;
+    box-sizing: border-box;
+  }
+
+  .position p {
+    font-size: 13px;
+    top: 38px;
+    right: 0px;
+  }
+
+  .position img {
+    top: 4px;
+    left: 7px;
+  }
+
+  .button-one {
+    padding: 7px 75px 7px 75px;
+    font-size: 22px;
+    margin-top: 38px;
+  }
+
+  .bottom-border {
+    margin-top: 15px;
+  }
+
+  .button-flex {
+    padding-top: 15px;
+  }
+
+  .buton-flex-two {
+    max-width: 398px;
+  }
+
+  .click-1,
+  .click-2,
+  .click-3 {
+    font-size: 14px;
+  }
+
+  .click-2 {
+    padding: 8px 15px 8px 15px;
+  }
+
+  .click-3 {
+    padding: 8px 32px 8px 32px;
+    margin-right: 265px;
+  }
+
+  .top-img {
+    margin-bottom: 5px;
+  }
+
+  .left-block li.active-2:before {
+    content: url(../img/sep4.png);
+    position: relative;
+    bottom: 5px;
+    right: 4px;
+  }
+
+  .click-img {
+    height: 392px;
+  }
+
+  .background-block {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
@@ -12455,11 +13225,23 @@ input[type=number] {
   }
 }
 
+@media only screen and (max-width: 1280px) {
+
+  .click-3 {
+    margin-right: 180px;
+  }
+}
+
 @media only screen and (max-width: 1240px) {
 
   .header {
     padding-right: 20px;
     padding-left: 80px;
+  }
+
+  .background-block {
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }
 
@@ -12505,6 +13287,44 @@ input[type=number] {
 
   .yacht-map__wrapper:not(.yacht-map__wrapper--card) {
     width: 100%;
+  }
+
+  .center-content {
+    padding-top: 30px;
+  }
+
+  .right-block {
+    max-width: 670px;
+  }
+
+  .par-2 {
+    max-width: 150px;
+    width: 100%;
+  }
+
+  .padding-1 {
+    padding-top: 110px;
+  }
+
+  .rental-dates {
+    margin-top: 90px;
+  }
+
+  .position {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .button-one {
+    margin-top: 20px;
+  }
+
+  .bottom-border {
+    margin-top: 50px;
+  }
+
+  .button-flex {
+    padding-bottom: 20px;
   }
 }
 
@@ -12644,6 +13464,10 @@ input[type=number] {
   .main-card {
     height: 60vh !important;
   }
+
+  .click-3 {
+    margin-right: 0;
+  }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -12660,6 +13484,26 @@ input[type=number] {
   }
 }
 
+@media only screen and (max-height: 680px) {
+
+  .calendar__event-descr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
+@media only screen and (max-height: 750px) {
+
+  .calendar__event-descr {
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+}
+
 @media only screen and (max-width: 1000px) {
 
   .nav {
@@ -12669,6 +13513,27 @@ input[type=number] {
   .nav__item {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 969px) {
+
+  .block-yacht {
+    margin-bottom: 30px;
+  }
+
+  .rental-dates {
+    margin-top: 0px;
+  }
+
+  .text-date {
+    font-size: 34px;
+  }
+
+  .buton-flex-two {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
 }
 
@@ -12692,10 +13557,34 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-height: 768px) {
+@media only screen and (max-width: 904px) {
 
-  .main-card {
-    max-height: 500px;
+  .right-block {
+    max-width: 500px;
+  }
+
+  .block-yacht {
+    max-width: 110px;
+  }
+
+  .position {
+    max-width: 230px;
+  }
+
+  .bottom-border {
+    margin-top: 25px;
+  }
+
+  .buton-flex-two {
+    margin: 0 auto;
+  }
+
+  .left-block li.active-2:before {
+    bottom: 5px;
+  }
+
+  .left-block li.active-2 {
+    font-size: 14px;
   }
 }
 
@@ -12706,12 +13595,21 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-height: 750px) {
+@media only screen and (max-width: 840px) {
 
-  .calendar__event-descr {
-    -webkit-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
+  .header__lang {
+    margin-left: 15px;
+  }
+
+  .nav {
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+
+  .main-card {
+    max-height: 500px;
   }
 }
 

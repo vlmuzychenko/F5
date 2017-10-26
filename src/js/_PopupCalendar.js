@@ -73,6 +73,7 @@ class Calendar {
 			showOtherMonths: true,
 			selectOtherMonths: false,
 			dateFormat: 'dd.mm.yy',
+			minDate: new Date(),
 			onChangeMonthYear: year => setActiveYear.call(this, year),
 			onSelect: () => saveDate.call(this)
 		});
@@ -120,6 +121,9 @@ class Calendar {
 
 	showModal(e) {
 		this.currentInput = $(e.target);
+		if(this.currentInput.val()) {
+			this.calendar.datepicker('setDate', this.currentInput.val());
+		}
 		this.modal.show(e);
 	}
 

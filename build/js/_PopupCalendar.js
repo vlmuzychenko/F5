@@ -89,6 +89,7 @@ var Calendar = function () {
 				showOtherMonths: true,
 				selectOtherMonths: false,
 				dateFormat: 'dd.mm.yy',
+				minDate: new Date(),
 				onChangeMonthYear: function onChangeMonthYear(year) {
 					return setActiveYear.call(_this, year);
 				},
@@ -137,6 +138,9 @@ var Calendar = function () {
 		key: 'showModal',
 		value: function showModal(e) {
 			this.currentInput = $(e.target);
+			if (this.currentInput.val()) {
+				this.calendar.datepicker('setDate', this.currentInput.val());
+			}
 			this.modal.show(e);
 		}
 	}, {

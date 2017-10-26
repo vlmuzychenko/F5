@@ -4,19 +4,16 @@ $(function () {
    //sort items in select
    var select = $('select.js-select-multiple');
    select.each(function () {
-      var options = $(this).find("option").not('.dont_sort');
-      var arr = options.map(function (_, o) {
-         return { t: $(o).text(), v: o.value };
+      var dontSort = $(this).find('.dont_sort');
+      var options = $(this).find('option').not('.dont_sort');
+      options.sort(function (a, b) {
+         a = a.text.toLowerCase();
+         b = b.text.toLowerCase();
+         //return a-b;
+         return a > b ? 1 : a < b ? -1 : 0;
       });
-      arr.sort(function (o1, o2) {
-         var t1 = o1.t.toLowerCase();
-         var t2 = o2.t.toLowerCase();
-         return t1 > t2 ? 1 : t1 < t2 ? -1 : 0;
-      });
-      options.each(function (i, o) {
-         o.value = arr[i].v;
-         $(o).text(arr[i].t);
-      });
+      $(this).html(options);
+      $(this).prepend(dontSort);
    });
 
    // custom selects

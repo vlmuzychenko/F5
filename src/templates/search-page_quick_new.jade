@@ -1,0 +1,130 @@
+---
+title: search-quick_new
+---
+extends layouts/_layout
+block content
+   // BEGIN search-quick_new
+
+   #background-block13.background-blocks.active
+   .background-block
+     .none-760
+       .center-content
+         .margin-left
+           .content-two-block
+             .left-block				
+               ul.click-img-static
+                 li(data-bg-block="1") 
+                  input(id='asia' name="asia" type='checkbox')
+                  label(for='asia') АЗИЯ
+                 li(data-bg-block="2")
+                   input(id='indian_ocean' name="indian_ocean" type='checkbox')
+                   label(for='indian_ocean') ИНДИЙСКИЙ ОКЕАН
+                 li(data-bg-block="3") 
+                   input(id='baltic_sea' name="baltic_sea" type='checkbox')
+                   label(for='baltic_sea') БАЛТИЙСКОЕ МОРЕ
+                 li(data-bg-block="4") 
+                   input(id='atlantica' name="atlantica" type='checkbox')
+                   label(for='atlantica') ЕВРОПА-АТЛАНТИКА
+                 li(data-bg-block="5") 
+                   input(id='mediterranean' name="mediterranean" type='checkbox')
+                   label(for='mediterranean') СРЕДИЗЕМНОЕ МОРЕ
+                 li(data-bg-block="6") 
+                   input(id='atlantic_ocean' name="atlantic_ocean" type='checkbox')
+                   label(for='atlantic_ocean') АТЛАНТИЧЕСКИЙ ОКЕАН
+                 li(data-bg-block="13").active-1 
+                   input(id='all' name="all" type='checkbox' checked)
+                   label(for='all') ВСЕ РЕГИОНЫ
+                 li(data-bg-block="7") 
+                   input(id='paciefic_ocean' name="paciefic_ocean" type='checkbox')
+                   label(for='paciefic_ocean') ТИХИЙ ОКЕАН
+                 li(data-bg-block="8") 
+                   input(id='caribian' name="caribian" type='checkbox')
+                   label(for='caribian') КАРИБСКИЕ ОСТРОВА
+                 li(data-bg-block="9") 
+                   input(id='bagam' name="bagam" type='checkbox')
+                   label(for='bagam') БАГАМСКИЕ ОСТРОВА
+                 li(data-bg-block="10") 
+                   input(id='central_south_america' name="central_south_america" type='checkbox')
+                   label(for='central_south_america') ЦЕНТРАЛЬНАЯ И ЮЖНАЯ АМЕРИКА
+                 li(data-bg-block="12") 
+                   input(id='usa' name="usa" type='checkbox')
+                   label(for='usa') США
+                 li(data-bg-block="11") 
+                   input(id='cuba' name="cuba" type='checkbox')
+                   label(for='cuba') КУБА
+             .right-block
+               .yacht-image
+                 .block-yacht
+                   input(id='sailboats' name="sailboats" type='checkbox')
+                   label(for='sailboats')
+                     .block-yacht__ico
+                       img(src="img/sailing_yachts_white.svg" alt="").img-1
+                       img(src="img/sailing_yachts.svg" alt="").img-1.img-1_hover
+                     p.text-center Парусная яхта
+                     span.mini
+                       img(src="img/tick1.png" alt="").img-min
+                 .block-yacht
+                   input(id='catamarans' name="catamarans" type='checkbox')
+                   label(for='catamarans')
+                     .block-yacht__ico
+                       img(src="img/catamarans_white.svg" alt="").img-1
+                       img(src="img/catamarans.svg" alt="").img-1.img-1_hover
+                     p.text-center Парусный катамаран 
+                     span.mini
+                       img(src="img/tick1.png" alt="").img-min
+                 .block-yacht
+                   input(id='motor_yachts' name="motor_yachts" type='checkbox')
+                   label(for='motor_yachts')
+                     .block-yacht__ico
+                       img(src="img/motor_yachts_white.svg" alt="").img-1
+                       img(src="img/motor_yachts.svg" alt="").img-1.img-1_hover
+                     p.text-center Моторная яхта
+                     span.mini
+                       img(src="img/tick1.png" alt="").img-min
+                 .block-yacht
+                   input(id='mega_yachts' name="mega_yachts" type='checkbox')
+                   label(for='mega_yachts')
+                     .block-yacht__ico
+                       img(src="img/mega_yachts_white.svg" alt="").img-1
+                       img(src="img/mega_yachts.svg" alt="").img-1.img-1_hover
+                     p.text-center Супер-яхта
+                     span.mini
+                       img(src="img/tick1.png" alt="").img-min
+               .rental-dates
+                 p.text-date ДАТЫ АРЕНДЫ ЯХТЫ
+                 .two-par-input
+                   .position
+                     input(id="sailing" type="text" name="date_from" required="required" data-calendar-from="").input.js-pick-date.js-open-popup
+                     img(src="img/calendar_icon.svg" alt="")
+                     p Отплытие
+                   .position
+                     input(id="arrival" type="text" name="date_to" required="required" data-calendar-to="").input.js-pick-date.js-open-popup
+                     img(src="img/calendar_icon.svg" alt="")
+                     p Прибытие
+                 button.button-one НАЙТИ
+       .bottom-border
+         .button-flex
+           .buton-flex-two
+             button.click-1 НЕ ЗНАЕТЕ ЧТО ПОДОБРАТЬ?
+             button.click-2 НУЖНА ПОМОЩЬ!
+           button.click-3 РАСШИРЕННЫЙ ПОИСК
+           button.click-2 РЕКОМЕНДАЦИИ ПО СЕЗОНУ
+
+   //BEGIN calendar
+   .calendar-wrap.calendar-wrap_search-new(data-calendar-popup)
+     .calendar__title(data-calendar-title) Отплытие
+     .calendar
+       ul.calendar__years
+         li
+           a(href="#" data-calendar-year data-value="2016") 2016
+         li
+           a(href="#" data-calendar-year class="is-active" data-value="2017") 2017
+         li
+           a(href="#" data-calendar-year data-value="2018") 2018
+         li
+           a(href="#" data-calendar-year data-value="2019") 2019
+         li
+           a(href="#" data-calendar-year data-value="2020") 2020
+         li
+           a(href="#" data-calendar-year data-value="2021") 2021
+       .calendar__main(data-calendar)

@@ -1,0 +1,611 @@
+.background-blocks,
+.background-block
+  padding-top: 70px
+  +rmin(1680)
+    padding-top: 100px
+
+.center-content
+  max-width: 1760px
+  width: 100%
+  margin: 0 auto
+  padding-top: 50px
+  +r(1920)
+    padding-top: 25px
+  +r(1366)
+    padding-top: 25px
+  +r(1200)
+    padding-top: 30px
+
+.margin-left
+  max-width: 1257px
+  width: 100%
+  +r(1366)
+    max-width: 920px
+
+.content-two-block
+  display: flex
+  justify-content: space-between
+
+.left-block img
+  margin-left: 15px
+  cursor: pointer
+  +r(1366)
+    height: 28px
+    margin-left: 0px
+
+.left-block li
+  font-size: 18px
+  color: #fff
+  height: 51px
+  max-height: 51px
+  display: flex
+  align-items: center
+  font-weight: bold
+  +futura-bold
+  transition: all 0.5s
+  cursor: pointer
+  overflow: hidden
+  transition: height .2s linear
+  +r(1920)
+    height: 48px
+    max-height: 48px
+  +r(1366)
+    font-size: 14px
+    height: 32px
+  &.active-2
+    +r(1366)
+      font-size: 14px
+
+.left-block
+  +r(1366)
+    max-width: 250px
+  & >:nth-child(1)
+    margin-bottom: 17px
+    +r(1920)
+      margin-bottom: 0px
+    +r(1366)
+      margin-bottom: 5px
+  & >:nth-child(3)
+    +r(1366)
+      margin-top: 5px
+
+.right-block
+  max-width: 750px
+  width: 100%
+  padding-top: 60px
+  +r(1366)
+    padding-top: 14px
+    max-width: 625px
+  +r(1200)
+    max-width: 670px
+  +r(904)
+    max-width: 500px
+
+.par-2
+  +r(1200)
+    max-width: 150px
+    width: 100%
+
+.padding-1
+  +r(1200)
+    padding-top: 110px
+
+.mar-bottom
+  +r(1920)
+    margin-bottom: 30px
+.yacht-image
+  display: flex
+  justify-content: space-between
+  +r(1366)
+    max-width: 604px
+    width: 100%
+    margin: 0 auto
+
+.block-yacht
+  position: relative
+  max-width: 145px
+  width: 100%
+  border: 2px solid #FFCC00
+  cursor: pointer
+  +r(1366)
+    max-width: 120px
+  +r(969)
+    margin-bottom: 30px
+  +r(904)
+    max-width: 110px
+  &__ico
+    width: 80px
+    height: 90px
+    position: relative
+    margin: 0 auto
+    +rmin(1680)
+      width: 103px
+      height: 135px
+  input:checked
+    + label
+      background-color: #FFCC00
+      .text-center
+        color: #000
+      .img-1
+        opacity: 0
+        &_hover
+          opacity: 1
+      .mini
+        border-color: #000
+        background-color: #000
+        img
+          display: block
+  label
+    display: block
+    width: 100%
+    height: 100%
+    padding-top: 15px
+    padding-bottom: 5px
+    cursor: pointer
+    &:hover
+      background-color: #FFCC00
+      .img-1
+        opacity: 0
+        &_hover
+          opacity: 1
+      .mini
+        border-color: #000
+      .text-center
+        color: #000
+  .img-1
+    display: block
+    opacity: 1
+    transition: opacity .3s
+    +vcenter
+    +r(1366)
+      width: 80px
+    &_hover
+      opacity: 0
+
+  .mini
+    position: absolute
+    width: 20px
+    height: 20px
+    border: 2px solid #FFCC00
+    top: 11px
+    right: 10px
+    +r(1366)
+      width: 15px
+      height: 15px
+      top: 9px
+    img
+      display: none
+
+.text-center
+  color: #fff
+  text-align: center
+  width: 95px
+  text-align: center
+  margin: 0 auto
+  margin-top: 10px
+  transition: color .3s
+  +futura-book
+  +r(1366)
+    font-size: 13px
+    width: 75px
+
+.two-par-input
+  display: flex
+  +r(1366)
+    max-width: 600px
+    margin: 0 auto
+    justify-content: space-between
+
+.rental-dates
+  margin-top: 70px
+  +r(1366)
+    margin-top: 105px
+  +r(1200)
+    margin-top: 90px
+  +r(969)
+    margin-top: 0px
+
+.text-date
+  text-align: center
+  color: #fff
+  font-size: 40px
+  margin-bottom: 20px
+  font-weight: bold
+  +futura-bold
+  +r(1366)
+    font-size: 32px
+    margin-bottom: 14px
+  +r(969)
+    font-size: 34px
+
+.two-par-input
+  max-width: 750px
+  width: 100%
+  display: flex
+  justify-content: space-between
+
+.position
+  position: relative
+  max-width: 330px
+  width: 100%
+  height: 35px
+  +r(1366)
+    max-width: 260px
+    height: 30px
+  +r(1200)
+    margin: 0 auto
+    margin-bottom: 40px
+  +r(904)
+    max-width: 230px
+
+.position input
+  max-width: 320px
+  width: 100%
+  height: 41px
+  border: 2px solid #AEAEAE
+  padding-left: 40px
+  outline: none
+  +r(1366)
+    max-width: 260px
+    height: 30px
+    box-sizing: border-box
+
+.position p
+  color: #fff
+  position: absolute
+  top: 44px
+  right: 8px
+  +futura-book
+  +r(1366)
+    font-size: 13px
+    top: 38px
+    right: 0px
+
+.position img
+  position: absolute
+  top: 9px
+  left: 10px
+  width: auto
+  height: 70%
+  +r(1366)
+    top: 4px
+    left: 7px
+
+.button-one
+  background: #FFCC00
+  border: none
+  outline: none
+  padding: 15px 90px 15px 90px
+  border-radius: 60px
+  font-size: 28px
+  margin: 0 auto
+  display: block
+  margin-top: 40px
+  +futura-book
+  cursor: pointer
+  transition: all .25s ease-in-out
+  +r(1366)
+    padding: 7px 75px 7px 75px
+    font-size: 22px
+    margin-top: 38px
+  +r(1200)
+    margin-top: 20px
+
+.button-one:hover
+  background: #fff
+
+.bottom-border
+  max-width: 1760px
+  width: 100%
+  margin: 0 auto
+  border-top: 2px solid #FFCC00
+  +r(1366)
+    margin-top: 15px
+  +r(1200)
+    margin-top: 50px
+  +r(904)
+    margin-top: 25px
+
+.button-flex
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding-top: 19px
+  padding-bottom: 19px
+  +r(1920)
+    padding-top: 12px
+    padding-bottom: 0
+  +r(1366)
+    padding-top: 15px
+  +r(1200)
+    padding-bottom: 20px
+
+.buton-flex-two
+  max-width: 508px
+  width: 100%
+  display: flex
+  justify-content: space-between
+  +r(1366)
+    max-width: 398px
+  +r(969)
+    justify-content: space-around
+  +r(904)
+    margin: 0 auto
+
+.click-1,
+.click-2,
+.click-3
+  +r(1366)
+    font-size: 14px
+
+.click-1
+  background: none
+  outline: none
+  border: none
+  font-size: 18px
+  color: #fff
+  +futura-book
+  cursor: pointer
+
+.click-2
+  background: none
+  outline: none
+  font-size: 18px
+  color: #fff
+  border: 2px solid #fff
+  border-radius: 30px
+  padding: 10px 39px 10px 39px
+  +futura-book
+  cursor: pointer
+  transition: all .25s ease-in-out
+  +r(1366)
+    padding: 8px 15px 8px 15px
+
+.click-2:hover
+  background: #fff
+  color: #000
+
+.click-3
+  margin-right: 180px
+  background: #FFCC00
+  outline: none
+  font-size: 18px
+  color: #000
+  border: none
+  border-radius: 30px
+  padding: 10px 40px 10px 40px
+  +futura-book
+  cursor: pointer
+  transition: all .25s ease-in-out
+  +r(1700)
+    margin-right: 0px
+  +r(1366)
+    padding: 8px 32px 8px 32px
+    margin-right: 265px
+  +r(1280)
+    margin-right: 180px
+  +r(1024)
+    margin-right: 0
+
+.click-3:hover
+  background: #fff
+
+.yacht-image-two
+  display: none
+
+.top-top
+  margin-top: -7px
+
+.wrapper
+  max-width: 600px
+  width: 100%
+  margin: 0 auto
+  overflow-x: hidden
+
+.tab_content
+  width: 5000px
+  display: flex
+  flex-wrap: nowrap
+  position: relative
+
+.tab_item
+  position: relative
+  width: 100vw
+
+.tab
+  color: #000
+  cursor: pointer
+  +futura-bold
+  text-transform: uppercase
+
+.tab-last
+  max-width: 600px
+  width: 100%
+  margin: 0 auto
+
+.tab-midle
+  padding-bottom: 77px
+  padding-top: 15px
+
+.tab-right
+  border-bottom: 3px solid #FFCC00
+  padding-bottom: 77px
+  padding-top: 80px
+
+.disp-flex
+  border-bottom: 3px solid #FFCC00
+  margin: 15px
+  display: flex
+  flex-direction: column
+
+.top-img
+  margin-top: -12px
+  margin-bottom: 47px
+  +r(1920)
+    margin-bottom: 15px
+  +r(1366)
+    margin-bottom: 5px
+
+.no-scroll
+  overflow: hidden
+
+.hover-menu
+  position: absolute
+  top: 302%
+  left: 0
+  z-index: 10
+  max-height: 0
+  overflow: hidden
+  transform: perspective(400px) rotate3d(1, 0, 0, -90deg)
+  transform-origin: 50% 0
+  transition: 350ms
+  background-color: #f6cb02
+  box-shadow: 0 5px 29px rgba(0, 0, 0, 0.84)
+
+.hover-menu a
+  font-size: 18px
+  white-space: nowrap
+  text-transform: uppercase
+  transition: .1s
+  padding: 15px 20px
+  display: block
+  color: #000 !important
+
+.hover-menu li:hover
+  background: #C3A102
+
+.hover-li
+  position: relative
+
+.hover-li:hover .hover-menu
+  max-height: 1000px
+  transform: perspective(400px) rotate3d(0, 0, 0, 0)
+
+.animate
+  position: fixed
+  width: 100%
+  height: 100vh
+  top: 75px
+  right: -100vw
+  background: #3D3D3D
+  z-index: 999999
+
+.animate a
+  position: relative
+  display: block
+  margin: 0 35px
+  padding: 26px 23px 22px 0
+  border-bottom: 2px solid #4b4b4b
+  color: #a8a8a8
+  font-size: 24px
+  text-transform: uppercase
+  text-decoration: none
+  +futura-book
+
+.top-link
+  display: none
+  max-width: 640px
+  width: 100%
+  position: relative
+  top: 0px
+  left: 0px
+  padding: 20px 0px 0 35px
+
+.top-link a
+  text-decoration: none
+  display: none
+
+.top-link img
+  position: relative
+  top: 3px
+  margin-right: 15px
+  width: 12px
+  height: 22px
+
+.top-link span
+  color: #a8a8a8
+  font-size: 24px
+  text-transform: uppercase
+  +futura-book
+
+.left-block li.active-1
+  font-weight: bold
+  transition: all 0.5s
+  transform: scale(1.2, 1.2)
+
+.left-block li.active-1:before
+  content: url('../img/sep.png')
+  position: relative
+  bottom: 5px
+  right: 4px
+
+.left-block li.active-2:before
+  +r(1366)
+    content: url(../img/sep4.png)
+    position: relative
+    bottom: 5px
+    right: 4px
+  +r(904)
+    bottom: 5px
+
+.left-block li.active-2
+  +r(904)
+    font-size: 14px
+
+.click-img li:first-child
+  margin-top: 0
+
+.left-block li
+  label
+    text-transform: uppercase
+    width: 100%
+    cursor: pointer
+  input:checked
+    + label
+      color: #FFCC00
+.click-img
+  height: 700px
+  overflow: hidden
+  padding-left: 40px
+  margin-left: -40px
+  +r(1920)
+    height: 635px
+  +r(1366)
+    height: 392px
+
+.left-block
+  max-width: 440px
+  width: 100%
+
+.background-block
+  +r(1920)
+    min-height: calc(100vh - 110px)
+  +r(1885)
+    padding-right: 50px
+    padding-left: 70px
+  +r(1366)
+    padding-left: 32px
+    padding-right: 32px
+  +r(1240)
+    padding-right: 50px
+    padding-left: 50px
+
+.background-blocks
+  background-image: url( /img/image-yh-4-min.png)
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  background-size: cover
+  z-index: -1
+  opacity: 0
+  transition: all .5s linear
+
+.background-blocks.active
+  opacity: 1
+  transition: all .5s linear
+
+
+.background-blocks#background-block13
+  background-image: url(../img/bg.png)

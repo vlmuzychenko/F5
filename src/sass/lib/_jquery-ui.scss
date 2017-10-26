@@ -111,6 +111,7 @@
 .ui-state-disabled {
 	cursor: default !important;
 	pointer-events: none;
+  opacity: .4;
 }
 
 /* Overlays */
@@ -301,4 +302,3 @@
    font-family: 'FuturaPT-Demi', Arial, sans-serif;
 	font-size: 16px;
 }
-

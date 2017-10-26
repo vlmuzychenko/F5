@@ -89,6 +89,7 @@ var Calendar = function () {
 				showOtherMonths: true,
 				selectOtherMonths: false,
 				dateFormat: 'dd.mm.yy',
+				minDate: new Date(),
 				onChangeMonthYear: function onChangeMonthYear(year) {
 					return setActiveYear.call(_this, year);
 				},

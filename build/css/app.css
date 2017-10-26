@@ -817,6 +817,7 @@ input[type='checkbox'], select, input[type='radio'] {
 .ui-state-disabled {
   cursor: default !important;
   pointer-events: none;
+  opacity: .4;
 }
 
 /* Overlays */
@@ -9364,6 +9365,12 @@ keyframes spinMaSearch 100% {
   font-family: FuturaPT-Book, Arial, sans-serif;
 }
 
+.calendar-wrap_search-new {
+  position: absolute;
+  bottom: 100%;
+  top: auto !important;
+}
+
 .calendar-wrap_adv {
   top: 5%;
 }
@@ -10410,7 +10417,7 @@ input[type=number] {
 }
 
 .left-block li.active-1:before {
-  content: url("../../img/sep.png");
+  content: url("../img/sep.png");
   position: relative;
   bottom: 5px;
   right: 4px;
@@ -13157,7 +13164,7 @@ input[type=number] {
   }
 
   .left-block li.active-2:before {
-    content: url(../../img/sep4.png);
+    content: url(../img/sep4.png);
     position: relative;
     bottom: 5px;
     right: 4px;

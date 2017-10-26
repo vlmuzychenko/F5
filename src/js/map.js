@@ -3,14 +3,16 @@ $(function () {
    var select = $('select.js-select-multiple');
    select.each(function(){
      var options = $(this).find("option");
-     var arr = options.map(function(_, o) { return { t: $(o).text(), v: o.value }; });
+     var arr = options.map(function(_, o) { return { t: $(o).text(), v: o.value, /*r: o.attr('data-region'), c: o.attr('data-country'),*/ id: $(o).data('id')}; });
      arr.sort(function(o1, o2) {
        var t1 = o1.t.toLowerCase();
        var t2 = o2.t.toLowerCase();
        return t1 > t2 ? 1 : t1 < t2 ? -1 : 0; });
      options.each(function(i, o) {
-       o.value = arr[i].v;
        $(o).text(arr[i].t);
+       o.value = arr[i].v;
+       $(o).data('id', arr[i].id);
+       console.log(arr[i].id);
      });
    });
 

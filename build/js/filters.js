@@ -113,11 +113,11 @@ $(function () {
             peopleCountInput.val(ui.value);
          }
       });
-       peopleCountInput.val(peopleCountRange.slider('value'));
-       peopleCountInput.on('change', function () {
+        peopleCountInput.val(peopleCountRange.slider('value'));
+        peopleCountInput.on('change', function () {
          var _value = peopleCountInput.val();
-          peopleCountInput.val(_value);
-          peopleCountRange.slider('value', _value);
+           peopleCountInput.val(_value);
+           peopleCountRange.slider('value', _value);
       });*/
 
       // toilets count

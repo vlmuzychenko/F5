@@ -12470,8 +12470,8 @@ input[type=number] {
   }
 
   .left-block li {
-    height: 40px;
-    max-height: 40px;
+    height: 48px;
+    max-height: 48px;
   }
 
   .left-block > :nth-child(1) {
@@ -12554,6 +12554,11 @@ input[type=number] {
 
   .search__rent-date {
     padding: 0 20px;
+  }
+
+  .left-block li {
+    height: 43px;
+    max-height: 43px;
   }
 }
 

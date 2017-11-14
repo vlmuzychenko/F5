@@ -12552,6 +12552,10 @@ input[type=number] {
     width: 50%;
   }
 
+  .card__rent {
+    font-size: 16px;
+  }
+
   .search__rent-date {
     padding: 0 20px;
   }
@@ -12610,10 +12614,6 @@ input[type=number] {
 
   .more .btn_large {
     width: 240px;
-  }
-
-  .card__rent {
-    font-size: 16px;
   }
 
   .search__region-name {

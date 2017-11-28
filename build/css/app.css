@@ -5662,9 +5662,9 @@ keyframes spinMaSearch 100% {
 
 .wiki-content {
   height: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;

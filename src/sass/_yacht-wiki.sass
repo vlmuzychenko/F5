@@ -416,7 +416,55 @@
     padding-top: 10px
     +rmin(1366)
       padding-top: 15px
-
+  &__prices-list
+    position: absolute
+    top: 5px
+    left: 100%
+    width: 70%
+    padding-left: 28px
+    font-size: 14px
+    +futura-demi
+    +rmin(1024)
+      font-size: 18px
+    +rmin(1366)
+      font-size: 19px
+    +rmin(1680)
+      font-size: 21px
+    input:checked + label span:after
+      opacity: 1
+      transform: translate(-50%, -50%) scale(1)
+  &__prices-item
+    display: block
+    padding-left: 25px
+    margin-top: 5px
+    position: relative
+    cursor: pointer
+    +rmin(1680)
+      padding-left: 30px
+    span
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 16px
+      height: 16px
+      border: 1px solid #000
+      border-radius: 50%
+      +rmin(1680)
+        width: 22px
+        height: 22px
+      &:after
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%) scale(.5)
+        opacity: 0
+        transition: .3s ease
+        width: 58%
+        height: 55%
+        border-radius: 50%
+        background-color: #951dd9
 
 .programm-wrap
   height: 100%

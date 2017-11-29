@@ -5365,6 +5365,60 @@ keyframes spinMaSearch 100% {
   padding-top: 10px;
 }
 
+.price__prices-list {
+  position: absolute;
+  top: 5px;
+  left: 100%;
+  width: 70%;
+  padding-left: 28px;
+  font-size: 14px;
+  font-family: FuturaPT-Demi, Arial, sans-serif;
+}
+
+.price__prices-list input:checked + label span:after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.price__prices-item {
+  display: block;
+  padding-left: 25px;
+  margin-top: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.price__prices-item span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.price__prices-item span:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+  -ms-transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  transition: .3s ease;
+  width: 58%;
+  height: 55%;
+  border-radius: 50%;
+  background-color: #951dd9;
+}
+
 .programm-wrap {
   height: 100%;
 }
@@ -10626,6 +10680,10 @@ input[type=number] {
     font-size: 18px;
   }
 
+  .price__prices-list {
+    font-size: 18px;
+  }
+
   .programm__descr {
     font-size: 16px;
   }
@@ -11271,6 +11329,10 @@ input[type=number] {
 
   .price__list-title {
     padding-top: 15px;
+  }
+
+  .price__prices-list {
+    font-size: 19px;
   }
 
   .programm__title {
@@ -11925,6 +11987,19 @@ input[type=number] {
 
   .price__list-wrap {
     font-size: 21px;
+  }
+
+  .price__prices-list {
+    font-size: 21px;
+  }
+
+  .price__prices-item {
+    padding-left: 30px;
+  }
+
+  .price__prices-item span {
+    width: 22px;
+    height: 22px;
   }
 
   .programm_flot .programm__slider {

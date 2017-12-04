@@ -9922,12 +9922,21 @@ input[type=number] {
   border: none;
 }
 
+.acquiring__chosen {
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 13px;
+  margin-bottom: 10px;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+}
+
 .acquiring__select .ms-drop {
   padding: 0;
 }
 
 .acquiring__select .ms-drop ul {
-  max-height: 110px !important;
+  max-height: 195px !important;
 }
 
 .acquiring__select .ms-drop ul > li:before, .acquiring__select .ms-drop ul > li:after {
@@ -11675,6 +11684,10 @@ input[type=number] {
 
   .checkin-form__btn {
     min-width: 190px;
+  }
+
+  .acquiring__chosen {
+    font-size: 16px;
   }
 }
 

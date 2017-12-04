@@ -1,0 +1,50 @@
+---
+title: Popup Acquiring Wiki
+---
+extends layouts/_layout 
+block content
+  
+   // BEGIN popup
+   a.btn.btn_purple.js-open-popup(href="#" data-open="acquiring") Оплатить онлайн
+   .popup.popup_acquiring.js-popup-acquiring.js-popup.is-open(data-popup="acquiring")
+     .popup__in.js-popup-in
+       .popup__body
+         .acquiring
+           .acquiring__header
+             h2.acquiring__title яхтвик
+             button(type="button").popup__close.js-close-popup-acquiring
+               +icon('icon-close-bold')
+           .acquiring__body
+             .acquiring__field.acquiring__field_yellow
+               h3.acquiring__title.acquiring__title_s.acquiring__title_black
+                 Для оплаты онлайн заполните обязательные поля 
+                 span *
+               .acquiring__input-wrap
+                 .acquiring__input-col
+                   label(for='name').acquiring__label Как Вас зовут?
+                    span *
+                   input(type='text' id='name' placeholder='Имя Фамилия').acquiring__input.error
+                 .acquiring__input-col
+                   label(for='email').acquiring__label Email
+                    span *
+                   input(type='text' id='email' placeholder='name@mail.com').acquiring__input
+             .acquiring__field.acquiring__field_pic-bg
+               .acquiring__input-wrap
+                 .acquiring__input-col
+                   p.acquiring__label.acquiring__label_white Выбранный продукт:
+                    span *
+                   p.acquiring__chosen CANARY YACHTWEEK 25.11 — 02.12 2017 - 490€ 
+                   label(for='spinner').acquiring__label.acquiring__label_white Укажите количество людей:
+                    span *
+                   .quantity.js-spinner.error
+                     input(type="number" min="1" max="40" step="1" value="1")
+                 .acquiring__input-col
+                   label(for='email').acquiring__label.acquiring__label_white Комментарий:
+                   textarea(placeholder='Не обязательное поле' rows='4').acquiring__input.acquiring__input_textarea
+               .acquiring__bottom-wrap
+                  h3.acquiring__title.acquiring__title_s.acquiring__title_yellow Сумма к оплате:
+                  .acquiring__title.acquiring__title_m.acquiring__title_yellow
+                    span(style='display: none;').empty
+                    span.filled 100.000
+                    span  грн
+                  a(href='#').btn.btn_xl.acquire__btn оплатить на Fondy.ua

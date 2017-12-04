@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index Page</title>
+    <title>Popup Acquiring Wiki</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=768, initial-scale=1">
     <meta name="theme-color" content="#f6cb02">
@@ -44,35 +44,39 @@
         </ul>
       </header>
       <!--END header-->
-      <header style="position: relative; z-index: 98" class="header"><a href="#" class="header__back-btn"><i class="header__back-icon"><svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow"></use></svg></i></a>
-        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
-        <ul class="nav js-nav">
-          <li class="nav__item is-active"><a href="#" class="nav__link">Services</a>
-            <ul class="nav__sub-nav">
-              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Yacht week</a></li>
-              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Yacht charters</a></li>
-              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Regattas</a></li>
-              <li class="nav__sub-item"><a href="#" class="nav__sub-link">Academy</a></li>
-            </ul>
-          </li>
-          <li class="nav__item"><a href="#" class="nav__link">Calendar</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">News</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
-          <li class="nav__line js-moving-line"></li>
-        </ul><a href="tel:0442544545" class="header__phone">044 254 45 45</a>
-        <ul class="header__lang lang">
-          <li><a href="#" class="is-active"><span>RU</span></a></li>
-          <li><a href="#"><span>EN</span></a></li>
-        </ul>
-      </header>
-      <div style="display: flex; flex-direction: column; align-items: flex-start;">
-        <h1>PAGES:</h1><a href="yacht_card.html">1) yacht card</a><a href="search-page_quick.html">2) search-page_quick</a><a href="search-page_advanced.html">3) search-page_advanced</a><a href="calendar.html">4) calendar</a><a href="yacht-wiki.html">5) yacht-wiki</a>
-        <a
-          href="contacts.html">6) contacts</a><a href="main.html">7) main</a><a href="yacht-wiki-main.html">8) yacht-wiki-main</a><a href="yacht-wiki-archive.html">9) yacht-wiki-archive</a><a href="yacht-wiki-archive-open.html">10) yacht-wiki-archive-open</a><a href="academy.html">11) academy</a>
-          <a
-            href="news.html">12) news</a><a href="news-archive.html">13) news archive</a><a href="news-open.html">14) news open</a><a href="event.html">15) event</a><a href="404.html">16) 404</a><a href="new-archive-open.html">17) new-archive</a><a href="popup-email.html">18) popup email</a>
-            <a
-              href="popup-email-thnk.html">19) popup email thank</a><a href="popup-acquiring-academy.html">20) popup acquiring academy</a><a href="popup-acquiring-wiki.html">20) popup acquiring wiki</a><a href="popup-acquiring-error.html">21) popup acquiring error</a><a href="search-page_quick_new.html">22) search-page quick new</a></div>
+      <!-- BEGIN popup--><a href="#" data-open="acquiring" class="btn btn_purple js-open-popup">Оплатить онлайн</a>
+      <div data-popup="acquiring" class="popup popup_acquiring js-popup-acquiring js-popup is-open">
+        <div class="popup__in js-popup-in">
+          <div class="popup__body">
+            <div class="acquiring">
+              <div class="acquiring__header">
+                <h2 class="acquiring__title">яхтвик</h2><button type="button" class="popup__close js-close-popup-acquiring"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button></div>
+              <div class="acquiring__body">
+                <div class="acquiring__field acquiring__field_yellow">
+                  <h3 class="acquiring__title acquiring__title_s acquiring__title_black">Для оплаты онлайн заполните обязательные поля <span>*</span></h3>
+                  <div class="acquiring__input-wrap">
+                    <div class="acquiring__input-col"><label for="name" class="acquiring__label">Как Вас зовут?<span>*</span></label><input type="text" id="name" placeholder="Имя Фамилия" class="acquiring__input error"></div>
+                    <div class="acquiring__input-col"><label for="email" class="acquiring__label">Email<span>*</span></label><input type="text" id="email" placeholder="name@mail.com" class="acquiring__input"></div>
+                  </div>
+                </div>
+                <div class="acquiring__field acquiring__field_pic-bg">
+                  <div class="acquiring__input-wrap">
+                    <div class="acquiring__input-col">
+                      <p class="acquiring__label acquiring__label_white">Выбранный продукт:<span>*</span></p>
+                      <p class="acquiring__chosen">CANARY YACHTWEEK 25.11 — 02.12 2017 - 490€ </p><label for="spinner" class="acquiring__label acquiring__label_white">Укажите количество людей:<span>*</span></label>
+                      <div class="quantity js-spinner error"><input type="number" min="1" max="40" step="1" value="1"></div>
+                    </div>
+                    <div class="acquiring__input-col"><label for="email" class="acquiring__label acquiring__label_white">Комментарий:</label><textarea placeholder="Не обязательное поле" rows="4" class="acquiring__input acquiring__input_textarea"></textarea></div>
+                  </div>
+                  <div class="acquiring__bottom-wrap">
+                    <h3 class="acquiring__title acquiring__title_s acquiring__title_yellow">Сумма к оплате:</h3>
+                    <div class="acquiring__title acquiring__title_m acquiring__title_yellow"><span style="display: none;" class="empty"></span><span class="filled">100.000</span><span> грн</span></div><a href="#" class="btn btn_xl acquire__btn">оплатить на Fondy.ua</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--END out-->
     <div data-popup="feedback" class="popup js-popup">

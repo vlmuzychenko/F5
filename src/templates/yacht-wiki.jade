@@ -122,6 +122,7 @@ block content
                     .price-block__value
                       span 490 € 
                       | за 7 дней
+                      
               .content-section.content-section_price
                 .price
                   .price__content
@@ -130,11 +131,11 @@ block content
                         input(type='radio' id='990' name='price-value' value='990')
                         label(for='990').price__prices-item 990 €
                           span
-                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах", "extra": "перелёт,виза,трансфер из/до аэpопорта"}')
+                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах", "extra": "перелётперелёт,виза,трансфер из/до аэpопорта"}')
                         input(type='radio' id='1100' name='price-value' value='1100')
                         label(for='1100').price__prices-item 1100 €
                           span
-                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах,услуги видео оператора,медицинское страхование", "extra": "перелёт,виза,трансфер из/до аэpопорта"}')
+                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах,услуги видео оператора услуги видео оператора,медицинское страхование", "extra": "перелёт,виза,трансфер из/до аэpопорта"}')
                         input(type='radio' id='1290' name='price-value' value='1290' checked)
                         label(for='1290').price__prices-item 1290 €
                           span
@@ -143,7 +144,7 @@ block content
                       span.price__title_period(style='display: none;') за 7 дней
                     .price__list-wrap.price__list-wrap_in
                       .price__list-title В стоимость входит:
-                      ul.price__list
+                      ul.price__list.js-included
                         li услуги шкипера
                         li аренда яхты
                         li страховой депозит
@@ -156,7 +157,7 @@ block content
                         li аренда машин для островных приключений
                     .price__list-wrap.price__list-wrap_out
                       .price__list-title Дополнительно оплачиваются:
-                      ul.price__list
+                      ul.price__list.js-extra
                         li перелёт
                         li виза
                         li трансфер из/до аэропорта

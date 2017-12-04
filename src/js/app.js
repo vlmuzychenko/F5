@@ -30,5 +30,4 @@
 //=include event.js
 //=include news.js
 //=include loop-bg-video.js
-
-sayHello();
+//=include price.js

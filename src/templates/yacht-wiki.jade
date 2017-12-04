@@ -3,6 +3,7 @@ title: Yacht Wiki
 ---
 extends layouts/_layout
 block content
+  
     // BEGIN yacht Wiki
     ul.yacht-wiki-menu
         li(data-menuanchor="description").yacht-wiki-menu__item
@@ -125,15 +126,18 @@ block content
                 .price
                   .price__content
                     form.price__prices-list
-                      input(type='radio' id='990' name='price-value' value='990')
-                      label(for='990').price__prices-item 990 €
-                        span
-                      input(type='radio' id='1100' name='price-value' value='1100')
-                      label(for='1100').price__prices-item 1100 €
-                        span
-                      input(type='radio' id='1290' name='price-value' value='1290' checked)
-                      label(for='1290').price__prices-item 1290 €
-                        span
+                      formfield.js-price(data-price-info='{"included": "услуги шкипера, аренда яхты,страховой депозит", "extra": "перелёт,виза,трансфер из/до аэpопорта"}')
+                        input(type='radio' id='990' name='price-value' value='990')
+                        label(for='990').price__prices-item 990 €
+                          span
+                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах", "extra": "перелёт,виза,трансфер из/до аэpопорта"}')
+                        input(type='radio' id='1100' name='price-value' value='1100')
+                        label(for='1100').price__prices-item 1100 €
+                          span
+                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах,услуги видео оператора,медицинское страхование", "extra": "перелёт,виза,трансфер из/до аэpопорта"}')
+                        input(type='radio' id='1290' name='price-value' value='1290' checked)
+                        label(for='1290').price__prices-item 1290 €
+                          span
                     .price__title
                       | 1500€
                       span.price__title_period(style='display: none;') за 7 дней

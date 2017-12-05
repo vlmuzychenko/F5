@@ -10,13 +10,13 @@ block content
      .popup__in.js-popup-in
        .popup__body
          .acquiring
-           .acquiring__header
-             h2.acquiring__title регаты
+           .acquiring__header(style='margin-left: 0;')
+             h2.acquiring__title академия
              button(type="button").popup__close.js-close-popup-acquiring
                +icon('icon-close-bold')
            .acquiring__body
              .acquiring__field.acquiring__field_yellow
-               h3.acquiring__title.acquiring__title_s.acquiring__title_black
+               //h3.acquiring__title.acquiring__title_s.acquiring__title_black
                  Для оплаты онлайн заполните обязательные поля 
                  span *
                .acquiring__input-wrap
@@ -32,7 +32,7 @@ block content
              .acquiring__field.acquiring__field_pic-bg
                .acquiring__input-wrap
                  .acquiring__input-col
-                   label(for='name').acquiring__label.acquiring__label_white Выберите регату:
+                   label(for='name').acquiring__label.acquiring__label_white Выберите курс:
                     span *
                    .acquiring__select.js-select-field <!--add class error -->
                      select.js-select-single
@@ -54,7 +54,6 @@ block content
                .acquiring__bottom-wrap
                   h3.acquiring__title.acquiring__title_s.acquiring__title_yellow Сумма к оплате:
                   .acquiring__title.acquiring__title_m.acquiring__title_yellow
-                    span.empty
-                    span(style='display: none;').filled 100.000
+                    span.filled 100.000
                     span  грн
                   a(href='#').btn.btn_xl.acquire__btn оплатить на Fondy.ua

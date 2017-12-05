@@ -49,11 +49,12 @@
         <div class="popup__in js-popup-in">
           <div class="popup__body">
             <div class="acquiring">
-              <div class="acquiring__header">
-                <h2 class="acquiring__title">регаты</h2><button type="button" class="popup__close js-close-popup-acquiring"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button></div>
+              <div style="margin-left: 0;" class="acquiring__header">
+                <h2 class="acquiring__title">академия</h2><button type="button" class="popup__close js-close-popup-acquiring"><svg class="icon-close-bold"><use xlink:href="img/sprite.svg#icon-close-bold"></use></svg></button></div>
               <div class="acquiring__body">
                 <div class="acquiring__field acquiring__field_yellow">
-                  <h3 class="acquiring__title acquiring__title_s acquiring__title_black">Для оплаты онлайн заполните обязательные поля <span>*</span></h3>
+                  <!--h3.acquiring__title.acquiring__title_s.acquiring__title_blackДля оплаты онлайн заполните обязательные поля 
+span *-->
                   <div class="acquiring__input-wrap">
                     <div class="acquiring__input-col"><label for="name" class="acquiring__label">Как Вас зовут?<span>*</span></label><input type="text" id="name" placeholder="Имя Фамилия" class="acquiring__input">
                       <!--add class error-->
@@ -63,7 +64,7 @@
                 </div>
                 <div class="acquiring__field acquiring__field_pic-bg">
                   <div class="acquiring__input-wrap">
-                    <div class="acquiring__input-col"><label for="name" class="acquiring__label acquiring__label_white">Выберите регату:<span>*</span></label>
+                    <div class="acquiring__input-col"><label for="name" class="acquiring__label acquiring__label_white">Выберите курс:<span>*</span></label>
                       <div class="acquiring__select js-select-field">
                         <!--add class error --><select class="js-select-single"><optgroup label="Group 1"><option>Цена вниз</option><option>Цена вверх</option></optgroup><optgroup label="Group 1"><option>Год выпуска вниз</option><option>Год выпуска вверх</option><option>Год выпуска вверх1</option><option>Год выпуска вверх2</option></optgroup></select></div>
                       <label
@@ -75,7 +76,7 @@
                   </div>
                   <div class="acquiring__bottom-wrap">
                     <h3 class="acquiring__title acquiring__title_s acquiring__title_yellow">Сумма к оплате:</h3>
-                    <div class="acquiring__title acquiring__title_m acquiring__title_yellow"><span class="empty"></span><span style="display: none;" class="filled">100.000</span><span> грн</span></div><a href="#" class="btn btn_xl acquire__btn">оплатить на Fondy.ua</a></div>
+                    <div class="acquiring__title acquiring__title_m acquiring__title_yellow"><span class="filled">100.000</span><span> грн</span></div><a href="#" class="btn btn_xl acquire__btn">оплатить на Fondy.ua</a></div>
                 </div>
               </div>
             </div>

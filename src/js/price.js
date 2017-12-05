@@ -47,13 +47,13 @@ $(function(){
       var self = $(this);
       setTimeout(function(){
         self.addClass('active');
-      }, i*150);
+      }, i*100);
     });
     extraWrap.find('li').each(function(i){
       var self = $(this);
       setTimeout(function(){
         self.addClass('active');
-      }, i*150);
+      }, i*100);
     });
   })
 

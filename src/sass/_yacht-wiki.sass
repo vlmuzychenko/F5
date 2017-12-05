@@ -375,14 +375,22 @@
     padding-right: 10%
     height: 25%
     font-size: 60px
+    opacity: 0
+    transform: translateY(50px)
     +rmin(1366)
       font-size: 65px
     +rmin(1680)
       font-size: 98px
+    &.active
+      opacity: 1
+      transform: translateY(0)
+      transition: .5s ease
     &_period
       display: block
       line-height: 0
       font-size: 30px
+      opacity: 1
+      transform: none
       +rmin(1680)
         font-size: 48px
   &__list-wrap
@@ -394,6 +402,13 @@
       font-size: 19px
     +rmin(1680)
       font-size: 21px
+    li
+      opacity: 0
+      transform: translateY(70px)
+      transition: .5s ease
+      &.active
+        opacity: 1
+        transform: translateY(0)
     &_in
       padding-right: 15px
       text-align: right

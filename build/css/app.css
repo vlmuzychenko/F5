@@ -5318,17 +5318,48 @@ keyframes spinMaSearch 100% {
   padding-right: 10%;
   height: 25%;
   font-size: 60px;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px);
+}
+
+.price__title.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  transition: .5s ease;
 }
 
 .price__title_period {
   display: block;
   line-height: 0;
   font-size: 30px;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 
 .price__list-wrap {
   font-size: 14px;
   font-family: FuturaPT-Demi, Arial, sans-serif;
+}
+
+.price__list-wrap li {
+  opacity: 0;
+  -webkit-transform: translateY(70px);
+  -ms-transform: translateY(70px);
+  transform: translateY(70px);
+  transition: .5s ease;
+}
+
+.price__list-wrap li.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .price__list-wrap_in {

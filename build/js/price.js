@@ -13,12 +13,12 @@ $(function () {
 
   includedWrap.html('');
   extraWrap.html('');
-  $('.price__title').text(currentText);
+  $('.price__title').text(currentText).addClass('active');
   for (var i = 0; i < currentIncludedCont.length; i++) {
-    includedWrap.append('<li>' + currentIncludedCont[i] + '</li>');
+    includedWrap.append('<li class="active">' + currentIncludedCont[i] + '</li>');
   }
   for (var i = 0; i < currentExtraCont.length; i++) {
-    extraWrap.append('<li>' + currentExtraCont[i] + '</li>');
+    extraWrap.append('<li class="active">' + currentExtraCont[i] + '</li>');
   }
 
   $('.js-price label').click(function (e) {
@@ -32,12 +32,28 @@ $(function () {
 
     includedWrap.html('');
     extraWrap.html('');
-    $('.price__title').text(text);
+    $('.price__title').text(text).removeClass('active');
     for (var i = 0; i < includedCont.length; i++) {
       includedWrap.append('<li>' + includedCont[i] + '</li>');
     }
     for (var i = 0; i < extraCont.length; i++) {
       extraWrap.append('<li>' + extraCont[i] + '</li>');
     }
+    //animations
+    setTimeout(function () {
+      $('.price__title').addClass('active');
+    }, 200);
+    includedWrap.find('li').each(function (i) {
+      var self = $(this);
+      setTimeout(function () {
+        self.addClass('active');
+      }, i * 150);
+    });
+    extraWrap.find('li').each(function (i) {
+      var self = $(this);
+      setTimeout(function () {
+        self.addClass('active');
+      }, i * 150);
+    });
   });
 })();

@@ -105,37 +105,37 @@ block content
         section.fp-section
             .price-wrap
               .skew-section.skew-section_price
-                .skew-section__img
-                .price-block(style='display:none;')
-                  .price-block__item.is-active
-                    .price-block__title покупая яхт-вик до 01.08.17
-                    .price-block__value
-                      span 490 € 
-                      | за 7 дней
+                .skew-section__img(style='display:none;')
+                .price-block
                   .price-block__item
                     .price-block__title покупая яхт-вик до 01.08.17
                     .price-block__value
                       span 490 € 
-                      | за 7 дней
+                      //| за 7 дней
                   .price-block__item
                     .price-block__title покупая яхт-вик до 01.08.17
                     .price-block__value
                       span 490 € 
-                      | за 7 дней
+                      //| за 7 дней
+                  .price-block__item
+                    .price-block__title покупая яхт-вик до 01.08.17
+                    .price-block__value
+                      span 490 € 
+                      //| за 7 дней
                       
               .content-section.content-section_price
                 .price
                   .price__content
                     form.price__prices-list
-                      formfield.js-price(data-price-info='{"included": "услуги шкипера, аренда яхты,страховой депозит", "extra": "перелёт,виза,трансфер из/до аэpопорта", "img": "img/programm-img-1.jpg"}')
+                      formfield.js-price(data-price-info='{"included": "услуги шкипера, аренда яхты,страховой депозит", "extra": "перелёт,виза,трансфер из/до аэpопорта", "multiprice": {"1": {"text": "покупая яхт-вик до 01.08.17", "price": "900€", "current": "n"}, "2": {"text": "покупая яхт-вик до 01.08.17", "price": "1000€", "current": "n"}, "3": {"text": "покупая яхт-вик до 02.08.17", "price": "1200€", "current": "y"}}}')
                         input(type='radio' id='990' name='price-value' value='990')
                         label(for='990').price__prices-item 990 €
                           span
-                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах", "extra": "перелётперелёт,виза,трансфер из/до аэpопорта", "img": "img/price-bg-new.jpg"}')
+                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах", "extra": "перелётперелёт,виза,трансфер из/до аэpопорта", "multiprice": {"1": {"text": "покупая яхт-вик до 01.08.17", "price": "1900€", "current": "y"}, "2": {"text": "покупая яхт-вик до 01.08.17", "price": "11000€", "current": "n"}, "3": {"text": "покупая яхт-вик до 03.08.17", "price": "11200€", "current": "n"}}}')
                         input(type='radio' id='1100' name='price-value' value='1100')
                         label(for='1100').price__prices-item 1100 €
                           span
-                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах,услуги видео оператора услуги видео оператора,медицинское страхование", "extra": "перелёт,виза,трансфер из/до аэpопорта", "img": "img/price-1.jpg"}')
+                      formfield.js-price(data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах,услуги видео оператора услуги видео оператора,медицинское страхование", "extra": "перелёт,виза,трансфер из/до аэpопорта", "multiprice": {"1": {"text": "покупая яхт-вик до 01.08.17", "price": "2900€", "current": "n"}, "2": {"text": "покупая яхт-вик до 01.08.17", "price": "21000€", "current": "y"}, "3": {"text": "покупая яхт-вик до 05.08.17", "price": "2200€", "current": "n"}}}')
                         input(type='radio' id='1290' name='price-value' value='1290' checked)
                         label(for='1290').price__prices-item 1290 €
                           span

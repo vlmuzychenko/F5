@@ -5623,20 +5623,32 @@ keyframes spinMaSearch 100% {
   background-image: url(../img/price-bg-new.jpg);
   padding-top: 120px;
   padding-left: 7%;
+  transition: background .7s;
   font-family: FuturaPT-Bold, Arial, sans-serif;
 }
 
 .price-block__item {
-  opacity: .5;
   margin-top: 7vh;
+  opacity: 0;
+  -webkit-transform: translateY(140px);
+  -ms-transform: translateY(140px);
+  transform: translateY(140px);
+  transition: .7s ease;
 }
 
-.price-block__item.is-active {
+.price-block__item.is-active.price-animate {
   opacity: 1;
 }
 
-.price-block__item.is-active .price-block__title {
+.price-block__item.is-active.price-animate .price-block__title {
   color: #f6cb02;
+}
+
+.price-block__item.price-animate {
+  opacity: .5;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .price-block__item:nth-child(2) .price-block__title,

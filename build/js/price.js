@@ -10,10 +10,12 @@ $(function () {
   var currentInfo = currentPrice.parent().data('price-info');
   var currentIncludedCont = currentInfo.included.split(',');
   var currentExtraCont = currentInfo.extra.split(',');
+  var currentImg = currentInfo.img;
 
   includedWrap.html('');
   extraWrap.html('');
   $('.price__title').text(currentText).addClass('active');
+  $('.skew-section__img').css('background-image', 'url(' + currentImg + ')');
   for (var i = 0; i < currentIncludedCont.length; i++) {
     includedWrap.append('<li class="active">' + currentIncludedCont[i] + '</li>');
   }
@@ -29,10 +31,12 @@ $(function () {
     var info = target.parent().data('price-info');
     var includedCont = info.included.split(',');
     var extraCont = info.extra.split(',');
+    var img = info.img;
 
     includedWrap.html('');
     extraWrap.html('');
     $('.price__title').text(text).removeClass('active');
+    $('.skew-section__img').css('background-image', 'url(' + img + ')');
     for (var i = 0; i < includedCont.length; i++) {
       includedWrap.append('<li>' + includedCont[i] + '</li>');
     }

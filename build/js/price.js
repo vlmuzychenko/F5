@@ -64,17 +64,20 @@ $(function () {
     for (var i = 0; i < extraCont.length; i++) {
       extraWrap.append('<li>' + extraCont[i] + '</li>');
     }
-    for (var i = 0; i < $('.price-block__item').length; i++) {
-      var text = multi[i].text;
-      var price = multi[i].price;
-      var current = multi[i].current;
+    setTimeout(function () {
+      for (var i = 0; i < $('.price-block__item').length; i++) {
+        var text = multi[i].text;
+        var price = multi[i].price;
+        var current = multi[i].current;
 
-      $(item[i]).find('.price-block__title').text(text);
-      $(item[i]).find('.price-block__value span').text(price);
-      if (current == 'y') {
-        $(item[i]).addClass('is-active');
+        $(item[i]).find('.price-block__title').text(text);
+        $(item[i]).find('.price-block__value span').text(price);
+        if (current == 'y') {
+          $(item[i]).addClass('is-active');
+        }
       }
-    }
+    }, 500);
+
     //animations
     setTimeout(function () {
       $('.price__title').addClass('active');

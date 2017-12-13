@@ -5630,7 +5630,7 @@ keyframes spinMaSearch 100% {
 .price-block__item {
   margin-top: 7vh;
   opacity: 0;
-  transition: .5s ease-in;
+  transition: .3s ease-in;
 }
 
 .price-block__item.is-active.price-animate {

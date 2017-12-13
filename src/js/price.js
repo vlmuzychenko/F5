@@ -95,7 +95,7 @@ $(function(){
       var self = $(this);
       setTimeout(function(){
         self.addClass('price-animate');
-      }, i*200);
+      }, 500);
     });
 
   })

@@ -5630,10 +5630,7 @@ keyframes spinMaSearch 100% {
 .price-block__item {
   margin-top: 7vh;
   opacity: 0;
-  -webkit-transform: translateY(140px);
-  -ms-transform: translateY(140px);
-  transform: translateY(140px);
-  transition: .7s ease;
+  transition: .5s ease-in;
 }
 
 .price-block__item.is-active.price-animate {
@@ -5646,9 +5643,6 @@ keyframes spinMaSearch 100% {
 
 .price-block__item.price-animate {
   opacity: .5;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
 }
 
 .price-block__item:nth-child(2) .price-block__title,

@@ -8,8 +8,8 @@ $(function () {
 
   var currentText = currentPrice.siblings('label').text();
   var currentInfo = currentPrice.parent().data('price-info');
-  var currentIncludedCont = currentInfo.included.split(',');
-  var currentExtraCont = currentInfo.extra.split(',');
+  var currentIncludedCont = currentInfo.included.split('|');
+  var currentExtraCont = currentInfo.extra.split('|');
   var currentMulti = $.map(currentInfo.multiprice, function (value) {
     return [value];
   });
@@ -45,8 +45,8 @@ $(function () {
 
     var text = target.text();
     var info = target.parent().data('price-info');
-    var includedCont = info.included.split(',');
-    var extraCont = info.extra.split(',');
+    var includedCont = info.included.split('|');
+    var extraCont = info.extra.split('|');
     var multi = $.map(info.multiprice, function (value) {
       return [value];
     });

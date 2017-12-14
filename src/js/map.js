@@ -28,7 +28,7 @@ $(function () {
    $('.js-select-single').each(function () {
       $(this).multipleSelect({
          width: '100%',
-         placeholder: $(this).attr('placeholder'),
+         //placeholder: $(this).attr('placeholder'),
          single: true
       });
    });

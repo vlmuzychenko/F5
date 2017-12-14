@@ -134,6 +134,25 @@
       & > span
         padding: 0 0 0 13px
         color: #000
+    &_chosen
+      .ms-parent
+        border: 1px solid #fff
+        padding: 10px 13px
+        margin-bottom: 10px
+      .ms-choice.disabled
+        border: none
+        background-color: rgba(0,0,0,0)
+        height: auto
+        line-height: 1.2
+        span
+          position: static
+          color: #fff
+          font-size: 12px
+          text-transform: uppercase
+          padding: 0
+          +futura-book
+          +rmin(1366)
+            font-size: 16px
   &__error-logo
     background-image: url(../img/help.svg)
     background-size: contain

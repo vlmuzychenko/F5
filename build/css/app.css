@@ -9997,6 +9997,28 @@ input[type=number] {
   color: #000;
 }
 
+.acquiring__select_chosen .ms-parent {
+  border: 1px solid #fff;
+  padding: 10px 13px;
+  margin-bottom: 10px;
+}
+
+.acquiring__select_chosen .ms-choice.disabled {
+  border: none;
+  background-color: transparent;
+  height: auto;
+  line-height: 1.2;
+}
+
+.acquiring__select_chosen .ms-choice.disabled span {
+  position: static;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0;
+  font-family: FuturaPT-Book, Arial, sans-serif;
+}
+
 .acquiring__error-logo {
   background-image: url(../img/help.svg);
   background-size: contain;
@@ -11724,6 +11746,10 @@ input[type=number] {
   }
 
   .acquiring__chosen {
+    font-size: 16px;
+  }
+
+  .acquiring__select_chosen .ms-choice.disabled span {
     font-size: 16px;
   }
 }

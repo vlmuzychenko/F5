@@ -64,20 +64,23 @@ span *-->
                   <div class="acquiring__input-wrap">
                     <div class="acquiring__input-col">
                       <h3 class="acquiring__label acquiring__label_white">Выбранный продукт:</h3>
-                      <p class="acquiring__chosen">CANARY YACHTWEEK 25.11 — 02.12 2017 - 490€ </p><label for="spinner" class="acquiring__label acquiring__label_white">Укажите количество людей:<span>*</span></label>
-                      <div class="quantity js-spinner"><input type="number" min="1" max="40" step="1" value="1"></div>
-                    </div>
-                    <div class="acquiring__input-col"><label for="email" class="acquiring__label acquiring__label_white">Комментарий:</label><textarea placeholder="Не обязательное поле" rows="4" class="acquiring__input acquiring__input_textarea"></textarea></div>
+                      <!--p.acquiring__chosen CANARY YACHTWEEK 25.11 — 02.12 2017 - 490€-->
+                      <div class="acquiring__select acquiring__select_chosen js-select-field">
+                        <!--add class error --><select disabled class="js-select-single"><option selected>Цена вниз</option><option>Цена вниз</option></select></div><label for="spinner" class="acquiring__label acquiring__label_white">Укажите количество людей:<span>*</span></label>
+                      <div
+                        class="quantity js-spinner"><input type="number" min="1" max="40" step="1" value="1"></div>
                   </div>
-                  <div class="acquiring__bottom-wrap">
-                    <h3 class="acquiring__title acquiring__title_s acquiring__title_yellow">Сумма к оплате:</h3>
-                    <div class="acquiring__title acquiring__title_m acquiring__title_yellow"><span style="display: none;" class="empty"></span><span class="filled">100.000</span><span> грн</span></div><a href="#" class="btn btn_xl acquire__btn">оплатить на Fondy.ua</a></div>
+                  <div class="acquiring__input-col"><label for="email" class="acquiring__label acquiring__label_white">Комментарий:</label><textarea placeholder="Не обязательное поле" rows="4" class="acquiring__input acquiring__input_textarea"></textarea></div>
                 </div>
+                <div class="acquiring__bottom-wrap">
+                  <h3 class="acquiring__title acquiring__title_s acquiring__title_yellow">Сумма к оплате:</h3>
+                  <div class="acquiring__title acquiring__title_m acquiring__title_yellow"><span style="display: none;" class="empty"></span><span class="filled">100.000</span><span> грн</span></div><a href="#" class="btn btn_xl acquire__btn">оплатить на Fondy.ua</a></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
     <!--END out-->
     <div data-popup="feedback" class="popup js-popup">

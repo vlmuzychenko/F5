@@ -9972,7 +9972,7 @@ input[type=number] {
   font-family: FuturaPT-Book, Arial, sans-serif;
 }
 
-.acquiring__select .ms-choice {
+.acquiring__select.error .ms-choice {
   background-color: #ff6e6e;
 }
 

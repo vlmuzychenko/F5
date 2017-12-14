@@ -15,6 +15,7 @@ $(function(){
 
         includedWrap.html('');
         extraWrap.html('');
+        item.html('');
         $('.price__title').text(currentText).addClass('active');
         item.each(function () {
             $(this).addClass('price-animate');
@@ -26,26 +27,35 @@ $(function(){
             extraWrap.append('<li class="active">' + currentExtraCont[i] + '</li>');
         }
         if(typeof(currentMulti[1]) != 'undefined'){
-            for (var i = 0; i < $('.price-block__item').length; i++) {
+            for (var i = 0; i < currentMulti.length; i++) {
                 var text = currentMulti[i].text;
                 var price = currentMulti[i].price;
                 var current = currentMulti[i].current;
 
-                $(item[i]).find('.price-block__title').text(text);
-                $(item[i]).find('.price-block__value span').text(price);
+                $(item[i]).append('<div class="price-block__title">' + text + '</div>');
+                $(item[i]).append('<div class="price-block__value"><span>' + price + '</span></div>');
                 if (current == 'y') {
                     $(item[i]).addClass('is-active');
                 }
             }
-        }else{
-          for (var i = 0; i < $('.price-block__item').length; i++) {
-              $(item[i]).find('.price-block__title').text('');
-              $(item[i]).find('.price-block__value span').text('');
-          }
         }
+        // else{
+        //   for (var i = 0; i < $('.price-block__item').length; i++) {
+        //       $(item[i]).find('.price-block__title').text('');
+        //       $(item[i]).find('.price-block__value span').text('');
+        //   }
+        // }
 
 
         $('.js-price label').click(function (e) {
+          var fondy_price = $(this).parents('.js-price').data('fprice');
+          var fondy_title = $(this).parents('.js-price').data('ftitle');
+          var _id = $(this).parents('.js-price').data('id');
+          $('#selected_id').val(_id);
+          $('.filled').text(fondy_price);
+          $('select.select-product option:selected').attr('data-id',_id).attr('value',fondy_price).text(fondy_title);
+          $('div.select-product button>span').text(fondy_title);
+          calculateFondySum();
 
             var target = $(e.currentTarget);
 
@@ -60,6 +70,7 @@ $(function(){
 
             includedWrap.html('');
             extraWrap.html('');
+            item.html('');
             $('.price__title').text(text).removeClass('active');
             item.each(function () {
                 $(this).removeClass('price-animate is-active');
@@ -72,24 +83,25 @@ $(function(){
             }
             if(typeof(multi[1]) != 'undefined'){
                 setTimeout(function () {
-                    for (var i = 0; i < $('.price-block__item').length; i++) {
+                    for (var i = 0; i < multi.length; i++) {
                         var text = multi[i].text;
                         var price = multi[i].price;
                         var current = multi[i].current;
 
-                        $(item[i]).find('.price-block__title').text(text);
-                        $(item[i]).find('.price-block__value span').text(price);
+                        $(item[i]).append('<div class="price-block__title">' + text + '</div>');
+                        $(item[i]).append('<div class="price-block__value"><span>' + price + '</span></div>');
                         if (current == 'y') {
                             $(item[i]).addClass('is-active');
                         }
                     }
                 }, 500);
-            }else{
-              for (var i = 0; i < $('.price-block__item').length; i++) {
-                  $(item[i]).find('.price-block__title').text('');
-                  $(item[i]).find('.price-block__value span').text('');
-              }
             }
+            // else{
+            //   for (var i = 0; i < $('.price-block__item').length; i++) {
+            //       $(item[i]).find('.price-block__title').text('');
+            //       $(item[i]).find('.price-block__value span').text('');
+            //   }
+            // }
 
             //animations
             setTimeout(function () {

@@ -9959,6 +9959,10 @@ input[type=number] {
   border: none;
 }
 
+.acquiring__input.error {
+  background-color: #ff6e6e;
+}
+
 .acquiring__chosen {
   border: 1px solid #fff;
   color: #fff;
@@ -9966,6 +9970,10 @@ input[type=number] {
   padding: 10px 13px;
   margin-bottom: 10px;
   font-family: FuturaPT-Book, Arial, sans-serif;
+}
+
+.acquiring__select .ms-choice {
+  background-color: #ff6e6e;
 }
 
 .acquiring__select .ms-drop {

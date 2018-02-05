@@ -6,6 +6,11 @@ html
     include _head
 
   body(class=bodyClass)
+    .preloader
+      .preloader__content
+        img.preloader__logo(src='img/preloader-logo.svg')
+        .preloader__statusbar
+      
     //BEGIN out
     .out(class=outClass)
       block header

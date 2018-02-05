@@ -1,0 +1,29 @@
+.preloader
+  width: 100vw
+  height: 100vh
+  background-color: #000
+  background-image: url(/img/preloader-bg.png)
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-size: cover
+  z-index: 1000
+  position: fixed
+  top: 0
+  left: 0
+  &__content
+    width: 20%
+    max-width: 335px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__logo
+    margin-right: -20%
+    max-width: 415px
+  &__statusbar
+    margin: 0 auto
+    margin-top: 15px
+    background-color: #fff
+    height: 2px
+    background-color: #d5c68d
+    transform: scaleX(.5)

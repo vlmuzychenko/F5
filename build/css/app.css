@@ -604,6 +604,47 @@ input[type='checkbox'], select, input[type='radio'] {
   z-index: 999 !important;
 }
 
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  background-image: url(/img/preloader-bg.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.preloader__content {
+  width: 20%;
+  max-width: 335px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.preloader__logo {
+  margin-right: -20%;
+  max-width: 415px;
+}
+
+.preloader__statusbar {
+  margin: 0 auto;
+  margin-top: 15px;
+  background-color: #fff;
+  height: 2px;
+  background-color: #d5c68d;
+  -webkit-transform: scaleX(0.5);
+  -ms-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
 /* Slider */
 .slick-slider {
   position: relative;

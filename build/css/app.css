@@ -616,6 +616,11 @@ input[type='checkbox'], select, input[type='radio'] {
   position: fixed;
   top: 0;
   left: 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  transition: .5s ease;
 }
 
 .preloader__content {
@@ -632,6 +637,13 @@ input[type='checkbox'], select, input[type='radio'] {
 .preloader__logo {
   margin-right: -20%;
   max-width: 415px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  transition: .5s ease;
 }
 
 .preloader__statusbar {
@@ -639,10 +651,89 @@ input[type='checkbox'], select, input[type='radio'] {
   margin-top: 15px;
   background-color: #fff;
   height: 2px;
-  background-color: #d5c68d;
-  -webkit-transform: scaleX(0.5);
-  -ms-transform: scaleX(0.5);
-  transform: scaleX(0.5);
+  background-color: #f6cb02;
+  -webkit-animation-name: loading;
+  animation-name: loading;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.preloader.finish {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.preloader.finish .preloader__statusbar {
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-name: finish;
+  animation-name: finish;
+}
+
+.preloader.finish .preloader__logo {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.preloader.preloader-animate {
+  opacity: 0;
+}
+
+.preloader.hide {
+  display: none;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(0.6);
+    transform: scaleX(0.6);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(0.6);
+    transform: scaleX(0.6);
+  }
+}
+
+@-webkit-keyframes finish {
+  from {
+    -webkit-transform: scaleX(0.6);
+    transform: scaleX(0.6);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+@keyframes finish {
+  from {
+    -webkit-transform: scaleX(0.6);
+    transform: scaleX(0.6);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 }
 
 /* Slider */

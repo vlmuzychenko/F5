@@ -10,6 +10,9 @@
   position: fixed
   top: 0
   left: 0
+  transform: scale(1)
+  opacity: 1
+  transition: .5s ease
   &__content
     width: 20%
     max-width: 335px
@@ -20,10 +23,41 @@
   &__logo
     margin-right: -20%
     max-width: 415px
+    transform: scale(1)
+    transform-origin: center
+    transition: .5s ease
   &__statusbar
     margin: 0 auto
     margin-top: 15px
     background-color: #fff
     height: 2px
-    background-color: #d5c68d
-    transform: scaleX(.5)
+    background-color: $accent
+    animation-name: loading
+    animation-duration: 1.2s
+    animation-fill-mode: forwards
+    animation-timing-function: ease
+    transition: transform .3s ease
+  &.finish
+    transform: scale(1.1)
+    .preloader
+      &__statusbar
+        animation-duration: .3s
+        animation-name: finish
+      &__logo
+        transform: scale(.8)
+  &.preloader-animate
+    opacity: 0
+  &.hide
+    display: none
+
+
+@keyframes loading
+  from
+    transform: scaleX(0)
+  to
+    transform: scaleX(.6)
+@keyframes finish
+  from
+    transform: scaleX(.6)
+  to
+    transform: scaleX(1)

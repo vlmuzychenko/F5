@@ -3387,10 +3387,29 @@ input[name="phone"]:focus::placeholder {
   transform: translate(-50%, -50%);
   width: 65px;
   height: 65px;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .card__info-pic--type::before {
   background-image: url(../img/yacht.svg);
+}
+
+.card__info-pic--mega::before {
+  background-image: url(../img/type-megayacht.svg);
+}
+
+.card__info-pic--motorboat::before {
+  background-image: url(../img/type-motorboat.svg);
+}
+
+.card__info-pic--monohull::before {
+  background-image: url(../img/type-monohull.svg);
+}
+
+.card__info-pic--catamaran::before {
+  background-image: url(../img/type-catamaran.svg);
 }
 
 .card__info-pic--length::before {
@@ -10610,7 +10629,6 @@ input[type=number] {
   width: 100vw;
   height: 100vh;
   background-color: #000;
-  background-image: url(/img/preloader-bg.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
